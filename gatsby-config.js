@@ -3,8 +3,17 @@ module.exports = {
     title: "spencer-lepine-com",
   },
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-image",
+    "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -37,6 +46,12 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
   ],
 };
