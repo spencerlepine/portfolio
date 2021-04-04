@@ -1,0 +1,47 @@
+{
+  "ci": {
+    "collect": {
+      "settings": {
+        "psiStrategy": "desktop"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "first-contentful-paint": [
+          "error",
+          {
+            "maxNumericValue": 5000,
+            "minScore": 0.8
+          }
+        ],
+        "first-meaningful-paint": [
+          "error",
+          {
+            "maxNumericValue": 5000,
+            "minScore": 0.8
+          }
+        ],
+        "interactive": [
+          "error",
+          {
+            "maxNumericValue": 5000,
+            "minScore": 0.5
+          }
+        ],
+        "speed-index": [
+          "error",
+          {
+            "maxNumericValue": 3000,
+            "minScore": 0.8
+          }
+        ]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    },
+    "assert-backup": {
+      "preset": "lighthouse:recommended"
+    }
+  }
+}

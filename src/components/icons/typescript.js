@@ -1,0 +1,50 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const IconTypeScript = ({ customClass }) => (
+  <svg className={customClass} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256" enableBackground="new 0 0 256 256" xmlSpace="preserve">
+    <title>TypeScript Icon</title>
+    <image id="image0" width="256" height="256" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABqlBMVEUAAAAxdsQtescteccz
+eswteMgtecYteMcteccudsgtesctesYtecctesgve8YteccseMgxds4zesIuecctecYteccteccs
+esguecgteccvccYuesgseMcteccueMcteMcueccqdb8tecdMjM+0zuv////L3fF5qds3f8rp8Pn2
++fxbldOWvONimtUyfMiVu+Izfcju9PrK3fH3+v3Z5vT9/v4uesc2f8kwe8hSkNHo8Pnb6PWZveRE
+h83F2e/6+/37/P660uyuy+k7gcr6/P2fweWgwuVAhMzQ4PJRj9D3+fz5+/37/f5zpdlLjM9pn9dS
+kNCfwuX4+v03f8nv9fuUuuLX5fR6qdvV5PTf6vaLtOD0+Pz+/v+/1u0zfMhKi8/z9/wuece70+3p
+8fk4gMqewOWdwORDh82YveM5gMowe8fr8vq81O3x9vvC1+6xzOpuodjN3/E/hMzk7vhgmdTm7vhD
+hs1votiCr91OjdDR4fK+1e1/rdw+g8va5/Xn7/hRkNBIic6RuOKzzutontbj7fdtodjN3vE0fcm1
+z+uPt+FNjM+50uxaldOUieUHAAAAInRSTlMAGvH1GaOm/v4c7e/u7BukoRoZ9PPz8heioBvr6/2b
+o/AYKeZsnQAAAAFiS0dEJcMByQ8AAAAHdElNRQfnBQ0XLR4+UwROAAAFFElEQVR42u3d938VRRTG
+4UGi3kRFRbArOjoaEDWIIkUlWLCADVEQUcTeO/ZCUcH2P3ujRsHc3ZnZcr93zjnvz8uZd57PLITs
+3sS5pVl2lheZ5VMuIWfTNfvNOZHt0/3GkZrtn0t3G08GFdufoouNL9Oj9j9DtxpnztN5958e7fv/
+vwDdhhY4ny5D5IL/9r+C7sJkWvUNsJDF/Q/oIlQGyg/A4hGgW+ACdAka4EK6BJmLlB+Av44AXYEG
+uJiuwGalu4SuwGaV8jtgeA/QBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegY
+AF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2A
+jgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQ
+BegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegYAF2AjgHQBegY
+AF2AjgHQBegUD3DDjWFJbrpZBcDs2lCfdbf0DLC+r9waXfq2kJrbewRILpGb9fXrzmWO2yAL4I4m
+E+UAbGw2UQrAnU0nygCYbT5RBMBdLSZKAGg1sXyATe0mFg9wd8uJpQNsbjuxdIDWEwsHaD+xbIAO
+JhYNsEU7QBcTSwbYqh2gk4kFA2xLuP6eM2rde58ogNi120d3m5sXAhD5GnBHXb/7+wZoDPRAV8jR
+P/6gaIB1KQMeEgyQOGJnyQAPt9//MPPlAjxSvf9Huyk54QCdHAADMACJAI9pB1B/AgxAPcAu7QAd
+HYGCAboRmHCA3b0LTDjA46FvgQkHiH3X6QntAO0PQfEAIeOt0BIBnowLhFnJAGnfep7TDhDCU2IB
+kp8+PK0dIIQ9MgGyHkA9IxFgb45AeFYeQO4zyOfEAWQ/hd0qDWBfrkDYLwvAP58tEA6IAvAv5AuE
+TZIA/IYGAgclAfgXGwiElwQB+ENNBLYJAmj4TpIkAP9yDwJFAfjD3QuUBeD9K10LlAbQ6MNjsgCa
+/GUoDCD/FLwqDcD7HXkC1V8Wlwrg/Wvd3ATlAgyzKx3gdZEA3r/R+ggUDuD9m4kAb0kF8Kn/LAoG
+SCMQDeDfjgNUfLZGCEDte+W1R0AMQPw+EA8QE3hHPIB/txbgPfkA/v38e0AWQIMXK4UB5L9bKw3g
+A+0A2S/YG4ABCAPYIwvgw486W7RQgDCvHSD3fXCBAOHjjDU/qd7/p8UChLC5/ZohfFYwQPJ9cCT3
+DigGII2g9nlR6QAhfB67+mCQDRDC7rprv6jdfvhSAsBCvhp95dchkooVygNYyDdnvhb/bWzz4gAa
+pOoBuRqAqhW0ABzWDlC5ghKA6hV0AHynHOD7mhVUANStoAGgdgUFAPUriAf4IbKCdICjsRWEA8RX
+EA1wLGGFCQdo88OLjyfNn3gA70802v6PidMLABjmp8zdb0wfXQbAMD8n7/5k1tw+ASp/n+CpphN/
+iW3+1+yRJf7Gyd92Lv0A4e9/NBzmVtPbYXOpm6IrsLnMlXgPdBhnAO5yugOZK5zyI+AMQLfA3/t3
+A7oHlcE/AGqPwOL+3ZV0EybT/wK4GboLkavcaaHLEHFOt4BzugXcklxNVxpnZtyIKPqP8Qo3OtfQ
+xcaTgasO3W0ccfW5lu7Xb9a4hKy8jq7ZT5ZfP2KzfwJrjlkBLy7UGQAAACV0RVh0ZGF0ZTpjcmVh
+dGUAMjAyMy0wNS0xM1QyMzo0NTozMCswMDowMCHbLv8AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMt
+MDUtMTNUMjM6NDU6MzArMDA6MDBQhpZDAAAAAElFTkSuQmCC" />
+  </svg>
+);
+
+IconTypeScript.propTypes = {
+  customClass: PropTypes.string,
+};
+
+export default IconTypeScript;

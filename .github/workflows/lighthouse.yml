@@ -1,0 +1,37 @@
+name: Lighthouse CI
+# on: [push]
+on: [workflow_dispatch]
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      # https://github.com/bahmutov/npm-install
+      # GitHub Action for install npm dependencies with caching without any configuration
+      - name: "📦 Install Dependencies"
+        uses: bahmutov/npm-install@v1
+
+      - name: yarn build
+        run: yarn run build
+        
+      - name: run Lighthouse CI
+        run: |
+          yarn global add @lhci/cli@0.9.0
+          yarn add puppeteer
+          lhci autorun --failOnUploadFailure=true 
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-report
+          path: .lighthouseci
+
+    # Output the JSON to job summary 
+    # head to https://googlechrome.github.io/lighthouse/viewer/

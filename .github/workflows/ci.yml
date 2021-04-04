@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  NODE_ENV: test
+
+jobs:
+
+  client-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['18']
+        os: [ubuntu-latest]
+
+    name: Node ${{ matrix.node }} on ${{ matrix.os }}
+    steps:
+      - name: ♻️ Check out Git Repository
+        uses: actions/checkout@v3
+
+      - name: 🔖  Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      # https://github.com/bahmutov/npm-install
+      # GitHub Action for install npm dependencies with caching without any configuration
+      - name: "📦 Install Dependencies"
+        uses: bahmutov/npm-install@v1
+
+      - name: 🔴 Lint all files
+        run: yarn run lint
+
+      - name: 🏗 Build
+        run: yarn run build
+
+      - name: ✅  Run tests
+        run: yarn test

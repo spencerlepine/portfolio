@@ -1,0 +1,46 @@
+name: 🚫 Typo Scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - none
+
+jobs:
+  # Preform typo scan
+  # https://github.com/crate-ci/typos
+  # https://crates.io/crates/typos-cli
+  typo_scan:
+    name: "🚫 Typo Scan"
+    runs-on: ubuntu-latest
+      
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v3
+      
+      - name:  🛠️ Configure rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: 🛠️ Configure rust cargo (package manager)
+        if: always()
+        uses: actions-rs/cargo@v1
+    
+      - name: 📦 Install spell-checker dependency
+        run: cargo install typos-cli
+        
+      - name: 🛠️ Create spell checker config file
+        run: |
+          touch _typos.toml
+          echo "[files]" >> _typos.toml
+          echo "extend-exclude = ['public/**']" >> _typos.toml
+
+      - name: 🚫 Preform typo scan
+        id: typo-scan
+        run: |
+          # ${{ github.workspace }}/../../../.cargo/bin/typos >> typos/typos.txt || true
+          echo '## Detected Typos Diff' >> $GITHUB_STEP_SUMMARY
+          echo '```diff' >> $GITHUB_STEP_SUMMARY
+          ${{ github.workspace }}/../../../.cargo/bin/typos --diff >> $GITHUB_STEP_SUMMARY || true
+          echo '```' >> $GITHUB_STEP_SUMMARY

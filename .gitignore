@@ -1,0 +1,11 @@
+node_modules/
+.cache/
+.env
+
+# Build directory
+/public
+.DS_Store
+
+# Misc
+*.log
+.lighthouseci

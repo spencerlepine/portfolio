@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme-dark {
+  --celticBlue: #668fff;
+  --blackPearl: #282828;
+  --alabasterWhite: #1c1c1c;
+  --buttonBlue: #e8eeff;
+  --linkBlue: #1f62c5;
+  --textOnBlue: #174ca9;
+  --textOnWhite: #979797;
+  --textOnBlack: #707070;
+  --titleText: #596bc0;
+}
+
+.theme-light {  
+  --celticBlue: #205CCF;
+  --blackPearl: #040B14;
+  --alabasterWhite: #FCFCFC;
+  --buttonBlue: #1B9BE3;
+  --linkBlue: #2EB2DC;
+  --textOnBlue: #AFD6DE;
+  --textOnWhite: #808080;
+  --textOnBlack: #BDBDBD;
+  --titleText: #040B14;
+}
+
+/* gatsby-remark-prismjs OVERRIDE
+   Inline code highlights are including backtick characters
+*/
+code::before, code::after {
+  display: none;
+}
+
+:not(pre) > code.language-text {
+  margin: 0 0.10em;
+  padding: 0 0.10em;
+  font-family: monospace;
+  font-weight: 100;
+  text-shadow: none;
+  color: #565656;
+  background: #d6d6d7 !important;
+}

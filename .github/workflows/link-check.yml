@@ -1,0 +1,36 @@
+name: Link Check
+# https://github.com/marketplace/actions/link-snitch
+
+# on:
+#   push:
+#     branches:
+#       - master
+# weekly schedule, say, 04:05 on Monday:
+on:
+  schedule:
+    - cron: '5 4 * * 1'
+
+env:
+  URL: https://spencerlepine.com
+  FILENAME: report.yaml
+  CONFIG: hydra-config.json
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Repository
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+
+      - name: Execute Link Check to Find Broken Links
+        uses: victoriadrake/link-snitch@master
+      
+      - name: Upload Link Check Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: link-check-artifact
+          path: report.yaml
