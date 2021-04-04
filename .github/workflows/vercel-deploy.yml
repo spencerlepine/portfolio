@@ -1,0 +1,99 @@
+name: 🚀 Deploy to Vercel
+# Custom workflow to build Next.js site with nested Docusaurus blog
+
+on:
+  push:
+    branches: [ v3 ]
+  workflow_dispatch:
+
+jobs:
+  build_blog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Blog Repository
+        id: cache-repo
+        uses: actions/cache@v4
+        with:
+          path: ./
+          key: ${{ runner.os }}-repo-${{ github.event.before }}
+          restore-keys: |
+            ${{ runner.os }}-repo-
+
+      - name: Clone Blog Repository
+        if: steps.cache-repo.outputs.cache-hit != 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: spencerlepine/blog
+
+      - name: 🔧 Set up Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+        
+      - name: Create .env File
+        run: |
+          echo "GISCUS_PROJECT_ID=${{ secrets.GISCUS_PROJECT_ID }}" >> .env
+          echo "GISCUS_DISCUSSION_CATEGORY=\"${{ secrets.GISCUS_DISCUSSION_CATEGORY }}\"" >> .env
+          echo "GISCUS_DISCUSSION_CATEGORY_ID=${{ secrets.GISCUS_DISCUSSION_CATEGORY_ID }}" >> .env
+          echo "ALGOLIA_APP_ID=${{ secrets.ALGOLIA_APP_ID }}" >> .env
+          echo "ALGOLIA_API_KEY=${{ secrets.ALGOLIA_API_KEY }}" >> .env
+          echo "ALGOLIA_INDEX_NAME=${{ secrets.ALGOLIA_INDEX_NAME }}" >> .env
+
+      - name:  Build
+        run: yarn build
+
+      - name: Cache Build Artifacts
+        uses: actions/cache@v4
+        with:
+          path: build
+          key: ${{ runner.os }}-build-${{ github.event.before }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog  # Artifact name
+          path: build  # Path to files
+
+  vercel_deploy:
+    runs-on: ubuntu-latest
+    needs: build_blog
+    environment:
+      name: deployment
+      url: https://spencerlepine.com
+    env:
+      NODE_VERSION: 18.x
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v4
+
+      - name: 🔧 Set up Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
+
+      - name: Install dependencies
+        if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
+        run: yarn install
+
+      - name: Prepare `public/blog` Folder
+        run: mkdir -p public/blog
+
+      - name: Download Blog Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: blog
+          path: public/blog
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Deploy to Vercel
+        run: vercel deploy --prod --token ${{ secrets.VERCEL_TOKEN }} --yes
