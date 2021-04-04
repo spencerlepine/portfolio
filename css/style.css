@@ -1,0 +1,147 @@
+html {
+	height: 100%;
+	display: block;
+}
+
+body {
+	background: rgb(60,60,60); /*#3c3c3c;*/
+	background: -moz-radial-gradient(circle, rgba(60,60,60,1) 0%, rgba(60,60,60,1) 71%, rgba(45,45,45,1) 100%);
+	background: -webkit-radial-gradient(circle, rgba(60,60,60,1) 0%, rgba(60,60,60,1) 71%, rgba(45,45,45,1) 100%);
+	background: radial-gradient(circle, rgba(60,60,60,1) 0%, rgba(60,60,60,1) 71%, rgba(45,45,45,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c3c3c",endColorstr="#2d2d2d",GradientType=1);
+	color: #ececec;
+	height: 100%;
+	margin: 0px;
+	overflow-x: hidden;
+	font-size: 11pt;
+}
+
+#content {
+	position: relative;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+	margin-top: 0px;
+	font-size: 4em;
+	margin-bottom: 0px;
+}
+
+h3 {
+	font-size: 2em;
+	margin: 0px;
+	margin-bottom: 1%;
+}
+
+.links {
+	margin: 1%;
+}
+
+.img-link img {
+	height: 4%;
+	width: 4%;
+	min-height: 40px;
+	min-width: 40px;
+	padding: 1%;
+}
+
+.img-link img:hover {
+	transition: 0.6s;
+	-webkit-transition-duration: 0.3s;
+	transform: rotate(5deg);
+	-webkit-transform: rotate(7deg);
+}
+
+#name-highlight {
+	color: #07a8e8
+}
+
+a {
+	color: #1f9ecb;
+}
+
+.text-link {
+	margin: 1%;
+	padding: 1%;
+	font-size: 2em;
+	text-decoration: underline;
+}
+
+.text-link:hover {
+	animation-name: link-hover;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes link-hover {
+	100% {
+		background: rgba(255, 255, 255, 0.1);
+		color: #07aff2;
+	}
+}
+
+:last-child {
+	margin-bottom: 0px;
+}
+
+/* Projcects page */
+.fade-scroll {
+	margin-top: 100px;
+	opacity: 0;
+	transition: opacity 250ms ease-in;
+}
+
+.fade-scroll.appear {
+	opacity: 1;
+	color: white;
+}
+
+.from-right-anim {
+	transform: translateX(30%);
+}
+
+.from-left-anim {
+	transform: translateX(-30%);
+}
+
+.from-right-anim, .from-left-anim {
+	opacity: 0;
+	transition: opacity 250ms ease-in, transform 400ms ease-in;
+}
+
+.from-right-anim.appear, .from-left-anim.appear {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.project-card {
+	width: 75%;
+	margin-left: 5%;
+	padding: 2%;
+	font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+	font-size: 3.5em;
+}
+
+p {
+	font-size: 23pt;
+}
+
+.homeLink {
+	position: fixed;
+    padding: 4px;
+    font-size: 2em;
+    color: #ffc107;
+    border: 1px solid ghostwhite;
+    border-radius: 4px;
+    margin: 6px;
+	background-color: #393939;
+	z-index: 9;
+}
