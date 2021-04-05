@@ -51,7 +51,6 @@ Portfolio and blog website ([Visit Here](https://www.spencerlepine.com)) created
 ---
 
 ## To do:
-- Create ```blog.js``` page
 - Display 6 latest articles with set limit
 - Style website
 
