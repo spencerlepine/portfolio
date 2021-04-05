@@ -1,0 +1,46 @@
+---
+title: 'Using Context in React'
+date: '2021-03-02'
+tags: 'react,context,javascript,webdev,framework,code'
+description: 'Learn this React feature and never drill props again.'
+thumbnail: '../images/using-context-in-react.png'
+---
+
+# Using Context in React
+
+`gist:[spencerlepine/]<e9374f9b5c0532f60925ec34207d60c2>[#themecontext-js]`
+
+## **Why use Context?**
+
+This React example will have an <App /> component that may render anything from a profile picture to a button. A <Button />component could be nested anywhere within the app, far down the render tree from <App />. Context allows you to share a common value between components without having to handle a state in <App /> .
+
+Before, we might save the current theme in the state of <App /> , and pass it down children through props. Changing the state and handling the logic can cause recursive re-renders throughout your app. To solve this, we use the Context API to pass the ‘theme’ value directly to ONLY the components that need it.
+
+**Reusable Context Component:**
+> We will implement React Context as a reusable file in a separate component.
+
+A themeContext.js file will handle the creation/access of Context. To initialize it, we will destructure Provider and Consumer after calling the createContext() from the React library.
+
+In this file, we create a ThemeContextProviderclass-based component. This will allow us to save the ‘theme’ into state, and update it’s value later on. Whenever we use ThemeContextProvider, we will input a JSX element that can be accessed through this.props.children.
+
+Lastly in this file, we will export ThemeContextProvider and Consumer instances. The Consumer will be a named export: ThemeContextConsumer to follow our naming convention.
+
+<!-- <iframe src="https://medium.com/media/7b5c363fa159ec6b455139a994f67efa" frameborder=0></iframe> -->
+ <div>
+     <Gist id='f824ffb7bafec535d0b6452179f2d790' file='java-file' />
+ </div>
+### **Using themeContext.js:**
+
+For any component to access the value of theme, we will need to connect it to the Context we created.
+
+In this example, Button.js will import from themeContext.js. To pull out the Consumer instance, we wrap the name in curly braces:
+
+```import {ThemeContextConsumer} from “./themeContext”```
+
+Now this component can utilize the ThemeContextConsumer and access the theme value using a render prop ([Learn more](https://reactjs.org/docs/render-props.html)),
+
+<!-- <iframe src="https://medium.com/media/fda4fe0f5c88b73642e3a6bb36c1cae3" frameborder=0></iframe> -->
+
+Whenever we need to access the theme value from context, we can import the ThemeContextConsumer and render elements through that. No more confusing props trails branching down the tree. Each element has a direct connection/path to a ‘global state’.
+
+For more information on the React Context API, visit the [DOCS](https://reactjs.org/docs/context.html)
