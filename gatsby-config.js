@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: "Spencer Lepine",
-    siteUrl: "https://spencerlepine.com"
+    siteUrl: "https://spencerlepine.com",
   },
   plugins: [
     "gatsby-plugin-postcss",
-    'gatsby-plugin-sharp',
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-sass",
       options: {
@@ -63,7 +63,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          posts: require.resolve('./src/templates/blog-post.js'),
+          posts: require.resolve("./src/templates/blog-post.js"),
         },
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
@@ -71,20 +71,6 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-transformer-remark`,
-            options: {
-              plugins: [
-                {
-                  resolve: 'gatsby-remark-external-links',
-                  options: {
-                    target: '_target',
-                    rel: 'nofollow'
-                  },
-                }
-              ],
             },
           },
         ],

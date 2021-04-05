@@ -2,8 +2,13 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-
+import { MDXProvider } from '@mdx-js/react'
+import CodeBlock from '../components/CodeBlock/CodeBlock';
 import Layout from '../components/Layout/Layout'
+
+const components = {
+  pre: CodeBlock
+}
 
 const BlogPost = ({ data }) => {
   const post = data.mdx
@@ -11,7 +16,6 @@ const BlogPost = ({ data }) => {
   let origin = 'https://www.spencerlepine.com'
   let imageSrc = post.frontmatter.thumbnail ? post.frontmatter.thumbnail.childImageSharp.sizes.src : null
 
-  
   return (
     <Layout>
       <Helmet
@@ -53,9 +57,9 @@ const BlogPost = ({ data }) => {
       <p>{imageSrc}</p>
       <p>{origin + imageSrc}</p>
 
-      <MDXRenderer>
-        {post.body}
-      </MDXRenderer>
+      <MDXProvider components={components}>
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </MDXProvider>
     </Layout>
   )
 }

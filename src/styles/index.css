@@ -1,7 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @import popup.css body {
-    @apply bg-purple-200;
-} */
