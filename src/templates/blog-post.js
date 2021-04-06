@@ -12,10 +12,7 @@ const components = {
 
 const BlogPost = ({ data }) => {
   const post = data.mdx
-
-  let origin = "https://www.spencerlepine.com"
-  let imageSrc = post.frontmatter.thumbnail ? post.frontmatter.thumbnail.childImageSharp.sizes.src : null
-
+  
   return (
     <Layout>
       <SEO
@@ -26,7 +23,7 @@ const BlogPost = ({ data }) => {
         article
       />
 
-      <h2 blogPost>{post.frontmatter.title}</h2>
+      <h2>{post.frontmatter.title}</h2>
       
       <img src={require(`../${post.fields.generatedCoverSlug}`)} alt="Blog Cover" width="100%" />
 
@@ -40,7 +37,7 @@ const BlogPost = ({ data }) => {
       >
         <a
           href={`http://twitter.com/share?text=${ "Check out this article: " }&url=https://spencerlepine.com${ post.fields.slug }${ post.frontmatter.tags ? `&hashtags=${ post.frontmatter.tags }` : "" }`}
-          class="twitter-share-button"
+          className="twitter-share-button"
           data-text=""
           data-via="spencerlepine"
           data-show-count="false">Tweet

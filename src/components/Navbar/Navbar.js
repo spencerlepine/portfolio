@@ -33,7 +33,6 @@ export default function Navbar() {
           title={siteMetadata.author + " | Full Stack Developer"}
           customTitle
           description={siteMetadata.description}
-          description={siteMetadata.description}
           image={siteMetadata.image}
           pathname={siteMetadata.siteUrl}
         />

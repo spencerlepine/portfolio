@@ -33,12 +33,12 @@ const {Provider, Consumer} = React.createContext()
 
 class ThemeContextProvider extends Component {
   state = {
-    theme: "light"
+    currentTheme: "light"
   }
 
   render() {
     return (
-      <Provider value={this.state.theme}>
+      <Provider value={this.state.currentheme}>
         {this.props.children}
       </Provider>
     )
@@ -56,6 +56,26 @@ In this example, ```Button.js``` will import from ```themeContext.js```. To pull
 ```import {ThemeContextConsumer} from “./themeContext”```
 
 Now this component can utilize the ```ThemeContextConsumer``` and access the theme value using a render prop ([Learn more](https://reactjs.org/docs/render-props.html)),
+
+```js
+import React from "react"
+import {ThemeContextConsumer} from "./themeContext"
+
+function Button(props) {
+    // currentTheme is stored in the Consumer
+    return (
+        <ThemeContextConsumer>
+            {theme => (
+                <button className={`${currentTheme}-theme`}>
+                  Switch Theme
+                </button>
+            )}
+        </ThemeContextConsumer>
+    )    
+}
+
+export default Button
+```
 
 Whenever we need to access the theme value from context, we can import the ```ThemeContextConsumer``` and render elements through that. No more confusing props trails branching down the tree. Each element has a direct connection/path to a ‘global state’.
 

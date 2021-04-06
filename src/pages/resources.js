@@ -121,17 +121,8 @@ export default function Resources() {
         <ul>
           Write about React basic folder setup (why each folder is important)
           Write about this gatsby app file setup
+          https://tailwindcss.com/docs/adding-new-utilities
         </ul>
     </Layout>
   )
 }
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
