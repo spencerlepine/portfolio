@@ -122,6 +122,7 @@ export default function Resources() {
           Write about React basic folder setup (why each folder is important)
           Write about this gatsby app file setup
           https://tailwindcss.com/docs/adding-new-utilities
+          PWA stuff from Gatsby Doc or article
         </ul>
     </Layout>
   )

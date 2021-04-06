@@ -12,7 +12,7 @@ const components = {
 
 const BlogPost = ({ data }) => {
   const post = data.mdx
-  
+
   return (
     <Layout>
       <SEO
