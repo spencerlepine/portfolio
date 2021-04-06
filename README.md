@@ -50,13 +50,4 @@ Portfolio and blog website ([Visit Here](https://www.spencerlepine.com)) created
 
 ---
 
-## To do:
-- Display 6 latest articles with set limit
-- Style website
-- connect google analytics
-- about page
-- contact
-
----
-
 > [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; Twitter [@spencerlepine](http://twitter.com/spencerlepine)

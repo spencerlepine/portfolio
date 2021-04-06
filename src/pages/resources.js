@@ -119,10 +119,20 @@ export default function Resources() {
           </li>
         </ul>
         <ul>
+          Email component: https://www.twilio.com/blog/gatsby-email-contact-form-react-serverless
           Write about React basic folder setup (why each folder is important)
           Write about this gatsby app file setup
           https://tailwindcss.com/docs/adding-new-utilities
           PWA stuff from Gatsby Doc or article
+          Change bit.ly/spencerlepine
+          Tweet in new tab
+          <br/>
+          ## To do:
+          - Display 6 latest articles with set limit
+          - Style website
+          - connect google analytics
+          - about page
+          - contact
         </ul>
     </Layout>
   )

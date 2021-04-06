@@ -17,12 +17,15 @@ const BlogPost = ({ data }) => {
     <Layout>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt || "nothing"}
+        description={post.frontmatter.description || post.excerpt || "Blog post written by Spencer Lepine"}
         image={post.frontmatter.image.childImageSharp.sizes.src}
         pathname={post.fields.slug}
         article
       />
 
+      <p>Testing if the description is being passed to SEO</p>
+      <p>{post.frontmatter.description}</p>
+      
       <h2>{post.frontmatter.title}</h2>
       
       <img src={require(`../${post.fields.generatedCoverSlug}`)} alt="Blog Cover" width="100%" />
@@ -61,6 +64,7 @@ export const query = graphql`
         title
         date
         tags
+        description
         image {
           childImageSharp {
             sizes(maxWidth: 600) {
