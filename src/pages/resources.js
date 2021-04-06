@@ -118,6 +118,10 @@ export default function Resources() {
             <a href="https://codetrain.io/adding-prism-syntax-highlighting-to-gatsby-mdx"> Article</a>
           </li>
         </ul>
+        <ul>
+          Write about React basic folder setup (why each folder is important)
+          Write about this gatsby app file setup
+        </ul>
     </Layout>
   )
 }

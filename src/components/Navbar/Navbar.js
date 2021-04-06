@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import SEO from "../SEO/SEO"
 
 const ListLink = props => (
     <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -14,17 +15,32 @@ export default function Navbar() {
         site {
           siteMetadata {
             title
+            siteUrl
+            image
+            description
+            author
           }
         }
       }
     `
   )
 
+  const { siteMetadata } = data.site
+ 
   return (
-    <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
+    <div style={{ margin: `3rem auto`, maxWidth: 800, padding: `0 1rem` }}>
+        <SEO
+          title={siteMetadata.author + " | Full Stack Developer"}
+          customTitle
+          description={siteMetadata.description}
+          description={siteMetadata.description}
+          image={siteMetadata.image}
+          pathname={siteMetadata.siteUrl}
+        />
+
         <header style={{ marginBottom: `1.5rem` }}>
         <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-          <h3 style={{ display: `inline` }}>Spencer Lepine</h3>
+          <h3 style={{ display: `inline` }}>{siteMetadata.title}</h3>
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
           <ListLink to="/blog">Blog</ListLink>

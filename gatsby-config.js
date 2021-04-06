@@ -1,7 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: "Spencer Lepine",
+    titleTemplate: "%s | Spencer Lepine",
+    description:
+      "Portfolio site and Blog by Spencer Lepine.",
     siteUrl: "https://spencerlepine.com",
+    image: "/images/about_pic.png", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@spencerlepine",
+    author: "Spencer Lepine"
   },
   plugins: [
     "gatsby-plugin-postcss",

@@ -53,6 +53,9 @@ Portfolio and blog website ([Visit Here](https://www.spencerlepine.com)) created
 ## To do:
 - Display 6 latest articles with set limit
 - Style website
+- connect google analytics
+- about page
+- contact
 
 ---
 
