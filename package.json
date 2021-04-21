@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/tag": "^0.20.3",
@@ -42,24 +43,18 @@
     "gatsby-plugin-sharp": "^2.0.31",
     "gatsby-plugin-sitemap": "^2.2.3",
     "gatsby-plugin-styled-components": "^3.1.2",
-    "gatsby-plugin-typography": "^2.3.2",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.1.7",
     "gatsby-source-filesystem": "^2.0.22",
     "gatsby-transformer-sharp": "^2.2.4",
     "loader-utils": "^1.4.0",
-    "node-html-to-image": "^1.2.0",
     "prism-react-renderer": "^1.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
-    "sass": "^1.32.8",
     "snyk": "^1.208.0",
-    "styled-components": "^4.3.2",
-    "tailwindcss": "^2.0.4",
-    "typography": "^0.16.19",
-    "typography-theme-twin-peaks": "^0.16.19"
+    "styled-components": "^4.3.2"
   },
   "license": "MIT",
   "snyk": true,

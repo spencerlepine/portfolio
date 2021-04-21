@@ -1,19 +1,15 @@
-import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
-import SEO from "../SEO/SEO"
-
-const ListLink = props => (
-    <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-        <Link to={props.to}>{props.children}</Link>
-    </li>
-)
+import React from "react";
+import { useStaticQuery, Link, graphql } from "gatsby";
+import SEO from "../SEO/SEO";
+import useStyles from "./styles.js";
+import logo from "../../images/logo.svg"
 
 export default function Navbar() {
   const data = useStaticQuery(
     graphql`
       query {
         site {
-          siteMetadata {
+              siteMetadata {
             title
             siteUrl
             image
@@ -23,30 +19,43 @@ export default function Navbar() {
         }
       }
     `
-  )
+  );
 
-  const { siteMetadata } = data.site
- 
+  const classes = useStyles();
+  const { siteMetadata } = data.site;
+
   return (
     <div style={{ margin: `3rem auto`, maxWidth: 800, padding: `0 1rem` }}>
-        <SEO
-          title={siteMetadata.author + " | Full Stack Developer"}
-          customTitle
-          description={siteMetadata.description}
-          image={siteMetadata.image}
-          pathname={siteMetadata.siteUrl}
-        />
+      <SEO
+        title={siteMetadata.author + " | Full Stack Developer"}
+        customTitle
+        description={siteMetadata.description}
+        image={siteMetadata.image}
+        pathname={siteMetadata.siteUrl}
+      />
 
-        <header style={{ marginBottom: `1.5rem` }}>
+      <header className={classes.navbar} style={{ marginBottom: `1.5rem`, display: "flex" }}>
         <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-          <h3 style={{ display: `inline` }}>{siteMetadata.title}</h3>
+          <h3 style={{ display: `inline` }}><img src={logo} className={classes.logo}></img></h3>
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink to="/blog">Blog</ListLink>
-          <ListLink to="/about/">About</ListLink>
-          <ListLink to="/contact/">Contact</ListLink>
+          <li className={classes.link}>
+            <Link to="/blog" className={classes.linkText}>
+              Blog
+            </Link>
+          </li>
+          <li className={classes.link}>
+            <Link to="/about" className={classes.linkText}>
+              About
+            </Link>
+          </li>
+          <li className={classes.link}>
+            <Link to="/contact" className={classes.linkText}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </header>
     </div>
-  )
+  );
 }

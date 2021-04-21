@@ -10,17 +10,7 @@ module.exports = {
     author: "Spencer Lepine"
   },
   plugins: [
-    "gatsby-plugin-postcss",
     "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-plugin-sass",
-      options: {
-        postCssPlugins: [
-          require("tailwindcss"),
-          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
-        ],
-      },
-    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -57,12 +47,6 @@ module.exports = {
       options: {
         name: `posts`,
         path: `./src/posts/`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
       },
     },
     {
