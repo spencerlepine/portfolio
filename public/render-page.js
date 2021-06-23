@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/Users/notspencer/Documents/spencer-lepine-com/node_modules/@reach/router/index.js"), require("fs"), require("/Users/notspencer/Documents/spencer-lepine-com/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("/Users/notspencer/Documents/portfolio-site/node_modules/@reach/router/index.js"), require("fs"), require("/Users/notspencer/Documents/portfolio-site/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/Users/notspencer/Documents/spencer-lepine-com/node_modules/@reach/router/index.js", "fs", "/Users/notspencer/Documents/spencer-lepine-com/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["/Users/notspencer/Documents/portfolio-site/node_modules/@reach/router/index.js", "fs", "/Users/notspencer/Documents/portfolio-site/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/Users/notspencer/Documents/spencer-lepine-com/node_modules/@reach/router/index.js"), require("fs"), require("/Users/notspencer/Documents/spencer-lepine-com/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("/Users/notspencer/Documents/portfolio-site/node_modules/@reach/router/index.js"), require("fs"), require("/Users/notspencer/Documents/portfolio-site/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["/Users/notspencer/Documents/spencer-lepine-com/node_modules/@reach/router/index.js"], root["fs"], root["/Users/notspencer/Documents/spencer-lepine-com/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["/Users/notspencer/Documents/portfolio-site/node_modules/@reach/router/index.js"], root["fs"], root["/Users/notspencer/Documents/portfolio-site/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -143,7 +143,7 @@ var plugins = [{
   options: {
     "plugins": [],
     "defaultLayouts": {
-      "posts": "/Users/notspencer/Documents/spencer-lepine-com/src/templates/blog-post.js"
+      "posts": "/Users/notspencer/Documents/portfolio-site/src/templates/blog-post.js"
     },
     "extensions": [".mdx", ".md"],
     "gatsbyRemarkPlugins": [{
@@ -156,7 +156,7 @@ var plugins = [{
     "remarkPlugins": [],
     "rehypePlugins": [],
     "mediaTypes": ["text/markdown", "text/x-markdown"],
-    "root": "/Users/notspencer/Documents/spencer-lepine-com"
+    "root": "/Users/notspencer/Documents/portfolio-site"
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
@@ -32885,9 +32885,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "@reach/router":
-/*!*****************************************************************************************************!*\
-  !*** external "/Users/notspencer/Documents/spencer-lepine-com/node_modules/@reach/router/index.js" ***!
-  \*****************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** external "/Users/notspencer/Documents/portfolio-site/node_modules/@reach/router/index.js" ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -32907,9 +32907,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!**********************************************************************************************!*\
-  !*** external "/Users/notspencer/Documents/spencer-lepine-com/node_modules/lodash/merge.js" ***!
-  \**********************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** external "/Users/notspencer/Documents/portfolio-site/node_modules/lodash/merge.js" ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

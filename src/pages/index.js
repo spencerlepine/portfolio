@@ -1,11 +1,13 @@
 import * as React from "react";
 import Layout from "../components/Layout/Layout"
+import Blob from "../components/Blob/Blob";
 import { Link, graphql } from "gatsby"
 
 export default function IndexPage({ data }) {
   return (
     <Layout >
       <div>
+        <Blob />
         <title>Spencer Lepine | Full Stack Developer</title>
         <h1>
           Hello,
