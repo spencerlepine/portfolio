@@ -1,48 +1,22 @@
 import * as React from "react";
 import Layout from "../components/Layout/Layout"
-import Blob from "../components/Blob/Blob";
+import PageLayout from "../components/PageLayout/PageLayout"
+import PictureBlob from "../components/PictureBlob/PictureBlob";
+import NameWelcome from "../components/NameWelcome/NameWelcome";
+import PostWidget from "../components/PostWidget/PostWidget";
+
 import { Link, graphql } from "gatsby"
 
 export default function IndexPage({ data }) {
   return (
     <Layout >
-      <div>
-        <Blob />
-        <title>Spencer Lepine | Full Stack Developer</title>
-        <h1>
-          Hello,
-          <br />
-          <span>I'm Spencer Lepine </span>
-          <span role="img" aria-label="Party popper emojis">
-            🎉🎉🎉
-          </span>
-        </h1>
-        <p>
-          a passionate Software Engineer
-          <span role="img" aria-label="Sunglasses smiley emoji">
-            😎
-          </span>
-        </p>
+      <PageLayout>
+        <PictureBlob />
 
-        <div>
-          <h4>{data.allMdx.totalCount} Posts</h4>
-          {data.allMdx.edges.map(({ node }) => (
-            <div key={node.id}>
-              <Link
-                to={node.fields.slug}
-              >
-                <h3>
-                  {node.frontmatter.title}{" "}
-                  <span>
-                    — {node.frontmatter.date}
-                  </span>
-                </h3>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
+        <NameWelcome />
+
+        <PostWidget allMdx={data.allMdx} />
+      </PageLayout>
     </Layout>
   );
 };

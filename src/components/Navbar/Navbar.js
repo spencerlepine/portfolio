@@ -25,37 +25,39 @@ export default function Navbar() {
   const { siteMetadata } = data.site;
 
   return (
-    <div style={{ margin: `3rem auto`, maxWidth: 800, padding: `0 1rem` }}>
-      <SEO
-        title={siteMetadata.author + " | Full Stack Developer"}
-        customTitle
-        description={siteMetadata.description}
-        image={siteMetadata.image}
-        pathname={siteMetadata.siteUrl}
-      />
+    <div className={classes.navbarContainer}>
+      <div style={{ margin: "auto", maxWidth: 800, padding: `0 1rem` }}>
+        <SEO
+          title={siteMetadata.author + " | Full Stack Developer"}
+          customTitle
+          description={siteMetadata.description}
+          image={siteMetadata.image}
+          pathname={siteMetadata.siteUrl}
+        />
 
-      <header className={classes.navbar} style={{ marginBottom: `1.5rem`, display: "flex" }}>
-        <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-          <h3 style={{ display: `inline` }}><img src={logo} className={classes.logo}></img></h3>
-        </Link>
-        <ul style={{ listStyle: `none`, float: `right` }}>
-          <li className={classes.link}>
-            <Link to="/blog" className={classes.linkText}>
-              Blog
-            </Link>
-          </li>
-          <li className={classes.link}>
-            <Link to="/about" className={classes.linkText}>
-              About
-            </Link>
-          </li>
-          <li className={classes.link}>
-            <Link to="/contact" className={classes.linkText}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </header>
+        <header className={classes.navbar}>
+          <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+            <img src={logo} className={classes.logo} />
+          </Link>
+          <ul style={{ listStyle: `none`, float: `right` }}>
+            <li className={classes.link}>
+              <Link to="/blog" className={classes.linkText}>
+                Blog
+              </Link>
+            </li>
+            <li className={classes.link}>
+              <Link to="/about" className={classes.linkText}>
+                About
+              </Link>
+            </li>
+            <li className={classes.link}>
+              <Link to="/contact" className={classes.linkText}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </header>
+      </div>
     </div>
   );
 }
