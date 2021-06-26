@@ -6,12 +6,6 @@ description: 'Learn this React feature and never drill props again.'
 image: '../images/using-context-in-react.png'
 ---
 
-```js
-function test() {
-  return <MyComponent />
-}
-```
-
 ## **Why use Context?**
 
 This React example will have an ```<App />``` component that may render anything from a profile picture to a button. A ```<Button />``` component could be nested anywhere within the app, far down the render tree from ```<App />```. Context allows you to share a common value between components without having to handle a state in ```<App />```.
@@ -71,7 +65,7 @@ function Button(props) {
                 </button>
             )}
         </ThemeContextConsumer>
-    )    
+    )
 }
 
 export default Button
