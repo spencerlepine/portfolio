@@ -7,10 +7,6 @@ html, body, #root {
   @apply bg-ghost text-charcoal;
 }
 
-div {
-  @apply bg-white rounded;
-}
-
 btn {
   @apply font-bold py-2 px-4 rounded;
 }

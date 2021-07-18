@@ -10,7 +10,7 @@ import {
   IconTwitter,
 } from '@components/icons';
 
-const Icon = ({ name }) => {
+const Icon = ({ name, customClass }) => {
   switch (name) {
     case 'Bookmark':
       return <IconBookmark />;
@@ -23,7 +23,7 @@ const Icon = ({ name }) => {
     case 'Linkedin':
       return <IconLinkedin />;
     case 'Logo':
-      return <IconLogo />;
+      return <IconLogo customClass={customClass} />;
     case 'Twitter':
       return <IconTwitter />;
     default:
@@ -33,6 +33,8 @@ const Icon = ({ name }) => {
 
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
+  customWidth: PropTypes.string,
+  customHeight: PropTypes.string,
 };
 
 export default Icon;

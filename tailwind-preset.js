@@ -1,9 +1,12 @@
-const { colors: defaultColors } = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   theme: {
     colors: {
-      ...defaultColors,
+      ...colors,
+      lime: {
+        DEFAULT: '#8EEEAA',
+      },
       charcoal: {
         DEFAULT: '#08090a',
       },

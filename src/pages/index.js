@@ -4,7 +4,7 @@ import { Layout, Welcome, About, Jobs, Featured, Projects, Contact } from '@comp
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <main className="mg-4">
+    <main className="m-4">
       <Welcome />
       <About />
       <Jobs />

@@ -5,18 +5,12 @@ import { navLinks } from '@config';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
 
-const Nav = ({ isHome }) => {
+const Nav = () => {
   const Logo = (
-    <div className="logo" tabIndex="-1">
-      {isHome ? (
-        <a href="/" aria-label="home">
-          <IconLogo />
-        </a>
-      ) : (
-        <Link to="/" aria-label="home">
-          <IconLogo />
-        </Link>
-      )}
+    <div className="w-auto relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start" tabIndex="-1">
+      <Link to="/" className="text-sm font-bold leading-relaxed inline-block whitespace-nowrap uppercase text-white w-auto">
+        <IconLogo customClass="w-16 h-16" />
+      </Link>
     </div>
   );
 
@@ -28,20 +22,25 @@ const Nav = ({ isHome }) => {
 
   return (
     <header>
-      <nav>
+      <nav className="relative flex flex-wrap items-center justify-between px-3 py-1 bg-coolGray-600 mb-3">
         {Logo}
 
-        <div>
-          <ol>
+        <div className="w-auto container px-4 flex flex-wrap justify-between">
+          <ol className="flex flex-col lg:flex-row list-none ml-auto">
             {navLinks &&
               navLinks.map(({ url, name }, i) => (
                 <li key={i}>
-                  <Link to={url}>{name}</Link>
+                  <Link
+                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                    to={url}>
+                    {name}
+                  </Link>
                 </li>
               ))}
           </ol>
-          <div>{ResumeLink}</div>
         </div>
+
+        {/* <div>{ResumeLink}</div> */}
 
         <Menu />
       </nav>
