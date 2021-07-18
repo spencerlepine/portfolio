@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Spencer Lepine',
     description:
-      'Spencer Lepine is a software engineer working to build the future today.',
+      'Software Engineer and technologist working to build the future today.',
     siteUrl: 'https://spencerlepine.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@spencerlepine',
