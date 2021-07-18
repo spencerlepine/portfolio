@@ -1,6 +1,9 @@
+const { colors: defaultColors } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   theme: {
     colors: {
+      ...defaultColors,
       charcoal: {
         DEFAULT: '#08090a',
       },
