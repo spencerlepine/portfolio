@@ -4,6 +4,11 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
+      navy: {
+        dark: '#053742',
+        medium: '#39A2DB',
+        light: '#A2DBFA',
+      },
       lime: {
         DEFAULT: '#8EEEAA',
       },
@@ -12,13 +17,6 @@ module.exports = {
       },
       ghost: {
         DEFAULT: '#edf0f1',
-      },
-      gray: {
-        darkest: '#1f2d3d',
-        dark: '#3c4858',
-        DEFAULT: '#c0ccda',
-        light: '#e0e6ed',
-        lightest: '#f9fafc',
       },
     },
     fontFamily: {

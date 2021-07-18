@@ -7,7 +7,7 @@ const About = () => {
   const skills = ['JavaScript (ES6+)', 'React', 'Firebase', 'Node.js', 'Python'];
 
   return (
-    <section id="about" ref={revealContainer}>
+    <section id="about" ref={revealContainer} className="m-4 bg-white">
       <h2 className="numbered-heading">About Me</h2>
 
       <div className="inner">

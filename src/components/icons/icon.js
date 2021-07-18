@@ -33,8 +33,7 @@ const Icon = ({ name, customClass }) => {
 
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
-  customWidth: PropTypes.string,
-  customHeight: PropTypes.string,
+  customClass: PropTypes.string,
 };
 
 export default Icon;
