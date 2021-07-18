@@ -1,56 +1,22 @@
-import * as React from "react";
-import Layout from "../components/Layout/Layout"
-import PageLayout from "../components/PageLayout/PageLayout"
-import PictureBlob from "../components/PictureBlob/PictureBlob";
-import NameWelcome from "../components/NameWelcome/NameWelcome";
-import PostWidget from "../components/PostWidget/PostWidget";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Layout, Welcome, About, Jobs, Featured, Projects, Contact } from '@components';
 
-import { Link, graphql } from "gatsby"
+const IndexPage = ({ location }) => (
+  <Layout location={location}>
+    <main className="fillHeight">
+      <Welcome />
+      <About />
+      <Jobs />
+      <Featured />
+      <Projects />
+      <Contact />
+    </main>
+  </Layout>
+);
 
-export default function IndexPage({ data }) {
-  return (
-    <Layout >
-      <PageLayout>
-        <PictureBlob />
-
-        <NameWelcome />
-
-        <PostWidget allMdx={data.allMdx} />
-      </PageLayout>
-    </Layout>
-  );
+IndexPage.propTypes = {
+  location: PropTypes.object.isRequired,
 };
 
-export const query = graphql`
-  query {
-    allMdx (sort: { fields: [fields___publishedAt], order: DESC }) {
-      edges {
-        next {
-          frontmatter {
-            title
-            date
-            description
-            tags
-          }
-        }
-        previous {
-          frontmatter {
-            title
-            date
-          }
-        }
-        node {
-          id
-          frontmatter {
-            title
-            date
-          }
-          fields {
-            publishedAt
-            slug
-          }
-        }
-      }
-    }
-  }
-`
+export default IndexPage;

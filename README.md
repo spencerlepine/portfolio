@@ -17,9 +17,9 @@ Portfolio and blog website ([Visit Here](https://www.spencerlepine.com)) created
 <hr>
 
 ## 📦 Technologies:
-- [GatsbyJS](https://www.gatsbyjs.com/) (+[React](https://reactjs.org/))
+- [GatsbyJS](https://www.gatsbyjs.com/)
+- [React](https://reactjs.org/)
 - [GraphQL](https://graphql.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
 
 ## ⚙️ Setup
 
@@ -27,17 +27,15 @@ Portfolio and blog website ([Visit Here](https://www.spencerlepine.com)) created
 
   Download the Gatsby project locally
 
-  ```shell
-  # create a new Gatsby site using the minimal starter
+  ```sh
   git clone https://github.com/spencerlepine/portfolio-site.git
   ```
 
 2.  **Start developing**
 
-  Navigate into your new site’s directory and initiate the project
+  Install pacakges in the the root directory
 
-  ```shell
-  cd portfolio-site/
+  ```sh
   npm install
   npm run develop
   ```

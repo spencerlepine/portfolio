@@ -1,0 +1,2 @@
+(self.webpackChunkportfolio_site=self.webpackChunkportfolio_site||[]).push([[678],{7704:function(e,l,t){"use strict";t.r(l);var n=t(7294),a=t(483);l.default=function(e){var l=e.location;return n.createElement(a.Ar,{location:l},n.createElement("main",{className:"fillHeight"},n.createElement(a.cI,null),n.createElement(a.CL,null),n.createElement(a.pe,null),n.createElement(a.g4,null),n.createElement(a.pj,null),n.createElement(a.r8,null)))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-edc18361a44fc707f312.js.map

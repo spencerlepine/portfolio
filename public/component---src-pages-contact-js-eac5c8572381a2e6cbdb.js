@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"Cuy+":function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return c}));var a=n("q1tI"),l=n.n(a),r=n("yBb5");function c(){return l.a.createElement(r.default,null,l.a.createElement("h1",null,"I'd love to talk! Email me at the address below"),l.a.createElement("p",null,l.a.createElement("a",{href:"mailto:me@example.com"},"spencerlepine@gmail.com")))}}}]);
-//# sourceMappingURL=component---src-pages-contact-js-eac5c8572381a2e6cbdb.js.map

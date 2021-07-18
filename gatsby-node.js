@@ -1,72 +1,99 @@
-const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
-const { format } = require("date-fns");
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
 
-const titleToSlug = (title) =>
-  title
-    // replace characters that are not letters, numbers or whitespaces
-    // with empty strings
-    .replace(/[^a-z0-9 ]/gi, "")
-    //replace whitespaces with hyphens
-    .replace(/\s/g, "-")
-    // replace double hyphens with one
-    .replace(/--/g, "-")
-    // change to lowercase
-    .toLowerCase();
+const path = require('path');
+const _ = require('lodash');
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === `Mdx`) {
-    const slug = createFilePath({ node, getNode, basePath: `posts` });
-    createNodeField({
-      node,
-      name: `slug`,
-      value: `/blog${slug}`,
-    });
-    createNodeField({
-      node,
-      name: `publishedAt`,
-      value: format(new Date(node.frontmatter.date), "MMM dd, yyyy"),
-    });
-
-    const { title } = node.frontmatter;
-    const generatedCoverSlug = "images/" + titleToSlug(title) + ".png"
-
-    createNodeField({
-      node,
-      name: "generatedCoverSlug",
-      value: generatedCoverSlug,
-    });
-  }
-};
-
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allMdx {
-          edges {
-            node {
-              id
-              fields {
-                slug
-                generatedCoverSlug
-                publishedAt
-              }
+  const postTemplate = path.resolve(`src/templates/post.js`);
+  const tagTemplate = path.resolve('src/templates/tag.js');
+
+  const result = await graphql(`
+    {
+      postsRemark: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/posts/" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
             }
           }
         }
       }
-    `).then((result) => {
-      result.data.allMdx.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve(`./src/templates/blog-post.js`),
-          context: { id: node.id },
-        });
-      });
-      resolve();
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
+    }
+  `);
+
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
+
+  // Create post detail pages
+  const posts = result.data.postsRemark.edges;
+
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: postTemplate,
+      context: {},
     });
+  });
+
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group;
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/blog/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    });
+  });
+};
+
+// https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  // https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
+  if (stage === 'build-html' || stage === 'develop-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /miniraf/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
+
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, 'src/components'),
+        '@config': path.resolve(__dirname, 'src/config'),
+        '@fonts': path.resolve(__dirname, 'src/fonts'),
+        '@hooks': path.resolve(__dirname, 'src/hooks'),
+        '@images': path.resolve(__dirname, 'src/images'),
+        '@pages': path.resolve(__dirname, 'src/pages'),
+        '@styles': path.resolve(__dirname, 'src/styles'),
+        '@utils': path.resolve(__dirname, 'src/utils'),
+      },
+    },
   });
 };
