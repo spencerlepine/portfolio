@@ -41,7 +41,7 @@ const Projects = () => {
     const { github, external, title, tech } = frontmatter;
 
     return (
-      <div className="project-inner">
+      <div className="landing-section">
         <header>
           <div className="project-top">
             <div className="folder">
@@ -92,8 +92,8 @@ const Projects = () => {
     <section>
       <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
 
-      <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
+      <Link className="inline-link archive-link" to="/projects" ref={revealArchiveLink}>
+        view all projects
       </Link>
 
       <ul className="projects-grid">

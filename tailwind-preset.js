@@ -22,6 +22,9 @@ module.exports = {
     fontFamily: {
       ui: ['system-ui', 'Segoe UI'],
     },
+    minHeight: {
+      '1': '100px',
+    },
     extend: {},
   },
   plugins: [],

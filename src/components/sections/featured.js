@@ -22,8 +22,8 @@ const Featured = () => {
               tech
               github
               external
+              description
             }
-            html
           }
         }
       }
@@ -35,66 +35,70 @@ const Featured = () => {
   const revealProjects = useRef([]);
 
   return (
-    <section id="projects">
-      <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’ve Built
+    <section id="projects" className="landing-section">
+      <h2 className="section-title m-2" ref={revealTitle}>
+        Featured Project
       </h2>
 
       <ul>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
-            const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const { frontmatter } = node;
+            const { external, title, tech, github, cover, description } = frontmatter;
             const image = getImage(cover);
 
             return (
               <li key={i} ref={el => (revealProjects.current[i] = el)}>
-                <div className="project-content">
+                <div className="project-content relative">
                   <div>
-                    <p className="project-overline">Featured Project</p>
+                    <div className="project-image w-auto m-auto md:pb-8">
+                      <a href={external ? external : github ? github : '#'} className="m-auto w-full">
+                        <GatsbyImage image={image} alt={title} className="img m-auto md:ml-40 md:mr-4" />
+                      </a>
+                    </div>
 
-                    <h3 className="project-title">
-                      <a href={external}>{title}</a>
-                    </h3>
+                    <div className="project-details bg-navy-dark md:absolute md:-bottom-2 md:rounded-lg p-2">
+                      <div className="flex p-3">
+                        <h3 className="project-title text-xl inline-block">
+                          <a href={external} className="text-navy-medium my-2">
+                            {title}
+                          </a>
+                        </h3>
+                        {github && (
+                          <a href={github} aria-label="GitHub Link" className="inline-block pl-3">
+                            <Icon name="GitHub" customClass="text-white" />
+                          </a>
+                        )}
+                        {external && (
+                          <a href={external} aria-label="External Link" className="external inline-block pl-3">
+                            <Icon name="External" customClass="text-white" />
+                          </a>
+                        )}
+                      </div>
 
-                    <div
-                      className="project-description"
-                      dangerouslySetInnerHTML={{ __html: html }}
-                    />
+                      <div className="project-description p-3">
+                        <p className="text-gray-300">
+                          {description}
+                        </p>
+                      </div>
 
-                    {tech.length && (
-                      <ul className="project-tech-list">
-                        {tech.map((tech, i) => (
-                          <li key={i}>{tech}</li>
-                        ))}
-                      </ul>
-                    )}
-
-                    <div className="project-links">
-                      {github && (
-                        <a href={github} aria-label="GitHub Link">
-                          <Icon name="GitHub" />
-                        </a>
-                      )}
-                      {external && (
-                        <a href={external} aria-label="External Link" className="external">
-                          <Icon name="External" />
-                        </a>
+                      {tech.length && (
+                        <ul className="project-tech-list w-auto flex flex-wrap">
+                          {tech.map((tech, i) => (
+                            <li key={i} className="whitespace-nowrap w-min p-1 block sm:inline-block mx-3 my-1 text-navy-light">
+                              {tech}
+                            </li>
+                          ))}
+                        </ul>
                       )}
                     </div>
                   </div>
-                </div>
-
-                <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className="img" />
-                  </a>
                 </div>
               </li>
             );
           })}
       </ul>
-    </section>
+    </section >
   );
 };
 

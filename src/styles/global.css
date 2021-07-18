@@ -4,9 +4,25 @@
 
 
 html, body, #root {
-  @apply bg-ghost text-charcoal font-ui;
+  @apply bg-ghost text-charcoal font-ui m-auto;
+}
+
+img {
+  @apply max-w-lg;
+}
+
+svg {
+  @apply w-7 h-7;
+}
+
+p {
+  @apply text-blueGray-500;
 }
 
 .section-title {
   @apply text-2xl font-semibold text-center;
+}
+
+.landing-section {
+  @apply m-auto m-4 bg-white p-4 max-w-5xl mt-3 min-h-1;
 }

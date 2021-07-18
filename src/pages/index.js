@@ -7,7 +7,7 @@ const IndexPage = ({ location }) => (
     <main className="m-4">
       <Welcome />
       <About />
-      <Jobs />
+      {/* <Jobs /> */}
       <Featured />
       <Projects />
       <Contact />

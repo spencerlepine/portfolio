@@ -13,21 +13,21 @@ import {
 const Icon = ({ name, customClass }) => {
   switch (name) {
     case 'Bookmark':
-      return <IconBookmark />;
+      return <IconBookmark customClass={customClass} />;
     case 'External':
-      return <IconExternal />;
+      return <IconExternal customClass={customClass} />;
     case 'Folder':
-      return <IconFolder />;
+      return <IconFolder customClass={customClass} />;
     case 'GitHub':
-      return <IconGitHub />;
+      return <IconGitHub customClass={customClass} />;
     case 'Linkedin':
-      return <IconLinkedin />;
+      return <IconLinkedin customClass={customClass} />;
     case 'Logo':
       return <IconLogo customClass={customClass} />;
     case 'Twitter':
-      return <IconTwitter />;
+      return <IconTwitter customClass={customClass} />;
     default:
-      return <IconExternal />;
+      return <IconExternal customClass={customClass} />;
   }
 };
 
