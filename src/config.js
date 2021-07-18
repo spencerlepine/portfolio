@@ -34,8 +34,4 @@ module.exports = {
       url: '/#contact',
     },
   ],
-
-  colors: {
-    slateWhite: '#f8f8ff',
-  },
 };
