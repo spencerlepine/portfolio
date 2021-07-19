@@ -8,6 +8,7 @@ import {
   IconLinkedin,
   IconLogo,
   IconTwitter,
+  IconHamburger,
 } from '@components/icons';
 
 const Icon = ({ name, customClass }) => {
@@ -26,6 +27,8 @@ const Icon = ({ name, customClass }) => {
       return <IconLogo customClass={customClass} />;
     case 'Twitter':
       return <IconTwitter customClass={customClass} />;
+    case 'Hamburger':
+      return <IconHamburger customClass={customClass} />;
     default:
       return <IconExternal customClass={customClass} />;
   }

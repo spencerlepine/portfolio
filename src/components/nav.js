@@ -25,13 +25,13 @@ const Nav = () => {
       <nav className="relative flex flex-wrap items-center justify-between px-3 py-1 bg-coolGray-600 mb-3">
         {Logo}
 
-        <div className="w-auto container px-4 flex flex-wrap justify-between">
-          <ol className="flex flex-col lg:flex-row list-none ml-auto">
+        <div className="hidden ml-auto md:flex w-auto container px-4 flex-wrap content-end justify-between">
+          <ol className="flex flex-row list-none ml-auto">
             {navLinks &&
               navLinks.map(({ url, name }, i) => (
                 <li key={i}>
                   <Link
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                    className="text-lg px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                     to={url}>
                     {name}
                   </Link>
