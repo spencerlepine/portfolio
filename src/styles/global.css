@@ -26,3 +26,7 @@ p {
 .landing-section {
   @apply m-auto m-4 bg-white p-4 max-w-5xl mt-3 min-h-1;
 }
+
+.project-title {
+  @apply whitespace-nowrap text-navy-medium bg-gray-900 p-1 rounded font-bold
+}

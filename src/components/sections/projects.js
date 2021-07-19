@@ -41,11 +41,11 @@ const Projects = () => {
     const { github, external, title, tech, description } = frontmatter;
 
     return (
-      <div className="bg-gray border-solid border-4 border-gray-600 p-3 w-80 m-3">
+      <div className="relative h-auto bg-indigo-50 border-solid border-4 border-indigo-100 p-3 w-80 m-auto h-full">
         <header>
           <div className="flex p-3">
             <h3 className="project-title text-xl inline-block">
-              <a href={external} className="text-purple-900 my-1">
+              <a href={external} className="project-title">
                 {title}
               </a>
             </h3>
@@ -60,27 +60,27 @@ const Projects = () => {
               </a>
             )}
           </div>
-
-          <div className="project-description p-3">
-            <p className="text-charcoal">
-              {description}
-            </p>
-          </div>
         </header>
 
-        <footer>
+        <div className="project-description p-3">
+          <p className="text-charcoal">
+            {description}
+          </p>
+        </div>
+
+        <div className="relative h-5/6">
           {tech && (
             <ul className="project-tech-list">
               {tech.map((tech, i) => (
                 <li
-                  className="whitespace-nowrap w-min px-2 py-1 block sm:inline-block mx-3 my-1 text-navy-dark m-5 border-solid border-4 border-gray-300"
+                  className="whitespace-nowrap w-min block sm:inline-block text-indigo-400 m-1 bg-gray-50 shadow-md p-1"
                   key={i}>
                   {tech}
                 </li>
               ))}
             </ul>
           )}
-        </footer>
+        </div>
       </div>
     );
   };
@@ -93,11 +93,11 @@ const Projects = () => {
         <p className="whitespace-nowrap w-min m-auto text-navy-medium">view all projects</p>
       </Link>
 
-      <ul className="projects-grid flex flex-row flex-wrap justify-center">
+      <ul className="projects-grid grid auto-rows-fr grid-flow-row md:grid-cols-2 auto-rows-fr w-max m-auto">
         <>
           {projectsToShow &&
             projectsToShow.map(({ node }, i) => (
-              <li key={i}>
+              <li key={i} className="content-center m-2">
                 {projectInner(node)}
               </li>
             ))}
