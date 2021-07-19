@@ -9,12 +9,15 @@ import {
   IconLogo,
   IconTwitter,
   IconHamburger,
+  IconEmail,
 } from '@components/icons';
 
 const Icon = ({ name, customClass }) => {
   switch (name) {
     case 'Bookmark':
       return <IconBookmark customClass={customClass} />;
+    case 'Email':
+      return <IconEmail customClass={customClass} />;
     case 'External':
       return <IconExternal customClass={customClass} />;
     case 'Folder':

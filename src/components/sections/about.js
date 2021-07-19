@@ -42,7 +42,7 @@ const About = () => {
       <ul className="max-w-2xl grid md:flex md:flex-row my-6 m-auto">
         <li className="uppercase m-auto text-navy-medium font-semibold">Skills:</li>
         {skills && skills.map((skill, i) => (
-          <li className="w-50 px-2 mx-2"
+          <li className="w-50 px-2 py-1 mx-2 border-solid border-4 border-purple-100 text-charcoal"
             key={i}>
             {skill}
           </li>

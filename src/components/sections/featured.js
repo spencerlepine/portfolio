@@ -57,7 +57,7 @@ const Featured = () => {
                       </a>
                     </div>
 
-                    <div className="project-details bg-navy-dark md:absolute md:-bottom-2 md:rounded-lg p-2">
+                    <div className="project-details bg-indigo-50 md:absolute md:-bottom-2 md:rounded-lg p-2 border-solid border-4 border-indigo-100">
                       <div className="flex p-3">
                         <h3 className="project-title text-xl inline-block">
                           <a href={external} className="project-title">
@@ -66,18 +66,18 @@ const Featured = () => {
                         </h3>
                         {github && (
                           <a href={github} aria-label="GitHub Link" className="inline-block pl-3">
-                            <Icon name="GitHub" customClass="text-white" />
+                            <Icon name="GitHub" customClass="" />
                           </a>
                         )}
                         {external && (
                           <a href={external} aria-label="External Link" className="external inline-block pl-3">
-                            <Icon name="External" customClass="text-white" />
+                            <Icon name="External" customClass="" />
                           </a>
                         )}
                       </div>
 
                       <div className="project-description p-3">
-                        <p className="text-gray-300">
+                        <p className="text-charcoal">
                           {description}
                         </p>
                       </div>
@@ -85,7 +85,7 @@ const Featured = () => {
                       {tech.length && (
                         <ul className="project-tech-list w-auto flex flex-wrap">
                           {tech.map((tech, i) => (
-                            <li key={i} className="whitespace-nowrap w-min p-1 block sm:inline-block mx-3 my-1 text-navy-light">
+                            <li key={i} className="whitespace-nowrap w-min block sm:inline-block text-indigo-400 m-1 bg-gray-50 shadow-md p-1">
                               {tech}
                             </li>
                           ))}

@@ -7,3 +7,4 @@ export { default as IconLogo } from './logo';
 export { default as IconHamburger } from './hamburger';
 export { default as IconTwitter } from './twitter';
 export { default as IconBookmark } from './bookmark';
+export { default as IconEmail } from './email';

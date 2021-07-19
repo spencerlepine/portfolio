@@ -23,6 +23,13 @@ p {
   @apply text-2xl font-semibold text-center;
 }
 
+.section-title::after {
+  flex: 1;
+  content: "";
+  border-bottom: 1px solid #000;
+}
+
+
 .landing-section {
   @apply m-auto m-4 bg-white p-4 max-w-5xl mt-3 min-h-1;
 }
