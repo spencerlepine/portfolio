@@ -15,6 +15,11 @@ const BlogPage = ({ location, data }) => {
 
       <main>
         <header>
+          <h1 className="big-heading text-4xl">Under Construction</h1>
+          <img src="http://troya.tv/UnderConstruction.png"></img>
+        </header>
+
+        <header>
           <h1 className="big-heading">Blog</h1>
           <p className="subtitle">
             a collection of articles and posts

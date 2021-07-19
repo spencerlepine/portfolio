@@ -17,8 +17,13 @@ const ProjectsPage = ({ location, data }) => {
 
       <main>
         <header ref={revealTitle}>
+          <h1 className="big-heading text-4xl">Under Construction</h1>
+          <img src="http://troya.tv/UnderConstruction.png"></img>
+        </header>
+
+        <header ref={revealTitle}>
           <h1 className="big-heading">Projects</h1>
-          <p className="subtitle">A big list of things I’ve worked on</p>
+          <p className="subtitle">What I’ve worked on</p>
         </header>
 
         <div ref={revealTable}>
