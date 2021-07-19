@@ -5,12 +5,12 @@ module.exports = {
     colors: {
       ...colors,
       navy: {
-        dark: '#053742',
+        dark: '#4b5563',
         medium: '#39A2DB',
         light: '#A2DBFA',
       },
-      lime: {
-        DEFAULT: '#8EEEAA',
+      apple: {
+        DEFAULT: '#ff3e3e',
       },
       charcoal: {
         DEFAULT: '#08090a',

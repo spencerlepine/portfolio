@@ -60,7 +60,7 @@ const Featured = () => {
                     <div className="project-details bg-navy-dark md:absolute md:-bottom-2 md:rounded-lg p-2">
                       <div className="flex p-3">
                         <h3 className="project-title text-xl inline-block">
-                          <a href={external} className="text-navy-medium my-2">
+                          <a href={external} className="text-navy-medium my-1 bg-gray-900 p-1 rounded font-bold">
                             {title}
                           </a>
                         </h3>

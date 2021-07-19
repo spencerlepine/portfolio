@@ -19,8 +19,8 @@ const Projects = () => {
               tech
               github
               external
+              description
             }
-            html
           }
         }
       }
@@ -37,49 +37,46 @@ const Projects = () => {
   const projectsToShow = showMore ? projects : firstSix;
 
   const projectInner = node => {
-    const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { frontmatter } = node;
+    const { github, external, title, tech, description } = frontmatter;
 
     return (
-      <div className="landing-section">
+      <div className="bg-gray border-solid border-4 border-gray-600 p-3 w-80 m-3">
         <header>
-          <div className="project-top">
-            <div className="folder">
-              <Icon name="Folder" />
-            </div>
-            <div className="project-links">
-              {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                  <Icon name="GitHub" />
-                </a>
-              )}
-              {external && (
-                <a
-                  href={external}
-                  aria-label="External Link"
-                  className="external"
-                  target="_blank"
-                  rel="noreferrer">
-                  <Icon name="External" />
-                </a>
-              )}
-            </div>
+          <div className="flex p-3">
+            <h3 className="project-title text-xl inline-block">
+              <a href={external} className="text-purple-900 my-1">
+                {title}
+              </a>
+            </h3>
+            {github && (
+              <a href={github} aria-label="GitHub Link" className="inline-block pl-3">
+                <Icon name="GitHub" customClass="" />
+              </a>
+            )}
+            {external && (
+              <a href={external} aria-label="External Link" className="external inline-block pl-3">
+                <Icon name="External" customClass="" />
+              </a>
+            )}
           </div>
 
-          <h3 className="project-title">
-            <a href={external} target="_blank" rel="noreferrer">
-              {title}
-            </a>
-          </h3>
-
-          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="project-description p-3">
+            <p className="text-charcoal">
+              {description}
+            </p>
+          </div>
         </header>
 
         <footer>
           {tech && (
             <ul className="project-tech-list">
               {tech.map((tech, i) => (
-                <li key={i}>{tech}</li>
+                <li
+                  className="whitespace-nowrap w-min px-2 py-1 block sm:inline-block mx-3 my-1 text-navy-dark m-5 border-solid border-4 border-gray-300"
+                  key={i}>
+                  {tech}
+                </li>
               ))}
             </ul>
           )}
@@ -89,25 +86,27 @@ const Projects = () => {
   };
 
   return (
-    <section>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+    <section className="landing-section">
+      <h2 ref={revealTitle} className="section-title">Other Projects</h2>
 
-      <Link className="inline-link archive-link" to="/projects" ref={revealArchiveLink}>
-        view all projects
+      <Link className="inline-link archive-link m-auto" to="/projects" ref={revealArchiveLink}>
+        <p className="whitespace-nowrap w-min m-auto text-navy-medium">view all projects</p>
       </Link>
 
-      <ul className="projects-grid">
+      <ul className="projects-grid flex flex-row flex-wrap justify-center">
         <>
           {projectsToShow &&
             projectsToShow.map(({ node }, i) => (
-              <li key={i}>{projectInner(node)}</li>
+              <li key={i}>
+                {projectInner(node)}
+              </li>
             ))}
         </>
       </ul>
 
-      <button className="more-button" onClick={() => setShowMore(!showMore)}>
+      {/* <button className="more-button" onClick={() => setShowMore(!showMore)}>
         Show {showMore ? 'Less' : 'More'}
-      </button>
+      </button> */}
     </section>
   );
 };
