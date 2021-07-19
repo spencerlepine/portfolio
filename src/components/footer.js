@@ -4,8 +4,8 @@ import { socialMedia } from '@config';
 
 const Footer = () => (
   <footer>
-    <div>
-      <ul>
+    {/* <div className="w-full">
+      <ul className="w-min whitespace-nowrap inline-block m-auto">
         {socialMedia &&
           socialMedia.map(({ name, url }, i) => (
             <li key={i}>
@@ -15,14 +15,14 @@ const Footer = () => (
             </li>
           ))}
       </ul>
-    </div>
+    </div> */}
 
     <div>
       <a href="https://github.com/spencerlepine/portfolio-site">
-        <div>Created by Spencer Lepine</div>
+        <div className="w-min whitespace-nowrap m-auto pb-4">Created by Spencer Lepine</div>
       </a>
     </div>
-  </footer>
+  </footer >
 );
 
 export default Footer;
