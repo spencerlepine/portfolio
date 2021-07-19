@@ -9,7 +9,6 @@ const IconLinkedIn = () => (
 );
 
 IconLinkedIn.propTypes = {
-  name: PropTypes.string.isRequired,
   customClass: PropTypes.string,
 };
 

@@ -5,9 +5,12 @@ import {
   IconExternal,
   IconFolder,
   IconGitHub,
+  IconGitHubSquare,
   IconLinkedin,
+  IconLinkedinSquare,
   IconLogo,
   IconTwitter,
+  IconTwitterSquare,
   IconHamburger,
   IconEmail,
 } from '@components/icons';
@@ -24,12 +27,18 @@ const Icon = ({ name, customClass }) => {
       return <IconFolder customClass={customClass} />;
     case 'GitHub':
       return <IconGitHub customClass={customClass} />;
+    case 'GitHubSquare':
+      return <IconGitHubSquare customClass={customClass} />;
     case 'Linkedin':
       return <IconLinkedin customClass={customClass} />;
+    case 'LinkedinSqaure':
+      return <IconLinkedinSquare customClass={customClass} />;
     case 'Logo':
       return <IconLogo customClass={customClass} />;
     case 'Twitter':
       return <IconTwitter customClass={customClass} />;
+    case 'TwitterSquare':
+      return <IconTwitterSquare customClass={customClass} />;
     case 'Hamburger':
       return <IconHamburger customClass={customClass} />;
     default:

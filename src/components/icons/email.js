@@ -21,7 +21,6 @@ const IconEmail = ({ customClass }) => (
 );
 
 IconEmail.propTypes = {
-  name: PropTypes.string.isRequired,
   customClass: PropTypes.string,
 };
 

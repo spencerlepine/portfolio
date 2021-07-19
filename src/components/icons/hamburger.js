@@ -9,7 +9,6 @@ const IconHamburger = ({ customClass }) => (
 );
 
 IconHamburger.propTypes = {
-  name: PropTypes.string.isRequired,
   customClass: PropTypes.string,
 };
 

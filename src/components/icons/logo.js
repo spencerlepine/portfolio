@@ -103,7 +103,6 @@ const IconLogo = ({ customClass }) => (
 );
 
 IconLogo.propTypes = {
-  name: PropTypes.string.isRequired,
   customClass: PropTypes.string,
 };
 

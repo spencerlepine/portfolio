@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Head, Nav, Footer } from '@components';
+import { Head, Nav, Footer, Socials } from '@components';
 
 const Layout = ({ children, location }) => (
   <>
@@ -12,6 +12,7 @@ const Layout = ({ children, location }) => (
 
         <div id="content">
           {children}
+          <Socials />
           <Footer />
         </div>
       </div>

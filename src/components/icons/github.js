@@ -14,7 +14,6 @@ const IconGitHub = ({ customClass }) => (
 );
 
 IconGitHub.propTypes = {
-  name: PropTypes.string.isRequired,
   customClass: PropTypes.string,
 };
 

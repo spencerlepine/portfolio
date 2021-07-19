@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import { navLinks } from '@config';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
@@ -46,10 +45,6 @@ const Nav = () => {
       </nav>
     </header>
   );
-};
-
-Nav.propTypes = {
-  isHome: PropTypes.bool,
 };
 
 export default Nav;

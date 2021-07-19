@@ -11,7 +11,6 @@ const IconExternal = ({ customClass }) => (
 );
 
 IconExternal.propTypes = {
-  name: PropTypes.string.isRequired,
   customClass: PropTypes.string,
 };
 
