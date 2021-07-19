@@ -7,8 +7,7 @@ description: 'Organize and budget a personal grocery cart for easy shopping.'
 tech:
   - React
   - Firebase
-  - Jest/Enzyme
-  - Material-UI
+  - Enzyme
   - Spoonacular
   - OpenFoodFacts
 company: ''

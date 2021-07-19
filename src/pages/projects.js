@@ -15,85 +15,62 @@ const ProjectsPage = ({ location, data }) => {
     <Layout location={location}>
       <Helmet title="Projects" />
 
-      <main>
+      <main className="m-auto m-4 bg-white p-4 max-w-5xl mt-3 min-h-1 rounded">
         <header ref={revealTitle}>
-          <h1 className="big-heading text-4xl">Under Construction</h1>
-          <img src="http://troya.tv/UnderConstruction.png"></img>
+          <h1 className="text-4xl m-auto w-max font-semibold">Projects</h1>
+          <p className="text-xl m-auto w-max font-semibold">What I’ve worked on</p>
         </header>
 
-        <header ref={revealTitle}>
-          <h1 className="big-heading">Projects</h1>
-          <p className="subtitle">What I’ve worked on</p>
-        </header>
-
-        <div ref={revealTable}>
+        <div ref={revealTable} className="m-auto w-max p-4">
           <table>
             <thead>
               <tr>
-                <th>Year</th>
-                <th>Title</th>
-                <th className="hide-on-mobile">Made at</th>
-                <th className="hide-on-mobile">Built with</th>
                 <th>Link</th>
+                <th>Title</th>
+                <th className="hidden md:block">Technologies</th>
               </tr>
             </thead>
             <tbody>
               {projects.length > 0 &&
                 projects.map(({ node }, i) => {
                   const {
-                    date,
                     github,
                     external,
-                    ios,
-                    android,
                     title,
                     tech,
-                    company,
                   } = node.frontmatter;
                   return (
-                    <tr key={i} ref={el => (revealProjects.current[i] = el)}>
-                      <td className="overline year">{`${new Date(date).getFullYear()}`}</td>
-
-                      <td className="title">{title}</td>
-
-                      <td className="company hide-on-mobile">
-                        {company ? <span>{company}</span> : <span>—</span>}
-                      </td>
-
-                      <td className="tech hide-on-mobile">
-                        {tech.length > 0 &&
-                          tech.map((item, i) => (
-                            <span key={i}>
-                              {item}
-                              {''}
-                              {i !== tech.length - 1 && <span className="separator">&middot;</span>}
-                            </span>
-                          ))}
-                      </td>
-
+                    <tr key={i} ref={el => (revealProjects.current[i] = el)} className="bg-indigo-50 p-4 border-solid border-4 border-indigo-100">
                       <td className="links">
-                        <div>
-                          {external && (
-                            <a href={external} aria-label="External Link">
-                              <Icon name="External" />
-                            </a>
-                          )}
+                        <div className="inline-block">
                           {github && (
-                            <a href={github} aria-label="GitHub Link">
+                            <a href={github} aria-label="GitHub Link" className="inline-block px-1 ml-auto">
                               <Icon name="GitHub" />
                             </a>
                           )}
-                          {ios && (
-                            <a href={ios} aria-label="Apple App Store Link">
-                              <Icon name="AppStore" />
-                            </a>
-                          )}
-                          {android && (
-                            <a href={android} aria-label="Google Play Store Link">
-                              <Icon name="PlayStore" />
+                          {external && (
+                            <a href={external} aria-label="External Link" className="inline-block px-1">
+                              <Icon name="External" />
                             </a>
                           )}
                         </div>
+                      </td>
+
+                      <td className="m-3">
+                        <p className="project-title w-max mx-2">{title}</p>
+                      </td>
+
+                      <td className="hidden md:block">
+                        {tech.length > 0 &&
+                          tech.map((item, i) => (
+                            <span
+                              className="whitespace-nowrap w-min block sm:inline-block text-indigo-400 m-1 bg-gray-50 shadow-md p-1"
+                              key={i}
+                            >
+                              {item}
+                              {''}
+                            </span>
+                          ))}
                       </td>
                     </tr>
                   );
@@ -102,7 +79,7 @@ const ProjectsPage = ({ location, data }) => {
           </table>
         </div>
       </main>
-    </Layout>
+    </Layout >
   );
 };
 ProjectsPage.propTypes = {
