@@ -6,7 +6,7 @@ const Layout = ({ children, location }) => (
   <>
     <Head />
 
-    <div id="root">
+    <div id="root" className="w-full overflow-x-hidden">
       <div>
         <Nav />
 
