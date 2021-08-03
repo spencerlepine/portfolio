@@ -11,7 +11,7 @@ const Welcome = () => (
         <span className="font-bold text-navy-medium">Spencer Lepine</span>
         <span className="opacity-0">,</span>
         <br />a{' '}
-        <span className="text-purple-900">Software Engineer</span>
+        <span className="text-purple-900 relative in-training mb-16">Software Engineer</span>
         <span className="opacity-0">.</span>
       </h3>
     </span>

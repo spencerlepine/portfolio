@@ -37,3 +37,19 @@ p {
 .project-title {
   @apply whitespace-nowrap text-navy-medium bg-gray-900 p-1 rounded font-bold
 }
+
+/* Temporary In-training indicator */
+.in-training::before {
+  @apply px-1 absolute;
+  content: "In Training";
+  font-size: 0.5em;
+  right: -15%;
+  bottom: -65%;
+  transform: rotate(-10deg);
+  color: #fff4ea;
+  font-weight: 600;
+  background: #a351e0ab;
+  border-radius: 8px;
+  border: 2px solid #cecece;
+  text-shadow: 2px 2px #8d1ec5;
+}
