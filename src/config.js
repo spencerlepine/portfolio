@@ -1,5 +1,5 @@
 module.exports = {
-  email: 'spencerlepine@gmail.com',
+  email: 'hello@spencerlepine.com',
 
   socialMedia: [
     {
@@ -36,6 +36,11 @@ module.exports = {
       url: '/#contact',
       emoji: '📮',
     },
+    // {
+    //   name: 'Blog',
+    //   url: '/blog',
+    //   emoji: '📝',
+    // },
   ],
 
   colors: {
