@@ -36,11 +36,11 @@ module.exports = {
       url: '/#contact',
       emoji: '📮',
     },
-    // {
-    //   name: 'Blog',
-    //   url: '/blog',
-    //   emoji: '📝',
-    // },
+    {
+      name: 'Blog',
+      url: '/blog',
+      emoji: '📝',
+    },
   ],
 
   colors: {
