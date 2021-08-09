@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html, body, #root {
   @apply bg-ghost text-charcoal font-ui m-auto;
 }
@@ -35,10 +34,9 @@ p {
 }
 
 .project-title {
-  @apply whitespace-nowrap text-navy-medium bg-gray-900 p-1 rounded font-bold
+  @apply whitespace-nowrap text-blue-100 bg-gray-900 p-1 rounded font-bold
 }
 
-/* Temporary In-training indicator */
 .in-training::before {
   @apply px-1 absolute;
   content: "In Training";
@@ -53,3 +51,119 @@ p {
   border: 2px solid #cecece;
   text-shadow: 2px 2px #8d1ec5;
 }
+
+.blog-post p img {
+  @apply m-auto w-full h-auto rounded p-1
+}
+
+.blog-post p {
+  @apply mt-3 mb-3
+}
+
+.blog-post h1 {
+  @apply mt-6 mb-3 text-xl font-bold
+}
+
+.blog-post p a {
+  @apply whitespace-nowrap w-min block sm:inline-block text-blue-400 bg-gray-50 shadow-md p-2
+}
+
+.blog-post a:hover {
+  @apply underline;
+}
+
+.blog-post {
+  @apply leading-relaxed text-sm;
+}
+
+@screen sm {
+  .blog-post {
+    @apply text-base;
+  }
+}
+
+@screen lg {
+  .blog-post {
+    @apply text-lg;
+  }
+}
+
+/* Headers */
+.blog-post h1,
+.blog-post h2 {
+  @apply text-xl my-6 font-semibold;
+}
+.blog-post h3,
+.blog-post h4,
+.blog-post h5,
+.blog-post h6 {
+  @apply text-lg my-3 font-semibold;
+}
+
+@screen sm {
+  .blog-post h1,
+  .blog-post h2 {
+    @apply text-2xl;
+  }
+  .blog-post h3,
+  .blog-post h4,
+  .blog-post h5,
+  .blog-post h6 {
+    @apply text-xl;
+  }
+}
+
+/* Links */
+.blog-post a {
+  @apply text-blue-600;
+}
+.blog-post a:hover {
+  @apply underline;
+}
+/* Paragraph */
+.blog-post p {
+  @apply mb-4;
+}
+/* Lists */
+.blog-post ul,
+.blog-post ol {
+  @apply mb-4 ml-8;
+}
+.blog-post li > p,
+.blog-post li > ul,
+.blog-post li > ol {
+  @apply mb-0;
+}
+.blog-post ol {
+  @apply list-decimal;
+}
+.blog-post ul {
+  @apply list-disc;
+}
+/* Blockquotes */
+.blog-post blockquote {
+  @apply p-2 mx-6 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
+}
+.blog-post blockquote > p {
+  @apply mb-0;
+}
+/* Tables */
+.blog-post td,
+.blog-post th {
+  @apply px-2 py-1 border border-gray-400;
+}
+.blog-post tr:nth-child(odd) {
+  @apply bg-gray-100;
+}
+.blog-post table {
+  @apply mb-6;
+}
+
+/* Wrap any inline highlights `that are really long`, but don't modify
+   the setting for codeblocks (inside ```), which are rendered in as:
+   <pre><code>...
+*/
+.blog-post :not(pre) > code.language-text {
+  white-space: pre-line;
+}
+/* purgecss end ignore */

@@ -39,10 +39,10 @@ const About = () => {
         </div>
       </div>
 
-      <ul className="max-w-2xl grid md:flex md:flex-row my-6 m-auto">
-        <li className="uppercase m-auto text-navy-medium font-semibold">Skills:</li>
+      <p className="uppercase m-auto w-fit-content text-navy-medium font-semibold">Skills:</p>
+      <ul className="max-w-2xl w-fit-content flex my-6 m-auto flex-wrap">
         {skills && skills.map((skill, i) => (
-          <li className="w-50 px-2 py-1 mx-2 border-solid border-4 border-purple-100 text-charcoal"
+          <li className="w-fit-content px-2 py-1 mx-2 border-solid border-4 border-purple-100 text-charcoal inline"
             key={i}>
             {skill}
           </li>

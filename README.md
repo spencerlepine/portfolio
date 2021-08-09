@@ -1,3 +1,4 @@
+https://github.com/KyleAMathews/typography.js
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="./src/images/logo.svg" width="60" />

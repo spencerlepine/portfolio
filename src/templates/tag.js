@@ -16,13 +16,13 @@ const TagTemplate = ({ pageContext, data, location }) => {
       <main>
         <span className="breadcrumb">
           <span className="arrow">&larr;</span>
-          <Link to="/pensieve">All memories</Link>
+          <Link to="/blog">All posts</Link>
         </span>
 
         <h1>
           <span>#{tag}</span>
           <span>
-            <Link to="/pensieve/tags">View all tags</Link>
+            <Link to="/blog/tags">View all tags</Link>
           </span>
         </h1>
 

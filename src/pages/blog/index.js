@@ -10,20 +10,12 @@ const BlogPage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} >
       <Helmet title="Blog" />
 
       <main>
-        <header>
-          <h1 className="big-heading text-4xl">Under Construction</h1>
-          <img src="http://troya.tv/UnderConstruction.png"></img>
-        </header>
-
-        <header>
-          <h1 className="big-heading">Blog</h1>
-          <p className="subtitle">
-            a collection of articles and posts
-          </p>
+        <header className="">
+          <h1 className="text-xl m-auto w-fit-content p-4">sharing my knowledge of full-stack development and crypto</h1>
         </header>
 
         <ul>
@@ -32,32 +24,20 @@ const BlogPage = ({ location, data }) => {
               const { frontmatter } = node;
               const { title, description, slug, date, tags } = frontmatter;
               const formattedDate = new Date(date).toLocaleDateString();
+              // <span className="post__date">{formattedDate}</span>
 
               return (
-                <article key={i}>
-                  <div className="post__inner">
-                    <header>
-                      <div className="post__icon">
-                        <IconBookmark />
-                      </div>
-                      <h5 className="post__title">
-                        <Link to={slug}>{title}</Link>
+                <article key={i} className="bg-white rounded p-3 max-w-md m-auto">
+                  <div className="inner">
+                    <Link to={slug} className="font-bold">
+                      {/* <div className="inline float-left p-2 h-full">
+                        <IconBookmark customClass="inline" />
+                      </div> */}
+                      <h5 className="title text-xl">
+                        {title}
                       </h5>
-                      <p className="post__desc">{description}</p>
-                    </header>
-
-                    <footer>
-                      <span className="post__date">{formattedDate}</span>
-                      <ul className="post__tags">
-                        {tags.map((tag, i) => (
-                          <li key={i}>
-                            <Link to={`/blog/tags/${kebabCase(tag)}/`} className="inline-link">
-                              #{tag}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </footer>
+                      <p className="desc font-light">{description}</p>
+                    </Link>
                   </div>
                 </article>
               );

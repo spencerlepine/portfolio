@@ -25,7 +25,11 @@ module.exports = {
     minHeight: {
       '1': '100px',
     },
-    extend: {},
+    extend: {
+      width: {
+        'fit-content': 'fit-content',
+      },
+    },
   },
   plugins: [],
 };
