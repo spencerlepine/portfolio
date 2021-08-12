@@ -1,6 +1,7 @@
 import React from 'react';
 import { Emoji } from '@components';
-
+import { socialMedia } from '@config';
+import { Icon } from '@components/icons';
 
 const Welcome = () => (
   <section className="landing-section">
@@ -27,7 +28,15 @@ const Welcome = () => (
       </a>
       .
     </p>
-  </section>
+
+    <div className="m-auto flex items-center w-fit-content p-2 md:p-4 text-blue-300">
+      {socialMedia.map((social, i) => (
+        <a href={social.url} className="" key={i}>
+          <Icon name={social.name} customClass="inline m-1 mx-3"></Icon>
+        </a>
+      ))}
+    </div>
+  </section >
 );
 
 export default Welcome;

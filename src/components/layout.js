@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Head, Nav, Footer, Socials } from '@components';
+import { Head, Nav, Footer } from '@components';
 
 const Layout = ({ children, location }) => (
   <>
@@ -14,8 +14,7 @@ const Layout = ({ children, location }) => (
           {children}
         </div>
 
-        <Socials />
-        {location !== '/' && <Footer />}
+        <Footer />
       </div>
     </div>
   </>

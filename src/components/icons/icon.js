@@ -8,10 +8,12 @@ import {
   IconGitHubSquare,
   IconLinkedin,
   IconLinkedinSquare,
+  IconMedium,
   IconLogo,
   IconTwitter,
   IconTwitterSquare,
   IconHamburger,
+  IconYoutube,
   IconEmail,
 } from '@components/icons';
 
@@ -35,12 +37,16 @@ const Icon = ({ name, customClass }) => {
       return <IconLinkedinSquare customClass={customClass} />;
     case 'Logo':
       return <IconLogo customClass={customClass} />;
+    case 'Medium':
+      return <IconMedium customClass={customClass} />;
     case 'Twitter':
       return <IconTwitter customClass={customClass} />;
     case 'TwitterSquare':
       return <IconTwitterSquare customClass={customClass} />;
     case 'Hamburger':
       return <IconHamburger customClass={customClass} />;
+    case 'Youtube':
+      return <IconYoutube customClass={customClass} />;
     default:
       return <IconExternal customClass={customClass} />;
   }

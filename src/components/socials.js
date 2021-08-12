@@ -8,7 +8,7 @@ const Socials = () => (
       socialMedia.map(({ url, name }, i) => (
         <div key={i} className="w-auto relative -top-1/4 inline-block lg:block" tabIndex="-1">
           <a href={url} className="m-3 text-sm font-bold leading-relaxed inline-block whitespace-nowrap uppercase text-white w-auto">
-            <Icon name={`${name}Square`} customClass="w-16 h-16 text-navy-medium md:inline-block" />
+            <Icon name={name} customClass="w-16 h-16 text-navy-medium md:inline-block" />
           </a>
         </div>
       ))}
