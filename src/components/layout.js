@@ -7,14 +7,15 @@ const Layout = ({ children, location }) => (
     <Head />
 
     <div id="root" className="w-full overflow-x-hidden">
-      <div>
+      <div className="flex flex-col h-screen">
         <Nav />
 
-        <div id="content">
+        <div id="content" className="flex-grow">
           {children}
-          <Socials />
-          <Footer />
         </div>
+
+        <Socials />
+        {location !== '/' && <Footer />}
       </div>
     </div>
   </>

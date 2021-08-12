@@ -5,8 +5,8 @@ module.exports = {
     title: 'Spencer Lepine',
     description:
       'Software Engineer and technologist working to build the future today.',
-    siteUrl: 'https://spencerlepine.com', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    siteUrl: 'https://spencerlepine.com',
+    image: '/og.png',
     twitterUsername: '@spencerlepine',
   },
   plugins: [

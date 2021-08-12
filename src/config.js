@@ -14,6 +14,14 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/spencer-lepine',
     },
+    {
+      name: 'Medium',
+      url: 'https://medium.com/@spencerlepine',
+    },
+    {
+      name: 'Youtube',
+      url: 'https://www.linkedin.com/in/spencer-lepine',
+    },
   ],
 
   navLinks: [
@@ -46,4 +54,6 @@ module.exports = {
   colors: {
     slateWhite: '#f8f8ff',
   },
+
+  sourceRepository: 'https://github.com/spencerlepine/portfolio-site',
 };

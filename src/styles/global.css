@@ -52,6 +52,7 @@ p {
   text-shadow: 2px 2px #8d1ec5;
 }
 
+/* ***** BLOG STYLES ***** */
 .blog-post p img {
   @apply m-auto w-full h-auto rounded p-1
 }
@@ -166,4 +167,4 @@ p {
 .blog-post :not(pre) > code.language-text {
   white-space: pre-line;
 }
-/* purgecss end ignore */
+/* ***** END BLOG STYLES ***** */
