@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Welcome, About, Jobs, Featured, Projects, Contact } from '@components';
+import { Layout, Welcome, About, Featured, Projects, Contact } from '@components'; // Jobs,
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>

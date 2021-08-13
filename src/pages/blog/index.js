@@ -1,10 +1,9 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
-import { IconBookmark } from '@components/icons';
+// import { IconBookmark } from '@components/icons';
 
 const BlogPage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -22,14 +21,13 @@ const BlogPage = ({ location, data }) => {
           {posts.length > 0 &&
             posts.map(({ node }, i) => {
               const { frontmatter } = node;
-              const { title, description, slug, date, tags } = frontmatter;
-              const formattedDate = new Date(date).toLocaleDateString();
-              // <span className="post__date">{formattedDate}</span>
+              const { title, description, slug } = frontmatter;
 
               return (
                 <article key={i} className="bg-white rounded p-3 max-w-md m-auto">
                   <div className="inner">
                     <Link to={slug} className="font-bold">
+
                       {/* <div className="inline float-left p-2 h-full">
                         <IconBookmark customClass="inline" />
                       </div> */}
@@ -68,7 +66,6 @@ export const pageQuery = graphql`
             description
             slug
             date
-            tags
             draft
           }
           html

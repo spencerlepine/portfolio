@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Head, Nav, Footer } from '@components';
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children }) => (
   <>
     <Head />
 
@@ -22,7 +22,7 @@ const Layout = ({ children, location }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.object.isRequired,
+  location: PropTypes.object,
 };
 
 export default Layout;

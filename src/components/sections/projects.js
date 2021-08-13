@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Icon } from '@components/icons';
 
@@ -27,14 +27,14 @@ const Projects = () => {
     }
   `);
 
-  const [showMore, setShowMore] = useState(false);
+  // const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
 
-  const GRID_LIMIT = 6;
+  // const GRID_LIMIT = 6;
   const projects = data.projects.edges.filter(({ node }) => node);
-  const firstSix = projects.slice(0, GRID_LIMIT);
-  const projectsToShow = showMore ? projects : firstSix;
+  // const firstSix = projects.slice(0, GRID_LIMIT);
+  const projectsToShow = projects; // showMore ? projects : firstSix;
 
   const projectInner = node => {
     const { frontmatter } = node;
