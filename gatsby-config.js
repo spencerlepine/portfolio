@@ -26,7 +26,7 @@ module.exports = {
         SymLinksIfOwnerMatch: true,
         host: 'www.spencerlepine.com', // if 'www' is set to 'false', be sure to also remove it here!
         ErrorDocument: `
-          ErrorDocument 404 /pages/404.html
+          ErrorDocument 404 /404.html
         `,
       },
     },

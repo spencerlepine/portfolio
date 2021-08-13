@@ -47,7 +47,7 @@
 
 
     
-          ErrorDocument 404 /pages/404.html
+          ErrorDocument 404 /404.html
         
         
 
