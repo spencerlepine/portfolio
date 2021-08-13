@@ -14,18 +14,21 @@ const TagsPage = ({
   <Layout location={location}>
     <Helmet title="Tags" />
 
-    <main>
-      <span className="breadcrumb">
+    <main className="min-w-min m-auto overflow-hidden pr-2 md:pr-4 max-w-2xl">
+      <span className="w-fit-content text-lg">
         <span className="arrow">&larr;</span>
         <Link to="/blog">All posts</Link>
       </span>
 
-      <h1>Tags</h1>
-      <ul className="fancy-list">
+      <h1 className="m-auto w-fit-content text-xl text-navy-medium">Tags</h1>
+      <ul className="m-3 flex justify-around bg-white flex-wrap p-3">
         {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/blog/tags/${kebabCase(tag.fieldValue)}/`} className="inline-link">
-              {tag.fieldValue} <span className="count">({tag.totalCount})</span>
+          <li key={tag.fieldValue} className="m-2 bg-blueGray-100 p-2">
+            <Link to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue}{' '}
+              <span className="count text-blueGray-400">
+                ({tag.totalCount})
+              </span>
             </Link>
           </li>
         ))}

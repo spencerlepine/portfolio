@@ -13,26 +13,27 @@ const TagTemplate = ({ pageContext, data, location }) => {
     <Layout location={location}>
       <Helmet title={`Tagged: #${tag}`} />
 
-      <main>
-        <span className="breadcrumb">
+      <main className="min-w-min m-auto overflow-hidden pr-2 md:pr-4 max-w-2xl">
+        <span className="w-fit-content text-lg">
           <span className="arrow">&larr;</span>
           <Link to="/blog">All posts</Link>
         </span>
 
-        <h1>
-          <span>#{tag}</span>
-          <span>
+        <h1 className="m-auto w-fit-content text-xl text-navy-medium">
+          <span className="p-3">#{tag}</span>
+          <span>-</span>
+          <span className="p-3 text-navy-dark underline">
             <Link to="/blog/tags">View all tags</Link>
           </span>
         </h1>
 
-        <ul className="fancy-list">
+        <ul className="m-3">
           {edges.map(({ node }) => {
             const { title, slug, date, tags } = node.frontmatter;
             return (
-              <li key={slug}>
-                <h2>
-                  <Link to={slug}>{title}</Link>
+              <li key={slug} className="bg-white p-3">
+                <h2 className="text-lg">
+                  <Link to={slug} className="font-bold">{title}</Link>
                 </h2>
                 <p className="subtitle">
                   <time>
@@ -46,7 +47,7 @@ const TagTemplate = ({ pageContext, data, location }) => {
                   {tags &&
                     tags.length > 0 &&
                     tags.map((tag, i) => (
-                      <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="tag">
+                      <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="text-blueGray-600 m-1 bg-blueGray-200">
                         #{tag}
                       </Link>
                     ))}
