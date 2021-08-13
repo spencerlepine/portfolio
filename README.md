@@ -1,21 +1,10 @@
-https://github.com/KyleAMathews/typography.js
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="./src/images/logo.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Spencer Lepine Dev Site
+  <a href="https://www.spencerlepine.com">
+    spencerlepine.com
+  </a>
 </h1>
 
 Portfolio and blog website ([Visit Here](https://www.spencerlepine.com)) created by Spencer Lepine. Built using static pages created with GatsbyJS.
-
-<p align="center">
-	<a href="#technologies">Technologies</a> •
-  <a href="#setup">Setup</a>
-</p>
-
-<hr>
 
 ## 📦 Technologies:
 - [GatsbyJS](https://www.gatsbyjs.com/)
