@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
       <div className="flex flex-col h-screen">
         <Nav />
 
-        <div id="content" className="flex-grow">
+        <div id="content" className="flex-grow p-3">
           {children}
         </div>
 

@@ -12,8 +12,6 @@ tags:
 
 <!-- MARKDOWN CONTENT -->
 
-# Software Engineer Workflow
-
 This is a collection of resources and my general workflow for Software Engineering. Note: workstation is running MacOS.
 
 ### **Dependencies/Libraries:**
@@ -64,15 +62,14 @@ This is a collection of resources and my general workflow for Software Engineeri
 * [Notion](https://www.notion.so/)
 
 
-
 ### **IDE:**
 
 [VSCode](https://code.visualstudio.com/download):
 * MacOS Quick Action: Open Folder from finder -> [Configure Quick Action](https://stackoverflow.com/questions/64040393/open-a-folder-in-vscode-through-finder-in-macos)
 * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) Extension - Integrates ESLint JavaScript into VS Code.
 * [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer) Extension - A customizable extension for colorizing matching brackets
-* [Open In Default Browser](https://marketplace.visualstudio.com/items?itemName=peakchen90.open-html-in-browser) Extension: A VSCode extension to fast open html file in browser
-*  [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) Extension: Modern CSS/SCSS/Less linter
+* [Open In Default Browser](https://marketplace.visualstudio.com/items?itemName=peakchen90.open-html-in-browser) Extension -  A VSCode extension to fast open html file in browser
+*  [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) Extension - Modern CSS/SCSS/Less linter
 * settings.json:
 
     ```json
@@ -113,13 +110,9 @@ This is a collection of resources and my general workflow for Software Engineeri
         }
     ```
 
-
-
 ## **Interested in working together?**
 
 Let’s connect! Find me on any of my socials linked below:
-
-
 
 * [Twitter (@spencerlepine)](https://twitter.com/SpencerLepine)
 * [GitHub (@spencerlepine)](https://github.com/spencerlepine)

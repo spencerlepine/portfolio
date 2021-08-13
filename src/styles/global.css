@@ -65,7 +65,7 @@ p {
   @apply mt-6 mb-3 text-xl font-bold
 }
 
-.blog-post p a {
+.blog-post p a, .blog-post a {
   @apply whitespace-nowrap w-min block sm:inline-block text-blue-400 bg-gray-50 shadow-md p-2
 }
 
@@ -139,7 +139,8 @@ p {
   @apply list-decimal;
 }
 .blog-post ul {
-  @apply list-disc;
+  list-style-type: square;
+  /* @apply list-disc; */
 }
 /* Blockquotes */
 .blog-post blockquote {
