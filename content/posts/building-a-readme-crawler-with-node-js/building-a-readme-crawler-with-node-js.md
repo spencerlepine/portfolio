@@ -169,10 +169,6 @@ Overall, this was a great learning experience and problem solving exercise.
 
 View the source code on [GitHub](https://github.com/spencerlepine/readme-crawler).
 
-If you’re interested in my work, read more here on my [blog](https://spencerlepine.com/blog).
-
-Want to get in touch, I’d love to talk! Send me an [email](mailto:hello@spencerlepine.com).
-
 Also find me here:
 * [Twitter (@spencerlepine)](https://twitter.com/SpencerLepine)
 * [GitHub (@spencerlepine)](https://github.com/spencerlepine)
