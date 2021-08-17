@@ -37,9 +37,9 @@ Let’s create a custom script to combine the git commands.
   ((!$#)) && echo missing git URL argument! && exit 1
 
   git clone $1
-  basename=$(basename $url)
+  basename=$(basename $1)
   reponame=${basename%.*}
-  Cd $reponame
+  cd $reponame
   npm install
   code .
 ```

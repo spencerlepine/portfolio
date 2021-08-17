@@ -25,9 +25,9 @@
   ((!$#)) &amp;&amp; echo missing git URL argument! &amp;&amp; exit 1
 
   git clone $1
-  basename=$(basename $url)
+  basename=$(basename $1)
   reponame=${basename%.*}
-  Cd $reponame
+  cd $reponame
   npm install
   code .</code></pre></div>
 <p>Use this script or create your own, and follow these steps to set up the custom command:</p>
