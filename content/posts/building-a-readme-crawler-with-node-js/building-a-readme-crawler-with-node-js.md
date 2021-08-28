@@ -123,7 +123,7 @@ yaspeller -e ".md" ./ --find-repeat-words --ignore-digits --ignore-urls --only-e
 
 And that's it! I now have a way to look through hundreds of repositories. I can spell check tons of README files and help people remove possibly embarrassing typos. There are many ways to expand on this. You could analyze the languages used, the diction, create a Graph, or even run the data through machine learning algorithms.
 
-```
+```js
 run() {
     const repositoriesFolder = this.outputFolderPath + "repositories/";
     const linkQueueFile = "linkQueue.txt";

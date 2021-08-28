@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "babel-plugin-prismjs": "^2.1.0",
     "gatsby": "^3.10.2",
     "gatsby-plugin-google-gtag": "^3.10.0",
     "gatsby-plugin-htaccess": "^1.4.0",

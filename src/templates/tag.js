@@ -47,7 +47,7 @@ const TagTemplate = ({ pageContext, data, location }) => {
                   {tags &&
                     tags.length > 0 &&
                     tags.map((tag, i) => (
-                      <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="text-blueGray-600 m-1 bg-blueGray-200">
+                      <Link key={i} to={`/blog/tags/${kebabCase(tag)}/`} className="text-blueGray-600 m-1 bg-blueGray-200">
                         #{tag}
                       </Link>
                     ))}
