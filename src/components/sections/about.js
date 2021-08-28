@@ -33,7 +33,7 @@ const About = () => {
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
+              alt="Spencer Lepine Headshot Profile"
             />
           </div>
         </div>

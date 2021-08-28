@@ -61,7 +61,7 @@ Use this script or create your own, and follow these steps to set up the custom 
 Viola! This script will accept one command line argument of the destination repo URL. It will automatically open the new project in VSCode in one command.
 
 Also find me here:
- - [Twitter](@spencerlepine)
- - [GitHub](@spencerlepine)
+ - [Twitter](https://twitter.com/SpencerLepine)
+ - [GitHub](https://github.com/spencerlepine)
  - [LinkedIn](https://www.linkedin.com/in/spencer-lepine/)
  - [Youtube](https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q)

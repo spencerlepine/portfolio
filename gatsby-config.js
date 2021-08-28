@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Spencer Lepine',
     description:
-      'Software Engineer and technologist working to build the future today.',
+      'Spencer Lepine is a Full Stack Software Engineer and technologist working to build the future today.',
     siteUrl: 'https://spencerlepine.com',
     image: '/og.png',
     twitterUsername: '@spencerlepine',
