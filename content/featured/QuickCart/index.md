@@ -1,16 +1,15 @@
 ---
-date: '2021-06-17'
+date: '2021-09-19'
 title: 'Quickcart'
 cover: './demo.png'
 github: 'https://github.com/spencerlepine/quickcart'
 external: 'https://grocery-client-sl.herokuapp.com/'
-description: 'Organize and budget a personal grocery cart for easy shopping. Browse Grocery products and compare nutrional data. Get recommendations and view a history of cart purchases.'
+description: 'Frontend MVP client for browsing grocery products and creating a shopping list. Compare nutrional data and prices. View cart suggestions and stay under budget.'
 tech:
   - React
   - Firebase
   - Jest/Enzyme
-  - Material-UI
   - Spoonacular
-  - OpenFoodFacts
+  - Testing Library
 showInProjects: true
 ---
