@@ -1,0 +1,6 @@
+ssh spencer@143.198.123.87
+*enter passphrase*
+
+cd ../../var/www/spencerlepine.com
+sudo ./syncBuild.sh portfolio-site <GITHUB_REPO_NAME>
+*enter user password*
