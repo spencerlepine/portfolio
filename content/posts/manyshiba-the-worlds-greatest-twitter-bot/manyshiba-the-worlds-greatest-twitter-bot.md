@@ -15,7 +15,7 @@ ManyShiba is the greatest Twitter bot ever created. Bless your soul with a daily
 
 For so long, I felt that something was missing in my life. After being blessed by the presence of a divine Shiba Inu dog, I had my answer. I could cleanse my soul each day by reminding myself of this divine being. But that couldn’t be it, there had to be some way I could bless EVERYONE.
 
-Behold - your new favorite Twitter bot - @ManyShiba. (source code: [GitHub](https://github.com/spencerlepine/manyshiba-bot))
+Behold - your new favorite Twitter bot - [@ManyShiba](https://twitter.com/manyshiba). (source code: [GitHub](https://github.com/spencerlepine/manyshiba-bot))
 
 ### So what exactly is the ManyShiba Bot?
 
