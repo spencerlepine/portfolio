@@ -21,7 +21,7 @@ const PostTemplate = ({ data, location }) => {
 
         <header>
           <h1 className="medium-heading text-blue-900 font-serif text-2xl my-5 font-bold">{title}</h1>
-          <p className="subtitle text-blueGray-200">
+          <p className="subtitle text-blueGray-300">
             <time>
               {new Date(date).toLocaleDateString('en-US', {
                 year: 'numeric',
