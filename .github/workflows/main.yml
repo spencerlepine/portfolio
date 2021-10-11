@@ -20,9 +20,10 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+#         password: ${{ secrets.PASSWORD }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ secrets.PORT }}
+        script_stop: true # stop the action if something throws an error
         script: |
           whoami
           cd ../../var/www/spencerlepine.com
