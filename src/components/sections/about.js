@@ -13,7 +13,7 @@ const About = () => {
       <div className="m-auto max-w-4xl grid flex-column mt-4 sm:grid md:grid lg:flex">
         <div className="w-auto relative max-w-xl p-1 mt-2 text-lg leading-relaxed text-blueGray-500 flex-1 m-auto">
           <p className="p-1 w-auto m-auto">
-            My name is Spencer and building things for the web is my passion.
+            Building things for the web is my passion.
             In my late teens, I became curious about how sites and products were created.
             This inspired me to learn about the basics of Web Development in my free time.
           </p>

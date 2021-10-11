@@ -1,0 +1,96 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  # delete this line below after test works
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        passphrase: ${{ secrets.PASSPHRASE }}
+        port: ${{ secrets.PORT }}
+        script_stop: true
+        script: |
+          cd ../../var/www/spencerlepine.com
+          RED='\033[0;31m'
+          GREEN='\033[0;32m'
+          NC='\033[0m' # No Color
+          echo -e "$GREEN starting script $NC"
+          echo "Cloning the GitHub Repo"
+          GITHUB_LINK="https://github.com/spencerlepine/portfolio-site.git"
+          git clone "$GITHUB_LINK"
+          echo -e "$GREEN successfully cloned repo$NC \n"
+          echo "Root directory contains these files now:"
+          ls -l
+          echo "Removing the current public folder"
+          mkdir -p public
+          rm -r -d public
+          echo "Moving into the github repo folder"
+          cd portfolio-site
+          echo "Moving public folder contents OUT of repo folder"
+          mv public ..
+          echo -e "$GREEN Successfully copy news files $NC \n"
+          echo "Moving back into parent directory"
+          cd ..
+          echo "Deleting leftover github repo files"
+          rm -d -r  "portfolio-site"
+          echo "Restarting apache server"
+          systemctl restart apache2
+          echo -e "$GREEN Public folder sync complete! $NC"
+          echo "                                                     "
+          echo "                                                     "
+          echo "             0xlllx0000000000000000000000000         "
+          echo "           .000xllllllllll0000000000000000           "
+          echo "          00000xxxlllllllllllllll00000000            "
+          echo "          000000xxxx                                 "
+          echo "           &00000xxxx           x                    "
+          echo "             0000xxxxx         xxx                   "
+          echo "              0000xxxxx#     xxxxx&l                 "
+          echo "               0000xxxxxx  .xxxxxxx00                "
+          echo "                &00xxxxxxx  xxxxxxxx00               "
+          echo "                  00xxxxxxx  .xxxxxx000              "
+          echo "                   00xxxxxxx   xxxxxx000l            "
+          echo "                    0xxxxxx     xxxxxx0000           "
+          echo "                     &xxx        xxxxx00000          "
+          echo "                      .x          .xxxx00000         "
+          echo "                                    xxxx00000/       "
+          echo "               0000000lllllllllllllll#xx000000       "
+          echo "             .000000000000000llllllllllxx000         "
+          echo "            0000000000000000000000000llllx0          "
+          echo
+          echo
+          echo "spencerlepine.com"
+          echo
+          echo
+          
+  broken_link_checker_job:
+    runs-on: ubuntu-latest
+    name: Check for broken links
+    steps:
+    - name: Check for broken links
+      id: link-report
+      uses: celinekurpershoek/link-checker@v1.0.1
+      with:
+        # Required:
+        url: 'https://...'
+        # optional:
+        honorRobotExclusions: false
+        ignorePatterns: 'github,google'
+        recursiveLinks: false # Check all URLs on all reachable pages (could take a while)
+    - name: Get the result
+      run: echo "${{steps.link-report.outputs.result}}"
+          
