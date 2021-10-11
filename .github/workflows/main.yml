@@ -26,7 +26,42 @@ jobs:
         script_stop: true
         script: |
           cd ../../var/www/spencerlepine.com
-          sh ./syncBuild.sh portfolio-site 
+          sh ./syncBuild.sh portfolio-site
+          RED='\033[0;31m'
+          GREEN='\033[0;32m'
+          NC='\033[0m' # No Color
+          echo -e "$GREEN starting script $NC"
+          if [ "$#" -ne 1 ]; then
+            echo -e "$RED Illegal number of parameters$NC"
+            echo "Usage '$0 repo_name'"
+            echo
+            exit 2
+          fi
+          echo "Cloning the GitHub Repo"
+          GITHUB_LINK="https://github.com/spencerlepine/$1.git"
+          git clone "$GITHUB_LINK"
+          echo -e "$GREEN successfully cloned repo$NC \n"
+          echo "Root directory contains these files now:"
+          ls -l
+          echo "Removing the current public folder"
+          rm -r -d public
+          echo "Moving into the github repo folder"
+          cd $1
+          echo "Moving public folder contents OUT of repo folder"
+          mv public ..
+          echo -e "$GREEN Successfully copy news files $NC \n"
+          echo "Moving back into parent directory"
+          cd ..
+          echo "Deleting leftover github repo files"
+          rm -d -r  "$1"
+          echo "Restarting apache server"
+          systemctl restart apache2
+          echo -e "$GREEN Public folder sync complete! $NC"
+          echo
+          echo
+          echo "spencerlepine.com"
+          echo
+          echo
           
   broken_link_checker_job:
     runs-on: ubuntu-latest
