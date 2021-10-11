@@ -40,14 +40,14 @@ jobs:
           mkdir -p public
           rm -r -d public
           echo "Moving into the github repo folder"
-          cd $1
+          cd portfolio-site
           echo "Moving public folder contents OUT of repo folder"
           mv public ..
           echo -e "$GREEN Successfully copy news files $NC \n"
           echo "Moving back into parent directory"
           cd ..
           echo "Deleting leftover github repo files"
-          rm -d -r  "$1"
+          rm -d -r  "portfolio-site"
           echo "Restarting apache server"
           systemctl restart apache2
           echo -e "$GREEN Public folder sync complete! $NC"
