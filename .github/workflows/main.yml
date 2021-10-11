@@ -37,6 +37,7 @@ jobs:
           echo "Root directory contains these files now:"
           ls -l
           echo "Removing the current public folder"
+          mkdir -p public
           rm -r -d public
           echo "Moving into the github repo folder"
           cd $1
