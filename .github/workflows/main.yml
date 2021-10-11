@@ -1,12 +1,7 @@
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
-  # delete this line below after test works
-  pull_request:
     branches: [ master ]
 
 jobs:
@@ -15,7 +10,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
+    - name: Deploy Static Files
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
