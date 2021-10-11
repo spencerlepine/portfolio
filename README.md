@@ -1,8 +1,4 @@
-<h1 align="center">
-  <a href="https://www.spencerlepine.com">
-    spencerlepine.com
-  </a>
-</h1>
+# Spencer Lepine Developer Website [![CI](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml)
 
 Portfolio and blog website ([Visit Here](https://www.spencerlepine.com)) created by Spencer Lepine. Built using static pages created with GatsbyJS.
 
