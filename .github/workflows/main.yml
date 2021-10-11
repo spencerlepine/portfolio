@@ -26,19 +26,12 @@ jobs:
         script_stop: true
         script: |
           cd ../../var/www/spencerlepine.com
-          sh ./syncBuild.sh portfolio-site
           RED='\033[0;31m'
           GREEN='\033[0;32m'
           NC='\033[0m' # No Color
           echo -e "$GREEN starting script $NC"
-          if [ "$#" -ne 1 ]; then
-            echo -e "$RED Illegal number of parameters$NC"
-            echo "Usage '$0 repo_name'"
-            echo
-            exit 2
-          fi
           echo "Cloning the GitHub Repo"
-          GITHUB_LINK="https://github.com/spencerlepine/$1.git"
+          GITHUB_LINK="https://github.com/spencerlepine/portfolio-site.git"
           git clone "$GITHUB_LINK"
           echo -e "$GREEN successfully cloned repo$NC \n"
           echo "Root directory contains these files now:"
