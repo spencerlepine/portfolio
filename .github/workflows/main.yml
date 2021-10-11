@@ -23,8 +23,9 @@ jobs:
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ secrets.PORT }}
+        script_stop: true
         script: |
-          sudo su ${{ secrets.PASSWORD }}
+          sudo su ${{ secrets.PASSWORD }} -S
           cd ../../var/www/spencerlepine.com
           sh ./syncBuild.sh portfolio-site 
           
