@@ -46,6 +46,7 @@ jobs:
           echo "Restarting apache server"
           systemctl restart apache2
           echo -e "$GREEN Public folder sync complete! $NC"
+          du -hsc public/
           echo "                                                     "
           echo "                                                     "
           echo "             0xlllx0000000000000000000000000         "
