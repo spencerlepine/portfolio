@@ -10,4 +10,5 @@ tech:
   - Twitter API
 company: ''
 showInProjects: true
+slug: /projects/manyshiba-bot
 ---

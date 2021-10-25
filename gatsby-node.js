@@ -11,6 +11,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve(`src/templates/post.js`);
   const tagTemplate = path.resolve('src/templates/tag.js');
+  const projectTemplate = path.resolve('src/templates/project.js');
 
   const result = await graphql(`
     {
@@ -32,6 +33,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           fieldValue
         }
       }
+      projectsRemark: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/projects/" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -48,6 +62,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.frontmatter.slug,
       component: postTemplate,
+      context: {},
+    });
+  });
+
+
+  // Create project detail pages
+  const projects = result.data.projectsRemark.edges;
+
+  projects.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: projectTemplate,
       context: {},
     });
   });

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Icon } from '@components/icons';
 
@@ -23,6 +23,7 @@ const Featured = () => {
               github
               external
               description
+              slug
             }
           }
         }
@@ -44,9 +45,11 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter } = node;
-            const { external, title, tech, github, cover, description } = frontmatter;
+            const { external, title, tech, github, cover, description, slug } = frontmatter;
             const image = getImage(cover);
 
+            const cardStyles = 'bg-blue-100 border-blue-100 border-4 p-1 rounded-md';
+            // { `${cardStyles} relative h-auto border-solid w-80 m-auto h-full` }
             return (
               <li key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content relative">
@@ -57,40 +60,44 @@ const Featured = () => {
                       </a>
                     </div>
 
-                    <div className="project-details bg-indigo-50 md:absolute md:-bottom-2 md:rounded-lg p-2 border-solid border-4 border-indigo-100">
+                    <div className={`${cardStyles} project-details bg-indigo-50 md:absolute md:-bottom-2 md:rounded-lg p-2 border-solid border-4 border-indigo-100`}>
                       <div className="flex p-3">
                         <h3 className="project-title text-xl inline-block">
-                          <a href={external} className="project-title">
+                          <Link to={slug} className="project-title">
                             {title}
-                          </a>
+                          </Link>
                         </h3>
-                        {github && (
-                          <a href={github} aria-label="GitHub Link" className="inline-block pl-3">
-                            <Icon name="GitHub" customClass="" />
-                          </a>
-                        )}
-                        {external && (
-                          <a href={external} aria-label="External Link" className="external inline-block pl-3">
-                            <Icon name="External" customClass="" />
-                          </a>
-                        )}
+                        <span className="ml-4 bg-blue-200 border-b-4 border-blue-300 px-1 rounded text-navy-dark">
+                          {github && (
+                            <a href={github} aria-label="GitHub Link" className="inline-block m-1">
+                              <Icon name="GitHub" customClass="" />
+                            </a>
+                          )}
+                          {external && (
+                            <a href={external} aria-label="External Link" className="external inline-block p-1">
+                              <Icon name="External" customClass="" />
+                            </a>
+                          )}
+                        </span>
                       </div>
 
-                      <div className="project-description p-3">
-                        <p className="text-charcoal">
-                          {description}
-                        </p>
-                      </div>
+                      <div className="bg-gray-100 p-3 rounded-md mt-auto">
+                        <div className="project-description p-3">
+                          <p className="text-charcoal">
+                            {description}
+                          </p>
+                        </div>
 
-                      {tech.length && (
-                        <ul className="project-tech-list w-auto flex flex-wrap">
-                          {tech.map((tech, i) => (
-                            <li key={i} className="whitespace-nowrap w-min block sm:inline-block text-indigo-400 m-1 bg-gray-50 shadow-md p-1">
-                              {tech}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+                        {tech.length && (
+                          <ul className="project-tech-list w-auto flex flex-wrap">
+                            {tech.map((tech, i) => (
+                              <li key={i} className=" techStyles">
+                                {tech}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>

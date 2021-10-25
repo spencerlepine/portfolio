@@ -14,7 +14,7 @@ const BlogPage = ({ location, data }) => {
 
       <main>
         <header className="">
-          <h1 className="text-xl m-auto w-fit-content p-4">sharing my knowledge of full-stack development and crypto</h1>
+          <h1 className="text-xl m-auto w-fit-content p-4">sharing my knowledge of full-stack development</h1>
         </header>
 
         <ul>

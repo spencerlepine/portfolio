@@ -10,4 +10,5 @@ tech:
   - node-fetch
 company: ''
 showInProjects: true
+slug: /projects/readme-crawler
 ---

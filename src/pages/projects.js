@@ -38,11 +38,12 @@ const ProjectsPage = ({ location, data }) => {
                     external,
                     title,
                     tech,
+                    slug,
                   } = node.frontmatter;
                   return (
                     <tr key={i} ref={el => (revealProjects.current[i] = el)} className="bg-indigo-50 p-4 border-solid border-4 border-indigo-100">
                       <td className="links">
-                        <div className="inline-block">
+                        <div className="inline-block pl-3">
                           {github && (
                             <a href={github} aria-label="GitHub Link" className="inline-block px-1 ml-auto">
                               <Icon name="GitHub" />
@@ -57,7 +58,9 @@ const ProjectsPage = ({ location, data }) => {
                       </td>
 
                       <td className="m-3">
-                        <p className="project-title w-max mx-2">{title}</p>
+                        <p className="project-title w-max mx-2">
+                          <a href={slug}>{title}</a>
+                        </p>
                       </td>
 
                       <td className="hidden md:block">
@@ -104,6 +107,7 @@ export const pageQuery = graphql`
             github
             external
             company
+            slug
           }
           html
         }

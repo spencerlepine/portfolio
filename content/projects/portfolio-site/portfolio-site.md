@@ -11,4 +11,5 @@ tech:
   - Tailwindcss
 company: ''
 showInProjects: true
+slug: /projects/portfolio-site
 ---

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Head, Nav, Footer } from '@components';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 const Layout = ({ children }) => (
   <>
