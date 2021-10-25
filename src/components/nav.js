@@ -13,11 +13,11 @@ const Nav = () => {
     </div>
   );
 
-  // const ResumeLink = (
-  //   <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-  //     Resume
-  //   </a>
-  // );
+  const ResumeLink = (
+    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+      <h3 className="text-white px-3 py-2 bg-red-700">Resume</h3>
+    </a>
+  );
 
   return (
     <header>
@@ -26,20 +26,25 @@ const Nav = () => {
 
         <div className="hidden ml-auto md:flex w-auto container px-4 flex-wrap content-end justify-between">
           <ol className="flex flex-row list-none ml-auto">
-            {navLinks &&
-              navLinks.map(({ url, name }, i) => (
-                <li key={i}>
-                  <Link
-                    className="text-lg px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    to={url}>
-                    {name}
-                  </Link>
+            {navLinks && (
+              <>
+                {navLinks.map(({ url, name }, i) => (
+                  <li key={i}>
+                    <Link
+                      className="text-lg px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                      to={url}>
+                      {name}
+                    </Link>
+                  </li>
+                ))}
+
+                <li className="text-lg px-3 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                  {ResumeLink}
                 </li>
-              ))}
+              </>
+            )}
           </ol>
         </div>
-
-        {/* <div>{ResumeLink}</div> */}
 
         <Menu />
       </nav>

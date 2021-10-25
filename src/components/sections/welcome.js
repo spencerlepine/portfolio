@@ -12,7 +12,7 @@ const Welcome = () => (
         <span className="font-bold text-navy-medium">Spencer Lepine</span>
         <span className="opacity-0">,</span>
         <br />a{' '}
-        <span className="text-purple-900 relative in-training mb-16">Software Engineer</span>
+        <span className="text-purple-900 relative mb-16">Software Engineer</span>
         <span className="opacity-0">.</span>
       </h3>
     </span>
@@ -22,9 +22,10 @@ const Welcome = () => (
     <p className="max-w-lg w-auto px-1 text-center m-auto mt-4 text-lg leading-relaxed text-blueGray-500">
       I believe in building the future today.
       Writing well tested and maintainable code is my mission.
-      Currently, I'm attending the Software Enginnering Immersive at{' '}
-      <a href="https://www.hackreactor.com/" target="_blank" rel="noreferrer">
-        Hack Reactor
+
+      Currently, I'm attending the Basic Training  at{' '}
+      <a href="https://home.army.mil/jackson/index.php" className="text-violet-300" target="_blank" rel="noreferrer">
+        Fort Jackson
       </a>
       .
     </p>

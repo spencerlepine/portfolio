@@ -20,29 +20,29 @@ module.exports = {
     },
     {
       name: 'Youtube',
-      url: 'https://www.linkedin.com/in/spencer-lepine',
+      url: 'https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q',
     },
   ],
 
   navLinks: [
-    {
-      name: 'About',
-      url: '/#about',
-      emoji: '👦🏻',
-    },
+    // {
+    //   name: 'About',
+    //   url: '/#about',
+    //   emoji: '👦🏻',
+    // },
     // {
     //   name: 'Experience',
     //   url: '/#jobs',
     // },
     {
-      name: 'Projects',
-      url: '/#projects',
-      emoji: '📁',
-    },
-    {
       name: 'Contact',
       url: '/#contact',
       emoji: '📮',
+    },
+    {
+      name: 'Projects',
+      url: '/projects',
+      emoji: '📁',
     },
     {
       name: 'Blog',

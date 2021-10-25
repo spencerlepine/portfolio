@@ -34,7 +34,7 @@ p {
 }
 
 .project-title {
-  @apply whitespace-nowrap text-blue-100 bg-gray-900 p-1 rounded font-bold
+  @apply whitespace-nowrap text-blue-100 bg-blue-600 p-1 rounded font-bold
 }
 
 .in-training::before {
@@ -169,3 +169,11 @@ p {
   white-space: pre-line;
 }
 /* ***** END BLOG STYLES ***** */
+
+.resume-button {
+  @apply px-3 uppercase font-bold leading-snug text-white hover:opacity-75 bg-red-700 rounded-md;
+}
+
+.techStyles {
+  @apply bg-purple-400 whitespace-nowrap w-min block sm:inline-block m-1 text-purple-50 shadow-md p-1;
+}

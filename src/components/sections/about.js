@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 const About = () => {
   const revealContainer = useRef(null);
 
-  const skills = ['JavaScript (ES6+)', 'React', 'Firebase', 'Node.js', 'Python'];
+  const skills = ['JavaScript (ES5/ES6)', 'React', 'Firebase', 'Node.js', 'Express'];
 
   return (
     <section id="about" ref={revealContainer} className="landing-section">
@@ -13,15 +13,17 @@ const About = () => {
       <div className="m-auto max-w-4xl grid flex-column mt-4 sm:grid md:grid lg:flex">
         <div className="w-auto relative max-w-xl p-1 mt-2 text-lg leading-relaxed text-blueGray-500 flex-1 m-auto">
           <p className="p-1 w-auto m-auto">
-            Building things for the web is my passion.
-            In my late teens, I became curious about how sites and products were created.
-            This inspired me to learn about the basics of Web Development in my free time.
+            After stumbling upon a Javascript course in my late teens, I fell in love with programming mini-games and websites.
+            This sparked my curiosity for understand how websites and products are built.
+          </p>
+
+          <p className="p-1 w-auto m-auto">
+            Fast forward to the present, I have completed the Hack Reactor Software Engineering Immersive and began building my portfolio.
           </p>
 
           <p className="p-1 w-autom m-auto">
             At each milestone of my coding journey, there was always more to learn.
             I love surrounding myself with progress and innovation.
-            There is opportunity to question what already exists, and create a new or better solution.
           </p>
         </div>
 
