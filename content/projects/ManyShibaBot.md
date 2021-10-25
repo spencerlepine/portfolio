@@ -8,6 +8,7 @@ tech:
   - Shibe.online API
   - Node.js
   - twit (npm)
+  - Heroku
 company: ''
 showInProjects: true
 ---

@@ -20,7 +20,7 @@ module.exports = {
     },
     {
       name: 'Youtube',
-      url: 'https://www.linkedin.com/in/spencer-lepine',
+      url: 'https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q',
     },
   ],
 
