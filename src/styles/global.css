@@ -34,7 +34,7 @@ p {
 }
 
 .project-title {
-  @apply whitespace-nowrap text-blue-100 bg-gray-900 p-1 rounded font-bold
+  @apply whitespace-nowrap text-blue-100 bg-blue-800 p-1 rounded font-bold
 }
 
 .in-training::before {

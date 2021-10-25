@@ -7,11 +7,14 @@ import { Icon } from '@components/icons';
 const Contact = () => {
   const [showingEmail, setShowingEmail] = useState(false);
 
+  // const promptStyle = 'text-xl my-5 mx-auto w-min whitespace-nowrap';
+  const promptStyle = 'flex-wrap text-xl my-5 mx-auto text-center';
+
   return (
     <section id="contact" className="landing-section">
       <h2 className="section-title">Get In Touch</h2>
 
-      <p className="text-xl my-5 mx-auto w-min whitespace-nowrap">
+      <p className={`${promptStyle}`}>
         Any questions? Want to work together? Let's connect!
       </p>
 

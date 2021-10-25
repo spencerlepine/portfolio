@@ -40,48 +40,57 @@ const Projects = () => {
     const { frontmatter } = node;
     const { github, external, title, tech, description } = frontmatter;
 
+    const mainLink = external || github;
+
+    const cardStyles = 'bg-blue-200 border-blue-100 border-4 p-1 rounded-md'; // "bg-indigo-50 border-indigo-100"
+    const techStyles = 'bg-purple-400 whitespace-nowrap w-min block sm:inline-block m-1 text-purple-50 shadow-md p-1';
+
     return (
-      <div className="relative h-auto bg-indigo-50 border-solid border-4 border-indigo-100 p-3 w-80 m-auto h-full">
-        <header>
-          <div className="flex p-3">
-            <h3 className="project-title text-xl inline-block">
-              <a href={external} className="project-title">
+      <div className={`${cardStyles} relative h-auto border-solid w-80 m-auto h-full`}>
+        <header className="p-1">
+          <div className="flex flex-wrap">
+            <a href={mainLink} className="project-title mr-3 p-0" target="_blank" rel="noreferrer">
+              <h3 className="project-title text-xl inline-block p-0">
                 {title}
-              </a>
-            </h3>
-            {github && (
-              <a href={github} aria-label="GitHub Link" className="inline-block pl-3">
-                <Icon name="GitHub" customClass="" />
-              </a>
-            )}
-            {external && (
-              <a href={external} aria-label="External Link" className="external inline-block pl-3">
-                <Icon name="External" customClass="" />
-              </a>
+              </h3>
+            </a>
+            <span className="ml-auto bg-blue-100 border-b-4 border-blue-300 px-1 rounded">
+              {github && (
+                <a href={github} aria-label="GitHub Link" className="inline-block p-1">
+                  <Icon name="GitHub" customClass="" />
+                </a>
+              )}
+              {external && (
+                <a href={external} aria-label="External Link" className="external inline-block p-1">
+                  <Icon name="External" customClass="" />
+                </a>
+              )}
+            </span>
+          </div>
+        </header >
+
+        <div className="bg-blue-100 p-3 rounded-md mt-auto">
+          <div className="project-description p-3">
+            <p className="text-charcoal">
+              {description}
+            </p>
+          </div>
+
+          <div className="relative h-5/6">
+            {tech && (
+              <ul className="project-tech-list">
+                {tech.map((tech, i) => (
+                  <li
+                    className={techStyles}
+                    key={i}>
+                    {tech}
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
-        </header>
-
-        <div className="project-description p-3">
-          <p className="text-charcoal">
-            {description}
-          </p>
         </div>
-
-        <div className="relative h-5/6">
-          {tech && (
-            <ul className="project-tech-list">
-              {tech.map((tech, i) => (
-                <li
-                  className="whitespace-nowrap w-min block sm:inline-block text-indigo-400 m-1 bg-gray-50 shadow-md p-1"
-                  key={i}>
-                  {tech}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </div>
+      </div >
     );
   };
 

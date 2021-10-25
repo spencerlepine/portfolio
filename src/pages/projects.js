@@ -18,7 +18,7 @@ const ProjectsPage = ({ location, data }) => {
       <main className="m-auto m-4 bg-white p-4 max-w-5xl mt-3 min-h-1 rounded">
         <header ref={revealTitle}>
           <h1 className="text-4xl m-auto w-max font-semibold">Projects</h1>
-          <p className="text-xl m-auto w-max font-semibold">What I’ve worked on</p>
+          <p className="text-xl m-auto w-max font-semibold">Software Engineering Applications</p>
         </header>
 
         <div ref={revealTable} className="m-auto w-max p-4">
