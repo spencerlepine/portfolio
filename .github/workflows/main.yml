@@ -29,13 +29,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: ⬇️  Install npm dependencies
-        working-directory: ${{env.working-directory}}
         run: npm install
 
       - name: ✅  Run tests
-        working-directory: ${{env.working-directory}}
-        run: npm run test
+        run: npm test
 
       - name: 🔴 Lint all files
-        working-directory: ${{env.working-directory}}
-        run: npm run lint:check
+        run: npm run lint
