@@ -1,36 +1,35 @@
-# Spencer Lepine Developer Website [![CI](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml)
+# [spencerlepine.com](https://www.spencerlepine.com/) [![build](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml) [![build](https://github.com/spencerlepine/portfolio-site/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/deploy.yml)
 
-Portfolio and blog website ([Visit Here](https://www.spencerlepine.com)) created by Spencer Lepine. Built using static pages created with GatsbyJS.
-
-## 📦 Technologies:
-- [GatsbyJS](https://www.gatsbyjs.com/)
-- [React](https://reactjs.org/)
-- [GraphQL](https://graphql.org/)
+Portfolio and blog website powered by GatsbyJS and TailwindCSS.
 
 ## ⚙️ Setup
 
-1.  **Clone this repo**
+```sh
+npm install
+npm run develop
+```
 
-  Download the Gatsby project locally
+## 📦 Technologies:
 
-  ```sh
-  git clone https://github.com/spencerlepine/portfolio-site.git
-  ```
+- [GatsbyJS](https://www.gatsbyjs.com/)
+- [React](https://reactjs.org/)
+- [GraphQL](https://graphql.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/)
+- [Husky](https://typicode.github.io/husky/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
-2.  **Start developing**
+## Features
+### Pre-commit hooks
+- Uses `Husky`, `ESLint`, and `Prettier` to enforce code styles and ensure Gatsby will build before pushing to remote.
+### Static Files
+- `GatsbyJS` will dynamically build static files from files in the [`/content](./content) folder, including blog posts and projects.
 
-  Install pacakges in the the root directory
+### Continuous Integration
+- GitHub Actions will ensure a valid Gatsby build on the `master` branch
 
-  ```sh
-  npm install
-  npm run develop
-  ```
-
-3.  **Open the code and start customizing!**
-
-  The site is now running at http://localhost:8000!
-
-  Edit `src/pages/index.js` to see your site update in real-time!
+- Pushes to `master` will trigger automatic deployment to the [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/). GitHub Actions with SSH into the remote server and replace static files.
 
 ---
 
