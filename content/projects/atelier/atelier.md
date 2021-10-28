@@ -10,7 +10,6 @@ tech:
   - Webpack
   - Jest
   - Testing Library
-  - Google Lighthouse
 company: ''
 showInProjects: true
 slug: /projects/atelier
@@ -54,6 +53,7 @@ This project was for an external API with existing data, see the documentation [
 
 
 ## 📦 More Technologies:
+- [Google Lighthouse](https://developers.google.com/web/tools/lighthouse)
 - [Styled Components](https://styled-components.com/)
 - [ESLint](https://eslint.org/)
 - [Husky](https://www.npmjs.com/package/husky)

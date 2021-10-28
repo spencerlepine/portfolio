@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Icon } from '@components/icons';
 
+const MAX_PROJECTS_SHOWN = 4;
+
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -57,7 +59,7 @@ const Projects = () => {
   const featuredProjects = data.featured.edges.map(({ node }) => node.frontmatter.title);
   const projects = data.projects.edges.filter(({ node }) => node).filter(({ node }) => (
     featuredProjects.every(title => title !== node.frontmatter.title)
-  ));
+  )).slice(0, MAX_PROJECTS_SHOWN);
 
   // const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = projects; // showMore ? projects : firstSix;
