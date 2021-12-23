@@ -22,12 +22,6 @@ const Welcome = () => (
     <p className="max-w-lg w-auto px-1 text-center m-auto mt-4 text-lg leading-relaxed text-blueGray-500">
       I believe in building the future today.
       Writing well tested and maintainable code is my mission.
-
-      Currently, I'm attending the Basic Training  at{' '}
-      <a href="https://home.army.mil/jackson/index.php" className="text-violet-300" target="_blank" rel="noreferrer">
-        Fort Jackson
-      </a>
-      .
     </p>
 
     <div className="m-auto flex items-center w-fit-content p-2 md:p-4 text-blue-300">
