@@ -1,6 +1,6 @@
 ---
 title: Git project configuration with Husky and ESLint
-description: Git conventions pre-commit hooks and enforcing code styles.
+description: Git conventions using pre-commit hooks and enforcing code styles.
 date: 2022-03-20
 draft: false
 slug: /blog/git-project-configuration-with-husky-and-eslint
@@ -43,6 +43,12 @@ Alternatively, use this example file. In the root directory, create `.eslintrc`:
   "plugins": [
     "prettier"
   ],
+   "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true
+  },
   "rules": {
     "no-console": "off",
     "no-unused-vars": "off",

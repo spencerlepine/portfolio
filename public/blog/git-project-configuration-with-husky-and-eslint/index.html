@@ -29,6 +29,12 @@ npx husky add .husky/pre-push &quot;npx lint-staged &amp;&amp; npm test&quot;</c
   <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">"prettier"</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
+   <span class="token property">"parserOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"ecmaVersion"</span><span class="token operator">:</span> <span class="token number">2017</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"es6"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"rules"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"no-console"</span><span class="token operator">:</span> <span class="token string">"off"</span><span class="token punctuation">,</span>
     <span class="token property">"no-unused-vars"</span><span class="token operator">:</span> <span class="token string">"off"</span><span class="token punctuation">,</span>
