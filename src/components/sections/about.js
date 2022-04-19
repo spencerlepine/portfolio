@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 
 const About = () => {
   const revealContainer = useRef(null);
@@ -29,14 +28,14 @@ const About = () => {
 
         <div>
           <div className="wrapper flex items-center justify-center w-max h-full m-auto">
-            <StaticImage
+            {/* <StaticImage
               className="w-60 align-middle m-auto my-4"
               src="../../images/me.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
               alt="Spencer Lepine Headshot Profile"
-            />
+            /> */}
           </div>
         </div>
       </div>

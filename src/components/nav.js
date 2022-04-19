@@ -13,11 +13,11 @@ const Nav = () => {
     </div>
   );
 
-  const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-      <h3 className="text-white px-3 py-2 bg-red-700">Resume</h3>
-    </a>
-  );
+  // const ResumeLink = (
+  //   <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+  //     <h3 className="text-white px-3 py-2 bg-red-700">Resume</h3>
+  //   </a>
+  // );
 
   return (
     <header>
@@ -38,9 +38,9 @@ const Nav = () => {
                   </li>
                 ))}
 
-                <li className="text-lg px-3 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                {/* <li className="text-lg px-3 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                   {ResumeLink}
-                </li>
+                </li> */}
               </>
             )}
           </ol>
