@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Layout, Welcome, About, Featured, Projects, Contact } from '@components'; // Jobs,
-import { Layout, Welcome, About } from '@components'; // Jobs,
+import { Layout, Welcome, About, Featured, Projects, Contact } from '@components'; // Jobs,
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
@@ -9,9 +8,9 @@ const IndexPage = ({ location }) => (
       <Welcome />
       <About />
       {/* <Jobs /> */}
-      {/* <Featured />
+      <Featured />
       <Projects />
-      <Contact /> */}
+      <Contact />
     </main>
   </Layout>
 );

@@ -35,11 +35,6 @@ module.exports = {
     //   url: '/#jobs',
     // },
     {
-      name: 'Contact',
-      url: '/#contact',
-      emoji: '📮',
-    },
-    {
       name: 'Projects',
       url: '/projects',
       emoji: '📁',
@@ -48,6 +43,11 @@ module.exports = {
       name: 'Blog',
       url: '/blog',
       emoji: '📝',
+    },
+    {
+      name: 'Contact',
+      url: '/#contact',
+      emoji: '📮',
     },
   ],
 
