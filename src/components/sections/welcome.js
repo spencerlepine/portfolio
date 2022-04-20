@@ -11,7 +11,7 @@ const Welcome = () => (
 
       <span className="text-center p-1">
         <h1 className="text-3xl"><Emoji symbol='👋' />{' '}Hello, I'm</h1>
-        <h2 className="text-3xl font-bold text-navy-medium">Spencer Lepine</h2>
+        <h2 className="text-3xl font-bold text-navy-medium">Spencer Lepine<span className="opacity-0">,</span></h2>
         <h5 className="text-2xl">a Full Stack</h5>
         <h1 className="text-3xl"> <span className="text-purple-900 relative mb-16">Software Engineer</span></h1>
       </span>
