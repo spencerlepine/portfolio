@@ -171,11 +171,11 @@ p {
 /* ***** END BLOG STYLES ***** */
 
 .resume-button {
-  @apply px-3 uppercase font-bold leading-snug text-white hover:opacity-75 bg-red-700 rounded-md;
+  @apply px-3 uppercase font-bold leading-snug text-white hover:no-underline transition-all duration-100 bg-red-700 rounded-md;
 }
 
 .get-in-touch {
-  @apply px-3 uppercase font-bold leading-snug text-white hover:opacity-75 bg-purple-700 rounded-md;
+  @apply px-3 uppercase font-bold leading-snug text-white hover:no-underline transition-all duration-100 bg-purple-700 rounded-md;
 }
 
 .techStyles {

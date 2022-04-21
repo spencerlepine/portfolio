@@ -12,7 +12,7 @@ const Welcome = () => (
       <span className="text-center p-1">
         <h1 className="text-3xl"><Emoji symbol='👋' />{' '}Hello, I'm</h1>
         <h2 className="text-3xl font-bold text-navy-medium">Spencer Lepine<span className="opacity-0">,</span></h2>
-        <h5 className="text-2xl">a Full Stack</h5>
+        <h5 className="text-2xl text-gray-400">a Full Stack</h5>
         <h1 className="text-3xl"> <span className="text-purple-900 relative mb-16">Software Engineer</span></h1>
       </span>
 
@@ -21,12 +21,12 @@ const Welcome = () => (
       <div className="m-auto flex items-center w-fit-content p-2 md:p-4 text-blue-300">
         <Link
           to={'/#contact'}
-          className="get-in-touch text-white px-3 py-2 bg-red-700 m-1">
+          className="get-in-touch no-underline text-white px-3 py-2 bg-red-700 m-1">
           GET IN TOUCH
         </Link>
         <Link
           to={'/projects'}
-          className="resume-button text-white px-3 py-2 bg-red-700 m-1">
+          className="resume-button no-underline text-white px-3 py-2 bg-red-700 m-1">
           VIEW PORTFOLIO
         </Link>
       </div>
