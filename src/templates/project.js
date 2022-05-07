@@ -15,6 +15,7 @@ const extractImages = imageEdges => {
     }
     */
     //
+
     const images = imageEdges.edges[0].node.frontmatter.screenshots.map(imageObj => imageObj.childImageSharp.fluid.src);
     return images;
   } catch {
