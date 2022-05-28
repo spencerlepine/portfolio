@@ -6,7 +6,7 @@ import { Icon } from '@components/icons';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Welcome = () => (
-  <section className="landing-section grid grid-cols-2">
+  <section className="landing-section grid auto-cols-auto md:grid-cols-2">
     <div>
 
       <span className="text-center p-1">
@@ -24,6 +24,7 @@ const Welcome = () => (
           className="get-in-touch no-underline text-white px-3 py-2 bg-red-700 m-1">
           GET IN TOUCH
         </Link>
+
         <Link
           to={'/projects'}
           className="resume-button no-underline text-white px-3 py-2 bg-red-700 m-1">

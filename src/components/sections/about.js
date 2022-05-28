@@ -24,10 +24,6 @@ const About = () => {
             <p className="p-1 w-auto m-auto">
               &ensp; As a recent graduate of the Hack Reactor Software Engineering Immersive, I'm a passionate learner and highly motivated.
             </p>
-
-            <p className="p-1 w-auto m-auto">
-              &ensp; In my freetime, I love listening to music, hiking, and watching Studio Ghibli movies.
-            </p>
           </div>
         </div>
 
