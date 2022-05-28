@@ -1,8 +1,12 @@
-name: deploy
+name: Deploy
 
 on:
   push:
     branches: [ master ]
+    paths:
+      - src/**
+      - content/**
+      - static/**
 
 jobs:
 

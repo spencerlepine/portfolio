@@ -63,7 +63,7 @@ const ProjectsPage = ({ location, data }) => {
                         </p>
                       </td>
 
-                      <td className="hidden md:block">
+                      <td className="hidden md:block max-w-md overscroll-auto">
                         {tech.length > 0 &&
                           tech.map((item, i) => (
                             <span

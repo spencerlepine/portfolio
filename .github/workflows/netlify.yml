@@ -1,0 +1,53 @@
+name: Netlify Deploy
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - src/**
+      - content/**
+      - static/**
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: 🔧 Set up Node ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: "⚡ Cache node modules"
+      uses: actions/cache@v3
+      id: cache
+      env:
+        cache-name: cache-node-modules
+      with:
+        # npm cache files are stored in `~/.npm` on Linux/macOS
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+
+    - name: "📦 Install dependencies"
+      #if: steps.cache.outputs.cache-hit != 'true'
+      run: npm install --prefer-offline --no-audit --progress=false
+
+    - run: npm run build --if-present
+
+    - name: 🚀 Netlify Deploy
+      # uses: jsmrcaga/action-netlify-deploy@v1.7.1
+
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      run: netlify deploy --prod
