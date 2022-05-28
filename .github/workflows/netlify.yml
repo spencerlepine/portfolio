@@ -9,8 +9,8 @@ on:
       - static/**
 
 jobs:
-  build:
-
+  netlify_deploy:
+    environment: deployment
     runs-on: ubuntu-latest
 
     strategy:

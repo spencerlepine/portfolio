@@ -1,7 +1,8 @@
 name: Deploy
 
 on:
-  push:
+  # push:
+  workflow_dispatch:
     branches: [ master ]
     paths:
       - src/**
@@ -12,6 +13,7 @@ jobs:
 
   deploy:
     name: Deploy
+    enviroment: deployment
     runs-on: ubuntu-latest
     steps:
     - name: Deploy Static Files

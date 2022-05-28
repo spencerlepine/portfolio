@@ -1,7 +1,8 @@
-# [spencerlepine.com](https://www.spencerlepine.com/) [![build](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml) [![build](https://github.com/spencerlepine/portfolio-site/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/deploy.yml)
+# [SpencerLepine.com](https://www.spencerlepine.com/) [![CI](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml) [![Deploy](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml) [![Lighthouse](https://github.com/spencerlepine/portfolio-site/actions/workflows/lighthouse.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/lighthouse.yml)
 
-Portfolio and blog website powered by GatsbyJS and TailwindCSS.
+Developer Portfolio and Blog powered by GatsbyJS and TailwindCSS.
 
+![OG Snapshot](./static/og@2x.png)
 ## ⚙️ Setup
 
 ```sh
@@ -15,21 +16,21 @@ npm run develop
 - [React](https://reactjs.org/)
 - [GraphQL](https://graphql.org/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/)
+<!-- - [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/) -->
 - [Husky](https://typicode.github.io/husky/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
-## Features
+<!-- ## Features
 ### Pre-commit hooks
 - Uses `Husky`, `ESLint`, and `Prettier` to enforce code styles and ensure Gatsby will build before pushing to remote.
 ### Static Files
-- `GatsbyJS` will dynamically build static files from files in the [`/content](./content) folder, including blog posts and projects.
+- `GatsbyJS` will dynamically build static files from files in the [`/content](./content) folder, including blog posts and projects. -->
 
-### Continuous Integration
+<!-- ### Continuous Integration
 - GitHub Actions will ensure a valid Gatsby build on the `master` branch
 
-- Pushes to `master` will trigger automatic deployment to the [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/). GitHub Actions with SSH into the remote server and replace static files.
+- Pushes to `master` will trigger automatic deployment to the [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/). GitHub Actions with SSH into the remote server and replace static files. -->
 
 ---
 
