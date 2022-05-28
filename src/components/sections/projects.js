@@ -103,7 +103,7 @@ const Projects = () => {
 
           <div className="relative h-5/6">
             {tech && (
-              <ul className="project-tech-list">
+              <ul className="project-tech-list sm:flex">
                 {tech.map((tech, i) => (
                   <li
                     className="techStyles"
