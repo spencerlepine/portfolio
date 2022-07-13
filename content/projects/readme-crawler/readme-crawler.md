@@ -10,7 +10,7 @@ tech:
   - node-fetch
 company: ''
 showInProjects: true
-slug: /projects/readme-crawler
+slug: /portfolio/readme-crawler
 ---
 
 Want to no more? Check out the source code [on GitHub](https://github.com/spencerlepine/readme-crawler)

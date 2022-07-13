@@ -13,7 +13,7 @@ tech:
   - Docker
 company: ''
 showInProjects: true
-slug: /projects/atelier-products
+slug: /portfolio/atelier-products
 screenshots:
   - ./diagram.png
 ---

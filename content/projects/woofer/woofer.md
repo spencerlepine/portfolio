@@ -19,7 +19,7 @@ tech:
   - Socket.io
 company: ''
 showInProjects: true
-slug: /projects/woofer
+slug: /portfolio/woofer
 screenshots:
   - ./swipe.png
   - ./chat.png

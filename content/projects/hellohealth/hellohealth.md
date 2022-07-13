@@ -14,7 +14,7 @@ tech:
   - Firebase
 company: ''
 showInProjects: true
-slug: /projects/hellohealth
+slug: /portfolio/hellohealth
 screenshots:
   - project_deployment.png
   - home_page.png

@@ -12,7 +12,7 @@ tech:
   - Express
 company: ''
 showInProjects: true
-slug: /projects/grocerychecc
+slug: /portfolio/grocerychecc
 screenshots:
   - ./homepage.png
   - ./generate-list.png

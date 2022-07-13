@@ -11,7 +11,7 @@ tech:
   - Testing Library
 company: ''
 showInProjects: true
-slug: /projects/quickcart
+slug: /portfolio/quickcart
 screenshots:
   - ./quickcart.png
   - ./scan-upc.png

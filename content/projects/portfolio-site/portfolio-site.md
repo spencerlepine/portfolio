@@ -11,7 +11,7 @@ tech:
   - Tailwindcss
 company: ''
 showInProjects: true
-slug: /projects/portfolio-site
+slug: /portfolio/portfolio-site
 ---
 
 A GatsbyJS site styled with TailwindCSS.

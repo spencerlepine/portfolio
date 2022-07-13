@@ -12,7 +12,7 @@ tech:
   - Testing Library
 company: ''
 showInProjects: true
-slug: /projects/atelier
+slug: /portfolio/atelier
 screenshots:
   - ./product_overview.png
   - ./related_outfit.png

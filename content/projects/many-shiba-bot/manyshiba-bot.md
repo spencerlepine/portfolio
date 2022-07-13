@@ -10,7 +10,7 @@ tech:
   - Twitter API
 company: ''
 showInProjects: true
-slug: /projects/manyshiba-bot
+slug: /portfolio/manyshiba-bot
 ---
 
 [@ManyShibu](https://twitter.com/manyshiba) Twitter bot posting random (sacred) Shiba Inu pictures.

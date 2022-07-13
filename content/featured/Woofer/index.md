@@ -19,5 +19,5 @@ tech:
   - Bulma
   - Socket.io
 showInProjects: true
-slug: /projects/woofer
+slug: /portfolio/woofer
 ---

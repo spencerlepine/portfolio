@@ -7,7 +7,6 @@ slug: /blog/building-a-web-crawler-with-node-js
 tags:
   - GitHub
   - Repositories
-  - Projects
   - WebCrawler
   - Node
 ---

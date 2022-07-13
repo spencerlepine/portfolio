@@ -204,7 +204,7 @@ Here is an overview of everything I learned:
 **Projects:**
 -------------
 
-Explore more [projects](https://spencerlepine.com/projects) — or check out the ones mentioned in the article:
+Explore more [projects](https://spencerlepine.com/portfolio) — or check out the ones mentioned in the article:
 
 
 ### QuickCart
