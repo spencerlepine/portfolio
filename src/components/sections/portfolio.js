@@ -102,7 +102,7 @@ const Projects = () => {
           </div>
 
           <div className="relative h-5/6">
-            {tech && (
+            {tech && tech.length && (
               <ul className="project-tech-list">
                 {tech.map((tech, i) => (
                   <li
@@ -121,19 +121,23 @@ const Projects = () => {
 
   return (
     <section className="landing-section">
-      <h2 ref={revealTitle} className="section-title">Other Projects</h2>
+      <h2 ref={revealTitle} className="section-title">Portfolio</h2>
 
       <Link className="inline-link archive-link m-auto" to="/portfolio" ref={revealArchiveLink}>
-        <p className="whitespace-nowrap w-min m-auto text-navy-medium">view all projects</p>
+        <p className="whitespace-nowrap w-min m-auto text-navy-medium">veiw all</p>
       </Link>
 
       <ul className="projects-grid grid auto-rows-fr grid-flow-row md:grid-cols-2 auto-rows-fr w-max m-auto">
         <>
           {projectsToShow &&
             projectsToShow.map(({ node }, i) => (
-              <li key={i} className="content-center m-2">
-                {projectInner(node)}
-              </li>
+              <>
+                {node.frontmatter.tech && (
+                  <li key={i} className="content-center m-2">
+                    {projectInner(node)}
+                  </li>
+                )}
+              </>
             ))}
         </>
       </ul>

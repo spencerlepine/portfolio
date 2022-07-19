@@ -57,7 +57,7 @@ const ProjectTemplate = ({ data, location }) => {
         <p className="m-3">{description}</p>
 
         <div className="bg-gray-100 p-3 rounded-md mt-auto">
-          {tech.length && (
+          {tech && tech.length && (
             <ul className="project-tech-list w-auto flex flex-wrap">
               {tech.map((tech, i) => (
                 <li key={i} className=" techStyles">

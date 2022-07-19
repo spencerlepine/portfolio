@@ -18,6 +18,6 @@ tech:
   - Firebase
   - Bulma
   - Socket.io
-showInProjects: true
+showInProjects: false
 slug: /portfolio/woofer
 ---

@@ -17,7 +17,7 @@ const ProjectsPage = ({ location, data }) => {
 
       <main className="m-auto m-4 bg-white p-4 max-w-5xl mt-3 min-h-1 rounded">
         <header ref={revealTitle}>
-          <h1 className="text-4xl m-auto w-max font-semibold">Projects</h1>
+          <h1 className="text-4xl m-auto w-max font-semibold">Portfolio</h1>
           <p className="text-xl m-auto w-max font-semibold">Software Engineering Applications</p>
         </header>
 
@@ -42,42 +42,44 @@ const ProjectsPage = ({ location, data }) => {
                     description,
                   } = node.frontmatter;
                   return (
-                    <tr key={i} ref={el => (revealProjects.current[i] = el)} className="bg-indigo-50 p-4 border-solid border-8 border-indigo-100 my-2">
-                      <td className="links">
-                        <div className="inline-block pl-3">
-                          {github && (
-                            <a href={github} aria-label="GitHub Link" className="inline-block px-1 ml-auto">
-                              <Icon name="GitHub" />
-                            </a>
-                          )}
-                          {external && (
-                            <a href={external} aria-label="External Link" className="inline-block px-1">
-                              <Icon name="External" />
-                            </a>
-                          )}
-                        </div>
-                      </td>
+                    <>{tech && (
+                      <tr key={i} ref={el => (revealProjects.current[i] = el)} className="bg-indigo-50 p-4 border-solid border-8 border-indigo-100 my-2">
+                        <td className="links">
+                          <div className="inline-block pl-3">
+                            {github && (
+                              <a href={github} aria-label="GitHub Link" className="inline-block px-1 ml-auto">
+                                <Icon name="GitHub" />
+                              </a>
+                            )}
+                            {external && (
+                              <a href={external} aria-label="External Link" className="inline-block px-1">
+                                <Icon name="External" />
+                              </a>
+                            )}
+                          </div>
+                        </td>
 
-                      <td className="m-3">
-                        <p className="project-title w-max mx-2">
-                          <a href={slug}>{title}</a>
-                        </p>
-                      </td>
+                        <td className="m-3">
+                          <p className="project-title w-max mx-2">
+                            <a href={slug}>{title}</a>
+                          </p>
+                        </td>
 
-                      <td className="hidden md:block max-w-md overscroll-auto">
-                        <p>{description}</p>
-                        {tech.length > 0 &&
-                          tech.map((item, i) => (
-                            <span
-                              className="whitespace-nowrap w-min block sm:inline-block text-indigo-400 m-1 bg-gray-50 shadow-md p-1"
-                              key={i}
-                            >
-                              {item}
-                              {''}
-                            </span>
-                          ))}
-                      </td>
-                    </tr>
+                        <td className="hidden md:block max-w-md overscroll-auto">
+                          <p>{description}</p>
+                          {tech && tech.length > 0 &&
+                            tech.map((item, i) => (
+                              <span
+                                className="whitespace-nowrap w-min block sm:inline-block text-indigo-400 m-1 bg-gray-50 shadow-md p-1"
+                                key={i}
+                              >
+                                {item}
+                                {''}
+                              </span>
+                            ))}
+                        </td>
+                      </tr>
+                    )}</>
                   );
                 })}
             </tbody>
