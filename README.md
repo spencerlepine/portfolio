@@ -1,4 +1,4 @@
-# [SpencerLepine.com](https://www.spencerlepine.com/) [![CI](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml) [![Deploy](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml) [![Lighthouse](https://github.com/spencerlepine/portfolio-site/actions/workflows/lighthouse.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/lighthouse.yml)
+# [SpencerLepine.com](https://www.spencerlepine.com/) [![CI](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/main.yml) [![Deploy](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml)
 
 Developer Portfolio and Blog powered by GatsbyJS and TailwindCSS.
 
