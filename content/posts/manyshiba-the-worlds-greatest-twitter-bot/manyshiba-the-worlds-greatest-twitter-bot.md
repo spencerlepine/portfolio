@@ -7,7 +7,7 @@ slug: /blog/manyshiba-the-worlds-greatest-twitter-bot
 tags:
   - GitHub
   - Twitter
-  - Node
+  - Node.js
   - Bot
 ---
 

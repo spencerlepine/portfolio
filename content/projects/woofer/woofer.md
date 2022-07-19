@@ -7,7 +7,7 @@ description: 'Dating app for pets - a full stack MERN project. Complete with CI/
 tech:
   - React
   - Express
-  - Node
+  - Node.js
   - MongoDB
   - Docker
   - EC2
@@ -60,7 +60,7 @@ Check out the Woofer [Wiki](https://github.com/spencerlepine/woofer/wiki) to vie
 ## 📦 Technologies
 **Front-end:** [React](https://github.com/facebook/react/), [Bulma](https://github.com/jgthms/bulma)
 
-**Backend:** [Node](https://nodejs.org/), [Express.js](http://expressjs.com/), [MongoDB](https://docs.mongodb.com/)
+**Backend:** [Node.js](https://nodejs.org/), [Express.js](http://expressjs.com/), [MongoDB](https://docs.mongodb.com/)
 
 **Testing:** [Jest](https://jestjs.io/) , [supertest](https://github.com/visionmedia/supertest), [Testing Library](https://testing-library.com/docs/react-testing-library/intro/), [Puppeteer](https://pptr.dev/), [Coveralls.io](https://coveralls.io/)
 

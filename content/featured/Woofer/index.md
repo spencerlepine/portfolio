@@ -8,7 +8,7 @@ description: 'Dating app for pets - a full stack MERN project. Complete with CI/
 tech:
   - React
   - Express
-  - Node
+  - Node.js
   - MongoDB
   - Docker
   - EC2

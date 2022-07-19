@@ -76,7 +76,7 @@ Day 31–40: Diving Deeper
 
 CS50 included some lessons about data structures and SQL. I worked on some really good challenges for the CS50 Fiftyville assignment.
 
-It was time for me to learn how to connect a database. I began working with MongoDB and NodeJS. I used Postman to practice making requests.
+It was time for me to learn how to connect a database. I began working with MongoDB and Node.js. I used Postman to practice making requests.
 
 With a lot of data to store in state, I needed a way to organize it all. Thats where React Redux came up — createStore, redux philosophies, subscribe, dispatch, combineReducer. Abstracting reducers to handle each state in isolation. combineReducers to combine everything and handle state more cleanly in a rootReducer.
 
@@ -154,7 +154,7 @@ Day 91–100: The Final Stretch
 
 After learning so much with Javascript and best-practices for writing code, it was time to USE these skills. I continued working through Hack Reactor prep material. I learned about higher order functions, scopes, and hoisting. There were lessons about terminal commands and important dev tools like homebrew. It was time to upgrade my developer workflow, and get familiar with industry standard software.
 
-Here I read about NodeJS, npm, semvar, and modules. This was everything I need to know about how projects are set up and how developers are able to work together. There needs to be structure and conventions throughout the code base so everyone is on the same page.
+Here I read about Node.js, npm, semvar, and modules. This was everything I need to know about how projects are set up and how developers are able to work together. There needs to be structure and conventions throughout the code base so everyone is on the same page.
 
 I also added a some features to QuickCart on the side again. I connected a Google Custom Search Engine to allow image searches for a product. Instead of having the user upload or snap a photo, they could simply link an existing photo. This allowed me to store the image sources with links, instead a long base64 string with image data. That would improve scalability and prevent product images from being lost easily.
 
@@ -182,7 +182,7 @@ Here is an overview of everything I learned:
 *   ES6 Javascript
 *   Functional vs. OPP programming
 *   Javascript algorithms and data structures
-*   NodeJS
+*   Node.js
 *   Redux
 *   React
 *   SQL
