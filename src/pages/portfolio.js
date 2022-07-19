@@ -97,7 +97,7 @@ export default ProjectsPage;
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/projects/" } }
+      filter: { fileAbsolutePath: { regex: "/portfolio/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

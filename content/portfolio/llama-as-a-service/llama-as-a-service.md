@@ -14,10 +14,9 @@ tech:
   - GitHub Actions
 company: ''
 showInProjects: true
-slug: /projects/llama-as-a-service
+slug: /portfolio/llama-as-a-service
 ---
 TODO
-
 
 [@ManyShibu](https://twitter.com/manyshiba) Twitter bot posting random (sacred) Shiba Inu pictures.
 
@@ -25,8 +24,10 @@ TODO
  - [Shibe.online API](https://shibe.online/)
  - [Node.js](https://nodejs.org/)
  - [twit](https://www.npmjs.com/package/twit)
+
 ## Decription
 This hobby project is a simple Twitter account posting daily dog pictures. Deployed on Heroku with scheduled CRON jobs.
+
 ## Why Build This?
 
 I love dogs. If you are interested in the development of this project, check out my [blog post](/blog/manyshiba-the-worlds-greatest-twitter-bot).

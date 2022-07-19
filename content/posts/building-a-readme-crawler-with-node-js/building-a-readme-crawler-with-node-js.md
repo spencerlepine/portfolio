@@ -15,7 +15,7 @@ Building a README Crawler with Node.js
 
 An Overview of the Node.js README Web Crawler project and how I created it.
 
-A recent project of mine was this Node.js [web crawler](https://spencerlepine.com/blog/building-a-web-crawler-with-node.js). Working on that led to this idea for another crawler. I wanted a way to navigate through GitHub and search for obvious typos. I had this idea after stumbling across silly typos on numerous portfolio pages. Perhaps I could help fix these errors and ensure these projects/sites are more presentable.
+A recent project of mine was this Node.js [web crawler](https://spencerlepine.com/blog/building-a-web-crawler-with-node.js). Working on that led to this idea for another crawler. I wanted a way to navigate through GitHub and search for obvious typos. I had this idea after stumbling across silly typos on numerous portfolio pages. Perhaps I could help fix these errors and ensure these portfolio/sites are more presentable.
 
 If you’re interest in the final product, you can find the package [here](https://www.npmjs.com/package/readme-crawler), as well as the [GitHub Repo](https://github.com/spencerlepine/readme-crawler).
 

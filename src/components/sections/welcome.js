@@ -26,7 +26,7 @@ const Welcome = () => (
         </Link>
 
         <Link
-          to={'/projects'}
+          to={'/portfolio'}
           className="resume-button no-underline text-white px-3 py-2 bg-red-700 m-1">
           VIEW PORTFOLIO
         </Link>

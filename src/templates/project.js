@@ -35,7 +35,7 @@ const ProjectTemplate = ({ data, location }) => {
       <main className="m-auto overflow-hidden pr-2 md:pr-4 max-w-screen-lg w-11/12 bg-white py-3 p-10 break-normal">
         <span className="breadcrumb">
           <span className="arrow">&larr;</span>
-          <Link to="/projects">All projects</Link>
+          <Link to="/portfolio">View Portfolio</Link>
         </span>
 
         <header className="flex">
@@ -97,7 +97,7 @@ export const postQuery = graphql`
      markdown: allMarkdownRemark(
         filter: {
           frontmatter: { slug: { eq: $path } }
-          fileAbsolutePath: { regex: "/projects/" }
+          fileAbsolutePath: { regex: "/portfolio/" }
       }
       ) {
         edges {

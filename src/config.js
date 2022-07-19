@@ -35,8 +35,8 @@ module.exports = {
     //   url: '/#jobs',
     // },
     {
-      name: 'Projects',
-      url: '/projects',
+      name: 'Portfolio',
+      url: '/portfolio',
       emoji: '📁',
     },
     {

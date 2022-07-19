@@ -30,7 +30,7 @@ const Projects = () => {
       }
       projects: allMarkdownRemark(
         filter: {
-          fileAbsolutePath: { regex: "/projects/" }
+          fileAbsolutePath: { regex: "/portfolio/" }
           frontmatter: { showInProjects: { ne: false } }
         }
         sort: { fields: [frontmatter___date], order: DESC }
@@ -123,7 +123,7 @@ const Projects = () => {
     <section className="landing-section">
       <h2 ref={revealTitle} className="section-title">Other Projects</h2>
 
-      <Link className="inline-link archive-link m-auto" to="/projects" ref={revealArchiveLink}>
+      <Link className="inline-link archive-link m-auto" to="/portfolio" ref={revealArchiveLink}>
         <p className="whitespace-nowrap w-min m-auto text-navy-medium">view all projects</p>
       </Link>
 
