@@ -14,7 +14,7 @@ tech:
   - GitHub Actions
 company: ''
 showInProjects: true
-slug: /portfolio/llama-as-a-service
+slug: /projects/llama-as-a-service
 ---
 TODO
 

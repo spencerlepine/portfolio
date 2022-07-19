@@ -39,9 +39,10 @@ const ProjectsPage = ({ location, data }) => {
                     title,
                     tech,
                     slug,
+                    description,
                   } = node.frontmatter;
                   return (
-                    <tr key={i} ref={el => (revealProjects.current[i] = el)} className="bg-indigo-50 p-4 border-solid border-4 border-indigo-100">
+                    <tr key={i} ref={el => (revealProjects.current[i] = el)} className="bg-indigo-50 p-4 border-solid border-8 border-indigo-100 my-2">
                       <td className="links">
                         <div className="inline-block pl-3">
                           {github && (
@@ -64,6 +65,7 @@ const ProjectsPage = ({ location, data }) => {
                       </td>
 
                       <td className="hidden md:block max-w-md overscroll-auto">
+                        <p>{description}</p>
                         {tech.length > 0 &&
                           tech.map((item, i) => (
                             <span
@@ -102,6 +104,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             date
+            description
             title
             tech
             github
