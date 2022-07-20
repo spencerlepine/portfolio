@@ -1,17 +1,13 @@
-name: CI
+name: Docker CI
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-env:
-  NODE_ENV: test
+  schedule:
+    # Runs “At 00:00 on Sunday.” (see https://crontab.guru)
+    - cron: 0 0 * * 0
 
 jobs:
 
-  client-tests:
+  docker_ci:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -44,13 +40,7 @@ jobs:
 
       - name: "📦 Install Dependencies"
         # if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
-        run: yarn
-
-      - name: 🔴 Lint all files
-        run: yarn run lint
-
-      - name: 🏗 Build
         run: yarn run build --if-present
 
-      - name: ✅  Run tests
-        run: yarn test
+      - name: 🏗 Build
+        run: docker-compose build

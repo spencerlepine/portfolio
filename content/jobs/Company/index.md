@@ -5,6 +5,7 @@ company: 'Instacart'
 location: 'Seattle, WA'
 range: 'November - December 2017'
 url: 'https://www.instacart.com/'
+slug: 'experience/instacart'
 ---
 
 - Worked with a team to create this project

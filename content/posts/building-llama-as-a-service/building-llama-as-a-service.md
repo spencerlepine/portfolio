@@ -1,7 +1,7 @@
 ---
 title: Building Llama as a Service (LaaS)
 description: Creating the world’s first Llama as a Service
-date: 2022-07-13
+date: '2022-07-13'
 draft: false
 slug: /blog/building-llama-as-a-service
 tags:

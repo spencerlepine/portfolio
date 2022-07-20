@@ -3,10 +3,7 @@
   "description": "Portfolio Site and Blog",
   "version": "1.0.0",
   "author": "Spencer Lepine <spencerlepine@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/spencerlepine/portfolio-site"
-  },
+  "repository": "https://github.com/spencerlepine/portfolio-site",
   "keywords": [
     "gatsby"
   ],
@@ -17,7 +14,7 @@
     "test": "echo -e 'No tests to run.'",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "prepare": "husky install",
@@ -61,6 +58,8 @@
     "react-helmet": "^6.1.0",
     "react-responsive-carousel": "^3.2.22",
     "react-transition-group": "^4.3.0",
+    "react-typography": "^0.16.20",
+    "sharp": "0.28.0",
     "tailwindcss": "^2.2.7",
     "tailwindcss-typography": "^3.1.0",
     "typography": "^0.16.21",
@@ -84,5 +83,6 @@
     "lint-staged": "^11.1.2",
     "postcss": "^8.3.6",
     "prettier": "^2.2.1"
-  }
+  },
+  "main": "index.js"
 }

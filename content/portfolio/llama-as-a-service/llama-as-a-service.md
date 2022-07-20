@@ -22,6 +22,11 @@ screenshots:
   - horizontal-scale.png
 ---
 
+- Visit the [LaaS website](https://llama-as-a-service.netlify.app/) for a demo
+- View the source code on [GitHub](https://github.com/orgs/llama-as-a-service/repositories)
+- View the walkthrough [YouTube video](TODO)
+- Read the [blog post](https://www.spencerlepine.com/blog/building-llama-as-a-service)
+
 ## Decription
 This hobby project is a random Llama Image API. The world's first Llama as a Service (LaaS).
 ## ✅ Try it out
@@ -36,7 +41,6 @@ curl https://llama-as-a-service-images.herokuapp.com/random
   "message": "https://images.theconversation.com/files/337593/original/file-20200526-106811-ql6d51.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop"
 }
 ```
-
 
 ## 🛠️ Built with:
  - [Node.js](https://nodejs.org/)

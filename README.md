@@ -1,13 +1,18 @@
-# [SpencerLepine.com](https://www.spencerlepine.com/) [![CI](https://github.com/spencerlepine/portfolio-site/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/ci.yml) [![Deploy](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml/badge.svg?branch=master)](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml)
+# [SpencerLepine.com](https://www.spencerlepine.com/)
+
+[![CI](https://github.com/spencerlepine/portfolio-site/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/spencerlepine/portfolio-site/actions/workflows/ci.yml) [![Netlify Deploy](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml/badge.svg?branch=main)](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml) [![Publish Docker](https://github.com/spencerlepine/portfolio-site/actions/workflows/publish-to-ghcr.yml/badge.svg?branch=main)](https://github.com/spencerlepine/portfolio-site/actions/workflows/publish-to-ghcr.yml) [![Stable Version](https://img.shields.io/github/v/tag/spencerlepine/portfolio-site)](https://img.shields.io/github/v/tag/spencerlepine/portfolio-site) [![Latest Release](https://img.shields.io/github/v/release/spencerlepine/portfolio-site?color=%233D9970)](https://img.shields.io/github/v/tag/spencerlepine/portfolio-site?color=%233D9970)
 
 Developer Portfolio and Blog powered by GatsbyJS and TailwindCSS.
 
 ![OG Snapshot](./static/og@2x.png)
-## ⚙️ Setup
 
+## ⚙️ Setup
 ```sh
-npm install
-npm run develop
+$ git clone https://github.com/spencerlepine/portfolio-site.git
+$ cd portfolio-site
+$ yarn install
+$ yarn start
+# access on localhost:3000
 ```
 
 ## 📦 Technologies:
@@ -21,16 +26,12 @@ npm run develop
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
-<!-- ## Features
-### Pre-commit hooks
-- Uses `Husky`, `ESLint`, and `Prettier` to enforce code styles and ensure Gatsby will build before pushing to remote.
-### Static Files
-- `GatsbyJS` will dynamically build static files from files in the [`/content](./content) folder, including blog posts and projects. -->
-
-<!-- ### Continuous Integration
-- GitHub Actions will ensure a valid Gatsby build on the `master` branch
-
-- Pushes to `master` will trigger automatic deployment to the [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/). GitHub Actions with SSH into the remote server and replace static files. -->
+## 📦 Pull from GitHub Repository Container Registry
+```sh
+# docker pull ghcr.io/OWNER/IMAGE_NAME
+$ docker pull ghcr.io/spencerlepine/portfolio-site:0.1.0
+# runs on port 80
+```
 
 ---
 

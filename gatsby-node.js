@@ -33,7 +33,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           fieldValue
         }
       }
-      projectsRemark: allMarkdownRemark(
+      portfolioRemark: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/portfolio/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
@@ -42,6 +42,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               slug
+              title
             }
           }
         }
@@ -68,10 +69,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
   // Create project detail pages
-  const projects = result.data.projectsRemark.edges;
+  const projects = result.data.portfolioRemark.edges;
 
   projects.forEach(({ node }) => {
-    console.log(node)
     createPage({
       path: node.frontmatter.slug,
       component: projectTemplate,
