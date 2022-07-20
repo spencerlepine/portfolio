@@ -7,6 +7,7 @@ slug: /blog/building-llama-as-a-service
 tags:
   - Express
   - Docker
+  - MongoDB
   - Node.js
   - Heroku
   - GitHub Actions

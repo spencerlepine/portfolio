@@ -71,13 +71,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const projects = result.data.projectsRemark.edges;
 
   projects.forEach(({ node }) => {
-    if (node && node.frontmatter.slug && node.frontmatter.tech) {
-      createPage({
-        path: node.frontmatter.slug,
-        component: projectTemplate,
-        context: {},
-      });
-    }
+    console.log(node)
+    createPage({
+      path: node.frontmatter.slug,
+      component: projectTemplate,
+      context: {},
+    });
   });
 
   // Extract tag data from query

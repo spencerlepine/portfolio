@@ -64,7 +64,7 @@ As the UI Owner, I designed the [wireframes](https://github.com/Blue-Ocean-Team-
 The team built an API for the client/server interaction between the database, see the schema [on GitHub](https://github.com/Blue-Ocean-Team-1/HelloHealth/blob/main/BLUE_OCEAN_API.md).
 
 
-## 📦 More Technologies:
+## 📦 Technologies:
 - [AWS (EC2)](https://aws.amazon.com/ec2/)
 - [Vite](https://vitejs.dev/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
