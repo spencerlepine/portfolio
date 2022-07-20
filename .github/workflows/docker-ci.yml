@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: ['16']
+        node: ['18']
         os: [ubuntu-latest]
 
     name: Node ${{ matrix.node }} on ${{ matrix.os }}
@@ -40,7 +40,7 @@ jobs:
 
       - name: "📦 Install Dependencies"
         # if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
-        run: yarn run build --if-present
+        run: yarn run build
 
       - name: 🏗 Build
         run: docker-compose build
