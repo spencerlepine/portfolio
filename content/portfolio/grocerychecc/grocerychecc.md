@@ -13,6 +13,7 @@ tech:
 company: ''
 showInProjects: true
 slug: /portfolio/grocerychecc
+thumbnail: ./listmaker.png
 screenshots:
   - ./homepage.png
   - ./generate-list.png

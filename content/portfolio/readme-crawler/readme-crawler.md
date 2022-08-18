@@ -12,6 +12,7 @@ company: ''
 showInProjects: true
 isFeatured: ''
 slug: /portfolio/readme-crawler
+thumbnail: ./readme-thumbnail.png
 ---
 
 Want to no more? Check out the source code [on GitHub](https://github.com/spencerlepine/readme-crawler)

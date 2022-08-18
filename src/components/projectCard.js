@@ -3,8 +3,25 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Icon } from '@components/icons';
 
+const extractImages = node => {
+  try {
+    /*
+    childImageSharp {
+      gatsbyImageData(width: 700, formats: [AUTO, PNG])
+    }
+    */
+    //
+    const thumbnailData = node.frontmatter.thumbnail;
+    const image = thumbnailData.childImageSharp.fluid.src;
+    return image;
+  } catch {
+    return 'http://cmsi-id.com/assets/product/15032016/pt-cahayatiara-mustika-scientific-indonesia_wrv9c_1073.png';
+  }
+};
+
 const ProjectCard = ({ node, listIndex, customTitleData }) => {
   const { frontmatter } = node;
+  const image = extractImages(node);
 
   const { github, external, title, tech, description, slug } = frontmatter;
   const leftColumn = (listIndex + 1) % 2 === 0 ? 'image' : 'details';
@@ -15,7 +32,7 @@ const ProjectCard = ({ node, listIndex, customTitleData }) => {
   const ImageColumn = () => (
     <div className="projectImage align-end opacity-50 relative overflow-y-clip" style={{ overflowY: 'clip', zIndex: 0 }}>
       <a href={external || github} aria-label="Project Link" className="inline-block p-1">
-        <img className={`md:max-w-sm sm:max-w-xs xs:max-w-xs z-0 absolute ${imageAlign}-10`} src={'https://img.youtube.com/vi/7CqJlxBYj-M/0.jpg'} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
+        <img className={`md:max-w-sm sm:max-w-xs xs:max-w-xs z-0 absolute ${imageAlign}-10`} src={image} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
       </a>
     </div >
   );

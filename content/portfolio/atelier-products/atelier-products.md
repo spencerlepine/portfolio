@@ -14,9 +14,10 @@ tech:
 company: ''
 showInProjects: true
 slug: /portfolio/atelier-products
+thumbnail: ./diagram.png
 screenshots:
   - ./diagram.png
-isFeatured: ''
+isFeatured: 'yes'
 ---
 
 ## Overview

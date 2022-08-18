@@ -15,6 +15,7 @@ tech:
 company: ''
 isFeatured: 'yes'
 showInProjects: true
+thumbnail: ./farmers_page.png
 slug: /portfolio/hellohealth
 screenshots:
   - project_deployment.png

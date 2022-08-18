@@ -22,7 +22,15 @@ const Projects = () => {
               github
               external
               description
+              thumbnail {
+                childImageSharp {
+                  fluid(quality: 100, maxWidth: 1000) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               slug
+              isFeatured
             }
           }
         }
@@ -30,7 +38,7 @@ const Projects = () => {
     }
   `);
 
-  const projectsToShow = data.projects.edges.filter(({ node }) => node).slice(0, MAX_PROJECTS_SHOWN + 1);
+  const projectsToShow = data.projects.edges.filter(({ node }) => node.frontmatter.isFeatured && node.frontmatter.tech).slice(0, MAX_PROJECTS_SHOWN + 1);
 
   return (
     <section className="landing-section">

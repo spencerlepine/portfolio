@@ -13,6 +13,7 @@ tech:
 company: ''
 showInProjects: true
 slug: /portfolio/atelier
+thumbnail: ./product_overview.png
 screenshots:
   - ./product_overview.png
   - ./related_outfit.png

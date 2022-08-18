@@ -11,6 +11,7 @@ company: ''
 showInProjects: true
 isFeatured: ''
 slug: /portfolio/spotify-top-songs
+thumbnail: ./spotify-thumbnail.jpg
 ---
 
 Want to no more? Check out the source code [on GitHub](https://github.com/spencerlepine/spotify-top-songs)

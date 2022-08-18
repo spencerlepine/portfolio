@@ -18,8 +18,9 @@ tech:
   - Bulma
   - Socket.io
 company: ''
-isFeatured: ''
+isFeatured: 'yes'
 showInProjects: true
+thumbnail: ./thumbnail.jpeg
 slug: /portfolio/woofer
 screenshots:
   - ./swipe.png

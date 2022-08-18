@@ -12,6 +12,7 @@ tech:
 company: ''
 showInProjects: true
 isFeatured: ''
+thumbnail: ./og.png
 slug: /portfolio/portfolio-site
 ---
 

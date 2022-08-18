@@ -10,7 +10,7 @@ const ProjectsPage = ({ location, data }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title="Projects" />
+      <Helmet title="Portfolio" />
 
       <main className="m-auto m-4 bg-white p-4 max-w-5xl mt-3 min-h-1 rounded">
         <header>
@@ -77,6 +77,13 @@ export const pageQuery = graphql`
             github
             external
             company
+            thumbnail {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             slug
             isFeatured
           }

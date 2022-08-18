@@ -6,7 +6,7 @@ external: 'https://grocery-client-sl.herokuapp.com/'
 description: 'QuickCart web app is a grocery product catalog for budgeting a shopping list stored in the cloud. Connected to Firebase (BaaS) and multiple external APIs'
 tech:
   - React
-  - Node
+  - Node.js
   - Material UI
   - Firebase
   - Spoonacular API
@@ -15,8 +15,9 @@ tech:
   - Testing Library
 company: ''
 showInProjects: true
-isFeatured: ''
+isFeatured: 'yes'
 slug: /portfolio/quickcart
+thumbnail: ./quickcart.png
 screenshots:
   - ./quickcart.png
   - ./scan-upc.png
