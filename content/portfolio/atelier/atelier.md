@@ -20,6 +20,7 @@ screenshots:
   - ./ratings_review_modal.png
   - ./question_answer.png
   - ./question_answer_modal.png
+isFeatured: ''
 ---
 
 ## Overview

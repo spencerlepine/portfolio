@@ -19,6 +19,7 @@ screenshots:
   - ./listmaker.png
   - ./listchecker.png
   - ./nutritionfacts.png
+isFeatured: ''
 ---
 
 ## Overview

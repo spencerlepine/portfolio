@@ -14,6 +14,7 @@ tech:
   - GitHub Actions
 company: ''
 showInProjects: true
+isFeatured: ''
 slug: /portfolio/llama-as-a-service
 screenshots:
   - architecture-diagram.png

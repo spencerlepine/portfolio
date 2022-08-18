@@ -16,6 +16,7 @@ showInProjects: true
 slug: /portfolio/atelier-products
 screenshots:
   - ./diagram.png
+isFeatured: ''
 ---
 
 ## Overview

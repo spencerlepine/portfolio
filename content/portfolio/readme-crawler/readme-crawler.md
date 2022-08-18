@@ -10,6 +10,7 @@ tech:
   - node-fetch
 company: ''
 showInProjects: true
+isFeatured: ''
 slug: /portfolio/readme-crawler
 ---
 

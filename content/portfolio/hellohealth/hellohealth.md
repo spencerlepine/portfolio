@@ -13,6 +13,7 @@ tech:
   - Express
   - Firebase
 company: ''
+isFeatured: 'yes'
 showInProjects: true
 slug: /portfolio/hellohealth
 screenshots:

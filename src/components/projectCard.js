@@ -3,11 +3,14 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Icon } from '@components/icons';
 
-const ProjectCard = ({ node, listIndex }) => {
+const ProjectCard = ({ node, listIndex, customTitleData }) => {
   const { frontmatter } = node;
+
   const { github, external, title, tech, description, slug } = frontmatter;
-  const leftColumn = listIndex % 2 === 1 ? 'details' : 'image';
-  const imageAlign = listIndex % 2 !== 1 ? 'left' : 'right';
+  const leftColumn = (listIndex + 1) % 2 === 0 ? 'image' : 'details';
+  const imageAlign = (listIndex + 1) % 2 === 0 ? 'left' : 'right';
+  const customTitle = (customTitleData && customTitleData.title) ? customTitleData.title : 'Featured Project';
+  const customTitleStyle = (customTitleData && customTitleData.styleString) ? customTitleData.styleString : 'text-sm text-orange-400';
 
   const ImageColumn = () => (
     <div className="projectImage align-end opacity-50 relative overflow-y-clip" style={{ overflowY: 'clip', zIndex: 0 }}>
@@ -22,7 +25,7 @@ const ProjectCard = ({ node, listIndex }) => {
       <div className={`projectDetails max-w-sm ${alignment} sm:text-left xs:text-left lg:${alignment} md:${alignment}`} style={{ zIndex: 99 }}>
         <header className="p-1">
           <div className="grid">
-            <h6 className="text-sm text-orange-400">Featured Project</h6>
+            <h6 className={customTitleStyle}>{customTitle}</h6>
 
             <Link to={slug} className="" target="_blank" rel="noreferrer">
               <h3 className="text-xl font-bold">{title}</h3>

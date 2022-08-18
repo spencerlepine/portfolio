@@ -9,6 +9,7 @@ tech:
   - Spotify Web API
 company: ''
 showInProjects: true
+isFeatured: ''
 slug: /portfolio/spotify-top-songs
 ---
 

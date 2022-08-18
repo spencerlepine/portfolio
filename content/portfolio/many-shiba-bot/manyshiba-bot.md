@@ -10,6 +10,7 @@ tech:
   - Twitter API
 company: ''
 showInProjects: true
+isFeatured: ''
 slug: /portfolio/manyshiba-bot
 ---
 

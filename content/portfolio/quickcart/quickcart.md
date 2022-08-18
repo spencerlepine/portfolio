@@ -11,6 +11,7 @@ tech:
   - Testing Library
 company: ''
 showInProjects: true
+isFeatured: ''
 slug: /portfolio/quickcart
 screenshots:
   - ./quickcart.png
