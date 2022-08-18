@@ -14,8 +14,10 @@ const ProjectCard = ({ node, listIndex, customTitleData }) => {
 
   const ImageColumn = () => (
     <div className="projectImage align-end opacity-50 relative overflow-y-clip" style={{ overflowY: 'clip', zIndex: 0 }}>
-      <img className={`md:max-w-sm sm:max-w-xs xs:max-w-xs z-0 absolute ${imageAlign}-10`} src={'https://img.youtube.com/vi/7CqJlxBYj-M/0.jpg'} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
-    </div>
+      <a href={external || github} aria-label="Project Link" className="inline-block p-1">
+        <img className={`md:max-w-sm sm:max-w-xs xs:max-w-xs z-0 absolute ${imageAlign}-10`} src={'https://img.youtube.com/vi/7CqJlxBYj-M/0.jpg'} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
+      </a>
+    </div >
   );
 
   const ProjectDetails = () => {
