@@ -7,13 +7,13 @@ const Skills = () => (
       <div className="m-auto max-w-4xl flex-column mt-4 sm:grid md:flex lg:flex">
         <div className="w-auto relative max-w-2xl p-1 mt-2 text-lg leading-relaxed text-blueGray-500 flex-1 m-auto md:grid lg:inline sm:grid sm:grid-cols-2 xs:grid xs:grid-cols-2">
           <div className="m-auto sm:col-span-2 xs:col-span-2">
-            <h2 className="m-auto w-fit uppercase px-7 py-2 text-purple-700 bg-purple-100 font-bold m-1 rounded-md text-2xl font-semibold">
+            <h2 className="m-auto w-fit uppercase px-7 py-2 text-green-700 bg-green-100 font-bold m-1 rounded-md text-2xl font-semibold">
               Skills
             </h2>
           </div>
 
           {skills.map(({ name, tech }) => (
-            <ul key={name} className="max-w-2xl w-fit-content lg:flex my-6 flex-wrap mx-4 col-span-1 md:grid sm:grid xs:grid md:col-span-1 sm:col-span-2 xs:col-span-2">
+            <ul key={name} className="max-w-2xl w-fit-content lg:flex my-2 flex-wrap mx-4 col-span-1 md:grid sm:grid xs:grid md:col-span-1 sm:col-span-2 xs:col-span-2">
               <li>
                 <h3 className="font-bold text-xl inline-block p-1">
                   {name}:

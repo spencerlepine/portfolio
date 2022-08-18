@@ -6,9 +6,8 @@ import { Icon } from '@components/icons';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Welcome = () => (
-  <section className="landing-section grid auto-cols-auto md:grid-cols-2">
-    <div>
-
+  <section className="landing-section grid auto-cols-auto md:grid-cols-2 max-w-lg">
+    <div className="">
       <span className="text-center p-1">
         <h1 className="text-3xl"><Emoji symbol='👋' />{' '}Hello, I'm</h1>
         <h2 className="text-3xl font-bold text-navy-medium">Spencer Lepine<span className="opacity-0">,</span></h2>
@@ -35,7 +34,7 @@ const Welcome = () => (
     <div className="has-text-centered">
       <div className="m-auto w-min">
         <StaticImage
-          className="w-60 align-middle m-auto my-4"
+          className="w-60 align-middle m-auto my-4 rounded-full"
           src="../../images/me.jpg"
           width={500}
           quality={95}
@@ -47,7 +46,7 @@ const Welcome = () => (
       <div className="m-auto w-max">
         {socialMedia.map((social, i) => (
           <a href={social.url} className="" key={i}>
-            <Icon name={social.name} customClass="inline m-1 mx-3 text-purple-400 transform transition duration-500 hover:scale-125"></Icon>
+            <Icon name={social.name} customClass="inline m-1 mx-3 text-blue-400 transform transition duration-500 hover:scale-125"></Icon>
           </a>
         ))}
       </div>

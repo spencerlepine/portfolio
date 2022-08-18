@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Icon } from '@components/icons';
+import { ProjectCard } from '@components';
 
 const MAX_PROJECTS_SHOWN = 2;
 
@@ -30,93 +30,39 @@ const Projects = () => {
     }
   `);
 
-  // const GRID_LIMIT = 6;
-  const projects = data.projects.edges.filter(({ node }) => node).slice(0, MAX_PROJECTS_SHOWN + 1);
-
-  // const firstSix = projects.slice(0, GRID_LIMIT);
-  const projectsToShow = projects; // showMore ? projects : firstSix;
-
-  const projectInner = node => {
-    const { frontmatter } = node;
-    const { github, external, title, tech, description, slug } = frontmatter;
-
-    const cardStyles = 'bg-blue-200 border-blue-100 border-4 p-1 rounded-md'; // "bg-indigo-50 border-indigo-100"
-
-    return (
-      <div className={`${cardStyles} relative h-auto border-solid w-80 m-auto h-full`}>
-        <header className="p-1">
-          <div className="flex flex-wrap">
-            <Link to={slug} className="project-title mr-3 p-0" target="_blank" rel="noreferrer">
-              <h3 className="project-title text-xl inline-block p-0">
-                {title}
-              </h3>
-            </Link>
-            <span className="ml-auto bg-blue-100 border-b-4 border-blue-300 px-1 rounded text-navy-dark">
-              {github && (
-                <a href={github} aria-label="GitHub Link" className="inline-block p-1">
-                  <Icon name="GitHub" customClass="" />
-                </a>
-              )}
-              {external && (
-                <a href={external} aria-label="External Link" className="external inline-block p-1">
-                  <Icon name="External" customClass="" />
-                </a>
-              )}
-            </span>
-          </div>
-        </header >
-
-        <div className="bg-blue-100 p-3 rounded-md mt-auto">
-          <div className="project-description p-3">
-            <p className="text-charcoal">
-              {description}
-            </p>
-          </div>
-
-          <div className="relative h-5/6">
-            {tech && tech.length && (
-              <ul className="project-tech-list">
-                {tech.map((tech, i) => (
-                  <li
-                    className="techStyles"
-                    key={i}>
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </div>
-      </div >
-    );
-  };
+  const projectsToShow = data.projects.edges.filter(({ node }) => node).slice(0, MAX_PROJECTS_SHOWN + 1);
 
   return (
     <section className="landing-section">
-      <h2 className="section-title">Portfolio</h2>
+      <div className="m-auto flex-column mt-4">
+        <div className="w-auto relative max-w-2xl p-1 mt-2text-lg leading-relaxed text-blueGray-500 flex-1 m-auto">
+          <div className="m-auto max-w-xl mb-10">
+            <h2 className="m-auto w-fit uppercase px-7 py-2 text-blue-600 bg-blue-50 font-bold m-1 rounded-md text-2xl font-semibold flex">
+              Portfolio
 
-      <Link className="inline-link archive-link m-auto" to="/portfolio">
-        <p className="whitespace-nowrap w-min m-auto text-navy-medium">veiw all</p>
-      </Link>
+              <Link className="archive-link ml-auto" to="/portfolio">
+                <p className="font-semibold text-navy-medium text-lg">veiw all</p>
+              </Link>
+            </h2>
 
-      <ul className="projects-grid grid auto-rows-fr grid-flow-row md:grid-cols-2 auto-rows-fr w-max m-auto">
-        <>
-          {projectsToShow &&
-            projectsToShow.map(({ node }, i) => (
-              <>
-                {node.frontmatter.tech && (
-                  <li key={i} className="content-center m-2">
-                    {projectInner(node)}
-                  </li>
-                )}
-              </>
-            ))}
-        </>
-      </ul>
+          </div>
 
-      {/* <button className="more-button" onClick={() => setShowMore(!showMore)}>
-        Show {showMore ? 'Less' : 'More'}
-      </button> */}
+          <ul className="m-auto">
+            <>
+              {projectsToShow &&
+                projectsToShow.map(({ node }, i) => (
+                  <>
+                    {node.frontmatter.tech && (
+                      <li key={i} className="content-center my-12">
+                        <ProjectCard node={node} listIndex={i} />
+                      </li>
+                    )}
+                  </>
+                ))}
+            </>
+          </ul>
+        </div>
+      </div>
     </section>
   );
 };
