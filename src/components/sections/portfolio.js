@@ -2,32 +2,11 @@ import React, { useRef } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Icon } from '@components/icons';
 
-const MAX_PROJECTS_SHOWN = 4;
+const MAX_PROJECTS_SHOWN = 2;
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      featured: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/featured/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              cover {
-                childImageSharp {
-                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-                }
-              }
-              tech
-              github
-              external
-              description
-            }
-          }
-        }
-      }
       projects: allMarkdownRemark(
         filter: {
           fileAbsolutePath: { regex: "/portfolio/" }
@@ -56,10 +35,7 @@ const Projects = () => {
   const revealArchiveLink = useRef(null);
 
   // const GRID_LIMIT = 6;
-  const featuredProjects = data.featured.edges.map(({ node }) => node.frontmatter.title);
-  const projects = data.projects.edges.filter(({ node }) => node).filter(({ node }) => (
-    featuredProjects.every(title => title !== node.frontmatter.title)
-  )).slice(0, MAX_PROJECTS_SHOWN);
+  const projects = data.projects.edges.filter(({ node }) => node).slice(0, MAX_PROJECTS_SHOWN + 1);
 
   // const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = projects; // showMore ? projects : firstSix;
