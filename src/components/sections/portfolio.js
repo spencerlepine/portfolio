@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Icon } from '@components/icons';
 
@@ -29,10 +29,6 @@ const Projects = () => {
       }
     }
   `);
-
-  // const [showMore, setShowMore] = useState(false);
-  const revealTitle = useRef(null);
-  const revealArchiveLink = useRef(null);
 
   // const GRID_LIMIT = 6;
   const projects = data.projects.edges.filter(({ node }) => node).slice(0, MAX_PROJECTS_SHOWN + 1);
@@ -97,9 +93,9 @@ const Projects = () => {
 
   return (
     <section className="landing-section">
-      <h2 ref={revealTitle} className="section-title">Portfolio</h2>
+      <h2 className="section-title">Portfolio</h2>
 
-      <Link className="inline-link archive-link m-auto" to="/portfolio" ref={revealArchiveLink}>
+      <Link className="inline-link archive-link m-auto" to="/portfolio">
         <p className="whitespace-nowrap w-min m-auto text-navy-medium">veiw all</p>
       </Link>
 

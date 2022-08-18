@@ -26,11 +26,6 @@ module.exports = {
 
   navLinks: [
     // {
-    //   name: 'About',
-    //   url: '/#about',
-    //   emoji: '👦🏻',
-    // },
-    // {
     //   name: 'Experience',
     //   url: '/#jobs',
     // },
@@ -56,4 +51,23 @@ module.exports = {
   },
 
   sourceRepository: 'https://github.com/spencerlepine/portfolio-site',
+
+  skills: [
+    {
+      name: 'Frontend',
+      tech: ['JavaScript', 'HTML', 'CSS', 'React', 'MaterialUI', 'Tailwind'],
+    },
+    {
+      name: 'Backend',
+      tech: ['Node.js', 'Express', 'PostgreSQL', 'Firebase', 'MongoDB', 'RESTful API'],
+    },
+    {
+      name: 'Testing/Deployment',
+      tech: ['Jest', 'Testing Library', 'AWS (EC2)', 'Docker', 'NGINX'],
+    },
+    {
+      name: 'Developer Tools',
+      tech: ['Vim', 'Git', 'Webpack', 'Babel', 'ESLint', 'GitHub Actions'],
+    },
+  ],
 };

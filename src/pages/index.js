@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Welcome, About, Projects, Contact } from '@components'; // Jobs,
+import { Layout, Welcome, About, Projects, Contact, Skills } from '@components'; // Jobs,
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
@@ -8,6 +8,7 @@ const IndexPage = ({ location }) => (
       <Welcome />
       <About />
       {/* <Jobs /> */}
+      <Skills />
       <Projects />
       <Contact />
     </main>
