@@ -26,6 +26,7 @@
     }
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
     "@tailwindcss/typography": "^0.4.1",
     "babel-plugin-prismjs": "^2.1.0",
     "gatsby": "^3.10.2",
@@ -33,6 +34,7 @@
     "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-manifest": "^3.4.0",
+    "gatsby-plugin-material-ui": "^4.1.0",
     "gatsby-plugin-netlify": "^3.10.0",
     "gatsby-plugin-offline": "^4.10.0",
     "gatsby-plugin-postcss": "^4.11.0",
@@ -47,9 +49,7 @@
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.4.0",
-    "i": "^0.3.6",
     "lodash": "^4.17.19",
-    "npm": "^7.20.5",
     "postcss-import": "^14.0.2",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",

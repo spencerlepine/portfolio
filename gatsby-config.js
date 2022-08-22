@@ -10,6 +10,12 @@ module.exports = {
     twitterUsername: '@spencerlepine',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        pathToEmotionCacheProps: `src/emotion-cache-props`,
+      },
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
