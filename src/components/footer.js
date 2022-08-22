@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="min-w-full grid justify-items-start md:block m-auto">
         <a href={sourceRepository} className="no-underline float-left">
           <div className="w-full whitespace-nowrap p-2 md:p-4">
-            <p className="text-gray-400 p-1">Developed by Spencer Lepine</p>
+            <p className="text-gray-400 p-1">Built by Spencer Lepine</p>
           </div>
         </a>
 
