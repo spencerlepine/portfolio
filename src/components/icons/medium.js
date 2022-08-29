@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IconMedium = ({ customClass }) => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 512 512" className={customClass}>
+const IconMedium = () => (
+  <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 512 512">
     <title>Medium Link</title>
     <path fill="currentColor" d="M28,28v456h456V28H28z M406.83,136.04l-24.46,23.45c-2.11,1.61-3.15,4.25-2.72,6.86v172.28c-0.44,2.61,0.61,5.26,2.72,6.86
 		l23.88,23.45v5.15H286.13v-5.15l24.74-24.02c2.43-2.43,2.43-3.15,2.43-6.86V198.81l-68.79,174.71h-9.3l-80.09-174.71v117.1

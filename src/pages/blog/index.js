@@ -29,7 +29,7 @@ const BlogPage = ({ location, data }) => {
                     <Link to={slug} >
 
                       {/* <div>
-                        <IconBookmark customClass="inline" />
+                        <IconBookmark 
                       </div> */}
                       <h5 >
                         {title}

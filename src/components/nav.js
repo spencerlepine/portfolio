@@ -8,7 +8,7 @@ const Nav = () => {
   const Logo = (
     <div>
       <Link to="/" >
-        <IconLogo customClass="w-16 h-16" />
+        <IconLogo />
       </Link>
     </div>
   );

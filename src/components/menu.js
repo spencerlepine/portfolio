@@ -31,7 +31,7 @@ const Menu = () => {
   return (
     <div>
       <Helmet>
-        <body className={menuOpen ? 'blur' : ''} />
+        <body />
       </Helmet>
 
       <div ref={wrapperRef} >
@@ -39,11 +39,11 @@ const Menu = () => {
           onClick={toggleMenu}
           ref={buttonRef}>
           <div>
-            <Icon name="Hamburger" customClass="text-white" />
+            <Icon name="Hamburger" />
           </div>
         </button>
 
-        <aside className={menuOpen ? '' : 'hidden'}>
+        <aside>
           <nav ref={navRef} >
             {navLinks && (
               <ol >
@@ -59,10 +59,6 @@ const Menu = () => {
                 ))}
               </ol>
             )}
-
-            {/* <a href="/resume.pdf" >
-              Resume
-            </a> */}
           </nav>
         </aside>
       </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IconYoutube = ({ customClass }) => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 455 455" className={customClass}>
+const IconYoutube = () => (
+  <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 455 455">
     <title>Youtube Link</title>
     <g fill="currentColor">
       <path d="M0,0v455h455V0H0z M379.493,301.961

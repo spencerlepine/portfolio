@@ -8,25 +8,19 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Welcome = () => (
   <section>
     <div>
-      <span>
+      <div>
         <h1 ><Emoji symbol='👋' />{' '}Hello, I'm</h1>
-        <h2>,</h2>
+        <h2>Spencer Lepine,</h2>
         <h5>a Front End</h5>
         <h1 >Software Engineer</h1>
-      </span >
-
-      <hr />
+      </div>
 
       <div>
-        <Link
-          to={'/#contact'}
-        >
+        <Link to={'/#contact'}>
           GET IN TOUCH
         </Link>
 
-        <Link
-          to={'/portfolio'}
-        >
+        <Link to={'/portfolio'} >
           VIEW PORTFOLIO
         </Link>
       </div>
@@ -34,7 +28,6 @@ const Welcome = () => (
     <div>
       <div>
         <StaticImage
-
           src="../../images/me.jpg"
           width={500}
           quality={95}
@@ -46,7 +39,7 @@ const Welcome = () => (
       <div>
         {socialMedia.map((social, i) => (
           <a href={social.url} key={i}>
-            <Icon name={social.name} customClass="inline m-1 mx-3 text-blue-400 transform transition duration-500 hover:scale-125"></Icon>
+            <Icon name={social.name}></Icon>
           </a>
         ))}
       </div>
