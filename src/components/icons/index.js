@@ -5,7 +5,6 @@ export { default as IconGitHub } from './github';
 export { default as IconGitHubSquare } from './github';
 export { default as IconLinkedin } from './linkedin';
 export { default as IconLinkedinSquare } from './linkedin';
-export { default as IconMedium } from './medium';
 export { default as IconLogo } from './logo';
 export { default as IconHamburger } from './hamburger';
 export { default as IconTwitter } from './twitter';

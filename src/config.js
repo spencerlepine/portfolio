@@ -15,10 +15,6 @@ module.exports = {
       url: 'https://www.linkedin.com/in/spencer-lepine',
     },
     {
-      name: 'Medium',
-      url: 'https://medium.com/@spencerlepine',
-    },
-    {
       name: 'Youtube',
       url: 'https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q',
     },
@@ -32,17 +28,14 @@ module.exports = {
     {
       name: 'Portfolio',
       url: '/portfolio',
-      emoji: '📁',
     },
     {
       name: 'Blog',
       url: '/blog',
-      emoji: '📝',
     },
     {
       name: 'Contact',
       url: '/#contact',
-      emoji: '📮',
     },
   ],
 
@@ -53,21 +46,9 @@ module.exports = {
   sourceRepository: 'https://github.com/spencerlepine/portfolio-site',
 
   skills: [
-    {
-      name: 'Frontend',
-      tech: ['JavaScript', 'HTML', 'CSS', 'React', 'MaterialUI', 'Tailwind'],
-    },
-    {
-      name: 'Backend',
-      tech: ['Node.js', 'Express', 'PostgreSQL', 'Firebase', 'MongoDB', 'RESTful API'],
-    },
-    {
-      name: 'Testing/Deployment',
-      tech: ['Jest', 'Testing Library', 'AWS (EC2)', 'Docker', 'NGINX'],
-    },
-    {
-      name: 'Developer Tools',
-      tech: ['Vim', 'Git', 'Webpack', 'Babel', 'ESLint', 'GitHub Actions'],
-    },
+    'JavaScript', 'HTML', 'CSS', 'React', 'MaterialUI', 'Tailwind',
+    'Node.js', 'Express', 'PostgreSQL', 'Firebase', 'MongoDB', 'RESTful API',
+    'Jest', 'Testing Library', 'AWS (EC2)', 'Docker', 'NGINX',
+    'Vim', 'Git', 'Webpack', 'Babel', 'ESLint', 'GitHub Actions',
   ],
 };

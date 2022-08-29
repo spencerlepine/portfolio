@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import { navLinks } from '@config';
 import { Icon } from '@components/icons';
-import { Emoji } from '@components';
 import { useOnClickOutside } from '@hooks';
 
 const Menu = () => {
@@ -47,13 +46,10 @@ const Menu = () => {
           <nav ref={navRef} >
             {navLinks && (
               <ol >
-                {navLinks.map(({ url, name, emoji }, i) => (
+                {navLinks.map(({ url, name }, i) => (
                   <li key={i}>
                     <Link to={url} onClick={toggleMenu}>
-                      <p >
-                        <Emoji symbol={emoji} />{'  '}
-                        {name}
-                      </p>
+                      {name}
                     </Link>
                   </li>
                 ))}

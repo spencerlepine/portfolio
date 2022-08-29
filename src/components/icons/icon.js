@@ -8,7 +8,6 @@ import {
   IconGitHubSquare,
   IconLinkedin,
   IconLinkedinSquare,
-  IconMedium,
   IconLogo,
   IconTwitter,
   IconTwitterSquare,
@@ -37,8 +36,6 @@ const Icon = ({ name, customClass }) => {
       return <IconLinkedinSquare customClass={customClass} />;
     case 'Logo':
       return <IconLogo customClass={customClass} />;
-    case 'Medium':
-      return <IconMedium customClass={customClass} />;
     case 'Twitter':
       return <IconTwitter customClass={customClass} />;
     case 'TwitterSquare':

@@ -8,7 +8,7 @@ const Contact = () => (
       Want to work together or have any questions?
     </p>
 
-    {{ /* TODO FORM */ }}
+    { /* TODO FORM */}
   </section>
 );
 
