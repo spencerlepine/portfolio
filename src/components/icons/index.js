@@ -11,4 +11,4 @@ export { default as IconTwitter } from './twitter';
 export { default as IconTwitterSquare } from './twitter-square';
 export { default as IconBookmark } from './bookmark';
 export { default as IconEmail } from './email';
-export { default as IconYoutube } from './youtube';
+export { default as IconYouTube } from './youtube';

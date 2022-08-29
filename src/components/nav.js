@@ -1,55 +1,26 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { navLinks } from '@config';
-import { Menu } from '@components';
-import { IconLogo } from '@components/icons';
+// import { Menu } from '@components';
+import { Icon } from '@components/icons';
+import { Header as GrommetHeader, Heading } from 'grommet';
 
-const Nav = () => {
-  const Logo = (
-    <div>
-      <Link to="/" >
-        <IconLogo />
-      </Link>
-    </div>
-  );
+const Nav = () => (
+  <GrommetHeader background="brand" justify="center">
+    <Heading>
+      <Link to="/" ><Icon name="Logo" color='plain' size='xlarge' /></Link>
 
-  // const ResumeLink = (
-  //   <a >
-  //     <h3 >Resume</h3>
-  //   </a>
-  // );
+      {navLinks.map(({ url, name }) => (
+        <Link
+          key={name}
+          to={url}>
+          {name}
+        </Link>
+      ))}
 
-  return (
-    <header>
-      <nav >
-        {Logo}
-
-        <div>
-          <ol >
-            {navLinks && (
-              <>
-                {navLinks.map(({ url, name }, i) => (
-                  <li key={i}>
-                    <Link
-
-                      to={url}>
-                      {name}
-                    </Link>
-                  </li>
-                ))}
-
-                {/* <li >
-                  {ResumeLink}
-                </li> */}
-              </>
-            )}
-          </ol>
-        </div>
-
-        <Menu />
-      </nav>
-    </header>
-  );
-};
+      {/* <Menu />  TODO */}
+    </Heading>
+  </GrommetHeader>
+);
 
 export default Nav;

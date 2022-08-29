@@ -12,46 +12,56 @@ import {
   IconTwitter,
   IconTwitterSquare,
   IconHamburger,
-  IconYoutube,
+  IconYouTube,
   IconEmail,
 } from '@components/icons';
+import { Blank } from 'grommet-icons';
 
-const Icon = ({ name, customClass }) => {
+const GetIcon = name => {
   switch (name) {
     case 'Bookmark':
-      return <IconBookmark customClass={customClass} />;
+      return IconBookmark;
     case 'Email':
-      return <IconEmail customClass={customClass} />;
+      return IconEmail;
     case 'External':
-      return <IconExternal customClass={customClass} />;
+      return IconExternal;
     case 'Folder':
-      return <IconFolder customClass={customClass} />;
+      return IconFolder;
     case 'GitHub':
-      return <IconGitHub customClass={customClass} />;
+      return IconGitHub;
     case 'GitHubSquare':
-      return <IconGitHubSquare customClass={customClass} />;
+      return IconGitHubSquare;
     case 'Linkedin':
-      return <IconLinkedin customClass={customClass} />;
+      return IconLinkedin;
     case 'LinkedinSqaure':
-      return <IconLinkedinSquare customClass={customClass} />;
+      return IconLinkedinSquare;
     case 'Logo':
-      return <IconLogo customClass={customClass} />;
+      return IconLogo;
     case 'Twitter':
-      return <IconTwitter customClass={customClass} />;
+      return IconTwitter;
     case 'TwitterSquare':
-      return <IconTwitterSquare customClass={customClass} />;
+      return IconTwitterSquare;
     case 'Hamburger':
-      return <IconHamburger customClass={customClass} />;
-    case 'Youtube':
-      return <IconYoutube customClass={customClass} />;
+      return IconHamburger;
+    case 'YouTube':
+      return IconYouTube;
     default:
-      return <IconExternal customClass={customClass} />;
+      return IconExternal;
   }
 };
 
-Icon.propTypes = {
-  name: PropTypes.string.isRequired,
-  customClass: PropTypes.string,
+const WrappedIcon = props => {
+  const IconSVG = GetIcon(props.name);
+
+  return (
+    <Blank {...props}>
+      <IconSVG />
+    </Blank>
+  );
 };
 
-export default Icon;
+WrappedIcon.propTypes = {
+  name: PropTypes.string.isRequired,
+};
+
+export default WrappedIcon;

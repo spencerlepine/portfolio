@@ -116,4 +116,4 @@ Let’s connect! Find me on any of my socials linked below:
 
 * [Twitter (@spencerlepine)](https://twitter.com/SpencerLepine)
 * [GitHub (@spencerlepine)](https://github.com/spencerlepine)
-* [Youtube (Spencer Lepine)](https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q)
+* [YouTube (Spencer Lepine)](https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q)

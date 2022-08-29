@@ -1,19 +1,25 @@
 import React from 'react';
 import { Icon } from '@components/icons';
 import { socialMedia, sourceRepository } from '@config';
+import { Anchor, Footer, Text } from 'grommet';
 
-const Footer = () => (
-  <footer>
-    <p><a href={sourceRepository}>Built by Spencer Lepine</a></p>
+const FooterComponent = () => (
+  <Footer background="light-4" justify="center" pad="small">
+    <Text textAlign="center " size="small">
+      Built by Spencer Lepine
+    </Text>
+    <Text textAlign="center" size="small">
+      <Anchor href={sourceRepository}>Source Code</Anchor>
+    </Text>
 
-    <div>
-      {socialMedia.map((social, i) => (
-        <a href={social.url} key={i}>
+    <Text textAlign="center" size="small">
+      {socialMedia.map(social => (
+        <Anchor href={social.url} key={social.name}>
           <Icon name={social.name}></Icon>
-        </a>
+        </Anchor>
       ))}
-    </div>
-  </footer >
+    </Text>
+  </Footer>
 );
 
-export default Footer;
+export default FooterComponent;

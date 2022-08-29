@@ -8,7 +8,7 @@ import { grommet } from 'grommet/themes';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
-const Layout = ({ children }) => (
+const Layout = props => (
   <Grommet
     theme={grommet}
     full
@@ -19,11 +19,12 @@ const Layout = ({ children }) => (
   >
     <Head />
     <Nav />
-    <Footer />
+
     <Box as="main" pad="medium" flex overflow="auto">
-      {children}
+      {props.children}
     </Box>
 
+    <Footer />
   </Grommet>
 );
 

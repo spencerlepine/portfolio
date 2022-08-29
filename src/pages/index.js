@@ -7,13 +7,11 @@ import { Layout, Welcome, About, Projects, Contact, Skills } from '@components';
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <main >
-      <Welcome />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+    <Welcome />
+    <About />
+    <Skills />
+    <Projects />
+    <Contact />
   </Layout>
 );
 

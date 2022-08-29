@@ -141,4 +141,4 @@ Also find me here:
  - [Twitter](https://twitter.com/SpencerLepine)
  - [GitHub](https://github.com/spencerlepine)
  - [LinkedIn](https://www.linkedin.com/in/spencer-lepine/)
- - [Youtube](https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q)
+ - [YouTube](https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q)
