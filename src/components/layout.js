@@ -1,24 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Head, Nav, Footer } from '@components';
+
+import '../styles/layout.css';
+import { Grommet, Box } from 'grommet';
+import { grommet } from 'grommet/themes';
+
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 const Layout = ({ children }) => (
-  <>
+  <Grommet
+    theme={grommet}
+    full
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+    }}
+  >
     <Head />
+    <Nav />
+    <Footer />
+    <Box as="main" pad="medium" flex overflow="auto">
+      {children}
+    </Box>
 
-    <div id="root" >
-      <div>
-        <Nav />
-
-        <div id="content" >
-          {children}
-        </div>
-
-        <Footer />
-      </div>
-    </div>
-  </>
+  </Grommet>
 );
 
 Layout.propTypes = {
