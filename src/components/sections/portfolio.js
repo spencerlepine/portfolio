@@ -46,15 +46,18 @@ const Projects = () => {
 
       {projectsToShow &&
         projectsToShow.map(({ node }, i) => (
-          <>
-            {node.frontmatter.tech && (
-              <li key={i} >
-                <ProjectCard node={node} listIndex={i} />
-              </li>
-            )}
-          </>
-        ))}
-    </section>
+          <React.Fragment key={i}>
+            {
+              node.frontmatter.tech && (
+                <li key={i} >
+                  <ProjectCard node={node} listIndex={i} />
+                </li>
+              )
+            }
+          </React.Fragment>
+        ))
+      }
+    </section >
   );
 };
 

@@ -15,7 +15,6 @@ import {
   IconYouTube,
   IconEmail,
 } from '@components/icons';
-import { Blank } from 'grommet-icons';
 
 const GetIcon = name => {
   switch (name) {
@@ -53,11 +52,7 @@ const GetIcon = name => {
 const WrappedIcon = props => {
   const IconSVG = GetIcon(props.name);
 
-  return (
-    <Blank {...props}>
-      <IconSVG />
-    </Blank>
-  );
+  return <IconSVG />;
 };
 
 WrappedIcon.propTypes = {

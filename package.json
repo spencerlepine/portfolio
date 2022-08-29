@@ -47,7 +47,6 @@
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.4.0",
-    "grommet": "^2.25.1",
     "lodash": "^4.17.19",
     "postcss-import": "^14.0.2",
     "prismjs": "^1.17.1",

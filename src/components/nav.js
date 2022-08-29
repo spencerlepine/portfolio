@@ -3,25 +3,22 @@ import { Link } from 'gatsby';
 import { navLinks } from '@config';
 // import { Menu } from '@components';
 import { Icon } from '@components/icons';
-import { Header as GrommetHeader, Heading } from 'grommet';
 
 const Nav = () => (
-  <GrommetHeader background="brand" justify="center">
-    <Heading level={5} margin="none">
-      <Link to="/" ><Icon name="Logo" color='plain' size='xlarge' /></Link>
-      {/* <Menu />  TODO */}
-    </Heading>
+  <header>
+    <Link to="/" ><Icon name="Logo" color='plain' size='xlarge' /></Link>
+    {/* <Menu />  TODO */}
 
     {navLinks.map(({ url, name }) => (
-      <Heading level={3} size="medium" key={name}>
-        <Link
-          key={name}
-          to={url}>
-          {name}
-        </Link>
-      </Heading>
+      <Link
+        key={name}
+        to={url}
+        color="black"
+      >
+        {name}
+      </Link>
     ))}
-  </GrommetHeader>
+  </header>
 );
 
 export default Nav;
