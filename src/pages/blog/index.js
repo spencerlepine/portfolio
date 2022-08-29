@@ -13,8 +13,8 @@ const BlogPage = ({ location, data }) => {
       <Helmet title="Blog" />
 
       <main>
-        <header className="">
-          <h1 className="text-xl m-auto w-fit-content p-4">sharing my knowledge of full-stack development</h1>
+        <header >
+          <h1 >sharing my knowledge of full-stack development</h1>
         </header>
 
         <ul>
@@ -24,17 +24,17 @@ const BlogPage = ({ location, data }) => {
               const { title, description, slug } = frontmatter;
 
               return (
-                <article key={i} className="bg-white rounded p-3 max-w-md m-auto">
-                  <div className="inner">
-                    <Link to={slug} className="font-bold">
+                <article key={i} >
+                  <div>
+                    <Link to={slug} >
 
-                      {/* <div className="inline float-left p-2 h-full">
+                      {/* <div>
                         <IconBookmark customClass="inline" />
                       </div> */}
-                      <h5 className="title text-xl">
+                      <h5 >
                         {title}
                       </h5>
-                      <p className="desc font-light">{description}</p>
+                      <p >{description}</p>
                     </Link>
                   </div>
                 </article>

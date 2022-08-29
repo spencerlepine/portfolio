@@ -7,11 +7,11 @@ const Layout = ({ children }) => (
   <>
     <Head />
 
-    <div id="root" className="w-full overflow-x-hidden">
-      <div className="flex flex-col h-screen">
+    <div id="root" >
+      <div>
         <Nav />
 
-        <div id="content" className="flex-grow p-3">
+        <div id="content" >
           {children}
         </div>
 

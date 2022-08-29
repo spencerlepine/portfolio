@@ -13,15 +13,15 @@ const PostTemplate = ({ data, location }) => {
     <Layout location={location}>
       <Helmet title={title} />
 
-      <main className="m-auto overflow-hidden pr-2 md:pr-4 max-w-screen-lg w-11/12 bg-white py-3 p-10 break-normal">
-        <span className="breadcrumb">
-          <span className="arrow">&larr;</span>
+      <main >
+        <span >
+          <span >&larr;</span>
           <Link to="/blog">All posts</Link>
         </span>
 
         <header>
-          <h1 className="medium-heading text-blue-900 font-serif text-2xl my-5 font-bold">{title}</h1>
-          <p className="subtitle text-blueGray-300">
+          <h1 >{title}</h1>
+          <p >
             <time>
               {new Date(date).toLocaleDateString('en-US', {
                 year: 'numeric',
@@ -33,14 +33,14 @@ const PostTemplate = ({ data, location }) => {
             {tags &&
               tags.length > 0 &&
               tags.map((tag, i) => (
-                <Link key={i} to={`/blog/tags/${kebabCase(tag)}/`} className="tag p-1 break-all">
+                <Link key={i} to={`/blog/tags/${kebabCase(tag)}/`} >
                   #{tag}
                 </Link>
               ))}
           </p>
         </header>
 
-        <div className="w-full prose blog-post text-gray-900 font-light tracking-wider leading-loose" dangerouslySetInnerHTML={{ __html: html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </main>
     </Layout>
   );

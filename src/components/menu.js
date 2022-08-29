@@ -34,23 +34,23 @@ const Menu = () => {
         <body className={menuOpen ? 'blur' : ''} />
       </Helmet>
 
-      <div ref={wrapperRef} className="md:hidden">
+      <div ref={wrapperRef} >
         <button
           onClick={toggleMenu}
           ref={buttonRef}>
-          <div className="ham-box">
+          <div>
             <Icon name="Hamburger" customClass="text-white" />
           </div>
         </button>
 
         <aside className={menuOpen ? '' : 'hidden'}>
-          <nav ref={navRef} className="fixed top-0 right-0 bg-coolGray-600 z-50 h-screen border-l-solid border-l-8 border-l-navy-dark">
+          <nav ref={navRef} >
             {navLinks && (
-              <ol className="m-4 p-6 z-50 mr-10 w-60">
+              <ol >
                 {navLinks.map(({ url, name, emoji }, i) => (
                   <li key={i}>
                     <Link to={url} onClick={toggleMenu}>
-                      <p className="text-white p-2 text-2xl my-2">
+                      <p >
                         <Emoji symbol={emoji} />{'  '}
                         {name}
                       </p>
@@ -60,7 +60,7 @@ const Menu = () => {
               </ol>
             )}
 
-            {/* <a href="/resume.pdf" className="resume-link">
+            {/* <a href="/resume.pdf" >
               Resume
             </a> */}
           </nav>

@@ -11,8 +11,8 @@ const Contact = () => {
   const promptStyle = 'flex-wrap text-xl my-5 mx-auto text-center';
 
   return (
-    <section id="contact" className="landing-section">
-      <h2 className="section-title">Get In Touch</h2>
+    <section id="contact" >
+      <h2 >Get In Touch</h2>
 
       <p className={`${promptStyle}`}>
         Want to work together or have any questions?
@@ -20,14 +20,14 @@ const Contact = () => {
 
       {showingEmail ? (
         <a href={`mailto:${email}`}>
-          <p className="w-min rounded whitespace-nowrap mx-auto my-5 px-7 py-3 border-solid border-4 border-navy-light text-white bg-navy-medium">
+          <p >
             {email}
           </p>
         </a>
       ) : (
         <p
           onClick={() => setShowingEmail(!showingEmail)}
-          className="w-min rounded whitespace-nowrap mx-auto my-5 px-7 py-3 border-solid border-4 border-navy-light text-white bg-navy-medium"
+
         >
           Contact Me
           <Icon name="Email" customClass="ml-3 inline-block text-white" />

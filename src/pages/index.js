@@ -4,7 +4,7 @@ import { Layout, Welcome, About, Projects, Contact, Skills } from '@components';
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <main className="m-4">
+    <main >
       <Welcome />
       <About />
       {/* <Jobs /> */}

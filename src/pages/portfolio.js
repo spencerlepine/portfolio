@@ -12,17 +12,17 @@ const ProjectsPage = ({ location, data }) => {
     <Layout location={location}>
       <Helmet title="Portfolio" />
 
-      <main className="m-auto m-4 bg-white p-4 max-w-5xl mt-3 min-h-1 rounded">
+      <main >
         <header>
-          <h1 className="text-4xl m-auto w-max font-semibold">Portfolio</h1>
-          <p className="text-xl m-auto w-max font-semibold">Software Engineering Applications</p>
+          <h1 >Portfolio</h1>
+          <p >Software Engineering Applications</p>
         </header>
 
-        <div className="m-auto w-max p-4">
-          <ul className="m-auto">
+        <div>
+          <ul >
             <>
               {projects.map(({ node }, i) => (
-                <li key={node.frontmatter.date} className="content-center my-20">
+                <li key={node.frontmatter.date} >
                   <ProjectCard node={node} listIndex={i} />
                 </li>
               ))}
@@ -33,14 +33,14 @@ const ProjectsPage = ({ location, data }) => {
         <hr />
 
         <header>
-          <h1 className="text-4xl m-auto w-max font-semibold">More Projects</h1>
+          <h1 >More Projects</h1>
         </header>
 
-        <div className="m-auto w-max p-4">
-          <ul className="m-auto">
+        <div>
+          <ul >
             <>
               {hobbyProjects.map(({ node }, i) => (
-                <li key={i} className="content-center my-12">
+                <li key={i} >
                   <ProjectCard node={node} listIndex={i} customTitleData={{
                     title: 'Hobby Project',
                     styleString: 'text-sm text-green-500',

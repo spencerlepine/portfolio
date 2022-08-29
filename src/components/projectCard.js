@@ -30,30 +30,30 @@ const ProjectCard = ({ node, listIndex, customTitleData }) => {
   const customTitleStyle = (customTitleData && customTitleData.styleString) ? customTitleData.styleString : `text-sm text-orange-400 ${leftColumn === 'image' ? 'ml-auto' : ''} mb-1`;
 
   const ImageColumn = () => (
-    <div className="projectImage align-end opacity-50 hover:opacity-100 transition-opacity	 relative overflow-y-clip my-4" style={{ overflowY: 'clip', zIndex: 0 }}>
-      <a href={external || github} aria-label="Project Link" className="inline-block p-1">
+    <div style={{ overflowY: 'clip', zIndex: 0 }}>
+      <a href={external || github} aria-label="Project Link" >
         <img className={`md:max-w-sm sm:max-w-xs xs:max-w-xs z-0 absolute ${imageAlign}-10`} src={image} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
       </a>
-    </div >
+    </div>
   );
 
   const ProjectDetails = () => {
     const alignment = leftColumn === 'image' ? 'text-right' : '';
 
     const ProjectTitleLink = () => (
-      <Link to={slug} className="" target="_blank" rel="noreferrer">
-        <h3 className="text-xl font-bold">{title}</h3>
+      <Link to={slug} >
+        <h3 >{title}</h3>
       </Link>
     );
     const ProjectSourceLinks = () => (
       <div className={leftColumn !== 'image' ? 'ml-2' : 'mr-2'}>
         {github && (
-          <a href={github} aria-label="GitHub Link" className="inline-block px-1">
+          <a href={github} aria-label="GitHub Link" >
             <Icon name="GitHub" customClass="" />
           </a>
         )}
         {external && (
-          <a href={external} aria-label="External Link" className="external inline-block px-1">
+          <a href={external} aria-label="External Link" >
             <Icon name="External" customClass="" />
           </a>
         )}
@@ -62,8 +62,8 @@ const ProjectCard = ({ node, listIndex, customTitleData }) => {
 
     return (
       <div className={`projectDetails max-w-sm ${alignment} sm:text-left xs:text-left lg:${alignment} md:${alignment}`} style={{ zIndex: 99, minHeight: '17em' }}>
-        <header className="p-1">
-          <div className="grid">
+        <header >
+          <div>
             <h6 className={customTitleStyle}>{customTitle}</h6>
 
             <div className={`flex ${leftColumn === 'image' ? 'ml-auto' : ''}`}>
@@ -73,14 +73,14 @@ const ProjectCard = ({ node, listIndex, customTitleData }) => {
           </div>
         </header>
 
-        <div className="projectDesc p-3 bg-navy-dark z-10 rounded-md border-2 border-navy-dark">
-          <p className="text-sm text-gray-300">{description}</p>
+        <div>
+          <p >{description}</p>
         </div>
 
         <div className={`projectTechnologies max-w-sm ${alignment ? 'ml-auto' : ''}`} style={{ maxWidth: '75%' }}>
           {tech.map((tech, i) => (
             <p
-              className="whitespace-nowrap w-min block sm:inline-block xs:inline-block m-1 text-navy-medium p-0.5 text-sm"
+
               key={i}>
               {tech}
             </p>
@@ -91,10 +91,10 @@ const ProjectCard = ({ node, listIndex, customTitleData }) => {
   };
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    <div>
       {leftColumn === 'details' ? <ProjectDetails /> : <ImageColumn />}
       {leftColumn === 'details' ? <ImageColumn /> : <ProjectDetails />}
-    </div >
+    </div>
   );
 };
 
