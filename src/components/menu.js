@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import { navLinks } from '@config';
 import { Icon } from '@components/icons';
@@ -29,10 +28,6 @@ const Menu = () => {
 
   return (
     <div>
-      <Helmet>
-        <body />
-      </Helmet>
-
       <div ref={wrapperRef} >
         <button
           onClick={toggleMenu}

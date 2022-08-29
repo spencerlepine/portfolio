@@ -13,9 +13,7 @@ const BlogPage = ({ location, data }) => {
       <Helmet title="Blog" />
 
       <main>
-        <header >
-          <h1 >sharing my knowledge of full-stack development</h1>
-        </header>
+        <h1>Sharing my knowledge of full-stack development</h1>
 
         <ul>
           {posts.length > 0 &&
