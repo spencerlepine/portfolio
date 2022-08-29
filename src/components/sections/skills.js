@@ -10,7 +10,7 @@ const Skills = () => (
       {skills.map(({ skill, icon }) => (
         <li key={skill}>
           <Icon name={icon}></Icon>
-          <h3 >{skill}</h3>
+          <h3>{skill}</h3>
         </li>
       ))}
     </ul>

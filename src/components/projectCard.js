@@ -23,61 +23,33 @@ const ProjectCard = ({ node }) => {
   const { frontmatter } = node;
   const image = extractImages(node);
 
-  const { github, external, title, tech, description, slug } = frontmatter;
+  const { github, external, title, description, slug } = frontmatter;
 
-  const ImageColumn = () => (
-    <div style={{ overflowY: 'clip', zIndex: 0 }}>
-      <a href={external || github} aria-label="Project Link" >
-        <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
-      </a>
-    </div>
-  );
+  return (
+    <div>
+      <Link to={slug}><h3>{title}</h3></Link>
 
-  const ProjectDetails = () => {
+      <p>{description}</p>
 
-    const ProjectTitleLink = () => (
-      <Link to={slug} >
-        <h3 >{title}</h3>
-      </Link>
-    );
-
-    const ProjectSourceLinks = () => (
       <div>
         {github && (
           <a href={github} aria-label="GitHub Link" >
-            <Icon name="GitHub" />
+            <Icon name="GitHub" /> Source Code
           </a>
         )}
         {external && (
           <a href={external} aria-label="External Link" >
-            <Icon name="External" />
+            <Icon name="External" /> Demo
           </a>
         )}
       </div>
-    );
 
-    return (
-      <div>
-        <ProjectTitleLink />
-        <ProjectSourceLinks />
 
-        <p>{description}</p>
-
-        {tech.map((tech, i) => (
-          <p
-
-            key={i}>
-            {tech}
-          </p>
-        ))}
+      <div style={{ overflowY: 'clip', zIndex: 0 }}>
+        <a href={external || github} aria-label="Project Link" >
+          <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
+        </a>
       </div>
-    );
-  };
-
-  return (
-    <div>
-      <ProjectDetails />
-      <ImageColumn />
     </div>
   );
 };
