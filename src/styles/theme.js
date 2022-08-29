@@ -1,22 +1,56 @@
+const DaisyBush = '​#541C8C';
+const Alabaster = '#FCFCFC';
+const CuriosBlue = '#1B9BE3';
+const BlackPearl = '#040B14';
+
+function LightenDarkenColor(col, amt) {
+  let usePound = false;
+  if (col[0] === '#') {
+    col = col.slice(1);
+    usePound = true;
+  }
+
+  const num = parseInt(col, 16);
+
+  let r = (num >> 16) + amt;
+
+  if (r > 255) { r = 255; } else if (r < 0) { r = 0; }
+
+  let b = ((num >> 8) & 0x00FF) + amt;
+
+  if (b > 255) { b = 255; } else if (b < 0) { b = 0; }
+
+  let g = (num & 0x0000FF) + amt;
+
+  if (g > 255) { g = 255; } else if (g < 0) { g = 0; }
+
+  return (usePound ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16);
+}
+
 export const spencerTheme = {
   global: {
     colors: {
       /* BEGIN: Color Palette Definition */
-      ruby: {
-        dark: '#d4111e',
-        light: '#f58990',
+      purple: {
+        dark: LightenDarkenColor(DaisyBush, -10),
+        light: LightenDarkenColor(DaisyBush, 10),
       },
-      'ruby!': '#EF3F4C',
-      gold: {
-        dark: '#df9007',
-        light: '#e7b86b',
+      'purple!': DaisyBush,
+      white: {
+        dark: LightenDarkenColor(Alabaster, -10),
+        light: LightenDarkenColor(Alabaster, 10),
       },
-      'gold!': '#F9B644',
-      amethyst: {
-        dark: '#9B59B6',
-        light: '#C39BD3',
+      'white!': Alabaster,
+      blue: {
+        dark: LightenDarkenColor(CuriosBlue, -10),
+        light: LightenDarkenColor(CuriosBlue, 10),
       },
-      'amethyst!': '#AF7AC5',
+      'blue!': CuriosBlue,
+      black: {
+        dark: LightenDarkenColor(BlackPearl, -10),
+        light: LightenDarkenColor(BlackPearl, 10),
+      },
+      'black!': BlackPearl,
       'grey-1': '#ECE9E3',
       'grey-2': '#CECCC6',
       'grey-3': '#737069',
@@ -24,18 +58,18 @@ export const spencerTheme = {
       /* END: Color Palette Definition */
       /* BEGIN: Mapping Colors to Grommet Namespaces */
       background: {
-        dark: 'grey-4',
-        light: 'grey-1',
+        dark: 'white',
+        light: LightenDarkenColor(Alabaster, 10), // 'white.dark'?
       },
       'background-back': {
-        dark: 'grey-4',
-        light: 'grey-1',
+        dark: 'white',
+        light: LightenDarkenColor(Alabaster, 10), // 'white.dark'?
       },
       'background-front': {
         dark: 'grey-3',
         light: 'grey-2',
       },
-      brand: 'ruby!',
+      brand: 'purple!',
       control: {
         dark: 'brand',
         light: 'brand',
@@ -50,7 +84,7 @@ export const spencerTheme = {
     },
     focus: {
       border: {
-        color: 'gold',
+        color: 'blue',
       },
     },
     /* END: Mapping Colors to Grommet Namespaces */
@@ -58,8 +92,8 @@ export const spencerTheme = {
   /* BEGIN: Mapping Colors to Components */
   anchor: {
     color: {
-      dark: 'gold',
-      light: 'amethyst!',
+      dark: 'black',
+      light: 'white!',
     },
   },
   /* END: Mapping Colors to Components */
