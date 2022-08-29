@@ -2,7 +2,7 @@
   "name": "portfolio-site",
   "description": "Portfolio Site and Blog",
   "version": "1.0.0",
-  "author": "Spencer Lepine <spencerlepine@gmail.com>",
+  "author": "Spencer Lepine <spencerlepine26@gmail.com>",
   "repository": "https://github.com/spencerlepine/portfolio-site",
   "keywords": [
     "gatsby"
@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
-    "@tailwindcss/typography": "^0.4.1",
     "babel-plugin-prismjs": "^2.1.0",
     "gatsby": "^3.10.2",
     "gatsby-plugin-google-gtag": "^3.10.0",
@@ -60,11 +59,7 @@
     "react-transition-group": "^4.3.0",
     "react-typography": "^0.16.20",
     "sharp": "0.28.0",
-    "tailwindcss": "^2.2.7",
-    "tailwindcss-typography": "^3.1.0",
-    "typography": "^0.16.21",
-    "typography-plugin-code": "^0.16.20",
-    "typography-theme-moraga": "^0.16.19"
+    "typography": "^0.16.21"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

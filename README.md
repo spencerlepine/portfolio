@@ -20,11 +20,11 @@ $ yarn start
 - [GatsbyJS](https://www.gatsbyjs.com/)
 - [React](https://reactjs.org/)
 - [GraphQL](https://graphql.org/)
-- [TailwindCSS](https://tailwindcss.com/)
+<!-- - [TailwindCSS](https://tailwindcss.com/) -->
 <!-- - [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/) -->
-- [Husky](https://typicode.github.io/husky/)
+<!-- - [Husky](https://typicode.github.io/husky/)
 - [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+- [Prettier](https://prettier.io/) -->
 
 ## 📦 Pull from GitHub Repository Container Registry
 ```sh
