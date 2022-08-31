@@ -73,44 +73,48 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       method="POST"
       target="_blank"
+      className="max-w-md mx-auto py-10 pt-4"
     >
-      <div>
+      <div className="mb-4">
         <input
           type="text"
           placeholder="Name"
           name="name"
+          className="w-full p-4 text-xs font-semibold border-2 border-text-primary rounded"
           required
         />
       </div>
-      <div>
+      <div className="mb-4">
         <input
           type="email"
           placeholder="name@example.com"
+          className="w-full p-4 text-xs font-semibold border-2 border-text-primary rounded"
           name="email"
           required
         />
       </div>
-      <div>
+      <div className="mb-4">
         <textarea
           placeholder="Message..."
+          className="w-full p-4 text-xs font-semibold h-24 border-2 border-text-primary rounded"
           name="message"
           required
         />
       </div>
-      <div>
-        <button type="submit">
+      <div className="text-right">
+        <button type="submit" className="bg-secondary text-primary border-secondary px-6 py-2 font-bold border-2 border-solid rounded-xl">
           Submit
-        </button>
+        </button >
       </div>
     </form>
   );
 };
 
 const Contact = () => (
-  <section id="contact" >
-    <h2>Contact</h2>
+  <section id="contact" className="min-w-full text-center">
+    <h2 className="text-tertiary m-6 text-2xl font-bold">Contact</h2>
 
-    <p>
+    <p className="text-primary-text">
       Want to work together or have any questions?
     </p>
 

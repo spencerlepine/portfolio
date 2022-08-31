@@ -12,13 +12,11 @@ const Layout = props => {
       <Head />
       <Nav />
 
-      <div className="max-w-4xl mx-auto">
-        <main>
-          {props.children}
-        </main>
+      <main className="mx-auto">
+        {props.children}
+      </main>
 
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

@@ -1,24 +1,20 @@
 import React from 'react';
 import { Emoji } from '@components';
-import { Link } from 'gatsby';
 import { socialMedia } from '@config';
 import { Icon } from '@components/icons';
 import { StaticImage } from 'gatsby-plugin-image';
+import BubbleLink from '@styles/bubbleLink';
 
 const Welcome = () => (
-  <section>
+  <section className="min-w-full">
     <div className="mx-auto w-fit">
       <div className="flex flex-row">
         <div className="text-tertiary bg-red-100 max-w-md w-fit">
           <h1><Emoji symbol='👋' />{' '}Hello!</h1>
           <h2>I'm Spencer Lepine</h2>
           <p>$ Software Engineer</p>{/* TODO */}
-          <Link to={'/portfolio'} className="bg-secondary text-primary border-2 border-solid rounded-md border-secondary">
-            View Portfolio
-          </Link>
-          <Link to={'/#contact'} className="bg-primary text-secondary border-2 border-solid rounded-md border-secondary">
-            Get In Touch
-          </Link>
+          <BubbleLink linkPath='/portfolio' color="brand">View Portfolio</BubbleLink>
+          <BubbleLink linkPath='#contact' isOutlined color="brand">Get In Touch</BubbleLink>
         </div>
 
         <div>

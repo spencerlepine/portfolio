@@ -1,6 +1,7 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { ProjectCard } from '@components';
+import BubbleLink from '@styles/bubbleLink';
 
 const MAX_PROJECTS_SHOWN = 2;
 
@@ -41,9 +42,10 @@ const Projects = () => {
   const projectsToShow = data.projects.edges.filter(({ node }) => node.frontmatter.isFeatured && node.frontmatter.tech).slice(0, MAX_PROJECTS_SHOWN);
 
   return (
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <Link to={'/portfolio'} >View All</Link>
+    <section id="portfolio" className="prose lg:prose-xl text-center min-w-full">
+      <h2 className="text-tertiary mt-6">Portfolio</h2>
+
+      <BubbleLink linkPath='/portfolio' isOutlined color="link">View All</BubbleLink>
 
       {projectsToShow &&
         projectsToShow.map(({ node }) => (

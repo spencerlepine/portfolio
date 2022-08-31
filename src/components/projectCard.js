@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'gatsby';
-import { Icon } from '@components/icons';
+import BubbleLink from '@styles/bubbleLink';
 
 const extractImages = node => {
   try {
@@ -26,23 +26,22 @@ const ProjectCard = ({ node }) => {
   const { github, external, title, description, slug } = frontmatter;
 
   return (
-    <div>
+    <div className="max-w-lg text-left">
       <Link to={slug}><h3>{title}</h3></Link>
 
-      <p>{description}</p>
+      <p className="text-primary-text">{description}</p>
 
-      <div>
-        {github && (
-          <a href={github} aria-label="GitHub Link" >
-            <Icon name="GitHub" /> Source Code
-          </a>
-        )}
-        {external && (
-          <a href={external} aria-label="External Link" >
-            <Icon name="External" /> Demo
-          </a>
-        )}
-      </div>
+
+      {github && (
+        <BubbleLink linkPath={github} icon="GitHub" color="tertiary">
+          GitHub
+        </BubbleLink>
+      )}
+      {external && (
+        <BubbleLink linkPath={external} icon="External" color="brand">
+          Demo
+        </BubbleLink>
+      )}
 
 
       <div style={{ overflowY: 'clip', zIndex: 0 }}>
