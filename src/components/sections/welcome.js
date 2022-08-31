@@ -15,7 +15,7 @@ const Welcome = () => (
           <h1 className="my-2 font-semibold text-title-text">I'm Spencer Lepine</h1>
           <h1 className="mt-4 mb-8 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-8 py-2 rounded-md"><span className="text-gray-600 select-none">$</span> Software Engineer_</h1>{/* TODO */}
           <BubbleLink linkPath='/portfolio' color="brand" isLarger hasMargin>View Portfolio</BubbleLink>
-          <BubbleLink linkPath='#contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
+          <BubbleLink linkPath='/contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
         </div>
 
         <div className="mx-10">
