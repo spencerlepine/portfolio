@@ -2,7 +2,7 @@ export { default as Head } from './head';
 export { default as Layout } from './layout';
 export { default as Nav } from './nav';
 export { default as Emoji } from './emoji';
-export { default as ThemeToggleBtn } from './ThemeToggleBtn';
+export { default as ThemeToggleBtn } from './themeToggleBtn';
 export { default as Menu } from './menu';
 export { default as Footer } from './footer';
 export { default as ProjectCard } from './projectCard';

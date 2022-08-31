@@ -26,7 +26,7 @@ const FooterComponent = () => (
               </Link>
             </div>
           ))}
-          <div className="inline" key={name} >
+          <div className="inline">
             <Link to="/">
               Home
             </Link>
