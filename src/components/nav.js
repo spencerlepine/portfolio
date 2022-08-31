@@ -6,7 +6,7 @@ import { Icon } from '@components/icons';
 import ThemeToggleBtn from '@components/themeToggleBtn';
 
 const Nav = () => (
-  <header className="bg-tertiary text-primary uppercase h-16 flex w-full">
+  <header className="bg-tertiary text-white uppercase h-16 flex w-full">
     <div className="max-w-5xl w-full flex mx-auto">
       <div className="w-16 my-auto mx-0 min-w-10">
         <Link to="/" ><Icon name="Logo" customClass="max-w-full h-auto m-1" /></Link>

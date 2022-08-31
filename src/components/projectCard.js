@@ -29,12 +29,12 @@ const ProjectCard = ({ node }) => {
   const TitleLink = () => {
     if (external) {
       return (
-        <Link to={external} className="no-underline"><h3>{title} <Icon name="External" customClass="h-6 text-primary-text mx-1 inline" /></h3></Link>
+        <Link to={external} className="no-underline"><h3 className="text-title-text">{title} <Icon name="External" customClass="h-6 text-primary-text mx-1 inline" /></h3></Link>
       );
     }
 
     return (
-      <Link to={github} className="no-underline"><h3>{title}</h3></Link>
+      <Link to={github} className="no-underline"><h3 className="text-title-text">{title}</h3></Link>
     );
   };
   return (

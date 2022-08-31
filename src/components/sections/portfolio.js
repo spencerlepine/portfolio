@@ -48,7 +48,7 @@ const Projects = () => {
   return (
     <LandingSection id="portfolio">
       <div className="text-center mx-auto max-w-4xl py-20">
-        <h2 className="text-tertiary mt-6">Portfolio</h2>
+        <h2 className="text-title-text mt-6">Portfolio</h2>
 
         <BubbleLink linkPath='/portfolio' isOutlined color="link">View All</BubbleLink>
 

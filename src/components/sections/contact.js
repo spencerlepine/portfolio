@@ -113,7 +113,7 @@ const ContactForm = () => {
 
 const Contact = () => (
   <LandingSection id="contact">
-    <h2 className="text-tertiary m-6 text-2xl font-bold">Contact</h2>
+    <h2 className="text-title-text m-6 text-2xl font-bold">Contact</h2>
 
     <p className="text-primary-text">
       Want to work together or have any questions?

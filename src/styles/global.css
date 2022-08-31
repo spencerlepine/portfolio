@@ -21,14 +21,16 @@ const textOnWhite = '#808080';
   --textOnBlue: #AFD6DE;
   --textOnWhite: #808080;
   --textOnBlack: #BDBDBD;
+  --titleText: #040B14;
 }
 .theme-dark {
-  --celticBlue: #6f6f6f;
-  --blackPearl: #24293e;
-  --alabasterWhite: #040B14;
-  --buttonBlue: #e3a71b;
-  --linkBlue: #e7821e;
-  --textOnBlue: #BDBDBD;
-  --textOnWhite: #808080;
-  --textOnBlack: #BDBDBD;
+  --celticBlue: #668fff;
+  --blackPearl: #282828;
+  --alabasterWhite: #1c1c1c;
+  --buttonBlue: #e8eeff;
+  --linkBlue: #1f62c5;
+  --textOnBlue: #174ca9;
+  --textOnWhite: #979797;
+  --textOnBlack: #707070;
+  --titleText: #596bc0;
 }

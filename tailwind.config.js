@@ -20,6 +20,7 @@ module.exports = {
         'primary-text': 'var(--textOnWhite)',
         'secondary-text': 'var(--textOnBlue)',
         'tertiary-text': 'var(--textOnBlack)',
+        'title-text': 'var(--titleText)',
       },
     },
   },
