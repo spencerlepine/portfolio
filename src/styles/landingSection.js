@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SkewWrapper from '@styles/SkewWrapper';
+import SkewWrapper from '@styles/skewWrapper';
 
 const LandingSection = ({ children, id, isSkewSection }) => {
   if (isSkewSection) {
