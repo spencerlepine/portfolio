@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IconEmail = () => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 477.867 477.867">
+const IconEmail = ({ customClass }) => (
+  <svg className={customClass} xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 477.867 477.867">
     <title>Email</title>
     <g>
       <g fill="currentColor">

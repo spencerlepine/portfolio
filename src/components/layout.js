@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Head, Nav, Footer } from '@components';
 import '../styles/layout.css';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { ThemeContext } from '../context/themeContext';
 
-// import theme from '../styles/theme';
-// const darkMode = false;
+const Layout = props => {
+  const { theme } = useContext(ThemeContext);
 
-const Layout = props => (
-  <>
-    <Head />
-    <Nav />
+  return (
+    <div className={`text-primary-text ${theme === 'light' ? 'theme-light' : 'theme-dark'}`}>
+      <Head />
+      <Nav />
 
-    <main>
-      {props.children}
-    </main>
+      <div className="max-w-3xl mx-auto">
+        <main>
+          {props.children}
+        </main>
 
-    <Footer />
-  </>
-);
+        <Footer />
+      </div>
+    </div>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

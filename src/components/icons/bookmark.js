@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const IconBookmark = () => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 460.002 460.002">
+const IconBookmark = ({ customClass }) => (
+  <svg className={customClass} xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 460.002 460.002">
     <title>Bookmark Link</title>
     <g>
       <g>
@@ -10,5 +11,9 @@ const IconBookmark = () => (
     </g>
   </svg>
 );
+
+IconBookmark.propTypes = {
+  customClass: PropTypes.string,
+};
 
 export default IconBookmark;

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IconGitHub = () => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 2100 2100">
+const IconGitHub = ({ customClass }) => (
+  <svg className={customClass} xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 2100 2100">
     <title>GitHub Link</title>
     <g>
       <path

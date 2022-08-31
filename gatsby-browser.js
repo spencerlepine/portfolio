@@ -5,4 +5,10 @@
  */
 import './src/styles/global.css';
 import 'prismjs/themes/prism-okaidia.css'; // for code styling in blog posts
+import 'react-toggle/style.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
+import React from 'react';
+import ThemeContextProvider from './src/context/themeContext';
+
+export const wrapRootElement = ({ element }) => <ThemeContextProvider>{element}</ThemeContextProvider>;

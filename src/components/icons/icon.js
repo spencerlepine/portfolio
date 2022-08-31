@@ -52,11 +52,12 @@ const GetIcon = name => {
 const WrappedIcon = props => {
   const IconSVG = GetIcon(props.name);
 
-  return <IconSVG />;
+  return <IconSVG styleProp={props.styleProp} />;
 };
 
 WrappedIcon.propTypes = {
   name: PropTypes.string.isRequired,
+  styleProp: PropTypes.string,
 };
 
 export default WrappedIcon;
