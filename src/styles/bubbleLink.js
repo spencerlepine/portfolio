@@ -6,7 +6,7 @@ import { Icon } from '@components/icons';
 const colorPallete = {
   tertiary: {
     outlined: 'bg-primary text-tertiary border-tertiary',
-    fill: 'bg-tertiary text-primary border-tertiary',
+    fill: 'bg-tertiary text-white border-tertiary',
   },
   brand: {
     outlined: 'bg-none text-secondary border-secondary',

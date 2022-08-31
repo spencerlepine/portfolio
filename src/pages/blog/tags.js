@@ -4,7 +4,7 @@ import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
-
+// TODO
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },

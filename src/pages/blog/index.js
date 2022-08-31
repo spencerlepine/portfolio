@@ -3,43 +3,38 @@ import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
-// import { IconBookmark } from '@components/icons';
+import LandingSection from '@styles/landingSection';
 
 const BlogPage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location} >
+
       <Helmet title="Blog" />
 
-      <main>
-        <h1>Sharing my knowledge of full-stack development</h1>
+      <LandingSection id="blog">
+        <h2 className="text-title-text">Sharing my knowledge of full-stack development</h2>
 
-        <ul>
+        <ul className="max-w-lg mx-auto">
           {posts.length > 0 &&
-            posts.map(({ node }, i) => {
+            posts.map(({ node }) => {
               const { frontmatter } = node;
               const { title, description, slug } = frontmatter;
 
               return (
-                <article key={i} >
-                  <div>
-                    <Link to={slug} >
-
-                      {/* <div>
-                        <IconBookmark 
-                      </div> */}
-                      <h5 >
-                        {title}
-                      </h5>
-                      <p >{description}</p>
-                    </Link>
-                  </div>
-                </article>
+                <div key={slug} className="text-left border-4 rounded-tl-xl rounded-tr-xl rounded-bl-xl p-4 my-4">
+                  <Link to={slug} className="no-underline" >
+                    <h4 className="no-underline text-xl">
+                      {title}
+                    </h4>
+                    <p className="text-primary-text no-underline">{description}</p>
+                  </Link>
+                </div>
               );
             })}
         </ul>
-      </main>
+      </LandingSection>
     </Layout>
   );
 };
