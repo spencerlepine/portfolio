@@ -1,57 +1,46 @@
 import React from 'react';
 import { Emoji } from '@components';
-import { Link } from 'gatsby';
 import { socialMedia } from '@config';
 import { Icon } from '@components/icons';
 import { StaticImage } from 'gatsby-plugin-image';
+import BubbleLink from '@styles/bubbleLink';
+import LandingSection from '@styles/landingSection';
 
 const Welcome = () => (
-  <section className="landing-section grid auto-cols-auto md:grid-cols-2 max-w-lg">
-    <div className="">
-      <span className="text-center p-1">
-        <h1 className="text-3xl"><Emoji symbol='👋' />{' '}Hello, I'm</h1>
-        <h2 className="text-3xl font-bold text-navy-medium">Spencer Lepine<span className="opacity-0">,</span></h2>
-        <h5 className="text-2xl text-gray-400">a Front End</h5>
-        <h1 className="text-3xl"> <span className="text-purple-900 relative mb-16">Software Engineer</span></h1>
-      </span>
+  <LandingSection id="welcome">
+    <div className="flex text-center mx-auto max-w-6xl py-20">
+      <div className="flex mx-auto">
+        <div className="pr-10 max-w-md w-fit text-left my-auto mx-10">
+          <h1 className="my-2 font-semibold text-title-text"><Emoji symbol='👋' />{' '}Hello!</h1>
+          <h1 className="my-2 font-semibold text-title-text">I'm Spencer Lepine</h1>
+          <h1 className="mt-4 mb-8 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-8 py-2 rounded-md"><span className="text-gray-600 select-none">$</span> Software Engineer_</h1>{/* TODO */}
+          <BubbleLink linkPath='/portfolio' color="brand" isLarger hasMargin>View Portfolio</BubbleLink>
+          <BubbleLink linkPath='/contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
+        </div>
 
-      <hr className="max-w-sm m-auto w-64" />
+        <div className="mx-10">
+          <div className="mx-auto w-fit max-w-xs">
+            <StaticImage
+              src="../../images/me.jpg"
+              width={280}
+              className="flex justify-center max-w-full h-auto m-1 rounded-full border-8 border-solid border-gray-200"
+              quality={90}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Spencer Lepine Headshot Profile"
+            />
+          </div>
 
-      <div className="m-auto flex items-center w-fit-content p-2 md:p-4 text-blue-300">
-        <Link
-          to={'/#contact'}
-          className="get-in-touch no-underline text-white px-3 py-2 bg-red-700 m-1">
-          GET IN TOUCH
-        </Link>
-
-        <Link
-          to={'/portfolio'}
-          className="resume-button no-underline text-white px-3 py-2 bg-red-700 m-1">
-          VIEW PORTFOLIO
-        </Link>
+          <div className="flex mx-auto w-fit justify-center m-2">
+            {socialMedia.map((social, i) => (
+              <a href={social.url} key={i}>
+                <Icon name={social.name} customClass="h-8 text-title-text mx-1"></Icon>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
-    <div className="has-text-centered">
-      <div className="m-auto w-min">
-        <StaticImage
-          className="w-60 align-middle m-auto my-4 rounded-full"
-          src="../../images/me.jpg"
-          width={500}
-          quality={95}
-          formats={['AUTO', 'WEBP', 'AVIF']}
-          alt="Spencer Lepine Headshot Profile"
-        />
-      </div>
-
-      <div className="m-auto w-max">
-        {socialMedia.map((social, i) => (
-          <a href={social.url} className="" key={i}>
-            <Icon name={social.name} customClass="inline m-1 mx-3 text-blue-400 transform transition duration-500 hover:scale-125"></Icon>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section >
+  </LandingSection>
 );
 
 export default Welcome;

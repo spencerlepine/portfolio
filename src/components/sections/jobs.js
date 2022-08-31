@@ -29,10 +29,10 @@ const Jobs = () => {
   const revealContainer = useRef(null);
 
   return (
-    <section id="jobs" ref={revealContainer} className="landing-section">
-      <h2 className="section-title">Where I’ve Worked</h2>
+    <section id="jobs" ref={revealContainer} >
+      <h2 >Where I’ve Worked</h2>
 
-      <div className="inner">
+      <div>
         <div>
           {jobsData &&
             jobsData.map(({ node }, i) => {
@@ -60,15 +60,15 @@ const Jobs = () => {
                   id={`panel-${i}`}>
                   <h3>
                     <span>{title}</span>
-                    <span className="company">
+                    <span >
                       &nbsp;@&nbsp;
-                      <a href={url} className="inline-link">
+                      <a href={url} >
                         {company}
                       </a>
                     </span>
                   </h3>
 
-                  <p className="range">{range}</p>
+                  <p >{range}</p>
 
                   <div dangerouslySetInnerHTML={{ __html: html }} />
                 </div>

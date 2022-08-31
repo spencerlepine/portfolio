@@ -20,11 +20,11 @@ $ yarn start
 - [GatsbyJS](https://www.gatsbyjs.com/)
 - [React](https://reactjs.org/)
 - [GraphQL](https://graphql.org/)
-- [TailwindCSS](https://tailwindcss.com/)
+<!-- - [TailwindCSS](https://tailwindcss.com/) -->
 <!-- - [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/) -->
-- [Husky](https://typicode.github.io/husky/)
+<!-- - [Husky](https://typicode.github.io/husky/)
 - [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+- [Prettier](https://prettier.io/) -->
 
 ## 📦 Pull from GitHub Repository Container Registry
 ```sh
@@ -33,6 +33,12 @@ $ docker pull ghcr.io/spencerlepine/portfolio-site:0.1.0
 # runs on port 80
 ```
 
----
+## Features
+- Landing page
+- About me
+- Socials Links
+- Tech Stack Showcase
+- Portfolio Showcase
+- Contact Form
+- Blog
 
-> [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; Twitter [@spencerlepine](http://twitter.com/spencerlepine)

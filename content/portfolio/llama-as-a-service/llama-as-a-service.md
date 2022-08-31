@@ -21,6 +21,3 @@ slug: /portfolio/llama-as-a-service
 
 Want to no more? Check out the source code [on GitHub](https://github.com/llama-as-a-service)
 
----
-
-🏠 [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; 😺 GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; 🐦 Twitter [@spencerlepine](http://twitter.com/spencerlepine)

@@ -105,4 +105,4 @@ Also find me here:
 * [Twitter (@spencerlepine)](https://twitter.com/SpencerLepine)
 * [GitHub (@spencerlepine)](https://github.com/spencerlepine)
 * [LinkedIn](https://www.linkedin.com/in/spencer-lepine/)
-* [Youtube (Spencer Lepine)](https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q)
+* [YouTube (Spencer Lepine)](https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q)

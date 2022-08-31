@@ -1,36 +1,38 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { ProjectCard } from '@components';
+import BubbleLink from '@styles/bubbleLink';
+import LandingSection from '@styles/landingSection';
 
-const MAX_PROJECTS_SHOWN = 2;
+// const MAX_PROJECTS_SHOWN = 3;
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
-    query {
-      projects: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: { regex: "/portfolio/" }
-          frontmatter: { showInProjects: { ne: false } }
+  query {
+    projects: allMarkdownRemark(
+  filter: {
+    fileAbsolutePath: {regex: "/portfolio/" }
+  frontmatter: {showInProjects: {ne: false } }
         }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
+  sort: {fields: [frontmatter___date], order: DESC }
+  ) {
+    edges {
+    node {
+    frontmatter {
+    title
               tech
-              github
-              external
-              description
-              thumbnail {
-                childImageSharp {
-                  fluid(quality: 100, maxWidth: 1000) {
-                    ...GatsbyImageSharpFluid
-                  }
+  github
+  external
+  description
+  thumbnail {
+    childImageSharp {
+    fluid(quality: 100, maxWidth: 1000) {
+    ...GatsbyImageSharpFluid
+  }
                 }
               }
-              slug
-              isFeatured
+  slug
+  isFeatured
             }
           }
         }
@@ -38,40 +40,29 @@ const Projects = () => {
     }
   `);
 
-  const projectsToShow = data.projects.edges.filter(({ node }) => node.frontmatter.isFeatured && node.frontmatter.tech).slice(0, MAX_PROJECTS_SHOWN);
+  // const projectsToShow = data.projects.edges.filter(({ node }) => node.frontmatter.isFeatured && node.frontmatter.tech).slice(0, MAX_PROJECTS_SHOWN);
+  // Manually show SquidShop, QuickCart, and Woofer
+  const titleChoices = ['SquidShop Ecommerce', 'QuickCart', 'Woofer'];
+  const projectsToShow = data.projects.edges.filter(({ node }) => titleChoices.includes(node.frontmatter.title) && node.frontmatter.tech);
 
   return (
-    <section className="landing-section">
-      <div className="m-auto flex-column mt-4">
-        <div className="w-auto relative max-w-2xl p-1 mt-2text-lg leading-relaxed text-blueGray-500 flex-1 m-auto">
-          <div className="m-auto max-w-xl mb-10">
-            <h2 className="m-auto w-fit uppercase px-7 py-2 text-blue-600 bg-blue-50 font-bold m-1 rounded-md text-2xl font-semibold flex">
-              Portfolio
+    <LandingSection id="portfolio">
+      <div className="text-center mx-auto max-w-4xl py-20">
+        <h2 className="text-title-text mt-6">Portfolio</h2>
 
-              <Link className="archive-link ml-auto" to="/portfolio">
-                <p className="font-semibold text-navy-medium text-lg">veiw all</p>
-              </Link>
-            </h2>
+        <BubbleLink linkPath='/portfolio' isOutlined color="link">View All</BubbleLink>
 
-          </div>
-
-          <ul className="m-auto">
-            <>
-              {projectsToShow &&
-                projectsToShow.map(({ node }, i) => (
-                  <>
-                    {node.frontmatter.tech && (
-                      <li key={i} className="content-center my-12">
-                        <ProjectCard node={node} listIndex={i} />
-                      </li>
-                    )}
-                  </>
-                ))}
-            </>
-          </ul>
-        </div>
+        {projectsToShow &&
+          projectsToShow.map(({ node }) => (
+            <React.Fragment key={node.frontmatter.slug}>
+              {node.frontmatter.tech && (
+                <ProjectCard node={node} />
+              )}
+            </React.Fragment>
+          ))
+        }
       </div>
-    </section>
+    </LandingSection>
   );
 };
 

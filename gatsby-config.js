@@ -181,9 +181,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-theme-tailwindcss`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        postCssPlugins: [require('autoprefixer')],
       },
     },
   ],

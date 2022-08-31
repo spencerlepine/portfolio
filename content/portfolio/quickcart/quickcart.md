@@ -1,6 +1,6 @@
 ---
 date: '2021-09-19'
-title: 'Quickcart'
+title: 'QuickCart'
 github: 'https://github.com/spencerlepine/quickcart'
 external: 'https://grocery-client-sl.herokuapp.com/'
 description: 'QuickCart web app is a grocery product catalog for budgeting a shopping list stored in the cloud. Connected to Firebase (BaaS) and multiple external APIs'
@@ -108,6 +108,3 @@ One issue I ran into was trying to automatically save estimate prices. No servic
 
 I learned many development skills during this project, and also had many failures. I learned React, React Router, React Context, MongoDB, Express, Firebase Authentication, Firebase Firestore, MaterialUI, Jest and React Testing Library, using a linter, git workflow, and deploying to Heroku.
 
----
-
-🏠 [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; 😺 GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; 🐦 Twitter [@spencerlepine](http://twitter.com/spencerlepine)

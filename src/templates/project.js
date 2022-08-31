@@ -4,6 +4,8 @@ import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
+import BubbleLink from '@styles/bubbleLink';
+import LandingSection from '@styles/landingSection';
 
 import { Carousel } from 'react-responsive-carousel';
 
@@ -25,6 +27,7 @@ const extractImages = imageEdges => {
 
 const ProjectTemplate = ({ data, location }) => {
   const { frontmatter, html } = data.markdown.edges[0].node;
+  // eslint-disable-next-line no-unused-vars
   const { title, description, tech, github, external } = frontmatter;
   const images = extractImages(data.markdown);
 
@@ -32,55 +35,61 @@ const ProjectTemplate = ({ data, location }) => {
     <Layout location={location}>
       <Helmet title={title} />
 
-      <main className="m-auto overflow-hidden pr-2 md:pr-4 max-w-screen-lg w-11/12 bg-white py-3 p-10 break-normal">
-        <span className="breadcrumb">
-          <span className="arrow">&larr;</span>
+      <LandingSection>
+        <span >
+          <span >&larr;</span>
           <Link to="/portfolio">View Portfolio</Link>
         </span>
 
-        <header className="flex">
-          <h1 className="medium-heading text-blue-900 font-serif text-2xl my-5 font-bold">{title}</h1>
-          <span className="ml-auto px-1 rounded text-navy-dark ml-auto">
+        <header className="my-8">
+          <h1 >{title}</h1>
+          <span >
             {github && (
-              <a href={github} aria-label="GitHub Link" className="inline-block p-1 m-2 bg-blue-100 border-4 border-blue-300">
-                GitHub Repository
-              </a>
+              <BubbleLink linkPath={github} icon="GitHub" color="tertiary">
+                Repository
+              </BubbleLink>
             )}
             {external && (
-              <a href={external} aria-label="External Link" className="external inline-block p-1 m-2 bg-blue-100 border-4 border-blue-300">
+              <BubbleLink linkPath={external} icon="External" color="brand" isOutline>
                 Demo
-              </a>
+              </BubbleLink>
             )}
           </span>
         </header>
 
-        <p className="m-3">{description}</p>
+        <h2>PAGE UNDER CONSTRUCTION</h2>{/* TODO */}
 
-        <div className="bg-gray-100 p-3 rounded-md mt-auto">
+        {/* 
+        <div>
           {tech && tech.length && (
-            <ul className="project-tech-list w-auto flex flex-wrap">
+            <ul >
               {tech.map((tech, i) => (
-                <li key={i} className=" techStyles">
+                <li key={i} >
                   {tech}
                 </li>
               ))}
             </ul>
           )}
+        </div> */}
+
+        <div className="text-left max-w-4xl mx-auto">
+          <p className="max-w-md mx-auto text-center">{description}</p>
+
+          {images.length > 0 && (
+            <div>
+              <Carousel dynamicHeight autoPlay centerMode>
+                {images.map((imageSrc, i) => (
+                  <a href={external || github} key={i}>
+                    <img src={imageSrc} alt="Project Screenshot"></img>
+                  </a>
+                ))}
+              </Carousel>
+            </div>
+          )}
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
 
-        {images.length > 0 && (
-          <div className="project-image w-auto m-auto md:pb-8 border-8 border-gray-200">
-            <Carousel dynamicHeight autoPlay centerMode>
-              {images.map((imageSrc, i) => (
-                <a href={external || github} className="m-auto w-full" key={i}>
-                  <img src={imageSrc} alt="Project Screenshot"></img>
-                </a>
-              ))}
-            </Carousel>
-          </div>
-        )}
-        <div className="w-full prose blog-post text-gray-900 font-light tracking-wider leading-loose" dangerouslySetInnerHTML={{ __html: html }} />
-      </main>
+      </LandingSection>
     </Layout >
   );
 };
@@ -98,7 +107,7 @@ export const postQuery = graphql`
         filter: {
           frontmatter: { slug: { eq: $path } }
           fileAbsolutePath: { regex: "/portfolio/" }
-      }
+        }
       ) {
         edges {
           node {

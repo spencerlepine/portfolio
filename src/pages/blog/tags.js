@@ -4,7 +4,7 @@ import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
-
+// TODO
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -14,19 +14,19 @@ const TagsPage = ({
   <Layout location={location}>
     <Helmet title="Tags" />
 
-    <main className="min-w-min m-auto overflow-hidden pr-2 md:pr-4 max-w-2xl">
-      <span className="w-fit-content text-lg">
-        <span className="arrow">&larr;</span>
+    <main >
+      <span >
+        <span >&larr;</span>
         <Link to="/blog">All posts</Link>
       </span>
 
-      <h1 className="m-auto w-fit-content text-xl text-navy-medium">Tags</h1>
-      <ul className="m-3 flex justify-around bg-white flex-wrap p-3">
+      <h1 >Tags</h1>
+      <ul >
         {group.map(tag => (
-          <li key={tag.fieldValue} className="m-2 bg-blueGray-100 p-2">
+          <li key={tag.fieldValue} >
             <Link to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue}{' '}
-              <span className="count text-blueGray-400">
+              <span >
                 ({tag.totalCount})
               </span>
             </Link>

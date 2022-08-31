@@ -2,7 +2,7 @@
 date: '2022-08-22'
 title: 'SquidShop Ecommerce'
 github: 'https://github.com/spencerlepine/squidshop-ecommerce'
-external: ''
+external: 'https://squidshop.netlify.app'
 description: 'Ocean-themed ecommerce web app connected to microservice architecture backend. Dockerized and automated with continuous integration using GitHub Actions.'
 tech:
   - React
@@ -32,6 +32,3 @@ screenshots:
 - Continuous Integration with **GitHub Actions**, enforcing **ESLint** code styling, testing with **Jest**, and building Docker images
 - Automated scanning for static code and Docker images, tied with **Dependabot** to prevent known security vulnerabilities
 
----
-
-🏠 [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; 😺 GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; 🐦 Twitter [@spencerlepine](http://twitter.com/spencerlepine)

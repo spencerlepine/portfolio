@@ -1,27 +1,40 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Icon } from '@components/icons';
-import { socialMedia, sourceRepository } from '@config';
+import { socialMedia, sourceRepository, navLinks } from '@config';
 
-const Footer = () => (
-  <footer className="min-w-full relative px-3 py-1 bg-coolGray-600 text-gray-400 m-auto flex">
-    <div className="w-full m-auto max-w-screen-lg">
-      <div className="min-w-full grid justify-items-start md:block m-auto">
-        <a href={sourceRepository} className="no-underline float-left">
-          <div className="w-full whitespace-nowrap p-2 md:p-4">
-            <p className="text-gray-400 p-1">Built by Spencer Lepine</p>
-          </div>
-        </a>
+const FooterComponent = () => (
+  <footer className="bg-tertiary text-tertiary-text h-48 flex w-full">
+    <div className="max-w-5xl w-full flex mx-auto my-4">
+      <div className="float-left pl-4">
+        <p>Made by Spencer Lepine</p>
+        <p><a href={sourceRepository} className="underline">Source Code</a></p>
+      </div>
 
-        <div className="row-start-1 justify-start float-left md:float-right flex items-center p-2 md:p-4">
-          {socialMedia.map((social, i) => (
-            <a href={social.url} className="" key={i}>
-              <Icon name={social.name} customClass="inline m-1"></Icon>
-            </a>
+      <div className="ml-auto pr-4">
+        {socialMedia.map(social => (
+          <a href={social.url} key={social.name}>
+            <Icon name={social.name} customClass="h-8 mx-1 inline my-auto"></Icon>
+          </a>
+        ))}
+
+        <div className="grid text-right pt-4">
+          {navLinks.map(({ url, name }) => (
+            <div className="inline" key={name} >
+              <Link to={url}>
+                {name}
+              </Link>
+            </div>
           ))}
+          <div className="inline">
+            <Link to="/">
+              Home
+            </Link>
+          </div>
         </div>
       </div>
     </div>
-  </footer >
+  </footer>
 );
 
-export default Footer;
+export default FooterComponent;

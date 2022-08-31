@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Welcome, About, Projects, Contact, Skills } from '@components'; // Jobs,
+import { Layout, Welcome, About, Projects, Contact, Skills, ExtraLinks } from '@components';
+
+// Jobs,
+// <Jobs />
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <main className="m-4">
-      <Welcome />
-      <About />
-      {/* <Jobs /> */}
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+    <Welcome />
+    <About />
+    <Skills />
+    <Projects />
+    <ExtraLinks />
+    <Contact />
   </Layout>
 );
 

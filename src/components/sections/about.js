@@ -1,27 +1,16 @@
 import React from 'react';
+import LandingSection from '@styles/landingSection';
 
 const About = () => (
-  <section id="about" className="landing-section">
-    <div className="grid auto-cols-auto">
-      <div className="m-auto max-w-4xl grid flex-column mt-4 sm:grid md:grid lg:flex">
-        <div className="w-auto relative max-w-2xl p-1 mt-2 text-lg leading-relaxed text-blueGray-500 flex-1 m-auto">
-          <div className="m-auto">
-            <h2 className="m-auto w-fit uppercase px-7 py-2 text-blue-700 font-bold bg-blueGray-100 m-1 rounded-md text-2xl font-semibold">
-              About Me
-            </h2>
-          </div>
+  <LandingSection id="about" isSkewSection>
+    <div className="mx-auto max-w-4xl text-center py-10">
+      <h2 className="text-primary mt-0">About Me</h2>
 
-          <p className="px-10 py-2 w-auto m-auto">
-            &ensp; I am currently serving in the US Army Reserve while pursuing my dream career in tech. My mission is to build the future today and be surrounded by innovation.
-          </p>
-
-          <p className="px-10 py-2 w-auto m-auto">
-            &ensp; By working on both frontend and backend systems, I have experience with popular tools like React, NodeJS, PostgreSQL, and MongoDB. Using Docker, GitHub Actions, AWS EC2, and Heroku, I love finding ways to automate my development, to test, build, and deploy.
-          </p>
-        </div>
-      </div>
-    </div >
-  </section >
+      <p className="text-secondary-text mb-0 max-w-xl mx-auto">
+        I'm a front-end software engineer and reservist in the U.S. Army. My mission is to build the future today and be surrounded by innovation. By working on both frontend and backend systems, I have experience with popular tools like React, TypeScript, Node.js, SQL, and MongoDB. Also, using Docker, GitHub Actions, AWS EC2, and Heroku, I love finding ways to automate my development, to test, build, and deploy.
+      </p>
+    </div>
+  </LandingSection>
 );
 
 export default About;

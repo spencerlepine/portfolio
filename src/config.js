@@ -15,11 +15,7 @@ module.exports = {
       url: 'https://www.linkedin.com/in/spencer-lepine',
     },
     {
-      name: 'Medium',
-      url: 'https://medium.com/@spencerlepine',
-    },
-    {
-      name: 'Youtube',
+      name: 'YouTube',
       url: 'https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q',
     },
   ],
@@ -32,17 +28,14 @@ module.exports = {
     {
       name: 'Portfolio',
       url: '/portfolio',
-      emoji: '📁',
     },
     {
       name: 'Blog',
       url: '/blog',
-      emoji: '📝',
     },
     {
       name: 'Contact',
-      url: '/#contact',
-      emoji: '📮',
+      url: '/contact',
     },
   ],
 
@@ -53,21 +46,22 @@ module.exports = {
   sourceRepository: 'https://github.com/spencerlepine/portfolio-site',
 
   skills: [
-    {
-      name: 'Frontend',
-      tech: ['JavaScript', 'HTML', 'CSS', 'React', 'MaterialUI', 'Tailwind'],
-    },
-    {
-      name: 'Backend',
-      tech: ['Node.js', 'Express', 'PostgreSQL', 'Firebase', 'MongoDB', 'RESTful API'],
-    },
-    {
-      name: 'Testing/Deployment',
-      tech: ['Jest', 'Testing Library', 'AWS (EC2)', 'Docker', 'NGINX'],
-    },
-    {
-      name: 'Developer Tools',
-      tech: ['Vim', 'Git', 'Webpack', 'Babel', 'ESLint', 'GitHub Actions'],
-    },
+    { skill: 'JavaScript', icon: 'JavaScript' },
+    { skill: 'Node.js', icon: 'NodeJS' },
+    { skill: 'React', icon: 'React' },
+    { skill: 'Tailwind CSS', icon: 'TailwindCSS' },
+    { skill: 'HTML', icon: 'HTML' },
+    { skill: 'CSS', icon: 'CSS' },
+    { skill: 'Express', icon: 'Express' },
+    { skill: 'Jest', icon: 'Jest' },
+    { skill: 'Cypress', icon: 'Cypress' },
+    { skill: 'AWS (EC2)', icon: 'EC2' },
+    { skill: 'Docker', icon: 'Docker' },
+    { skill: 'Git', icon: 'Git' },
+    { skill: 'VSCode', icon: 'VSCode' },
+    { skill: 'OSX', icon: 'OSX' },
+    { skill: 'Firebase', icon: 'Firebase' },
+    { skill: 'SQL', icon: 'SQL' },
+    { skill: 'GitHub Actions', icon: 'GitHubActions' },
   ],
 };

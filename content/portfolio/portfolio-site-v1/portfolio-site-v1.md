@@ -1,7 +1,7 @@
 ---
 date: '2021-08-28'
 title: 'Portfolio Site'
-github: 'https://github.com/spencerlepine/portfolio-site'
+github: 'https://github.com/spencerlepine/portfolio-site/tree/v1'
 external: 'https://spencerlepine.com'
 description: 'Portfolio site and blog powered by Gatsby with automated deployment'
 tech:
@@ -13,7 +13,7 @@ company: ''
 showInProjects: true
 isFeatured: ''
 thumbnail: ./og.png
-slug: /portfolio/portfolio-site
+slug: /portfolio/portfolio-site-v1
 ---
 
 A GatsbyJS site styled with TailwindCSS.
@@ -38,6 +38,3 @@ A GatsbyJS site styled with TailwindCSS.
 
 - Pushes to `master` will trigger automatic deployment to the [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets/). GitHub Actions with SSH into the remote server and replace static files.
 
----
-
-> [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; Twitter [@spencerlepine](http://twitter.com/spencerlepine)

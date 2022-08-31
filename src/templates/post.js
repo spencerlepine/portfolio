@@ -4,6 +4,7 @@ import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
+import LandingSection from '@styles/landingSection';
 
 const PostTemplate = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark;
@@ -13,15 +14,16 @@ const PostTemplate = ({ data, location }) => {
     <Layout location={location}>
       <Helmet title={title} />
 
-      <main className="m-auto overflow-hidden pr-2 md:pr-4 max-w-screen-lg w-11/12 bg-white py-3 p-10 break-normal">
-        <span className="breadcrumb">
-          <span className="arrow">&larr;</span>
+      <LandingSection id="blogPost">
+        <span >
+          <span >&larr;</span>
           <Link to="/blog">All posts</Link>
         </span>
 
         <header>
-          <h1 className="medium-heading text-blue-900 font-serif text-2xl my-5 font-bold">{title}</h1>
-          <p className="subtitle text-blueGray-300">
+          <h1 >UNDER CONSTRUCTION</h1>{/* TOOD */}
+          <h1 >{title}</h1>
+          <p >
             <time>
               {new Date(date).toLocaleDateString('en-US', {
                 year: 'numeric',
@@ -33,15 +35,15 @@ const PostTemplate = ({ data, location }) => {
             {tags &&
               tags.length > 0 &&
               tags.map((tag, i) => (
-                <Link key={i} to={`/blog/tags/${kebabCase(tag)}/`} className="tag p-1 break-all">
+                <Link key={i} to={`/blog/tags/${kebabCase(tag)}/`} >
                   #{tag}
                 </Link>
               ))}
           </p>
         </header>
 
-        <div className="w-full prose blog-post text-gray-900 font-light tracking-wider leading-loose" dangerouslySetInnerHTML={{ __html: html }} />
-      </main>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </LandingSection>
     </Layout>
   );
 };
@@ -55,7 +57,7 @@ PostTemplate.propTypes = {
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $path } }) {
+    markdownRemark(frontmatter: { slug: { eq: $path } } fileAbsolutePath: { regex: "/posts/" }) {
       html
       frontmatter {
         title

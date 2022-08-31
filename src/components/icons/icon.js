@@ -8,53 +8,110 @@ import {
   IconGitHubSquare,
   IconLinkedin,
   IconLinkedinSquare,
-  IconMedium,
   IconLogo,
+  IconMeeting,
   IconTwitter,
   IconTwitterSquare,
   IconHamburger,
-  IconYoutube,
+  IconYouTube,
   IconEmail,
+  IconJavaScript,
+  IconNodeJS,
+  IconReact,
+  IconTailwindCSS,
+  IconHTML,
+  IconCSS,
+  IconExpress,
+  IconJest,
+  IconCypress,
+  IconEC2,
+  IconDocker,
+  IconGit,
+  IconVSCode,
+  IconOSX,
+  IconFirebase,
+  IconSQL,
+  IconGitHubActions,
 } from '@components/icons';
 
-const Icon = ({ name, customClass }) => {
+const GetIcon = name => {
   switch (name) {
     case 'Bookmark':
-      return <IconBookmark customClass={customClass} />;
+      return IconBookmark;
     case 'Email':
-      return <IconEmail customClass={customClass} />;
+      return IconEmail;
     case 'External':
-      return <IconExternal customClass={customClass} />;
+      return IconExternal;
     case 'Folder':
-      return <IconFolder customClass={customClass} />;
+      return IconFolder;
     case 'GitHub':
-      return <IconGitHub customClass={customClass} />;
+      return IconGitHub;
     case 'GitHubSquare':
-      return <IconGitHubSquare customClass={customClass} />;
+      return IconGitHubSquare;
     case 'Linkedin':
-      return <IconLinkedin customClass={customClass} />;
+      return IconLinkedin;
     case 'LinkedinSqaure':
-      return <IconLinkedinSquare customClass={customClass} />;
+      return IconLinkedinSquare;
     case 'Logo':
-      return <IconLogo customClass={customClass} />;
-    case 'Medium':
-      return <IconMedium customClass={customClass} />;
+      return IconLogo;
     case 'Twitter':
-      return <IconTwitter customClass={customClass} />;
+      return IconTwitter;
     case 'TwitterSquare':
-      return <IconTwitterSquare customClass={customClass} />;
+      return IconTwitterSquare;
     case 'Hamburger':
-      return <IconHamburger customClass={customClass} />;
-    case 'Youtube':
-      return <IconYoutube customClass={customClass} />;
+      return IconHamburger;
+    case 'YouTube':
+      return IconYouTube;
+    case 'JavaScript':
+      return IconJavaScript;
+    case 'NodeJS':
+      return IconNodeJS;
+    case 'React':
+      return IconReact;
+    case 'TailwindCSS':
+      return IconTailwindCSS;
+    case 'HTML':
+      return IconHTML;
+    case 'CSS':
+      return IconCSS;
+    case 'Express':
+      return IconExpress;
+    case 'Jest':
+      return IconJest;
+    case 'Cypress':
+      return IconCypress;
+    case 'EC2':
+      return IconEC2;
+    case 'Docker':
+      return IconDocker;
+    case 'Git':
+      return IconGit;
+    case 'VSCode':
+      return IconVSCode;
+    case 'OSX':
+      return IconOSX;
+    case 'Firebase':
+      return IconFirebase;
+    case 'SQL':
+      return IconSQL;
+    case 'GitHubActions':
+      return IconGitHubActions;
+    case 'Meeting':
+      return IconMeeting;
     default:
-      return <IconExternal customClass={customClass} />;
+      return IconExternal;
   }
 };
 
-Icon.propTypes = {
+const WrappedIcon = props => {
+  const IconSVG = GetIcon(props.name);
+
+  return <IconSVG customClass={props.customClass} />;
+};
+
+WrappedIcon.propTypes = {
   name: PropTypes.string.isRequired,
   customClass: PropTypes.string,
 };
 
-export default Icon;
+export default WrappedIcon;
