@@ -29,7 +29,7 @@ const ProjectCard = ({ node }) => {
   const TitleLink = () => {
     if (external) {
       return (
-        <Link to={external} className="no-underline"><h3 className="text-title-text">{title} <Icon name="External" customClass="h-6 text-primary-text mx-1 inline" /></h3></Link>
+        <Link to={external} target="_blank" className="no-underline"><h3 className="text-title-text">{title} <Icon name="External" customClass="h-6 text-primary-text mx-1 inline" /></h3></Link>
       );
     }
 
@@ -56,7 +56,7 @@ const ProjectCard = ({ node }) => {
       </div>
 
       <div style={{ overflowY: 'clip', zIndex: 0 }}>
-        <a href={external || github} aria-label="Project Link" >
+        <a href={external || github} target="_blank" aria-label="Project Link" rel="noreferrer" >
           <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
         </a>
       </div>
