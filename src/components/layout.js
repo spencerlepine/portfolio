@@ -12,7 +12,7 @@ const Layout = props => {
       <Head />
       <Nav />
 
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <main>
           {props.children}
         </main>
