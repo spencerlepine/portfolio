@@ -180,5 +180,11 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-theme-tailwindcss`,
+      options: {
+        postCssPlugins: [require('autoprefixer')],
+      },
+    },
   ],
 };

@@ -3,5 +3,6 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-import 'prismjs/themes/prism-okaidia.css';
+import './src/styles/global.css';
+import 'prismjs/themes/prism-okaidia.css'; // for code styling in blog posts
 
