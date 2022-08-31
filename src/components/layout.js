@@ -8,11 +8,11 @@ const Layout = props => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={`text-primary-text ${theme === 'light' ? 'theme-light' : 'theme-dark'}`}>
+    <div className={`text-primary-text ${theme === 'light' ? 'theme-light' : 'theme-dark'} bg-primary`}>
       <Head />
       <Nav />
 
-      <main className="mx-auto">
+      <main className="mx-auto bg-primary">
         {props.children}
       </main>
 

@@ -2,36 +2,37 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ProjectCard } from '@components';
 import BubbleLink from '@styles/bubbleLink';
+import LandingSection from '@styles/landingSection';
 
-const MAX_PROJECTS_SHOWN = 2;
+// const MAX_PROJECTS_SHOWN = 3;
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
-    query {
-      projects: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: { regex: "/portfolio/" }
-          frontmatter: { showInProjects: { ne: false } }
+  query {
+    projects: allMarkdownRemark(
+  filter: {
+    fileAbsolutePath: {regex: "/portfolio/" }
+  frontmatter: {showInProjects: {ne: false } }
         }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
+  sort: {fields: [frontmatter___date], order: DESC }
+  ) {
+    edges {
+    node {
+    frontmatter {
+    title
               tech
-              github
-              external
-              description
-              thumbnail {
-                childImageSharp {
-                  fluid(quality: 100, maxWidth: 1000) {
-                    ...GatsbyImageSharpFluid
-                  }
+  github
+  external
+  description
+  thumbnail {
+    childImageSharp {
+    fluid(quality: 100, maxWidth: 1000) {
+    ...GatsbyImageSharpFluid
+  }
                 }
               }
-              slug
-              isFeatured
+  slug
+  isFeatured
             }
           }
         }
@@ -39,24 +40,29 @@ const Projects = () => {
     }
   `);
 
-  const projectsToShow = data.projects.edges.filter(({ node }) => node.frontmatter.isFeatured && node.frontmatter.tech).slice(0, MAX_PROJECTS_SHOWN);
+  // const projectsToShow = data.projects.edges.filter(({ node }) => node.frontmatter.isFeatured && node.frontmatter.tech).slice(0, MAX_PROJECTS_SHOWN);
+  // Manually show SquidShop, QuickCart, and Woofer
+  const titleChoices = ['SquidShop Ecommerce', 'QuickCart', 'Woofer'];
+  const projectsToShow = data.projects.edges.filter(({ node }) => titleChoices.includes(node.frontmatter.title) && node.frontmatter.tech);
 
   return (
-    <section id="portfolio" className="prose lg:prose-xl text-center min-w-full">
-      <h2 className="text-tertiary mt-6">Portfolio</h2>
+    <LandingSection id="portfolio">
+      <div className="text-center mx-auto max-w-4xl py-20">
+        <h2 className="text-tertiary mt-6">Portfolio</h2>
 
-      <BubbleLink linkPath='/portfolio' isOutlined color="link">View All</BubbleLink>
+        <BubbleLink linkPath='/portfolio' isOutlined color="link">View All</BubbleLink>
 
-      {projectsToShow &&
-        projectsToShow.map(({ node }) => (
-          <React.Fragment key={node.frontmatter.slug}>
-            {node.frontmatter.tech && (
-              <ProjectCard node={node} />
-            )}
-          </React.Fragment>
-        ))
-      }
-    </section >
+        {projectsToShow &&
+          projectsToShow.map(({ node }) => (
+            <React.Fragment key={node.frontmatter.slug}>
+              {node.frontmatter.tech && (
+                <ProjectCard node={node} />
+              )}
+            </React.Fragment>
+          ))
+        }
+      </div>
+    </LandingSection>
   );
 };
 

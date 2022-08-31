@@ -4,20 +4,21 @@ import { socialMedia } from '@config';
 import { Icon } from '@components/icons';
 import { StaticImage } from 'gatsby-plugin-image';
 import BubbleLink from '@styles/bubbleLink';
+import LandingSection from '@styles/landingSection';
 
 const Welcome = () => (
-  <section className="min-w-full">
-    <div className="mx-auto w-fit">
-      <div className="flex flex-row">
-        <div className="text-tertiary bg-red-100 max-w-md w-fit">
-          <h1><Emoji symbol='👋' />{' '}Hello!</h1>
-          <h2>I'm Spencer Lepine</h2>
-          <p>$ Software Engineer</p>{/* TODO */}
-          <BubbleLink linkPath='/portfolio' color="brand">View Portfolio</BubbleLink>
-          <BubbleLink linkPath='#contact' isOutlined color="brand">Get In Touch</BubbleLink>
+  <LandingSection id="welcome">
+    <div className="flex text-center mx-auto max-w-6xl py-20">
+      <div className="flex mx-auto">
+        <div className="pr-10 text-tertiary  max-w-md w-fit text-left my-auto mx-10">
+          <h1 className="my-2 font-semibold"><Emoji symbol='👋' />{' '}Hello!</h1>
+          <h1 className="my-2 font-semibold">I'm Spencer Lepine</h1>
+          <h1 className="mt-4 mb-8 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-8 py-2 rounded-md"><span className="text-gray-600 select-none">$</span> Software Engineer_</h1>{/* TODO */}
+          <BubbleLink linkPath='/portfolio' color="brand" isLarger hasMargin>View Portfolio</BubbleLink>
+          <BubbleLink linkPath='#contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
         </div>
 
-        <div>
+        <div className="mx-10">
           <div className="mx-auto w-fit max-w-xs">
             <StaticImage
               src="../../images/me.jpg"
@@ -39,7 +40,7 @@ const Welcome = () => (
         </div>
       </div>
     </div>
-  </section >
+  </LandingSection>
 );
 
 export default Welcome;

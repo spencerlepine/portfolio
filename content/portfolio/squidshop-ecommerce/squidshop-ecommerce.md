@@ -2,7 +2,7 @@
 date: '2022-08-22'
 title: 'SquidShop Ecommerce'
 github: 'https://github.com/spencerlepine/squidshop-ecommerce'
-external: ''
+external: 'https://squidshop.netlify.app'
 description: 'Ocean-themed ecommerce web app connected to microservice architecture backend. Dockerized and automated with continuous integration using GitHub Actions.'
 tech:
   - React

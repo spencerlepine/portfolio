@@ -18,15 +18,17 @@ const textOnWhite = '#808080';
   --alabasterWhite: #FCFCFC;
   --buttonBlue: #1B9BE3;
   --linkBlue: #2EB2DC;
-  --textOnBlue: #BDBDBD;
+  --textOnBlue: #AFD6DE;
   --textOnWhite: #808080;
+  --textOnBlack: #BDBDBD;
 }
 .theme-dark {
-  --celticBlue: #2f3855;
+  --celticBlue: #6f6f6f;
   --blackPearl: #24293e;
-  --alabasterWhite: #FCFCFC;
+  --alabasterWhite: #040B14;
   --buttonBlue: #e3a71b;
   --linkBlue: #e7821e;
   --textOnBlue: #BDBDBD;
   --textOnWhite: #808080;
+  --textOnBlack: #BDBDBD;
 }

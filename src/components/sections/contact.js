@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LandingSection from '@styles/landingSection';
 
 const FORM_ENDPOINT = 'https://public.herotofu.com/v1/aae45b10-27cb-11ed-9d54-c9f9d2b00e7b';
 
@@ -73,7 +74,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       method="POST"
       target="_blank"
-      className="max-w-md mx-auto py-10 pt-4"
+      className="max-w-md mx-auto py-10 pt-4 mb-20"
     >
       <div className="mb-4">
         <input
@@ -111,16 +112,15 @@ const ContactForm = () => {
 };
 
 const Contact = () => (
-  <section id="contact" className="min-w-full text-center">
+  <LandingSection id="contact">
     <h2 className="text-tertiary m-6 text-2xl font-bold">Contact</h2>
 
     <p className="text-primary-text">
       Want to work together or have any questions?
     </p>
 
-
     <ContactForm />
-  </section>
+  </LandingSection>
 );
 
 export default Contact;

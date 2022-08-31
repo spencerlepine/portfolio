@@ -1,34 +1,30 @@
 import React from 'react';
 import BubbleLink from '@styles/bubbleLink';
-import SkewWrapper from '@styles/SkewWrapper';
+import { Icon } from '@components/icons';
+import LandingSection from '@styles/landingSection';
 
 const githubLink = 'https://github.com/spencerlepine';
 const meetingLink = 'https://calendly.com/spencerlepine';
 
+const LinkPrompt = (iconName, promptTitle, promptMessage, linkText, link) => (
+  <div>
+    <Icon name={iconName} customClass="h-16 text-tertiary mx-auto opacity-50"></Icon>
+
+    <h2 className="text-primary m-2 text-4xl font-bold">{promptTitle}</h2>
+    <p className="text-secondary-text mb-4 px-8">{promptMessage}</p>
+
+    <BubbleLink linkPath={link} color="button">{linkText}</BubbleLink>
+  </div>
+);
+
 const Extra = () => (
-  <SkewWrapper>
-    <section id="moreLinks" className="min-w-full bg-secondary relative" style={{ borderBottomRightRadius: '5em', borderTopLeftRadius: '5em' }}>
-      <div className="flex text-center mx-auto max-w-4xl py-20">
-        <div id="moreProjects">
-          <img alt="GitHub Logo" />
+  <LandingSection id="moreLinks" isSkewSection>
+    <div className="flex text-center mx-auto max-w-4xl py-20">
+      {LinkPrompt('GitHub', 'More Projects', 'Looking to read or explore actual code? Find more over on my GitHub profile.', 'Open GitHub', githubLink)}
 
-          <h2 className="text-primary">More Projects</h2>
-          <p className="text-secondary-text">Looking to read or explore actual code? Find more over on my GitHub profile.</p>
-
-          <BubbleLink linkPath={githubLink} color="brand">Open GitHub</BubbleLink>
-        </div>
-
-        <div id="bookMeeting">
-          <img alt="Meeting Icon" />
-
-          <h2 className="text-primary">Book Meeting</h2>
-          <p className="text-secondary-text">Interested in a virtual coffee chat? Easily book a meeting with me through Calendly.</p>
-
-          <BubbleLink linkPath={meetingLink} color="brand">Let's Chat</BubbleLink>
-        </div>
-      </div>
-    </section>
-  </SkewWrapper>
+      {LinkPrompt('Meeting', 'Book Meeting', 'Interested in a virtual coffee chat? Easily book a meeting with me through Calendly.', 'Let\'s Chat', meetingLink)}
+    </div>
+  </LandingSection>
 );
 
 export default Extra;

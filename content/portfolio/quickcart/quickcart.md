@@ -1,6 +1,6 @@
 ---
 date: '2021-09-19'
-title: 'Quickcart'
+title: 'QuickCart'
 github: 'https://github.com/spencerlepine/quickcart'
 external: 'https://grocery-client-sl.herokuapp.com/'
 description: 'QuickCart web app is a grocery product catalog for budgeting a shopping list stored in the cloud. Connected to Firebase (BaaS) and multiple external APIs'

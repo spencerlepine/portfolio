@@ -19,6 +19,7 @@ module.exports = {
         'link-primary': 'var(--linkBlue)',
         'primary-text': 'var(--textOnWhite)',
         'secondary-text': 'var(--textOnBlue)',
+        'tertiary-text': 'var(--textOnBlack)',
       },
     },
   },

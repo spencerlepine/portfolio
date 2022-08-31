@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'gatsby';
+import { Icon } from '@components/icons';
 import BubbleLink from '@styles/bubbleLink';
 
 const extractImages = node => {
@@ -25,24 +26,34 @@ const ProjectCard = ({ node }) => {
 
   const { github, external, title, description, slug } = frontmatter;
 
+  const TitleLink = () => {
+    if (external) {
+      return (
+        <Link to={external} className="no-underline"><h3>{title} <Icon name="External" customClass="h-6 text-primary-text mx-1 inline" /></h3></Link>
+      );
+    }
+
+    return (
+      <Link to={github} className="no-underline"><h3>{title}</h3></Link>
+    );
+  };
   return (
-    <div className="max-w-lg text-left">
-      <Link to={slug}><h3>{title}</h3></Link>
+    <div className="text-left flex">
+      <div>
+        {TitleLink()}
 
-      <p className="text-primary-text">{description}</p>
+        <p className="text-primary-text w-10/12">{description}</p>
 
-
-      {github && (
-        <BubbleLink linkPath={github} icon="GitHub" color="tertiary">
-          GitHub
+        <BubbleLink linkPath={slug} color="brand" hasMargin>
+          Learn More
         </BubbleLink>
-      )}
-      {external && (
-        <BubbleLink linkPath={external} icon="External" color="brand">
-          Demo
-        </BubbleLink>
-      )}
 
+        {github && (
+          <BubbleLink linkPath={github} icon="GitHub" color="tertiary">
+            Repository
+          </BubbleLink>
+        )}
+      </div>
 
       <div style={{ overflowY: 'clip', zIndex: 0 }}>
         <a href={external || github} aria-label="Project Link" >
