@@ -32,6 +32,3 @@ screenshots:
 - Continuous Integration with **GitHub Actions**, enforcing **ESLint** code styling, testing with **Jest**, and building Docker images
 - Automated scanning for static code and Docker images, tied with **Dependabot** to prevent known security vulnerabilities
 
----
-
-🏠 [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; 😺 GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; 🐦 Twitter [@spencerlepine](http://twitter.com/spencerlepine)

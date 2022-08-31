@@ -41,6 +41,4 @@ $ docker pull ghcr.io/spencerlepine/portfolio-site:0.1.0
 - Portfolio Showcase
 - Contact Form
 - Blog
----
 
-> [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; Twitter [@spencerlepine](http://twitter.com/spencerlepine)

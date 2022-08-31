@@ -4,6 +4,7 @@ import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
+import LandingSection from '@styles/landingSection';
 
 const PostTemplate = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark;
@@ -13,13 +14,14 @@ const PostTemplate = ({ data, location }) => {
     <Layout location={location}>
       <Helmet title={title} />
 
-      <main >
+      <LandingSection id="blogPost">
         <span >
           <span >&larr;</span>
           <Link to="/blog">All posts</Link>
         </span>
 
         <header>
+          <h1 >UNDER CONSTRUCTION</h1>{/* TOOD */}
           <h1 >{title}</h1>
           <p >
             <time>
@@ -41,7 +43,7 @@ const PostTemplate = ({ data, location }) => {
         </header>
 
         <div dangerouslySetInnerHTML={{ __html: html }} />
-      </main>
+      </LandingSection>
     </Layout>
   );
 };
@@ -55,7 +57,7 @@ PostTemplate.propTypes = {
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $path } }) {
+    markdownRemark(frontmatter: { slug: { eq: $path } } fileAbsolutePath: { regex: "/posts/" }) {
       html
       frontmatter {
         title
