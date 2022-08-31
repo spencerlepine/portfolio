@@ -77,7 +77,7 @@ const ContactForm = () => {
       <div>
         <input
           type="text"
-          placeholder="Your name"
+          placeholder="Name"
           name="name"
           required
         />
@@ -85,14 +85,14 @@ const ContactForm = () => {
       <div>
         <input
           type="email"
-          placeholder="Email"
+          placeholder="name@example.com"
           name="email"
           required
         />
       </div>
       <div>
         <textarea
-          placeholder="Your message"
+          placeholder="Message..."
           name="message"
           required
         />

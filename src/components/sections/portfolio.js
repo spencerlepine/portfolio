@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import { ProjectCard } from '@components';
 
 const MAX_PROJECTS_SHOWN = 2;
@@ -43,17 +43,14 @@ const Projects = () => {
   return (
     <section id="portfolio">
       <h2>Portfolio</h2>
+      <Link to={'/portfolio'} >View All</Link>
 
       {projectsToShow &&
-        projectsToShow.map(({ node }, i) => (
-          <React.Fragment key={i}>
-            {
-              node.frontmatter.tech && (
-                <li key={i} >
-                  <ProjectCard node={node} listIndex={i} />
-                </li>
-              )
-            }
+        projectsToShow.map(({ node }) => (
+          <React.Fragment key={node.frontmatter.slug}>
+            {node.frontmatter.tech && (
+              <ProjectCard node={node} />
+            )}
           </React.Fragment>
         ))
       }

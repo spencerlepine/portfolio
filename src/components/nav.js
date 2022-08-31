@@ -10,11 +10,7 @@ const Nav = () => (
     {/* <Menu />  TODO */}
 
     {navLinks.map(({ url, name }) => (
-      <Link
-        key={name}
-        to={url}
-        color="black"
-      >
+      <Link key={name} to={url}>
         {name}
       </Link>
     ))}

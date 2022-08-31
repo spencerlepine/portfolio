@@ -8,33 +8,21 @@ import { StaticImage } from 'gatsby-plugin-image';
 const Welcome = () => (
   <section>
     <div>
-      <div>
-        <h1 ><Emoji symbol='👋' />{' '}Hello, I'm</h1>
-        <h2>Spencer Lepine,</h2>
-        <h5>a Front End</h5>
-        <h1 >Software Engineer</h1>
-      </div>
+      <h1 ><Emoji symbol='👋' />{' '}Hello!</h1>
+      <h2>I'm Spencer Lepine</h2>
+      <p>$ Software Engineer</p>{/* TODO */}
+      <Link to={'/portfolio'} >View Portfolio</Link>
+      <Link to={'/#contact'}>Get In Touch</Link>
+    </div>
 
-      <div>
-        <Link to={'/#contact'}>
-          GET IN TOUCH
-        </Link>
-
-        <Link to={'/portfolio'} >
-          VIEW PORTFOLIO
-        </Link>
-      </div>
-    </div >
     <div>
-      <div>
-        <StaticImage
-          src="../../images/me.jpg"
-          width={500}
-          quality={95}
-          formats={['AUTO', 'WEBP', 'AVIF']}
-          alt="Spencer Lepine Headshot Profile"
-        />
-      </div>
+      <StaticImage
+        src="../../images/me.jpg"
+        // width={500}
+        quality={90}
+        formats={['AUTO', 'WEBP', 'AVIF']}
+        alt="Spencer Lepine Headshot Profile"
+      />
 
       <div>
         {socialMedia.map((social, i) => (
