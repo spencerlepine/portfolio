@@ -48,7 +48,14 @@ module.exports = {
         icon: 'src/images/logo-dark.png',
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['*.html'],
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
