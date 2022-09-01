@@ -9,7 +9,7 @@ import LandingSection from '@styles/landingSection';
 const Welcome = () => (
   <LandingSection id="welcome">
     <div className="flex text-center mx-auto max-w-6xl py-20">
-      <div className="flex mx-auto">
+      <div className="flex mx-auto flex-wrap">
         <div className="pr-10 max-w-md w-fit text-left my-auto mx-10">
           <h1 className="my-2 font-semibold text-title-text"><Emoji symbol='👋' />{' '}Hello!</h1>
           <h1 className="my-2 font-semibold text-title-text">I'm Spencer Lepine</h1>

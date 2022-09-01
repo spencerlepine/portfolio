@@ -26,9 +26,10 @@ const colorPallete = {
 const BubbleLink = ({ isOutlined, linkPath, children, icon, color, isLarger, hasMargin }) => {
   const sizes = `${isLarger ? `px-6 py-3 rounded-2xl border-2 text-lg ${hasMargin ? 'mr-2' : ''}` : `px-5 py-2 border-2 rounded-xl ${hasMargin ? 'mr-2' : ''}`}`;
   const colors = `${colorPallete[color][isOutlined ? 'outlined' : 'fill']}`;
-
-  const bubbleStyles = `${colors} ${sizes} border-solid no-underline`;
   const iconStyles = `${colors} h-6 mx-1 inline my-auto`;
+
+  const bubbleStyles = `${colors} ${sizes} border-solid no-underline inline-flex my-1`;
+
 
   const OptIcon = iconName => (
     <>{iconName && <Icon name={iconName} customClass={iconStyles} />}</>

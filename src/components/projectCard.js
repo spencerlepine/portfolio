@@ -38,8 +38,8 @@ const ProjectCard = ({ node }) => {
     );
   };
   return (
-    <div className="text-left flex">
-      <div>
+    <div className="text-left flex flex-wrap">
+      <div className="m-2">
         {TitleLink()}
 
         <p className="text-primary-text w-10/12">{description}</p>
@@ -57,7 +57,7 @@ const ProjectCard = ({ node }) => {
 
       <div style={{ overflowY: 'clip', zIndex: 0 }}>
         <a href={external || github} target="_blank" aria-label="Project Link" rel="noreferrer" >
-          <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot"></img>
+          <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot" className="max-w-max"></img>
         </a>
       </div>
     </div>
