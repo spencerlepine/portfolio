@@ -10,25 +10,12 @@ module.exports = {
     twitterUsername: '@spencerlepine',
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        pathToEmotionCacheProps: `src/emotion-cache-props`,
-      },
-    },
-    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        pathToEmotionCacheProps: `src/emotion-cache-props`,
-      },
-    },
     {
       resolve: 'gatsby-plugin-htaccess',
       options: {
@@ -54,14 +41,16 @@ module.exports = {
         icon: 'src/images/logo-dark.png',
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        workboxConfig: {
-          globPatterns: ['*.html'],
-        },
-      },
-    },
+    `gatsby-plugin-remove-serviceworker`,
+    `gatsby-plugin-styled-components`,
+    // {
+    //   resolve: 'gatsby-plugin-offline',
+    //   options: {
+    //     workboxConfig: {
+    //       globPatterns: ['*.html'],
+    //     },
+    //   },
+    // },
     `gatsby-plugin-force-trailing-slashes`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -194,10 +183,17 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-theme-tailwindcss`,
       options: {
         postCssPlugins: [require('autoprefixer')],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        pathToEmotionCacheProps: `src/emotion-cache-props`,
       },
     },
   ],
