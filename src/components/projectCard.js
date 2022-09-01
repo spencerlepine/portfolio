@@ -38,11 +38,11 @@ const ProjectCard = ({ node }) => {
     );
   };
   return (
-    <div className="text-left flex flex-wrap">
-      <div className="m-2">
+    <div className="text-left flex flex-wrap mx-auto justify-center">
+      <div>
         {TitleLink()}
 
-        <p className="text-primary-text w-10/12">{description}</p>
+        <p className="text-primary-text max-w-sm pr-4">{description}</p>
 
         <BubbleLink linkPath={slug} color="brand" hasMargin>
           Learn More
@@ -55,11 +55,11 @@ const ProjectCard = ({ node }) => {
         )}
       </div>
 
-      <div style={{ overflowY: 'clip', zIndex: 0 }}>
-        <a href={external || github} target="_blank" aria-label="Project Link" rel="noreferrer" >
-          <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot" className="max-w-max"></img>
-        </a>
-      </div>
+      <a href={external || github} target="_blank" aria-label="Project Link" rel="noreferrer" >
+        <div className="max-w-sm ml-auto">
+          <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot" className=''></img>
+        </div>
+      </a>
     </div>
   );
 };

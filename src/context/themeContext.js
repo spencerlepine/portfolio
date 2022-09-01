@@ -9,14 +9,16 @@ const ThemeContextProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    const storageTheme = localStorage.getItem('theme');
+    const storageTheme = localStorage.getItem('spencerl-theme');
     if (storageTheme === 'light' || storageTheme === 'dark') {
       setTheme(storageTheme);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('theme', theme);
+    if (theme) {
+      localStorage.setItem('spencerl-theme', theme);
+    }
   }, [theme]);
 
   const handleThemeToggle = () => {

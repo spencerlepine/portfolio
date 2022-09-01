@@ -11,7 +11,7 @@ const LinkPrompt = (iconName, promptTitle, promptMessage, linkText, link) => (
     <Icon name={iconName} customClass="h-16 text-tertiary mx-auto opacity-50"></Icon>
 
     <h2 className="text-primary m-2 text-4xl font-bold">{promptTitle}</h2>
-    <p className="text-secondary-text mb-4 px-8">{promptMessage}</p>
+    <p className="text-secondary-text mb-4 px-8 max-w-sm">{promptMessage}</p>
 
     <BubbleLink linkPath={link} color="button">{linkText}</BubbleLink>
   </div>

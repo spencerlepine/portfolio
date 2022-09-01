@@ -28,7 +28,7 @@ const BubbleLink = ({ isOutlined, linkPath, children, icon, color, isLarger, has
   const colors = `${colorPallete[color][isOutlined ? 'outlined' : 'fill']}`;
   const iconStyles = `${colors} h-6 mx-1 inline my-auto`;
 
-  const bubbleStyles = `${colors} ${sizes} border-solid no-underline inline-flex my-1`;
+  const bubbleStyles = `${colors} ${sizes} border-solid no-underline`;
 
 
   const OptIcon = iconName => (

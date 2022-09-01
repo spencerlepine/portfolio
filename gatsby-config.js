@@ -56,6 +56,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-force-trailing-slashes`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
