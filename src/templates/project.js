@@ -26,6 +26,11 @@ const extractImages = imageEdges => {
 };
 
 const ProjectTemplate = ({ data, location }) => {
+  if (!data.markdown.edges[0]) {
+    // BUG: it is trying to build page for BOTH paths: "/blog/a-cool-post" , "/blog/a-cool-post/"
+    return <></>;
+  }
+
   const { frontmatter, html } = data.markdown.edges[0].node;
   // eslint-disable-next-line no-unused-vars
   const { title, description, tech, github, external } = frontmatter;

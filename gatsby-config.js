@@ -24,6 +24,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        pathToEmotionCacheProps: `src/emotion-cache-props`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-htaccess',
       options: {
         RewriteBase: '/',

@@ -7,6 +7,11 @@ import { Layout } from '@components';
 import LandingSection from '@styles/landingSection';
 
 const PostTemplate = ({ data, location }) => {
+  if (!data.markdownRemark) {
+    // BUG: it is trying to build page for BOTH paths: "/blog/a-cool-post" , "/blog/a-cool-post/"
+    return <></>;
+  }
+
   const { frontmatter, html } = data.markdownRemark;
   const { title, date, tags } = frontmatter;
 
