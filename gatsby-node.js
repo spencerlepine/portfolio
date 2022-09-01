@@ -57,11 +57,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   // Create post detail pages
-  const posts = result.data.postsRemark.edges;
+  const posts = result.data.postsRemark.edges.filter(({ node }) => node.frontmatter.slug.substring(0, 5) === '/blog');
 
   posts.forEach(({ node }) => {
-    // console.log(node.frontmatter.slug);
-
     createPage({
       path: node.frontmatter.slug,
       component: postTemplate,
@@ -71,11 +69,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
   // Create project detail pages
-  const projects = result.data.portfolioRemark.edges;
+  const projects = result.data.portfolioRemark.edges.filter(({ node }) => node.frontmatter.slug.substring(0, 10) === '/portfolio');
 
   projects.forEach(({ node }) => {
-    // console.log('projec', node.frontmatter.slug);
-
     createPage({
       path: node.frontmatter.slug,
       component: projectTemplate,
@@ -85,7 +81,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // Extract tag data from query
   const tags = result.data.tagsGroup.group;
-  // Make tag pages
+  // // Make tag pages
   tags.forEach(tag => {
     createPage({
       path: `/blog/tags/${_.kebabCase(tag.fieldValue)}/`,

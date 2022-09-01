@@ -54,14 +54,15 @@ module.exports = {
         icon: 'src/images/logo-dark.png',
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        workboxConfig: {
-          globPatterns: ['*.html'],
-        },
-      },
-    },
+    `gatsby-plugin-remove-serviceworker`,
+    // {
+    //   resolve: 'gatsby-plugin-offline',
+    //   options: {
+    //     workboxConfig: {
+    //       globPatterns: ['*.html'],
+    //     },
+    //   },
+    // },
     `gatsby-plugin-force-trailing-slashes`,
     {
       resolve: `gatsby-source-filesystem`,

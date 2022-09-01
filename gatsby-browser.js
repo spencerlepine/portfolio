@@ -12,11 +12,3 @@ import React from 'react';
 import ThemeContextProvider from './src/context/themeContext';
 
 export const wrapRootElement = ({ element }) => <ThemeContextProvider>{element}</ThemeContextProvider>;
-
-import ReactDOM from 'react-dom';
-
-export function replaceHydrateFunction() {
-  return (element, container, callback) => {
-    ReactDOM.render(element, container, callback);
-  };
-}
