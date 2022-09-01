@@ -24,6 +24,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        pathToEmotionCacheProps: `src/emotion-cache-props`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-htaccess',
       options: {
         RewriteBase: '/',
@@ -48,7 +54,15 @@ module.exports = {
         icon: 'src/images/logo-dark.png',
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['*.html'],
+        },
+      },
+    },
+    `gatsby-plugin-force-trailing-slashes`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

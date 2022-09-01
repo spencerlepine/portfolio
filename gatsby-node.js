@@ -60,6 +60,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const posts = result.data.postsRemark.edges;
 
   posts.forEach(({ node }) => {
+    // console.log(node.frontmatter.slug);
+
     createPage({
       path: node.frontmatter.slug,
       component: postTemplate,
@@ -72,6 +74,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const projects = result.data.portfolioRemark.edges;
 
   projects.forEach(({ node }) => {
+    // console.log('projec', node.frontmatter.slug);
+
     createPage({
       path: node.frontmatter.slug,
       component: projectTemplate,

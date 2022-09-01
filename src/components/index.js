@@ -9,7 +9,6 @@ export { default as ProjectCard } from './projectCard';
 export { default as Welcome } from './sections/welcome';
 export { default as About } from './sections/about';
 export { default as Skills } from './sections/skills';
-export { default as Jobs } from './sections/jobs';
 export { default as Projects } from './sections/portfolio';
 export { default as Contact } from './sections/contact';
 export { default as ExtraLinks } from './sections/extra';

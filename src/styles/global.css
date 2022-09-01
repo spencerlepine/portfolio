@@ -11,6 +11,17 @@ const linkBlue = '#2EB2DC';
 const textOnBlue = '#BDBDBD';
 const textOnWhite = '#808080';
 */
+.theme-dark {
+  --celticBlue: #668fff;
+  --blackPearl: #282828;
+  --alabasterWhite: #1c1c1c;
+  --buttonBlue: #e8eeff;
+  --linkBlue: #1f62c5;
+  --textOnBlue: #174ca9;
+  --textOnWhite: #979797;
+  --textOnBlack: #707070;
+  --titleText: #596bc0;
+}
 
 .theme-light {  
   --celticBlue: #205CCF;
@@ -22,15 +33,4 @@ const textOnWhite = '#808080';
   --textOnWhite: #808080;
   --textOnBlack: #BDBDBD;
   --titleText: #040B14;
-}
-.theme-dark {
-  --celticBlue: #668fff;
-  --blackPearl: #282828;
-  --alabasterWhite: #1c1c1c;
-  --buttonBlue: #e8eeff;
-  --linkBlue: #1f62c5;
-  --textOnBlue: #174ca9;
-  --textOnWhite: #979797;
-  --textOnBlack: #707070;
-  --titleText: #596bc0;
 }

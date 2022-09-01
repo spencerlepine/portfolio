@@ -7,16 +7,18 @@ export const ThemeContext = React.createContext({
 
 const ThemeContextProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
+
   useEffect(() => {
-    function loadTheme() {
-      const theme = localStorage.getItem('theme');
-      return theme || 'light';
+    const storageTheme = localStorage.getItem('spencerl-theme');
+    if (storageTheme === 'light' || storageTheme === 'dark') {
+      setTheme(storageTheme);
     }
-    setTheme(loadTheme());
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('theme', theme);
+    if (theme) {
+      localStorage.setItem('spencerl-theme', theme);
+    }
   }, [theme]);
 
   const handleThemeToggle = () => {

@@ -74,7 +74,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       method="POST"
       target="_blank"
-      className="max-w-md mx-auto py-10 pt-4 mb-20"
+      className="max-w-md mx-auto pb-10 pt-4 mb-20"
     >
       <div className="mb-4">
         <input
@@ -113,13 +113,15 @@ const ContactForm = () => {
 
 const Contact = () => (
   <LandingSection id="contact">
-    <h2 className="text-title-text m-6 text-2xl font-bold">Contact</h2>
+    <div className="text-center mx-auto">
+      <h2 className="text-title-text m-6 text-2xl font-bold">Contact</h2>
 
-    <p className="text-primary-text">
-      Want to work together or have any questions?
-    </p>
+      <p className="text-primary-text">
+        Want to work together or have any questions?
+      </p>
 
-    <ContactForm />
+      <ContactForm />
+    </div>
   </LandingSection>
 );
 
