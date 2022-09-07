@@ -5,7 +5,7 @@ name: Link Check
 #   push:
 #     branches:
 #       - master
-weekly schedule, say, 04:05 on Monday:
+# weekly schedule, say, 04:05 on Monday:
 on:
   schedule:
     - cron: '5 4 * * 1'
