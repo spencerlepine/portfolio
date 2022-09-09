@@ -5,38 +5,45 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
 import LandingSection from '@styles/landingSection';
+import NotFoundPage from '@pages/404';
 
 const PostTemplate = ({ data, location }) => {
+  console.log(data);
+
   if (!data.markdownRemark) {
     // BUG: it is trying to build page for BOTH paths: "/blog/a-cool-post" , "/blog/a-cool-post/"
-    return <></>;
+    return <NotFoundPage location={location} />;
   }
 
-  const { frontmatter, html } = data.markdownRemark;
+  const postData = data.markdownRemark;
+  const { frontmatter, html } = postData;
   const { title, date, tags } = frontmatter;
+  const postStyles = 'text-left max-w-2xl mx-auto';
 
   return (
     <Layout location={location}>
       <Helmet title={title} />
 
-      <LandingSection id="blogPost">
+      <LandingSection>
+        {/* TOOD */}
         <span >
           <span >&larr;</span>
           <Link to="/blog">All posts</Link>
         </span>
 
         <header>
-          <h1 >UNDER CONSTRUCTION</h1>{/* TOOD */}
-          <h1 >{title}</h1>
-          <p >
-            <time>
-              {new Date(date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </time>
-            <span>&nbsp;&mdash;&nbsp;</span>
+          <h3 className="text-secondary">🏗️ PAGE UNDER CONSTRUCTION</h3>
+
+          <h1>{title}</h1>
+
+          <time>
+            {new Date(date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+          <p>
             {tags &&
               tags.length > 0 &&
               tags.map((tag, i) => (
@@ -47,7 +54,7 @@ const PostTemplate = ({ data, location }) => {
           </p>
         </header>
 
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div className={postStyles} dangerouslySetInnerHTML={{ __html: html }} />
       </LandingSection>
     </Layout>
   );
@@ -62,7 +69,7 @@ PostTemplate.propTypes = {
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $path } } fileAbsolutePath: { regex: "/posts/" }) {
+    markdownRemark(frontmatter: { slug: { eq: $path } }) {
       html
       frontmatter {
         title

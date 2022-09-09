@@ -55,7 +55,7 @@ BubbleLink.propTypes = {
   isOutlined: PropTypes.bool,
   linkPath: PropTypes.string.isRequired,
   icon: PropTypes.string,
-  color: PropTypes.oneOf(['tertiary', 'brand', 'link']).isRequired,
+  color: PropTypes.oneOf(['tertiary', 'brand', 'link', 'button']).isRequired,
   isLarger: PropTypes.bool,
   hasMargin: PropTypes.bool,
 };

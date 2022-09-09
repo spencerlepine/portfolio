@@ -19,7 +19,7 @@ const TagTemplate = ({ pageContext, data, location }) => {
           <Link to="/blog">All posts</Link>
         </span>
 
-        <h1 >
+        <h1>
           <span >#{tag}</span>
           <span>-</span>
           <span >
@@ -32,7 +32,7 @@ const TagTemplate = ({ pageContext, data, location }) => {
             const { title, slug, date, tags } = node.frontmatter;
             return (
               <li key={slug} >
-                <h2 >
+                <h2>
                   <Link to={slug} >{title}</Link>
                 </h2>
                 <p >

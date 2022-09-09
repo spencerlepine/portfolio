@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
 import BubbleLink from '@styles/bubbleLink';
 import LandingSection from '@styles/landingSection';
+import NotFoundPage from '@pages/404';
 
 import { Carousel } from 'react-responsive-carousel';
 
@@ -26,15 +27,15 @@ const extractImages = imageEdges => {
 };
 
 const ProjectTemplate = ({ data, location }) => {
-  if (!data.markdown.edges[0]) {
+  if (!data.allMarkdownRemark.edges[0]) {
     // BUG: it is trying to build page for BOTH paths: "/blog/a-cool-post" , "/blog/a-cool-post/"
-    return <></>;
+    return <NotFoundPage location={location} />;
   }
 
-  const { frontmatter, html } = data.markdown.edges[0].node;
+  const { frontmatter, html } = data.allMarkdownRemark.edges[0].node;
   // eslint-disable-next-line no-unused-vars
   const { title, description, tech, github, external } = frontmatter;
-  const images = extractImages(data.markdown);
+  const images = extractImages(data.allMarkdownRemark);
 
   return (
     <Layout location={location}>
@@ -47,7 +48,7 @@ const ProjectTemplate = ({ data, location }) => {
         </span>
 
         <header className="my-8">
-          <h1 >{title}</h1>
+          <h1>{title}</h1>
           <span >
             {github && (
               <BubbleLink linkPath={github} icon="GitHub" color="tertiary">
@@ -62,7 +63,7 @@ const ProjectTemplate = ({ data, location }) => {
           </span>
         </header>
 
-        <h2>PAGE UNDER CONSTRUCTION</h2>{/* TODO */}
+        <h3 className="text-secondary">🏗️ PAGE UNDER CONSTRUCTION</h3>
 
         {/* 
         <div>
@@ -107,33 +108,32 @@ ProjectTemplate.propTypes = {
 };
 
 export const postQuery = graphql`
-  query($path: String!) {
-     markdown: allMarkdownRemark(
-        filter: {
-          frontmatter: { slug: { eq: $path } }
-          fileAbsolutePath: { regex: "/portfolio/" }
-        }
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              title
-              screenshots {
-                childImageSharp {
-                  fluid(quality: 100, maxWidth: 1000) {
-                    ...GatsbyImageSharpFluid
-                  }
+  query ($path: String!) {
+    allMarkdownRemark(
+      filter: {frontmatter: {slug: {eq: $path}}, fileAbsolutePath: {regex: "/portfolio/"}}
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            screenshots {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
                 }
               }
-              tech
-              github
-              external
-              description
-              slug
             }
+            tech
+            github
+            external
+            description
+            slug
           }
+          fileAbsolutePath
         }
       }
+    }
   }
 `;

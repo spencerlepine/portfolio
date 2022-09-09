@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 // const MAX_PROJECTS_SHOWN = 3;
 
-const Projects = ({ hideViewAllBtn }) => {
+const MoreProjects = ({ hideViewAllBtn }) => {
   const data = useStaticQuery(graphql`
   query {
     projects: allMarkdownRemark(
@@ -68,8 +68,8 @@ const Projects = ({ hideViewAllBtn }) => {
   );
 };
 
-Projects.propTypes = {
+MoreProjects.propTypes = {
   hideViewAllBtn: PropTypes.bool,
 };
 
-export default Projects;
+export default MoreProjects;

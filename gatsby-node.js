@@ -16,7 +16,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/posts/" } }
+        filter: { fileAbsolutePath: { regex: "/blog/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -80,17 +80,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   });
 
   // Extract tag data from query
-  const tags = result.data.tagsGroup.group;
-  // // Make tag pages
-  tags.forEach(tag => {
-    createPage({
-      path: `/blog/tags/${_.kebabCase(tag.fieldValue)}/`,
-      component: tagTemplate,
-      context: {
-        tag: tag.fieldValue,
-      },
-    });
-  });
+  // const tags = result.data.tagsGroup.group;
+  // // // Make tag pages
+  // tags.forEach(tag => {
+  //   createPage({
+  //     path: `/blog/tags/${_.kebabCase(tag.fieldValue)}/`,
+  //     component: tagTemplate,
+  //     context: {
+  //       tag: tag.fieldValue,
+  //     },
+  //   });
+  // });
 };
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig

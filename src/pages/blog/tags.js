@@ -20,7 +20,7 @@ const TagsPage = ({
         <Link to="/blog">All posts</Link>
       </span>
 
-      <h1 >Tags</h1>
+      <h1>Tags</h1>
       <ul >
         {group.map(tag => (
           <li key={tag.fieldValue} >
