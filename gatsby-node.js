@@ -16,7 +16,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/blog/" } }
+        filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+      portfolioRemark: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/portfolio/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -33,20 +46,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           fieldValue
         }
       }
-      portfolioRemark: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/portfolio/" } }
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              slug
-              title
-            }
-          }
-        }
-      }
     }
   `);
 
@@ -57,7 +56,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   // Create post detail pages
-  const posts = result.data.postsRemark.edges.filter(({ node }) => node.frontmatter.slug.substring(0, 5) === '/blog');
+  const posts = result.data.postsRemark.edges; //.edges.filter(({ node }) => node.frontmatter.slug.substring(0, 5) === '/blog');
 
   posts.forEach(({ node }) => {
     createPage({
@@ -69,7 +68,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
   // Create project detail pages
-  const projects = result.data.portfolioRemark.edges.filter(({ node }) => node.frontmatter.slug.substring(0, 10) === '/portfolio');
+  const projects = result.data.portfolioRemark.edges; //.edges.filter(({ node }) => node.frontmatter.slug.substring(0, 10) === '/portfolio');
 
   projects.forEach(({ node }) => {
     createPage({
@@ -80,17 +79,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   });
 
   // Extract tag data from query
-  // const tags = result.data.tagsGroup.group;
-  // // // Make tag pages
-  // tags.forEach(tag => {
-  //   createPage({
-  //     path: `/blog/tags/${_.kebabCase(tag.fieldValue)}/`,
-  //     component: tagTemplate,
-  //     context: {
-  //       tag: tag.fieldValue,
-  //     },
-  //   });
-  // });
+  const tags = result.data.tagsGroup.group;
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/blog/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    });
+  });
 };
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig

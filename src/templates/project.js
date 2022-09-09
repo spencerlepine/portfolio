@@ -110,7 +110,7 @@ ProjectTemplate.propTypes = {
 export const postQuery = graphql`
   query ($path: String!) {
     allMarkdownRemark(
-      filter: {frontmatter: {slug: {eq: $path}}, fileAbsolutePath: {regex: "/portfolio/"}}
+      filter: {frontmatter: {slug: {regex: $path}}, fileAbsolutePath: {regex: "/portfolio/"}}
     ) {
       edges {
         node {

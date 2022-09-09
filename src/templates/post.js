@@ -8,10 +8,7 @@ import LandingSection from '@styles/landingSection';
 import NotFoundPage from '@pages/404';
 
 const PostTemplate = ({ data, location }) => {
-  console.log(data);
-
-  if (!data.markdownRemark) {
-    // BUG: it is trying to build page for BOTH paths: "/blog/a-cool-post" , "/blog/a-cool-post/"
+  if (!(data && data.markdownRemark)) {
     return <NotFoundPage location={location} />;
   }
 
@@ -67,9 +64,24 @@ PostTemplate.propTypes = {
   location: PropTypes.object,
 };
 
+// export const pageQuery = graphql`
+//   query($path: String!) {
+//     markdownRemark(frontmatter: { slug: { eq: $path } }) {
+//       html
+//       frontmatter {
+//         title
+//         description
+//         date
+//         slug
+//         tags
+//       }
+//     }
+//   }
+// `;
+
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $path } }) {
+    markdownRemark(frontmatter: { slug: { regex: $path } }) {
       html
       frontmatter {
         title
