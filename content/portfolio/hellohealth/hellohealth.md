@@ -3,7 +3,7 @@ date: '2021-10-20'
 title: 'HelloHealth'
 github: 'https://github.com/Blue-Ocean-Team-1/HelloHealth'
 external: 'https://gallant-torvalds-547222.netlify.app/'
-description: 'A web app that connects consumers to local farms. Browse products and purchase the weekly meal-kit box'
+description: 'Web app that connects consumers to local farms. Browse products and purchase the weekly meal-kit box.'
 tech:
   - React
   - MaterialUI
@@ -13,7 +13,7 @@ tech:
   - Express
   - Firebase
 company: ''
-isFeatured: 'yes'
+isFeatured: ''
 showInProjects: true
 thumbnail: ./farmers_page.png
 slug: /portfolio/hellohealth

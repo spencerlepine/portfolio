@@ -13,11 +13,11 @@ tech:
   - GitHub Actions
   - Heroku
 company: ''
-showInProjects: true
+showInProjects: false
 isFeatured: ''
 thumbnail: ./laas-thumbnail.png
 slug: /portfolio/llama-as-a-service
 ---
 
-Want to no more? Check out the source code [on GitHub](https://github.com/llama-as-a-service)
+want to know more? Check out the source code [on GitHub](https://github.com/llama-as-a-service)
 

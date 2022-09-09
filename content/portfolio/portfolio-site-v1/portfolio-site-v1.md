@@ -1,8 +1,8 @@
 ---
 date: '2021-08-28'
-title: 'Portfolio Site'
+title: 'Portfolio Site v1'
 github: 'https://github.com/spencerlepine/portfolio-site/tree/v1'
-external: 'https://spencerlepine.com'
+external: 'https://youtu.be/g_OAnrkNDH8'
 description: 'Portfolio site and blog powered by Gatsby with automated deployment'
 tech:
   - React
@@ -10,7 +10,7 @@ tech:
   - GraphQL
   - Tailwindcss
 company: ''
-showInProjects: true
+showInProjects: false
 isFeatured: ''
 thumbnail: ./og.png
 slug: /portfolio/portfolio-site-v1

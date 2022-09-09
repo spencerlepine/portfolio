@@ -11,7 +11,7 @@ const ProjectsPage = ({ location }) => (
     <Helmet title="Portfolio" />
 
     <PortfolioSection hideViewAllBtn />
-    <MoreProjectsSection />
+    <MoreProjectsSection hideViewAllBtn />
   </Layout >
 );
 

@@ -11,7 +11,7 @@ tech:
   - Jest
   - Testing Library
 company: ''
-showInProjects: true
+showInProjects: false
 slug: /portfolio/atelier
 thumbnail: ./product_overview.png
 screenshots:

@@ -3,10 +3,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { ProjectCard } from '@components';
 import BubbleLink from '@styles/bubbleLink';
 import LandingSection from '@styles/landingSection';
+import PropTypes from 'prop-types';
 
 // const MAX_PROJECTS_SHOWN = 3;
 
-const Projects = () => {
+const Projects = ({ hideViewAllBtn }) => {
   const data = useStaticQuery(graphql`
   query {
     projects: allMarkdownRemark(
@@ -32,6 +33,7 @@ const Projects = () => {
             }
             slug
             isFeatured
+            showInProjects
           }
           html
         }
@@ -40,13 +42,17 @@ const Projects = () => {
   }
 `);
 
-  const projectsToShow = data.projects.edges ? data.projects.edges.filter(({ node }) => !node.frontmatter.isFeatured && node.frontmatter.tech) : [];
+  const filterProjects = ({ node: { frontmatter: meta } }) => (
+    !meta.isFeatured && meta.tech && meta.showInProjects
+  );
+
+  const projectsToShow = data.projects.edges ? data.projects.edges.filter(filterProjects) : [];
   return (
     <LandingSection id="portfolio">
       <div className="text-center mx-auto max-w-4xl">
         <h2 className="text-title-text mt-6">More Projects</h2>
 
-        <BubbleLink linkPath='/portfolio' isOutlined color="link">View All</BubbleLink>
+        {!hideViewAllBtn && <BubbleLink linkPath='/portfolio' isOutlined color="link">View All</BubbleLink>}
 
         {projectsToShow &&
           projectsToShow.map(({ node }) => (
@@ -60,6 +66,10 @@ const Projects = () => {
       </div>
     </LandingSection>
   );
+};
+
+Projects.propTypes = {
+  hideViewAllBtn: PropTypes.bool,
 };
 
 export default Projects;

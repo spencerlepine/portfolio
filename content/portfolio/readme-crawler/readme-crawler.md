@@ -17,4 +17,4 @@ screenshots:
   - ./readme-thumbnail.png
 ---
 
-Want to no more? Check out the source code [on GitHub](https://github.com/spencerlepine/readme-crawler)
+want to know more? Check out the source code [on GitHub](https://github.com/spencerlepine/readme-crawler)

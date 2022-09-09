@@ -11,7 +11,7 @@ tech:
   - Node.js
   - Express
 company: ''
-showInProjects: true
+showInProjects: false
 slug: /portfolio/grocerychecc
 thumbnail: ./listmaker.png
 screenshots:
