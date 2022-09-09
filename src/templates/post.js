@@ -15,7 +15,7 @@ const PostTemplate = ({ data, location }) => {
   const postData = data.markdownRemark;
   const { frontmatter, html } = postData;
   const { title, date, tags } = frontmatter;
-  const postStyles = 'text-left max-w-2xl mx-auto';
+  const postStyles = 'text-left max-w-2xl mx-auto text-primary-text';
 
   return (
     <Layout location={location}>
@@ -23,15 +23,13 @@ const PostTemplate = ({ data, location }) => {
 
       <LandingSection>
         {/* TOOD */}
-        <span >
+        <span>
           <span >&larr;</span>
-          <Link to="/blog">All posts</Link>
+          <Link to="/blog" className="text-primary-text">All posts</Link>
         </span>
 
         <header>
-          <h3 className="text-secondary">🏗️ PAGE UNDER CONSTRUCTION</h3>
-
-          <h1>{title}</h1>
+          <h3 className="text-secondary-text">🏗️ PAGE UNDER CONSTRUCTION</h3>
 
           <time>
             {new Date(date).toLocaleDateString('en-US', {
@@ -40,11 +38,12 @@ const PostTemplate = ({ data, location }) => {
               day: 'numeric',
             })}
           </time>
+          <h1 className="text-title-text">{title}</h1>
           <p>
             {tags &&
               tags.length > 0 &&
               tags.map((tag, i) => (
-                <Link key={i} to={`/blog/tags/${kebabCase(tag)}/`} >
+                <Link key={i} to={`/blog/tags/${kebabCase(tag)}/`} className="m-1 text-tertiary-text">
                   #{tag}
                 </Link>
               ))}

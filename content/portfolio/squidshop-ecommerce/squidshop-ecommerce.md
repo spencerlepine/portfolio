@@ -23,6 +23,8 @@ screenshots:
   - ./daigram.png
 ---
 
+Ocean-themed ecommerce web app connected to microservice architecture backend. Dockerized and automated with continuous integration using GitHub Actions.
+
 ## 🎯 Project Overview
 
 - **React** and **Material UI** frontend deployed to **Netlify**, connected to backend built with **Node.js**

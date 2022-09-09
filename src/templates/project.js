@@ -48,7 +48,7 @@ const ProjectTemplate = ({ data, location }) => {
         </span>
 
         <header className="my-8">
-          <h1>{title}</h1>
+          <h1 className="text-title-text">{title}</h1>
           <span >
             {github && (
               <BubbleLink linkPath={github} icon="GitHub" color="tertiary">
@@ -63,8 +63,6 @@ const ProjectTemplate = ({ data, location }) => {
           </span>
         </header>
 
-        <h3 className="text-secondary">🏗️ PAGE UNDER CONSTRUCTION</h3>
-
         {/* 
         <div>
           {tech && tech.length && (
@@ -78,9 +76,7 @@ const ProjectTemplate = ({ data, location }) => {
           )}
         </div> */}
 
-        <div className="text-left max-w-4xl mx-auto">
-          <p className="max-w-md mx-auto text-center">{description}</p>
-
+        <div className="text-left max-w-3xl mx-auto">
           {images.length > 0 && (
             <div>
               <Carousel dynamicHeight autoPlay centerMode>
