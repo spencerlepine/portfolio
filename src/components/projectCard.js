@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { Icon } from '@components/icons';
@@ -48,11 +48,13 @@ const ProjectCard = ({ node }) => {
         )}
       </div>
 
-      <a href={external || github} target="_blank" aria-label="Project Link" rel="noreferrer" >
-        <div className="max-w-sm ml-auto">
-          <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot" className=''></img>
-        </div>
-      </a>
+      <Suspense fallback={<div>Loading...</div>}>
+        <a href={external || github} target="_blank" aria-label="Project Link" rel="noreferrer" >
+          <div className="max-w-sm ml-auto">
+            <img src={image} style={{ zIndex: 0 }} alt="Project Screenshot" className=''></img>
+          </div>
+        </a>
+      </Suspense>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Emoji } from '@components';
 import { socialMedia } from '@config';
 import { Icon } from '@components/icons';
@@ -19,16 +19,18 @@ const Welcome = () => (
         </div>
 
         <div className="mx-10">
-          <div className="mx-auto w-fit max-w-xs">
-            <StaticImage
-              src="../../assets/images/me.jpg"
-              width={280}
-              className="flex justify-center max-w-full h-auto m-1 rounded-full border-8 border-solid border-gray-200"
-              quality={90}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Spencer Lepine Headshot Profile"
-            />
-          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <div className="mx-auto w-fit max-w-xs">
+              <StaticImage
+                src="../../assets/images/me.jpg"
+                width={280}
+                className="flex justify-center max-w-full h-auto m-1 rounded-full border-8 border-solid border-gray-200"
+                quality={90}
+                formats={['AUTO', 'WEBP', 'AVIF']}
+                alt="Spencer Lepine Headshot Profile"
+              />
+            </div>
+          </Suspense>
 
           <div className="flex mx-auto w-fit justify-center m-2">
             {socialMedia.map((social, i) => (

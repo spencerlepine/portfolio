@@ -1,0 +1,15 @@
+{
+  "ci": {
+    "collect": {
+      "settings": {
+        "psiStrategy": "desktop"
+      }
+    },
+    "assert": {
+      "preset": "lighthouse:recommended"
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

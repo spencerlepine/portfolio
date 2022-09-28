@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Link } from 'gatsby';
 import { navLinks } from '@config';
 // import { Menu } from '@components';
@@ -14,9 +14,11 @@ const Nav = () => (
 
       {/* <Menu />  TODO */}
 
-      <div className="ml-auto mr-4 relative my-auto h-fit pt-2">
-        <ThemeToggleBtn />
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="ml-auto mr-4 relative my-auto h-fit pt-2">
+          <ThemeToggleBtn />
+        </div>
+      </Suspense>
 
       <div className="my-auto">
         {navLinks.map(({ url, name }) => (
