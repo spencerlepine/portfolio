@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Toggle from 'react-toggle';
-import { ThemeContext } from '../context/themeContext';
+import { ThemeContext } from '../contexts/themeContext';
 
 const MoonIcon = () => (
   <div

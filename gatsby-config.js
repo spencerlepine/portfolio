@@ -1,5 +1,3 @@
-const config = require('./src/config');
-
 module.exports = {
   siteMetadata: {
     title: 'Spencer Lepine',
@@ -35,28 +33,20 @@ module.exports = {
         name: 'SpencerLepine',
         short_name: 'SpencerLepine',
         start_url: '/',
-        background_color: config.colors.slateWhite,
-        theme_color: config.colors.slateWhite,
+        background_color: '#f8f8ff',
+        theme_color: '#f8f8ff',
         display: 'minimal-ui',
-        icon: 'src/images/logo-dark.png',
+        icon: 'src/assets/images/logo-dark.png',
       },
     },
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-styled-components`,
-    // {
-    //   resolve: 'gatsby-plugin-offline',
-    //   options: {
-    //     workboxConfig: {
-    //       globPatterns: ['*.html'],
-    //     },
-    //   },
-    // },
     `gatsby-plugin-force-trailing-slashes`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
@@ -99,7 +89,7 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: { color: config.colors.green },
+              tracedSVG: { color: 'black' },
             },
           },
           {
@@ -193,7 +183,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {
-        pathToEmotionCacheProps: `src/emotion-cache-props`,
+        pathToEmotionCacheProps: `emotion-cache-props`,
       },
     },
   ],

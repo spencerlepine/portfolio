@@ -1,6 +1,10 @@
 module.exports = {
   email: 'spencer.sayhello@gmail.com',
 
+  projectTitleChoices: ['SquidShop Ecommerce', 'QuickCart', 'Atelier API'],
+
+  CONTACT_FORM_ENDPOINT: 'https://public.herotofu.com/v1/aae45b10-27cb-11ed-9d54-c9f9d2b00e7b',
+
   socialMedia: [
     {
       name: 'GitHub',
@@ -21,10 +25,6 @@ module.exports = {
   ],
 
   navLinks: [
-    // {
-    //   name: 'Experience',
-    //   url: '/#jobs',
-    // },
     {
       name: 'Portfolio',
       url: '/portfolio',
@@ -38,10 +38,6 @@ module.exports = {
       url: '/contact',
     },
   ],
-
-  colors: {
-    slateWhite: '#f8f8ff',
-  },
 
   sourceRepository: 'https://github.com/spencerlepine/portfolio-site',
 

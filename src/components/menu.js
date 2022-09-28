@@ -8,7 +8,6 @@ const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const buttonRef = useRef(null);
 
-
   const toggleMenu = () => {
     if (menuOpen) {
       buttonRef.current.className = '';

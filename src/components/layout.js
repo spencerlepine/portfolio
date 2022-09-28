@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Head, Nav, Footer } from '@components';
 import '../styles/layout.css';
-import { ThemeContext } from '../context/themeContext';
+import { ThemeContext } from '../contexts/themeContext';
 
 const Layout = props => {
   const { theme } = useContext(ThemeContext);

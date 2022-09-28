@@ -17,6 +17,15 @@ jobs:
       - name: run Lighthouse CI
         run: |
           yarn global add @lhci/cli@0.8.x
-          lhci autorun
+          yarn add puppeteer
+          lhci autorun --failOnUploadFailure=true 
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-report
+          path: lighthouse-report
+
+    # Output the JSON to job summary 
+    # head to https://googlechrome.github.io/lighthouse/viewer/

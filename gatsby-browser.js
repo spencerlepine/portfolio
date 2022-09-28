@@ -9,6 +9,6 @@ import 'react-toggle/style.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 import React from 'react';
-import ThemeContextProvider from './src/context/themeContext';
+import ThemeContextProvider from './src/contexts/themeContext';
 
 export const wrapRootElement = ({ element }) => <ThemeContextProvider>{element}</ThemeContextProvider>;

@@ -21,7 +21,7 @@ const Welcome = () => (
         <div className="mx-10">
           <div className="mx-auto w-fit max-w-xs">
             <StaticImage
-              src="../../images/me.jpg"
+              src="../../assets/images/me.jpg"
               width={280}
               className="flex justify-center max-w-full h-auto m-1 rounded-full border-8 border-solid border-gray-200"
               quality={90}

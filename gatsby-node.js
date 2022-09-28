@@ -56,7 +56,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   // Create post detail pages
-  const posts = result.data.postsRemark.edges; //.edges.filter(({ node }) => node.frontmatter.slug.substring(0, 5) === '/blog');
+  const posts = result.data.postsRemark.edges;
 
   posts.forEach(({ node }) => {
     createPage({
@@ -68,7 +68,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
   // Create project detail pages
-  const projects = result.data.portfolioRemark.edges; //.edges.filter(({ node }) => node.frontmatter.slug.substring(0, 10) === '/portfolio');
+  const projects = result.data.portfolioRemark.edges;
 
   projects.forEach(({ node }) => {
     createPage({
@@ -115,7 +115,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         '@config': path.resolve(__dirname, 'src/config'),
         '@fonts': path.resolve(__dirname, 'src/fonts'),
         '@hooks': path.resolve(__dirname, 'src/hooks'),
-        '@images': path.resolve(__dirname, 'src/images'),
+        '@images': path.resolve(__dirname, 'src/assets/images'),
         '@pages': path.resolve(__dirname, 'src/pages'),
         '@styles': path.resolve(__dirname, 'src/styles'),
         '@utils': path.resolve(__dirname, 'src/utils'),

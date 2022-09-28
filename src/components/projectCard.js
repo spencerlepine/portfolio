@@ -1,20 +1,13 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { Icon } from '@components/icons';
 import BubbleLink from '@styles/bubbleLink';
 
 const extractImages = node => {
   try {
-    /*
-    childImageSharp {
-      gatsbyImageData(width: 700, formats: [AUTO, PNG])
-    }
-    */
-    //
-    const thumbnailData = node.frontmatter.thumbnail;
-    const image = thumbnailData.childImageSharp.fluid.src;
-    return image;
+    const thumbnailData = node.frontmatter.thumbnail.childImageSharp.fluid.src;
+    return thumbnailData;
   } catch {
     return 'http://cmsi-id.com/assets/product/15032016/pt-cahayatiara-mustika-scientific-indonesia_wrv9c_1073.png';
   }
@@ -62,6 +55,10 @@ const ProjectCard = ({ node }) => {
       </a>
     </div>
   );
+};
+
+ProjectCard.propTypes = {
+  node: PropTypes.object.isRequired,
 };
 
 export default ProjectCard;

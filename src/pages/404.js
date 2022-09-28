@@ -13,9 +13,6 @@ const NotFoundPage = ({ location }) => (
         <div className="max-w-md text-center">
           <p className="mb-8 font-extrabold text-6xl">404</p>
 
-          {/* <p className="mb-8 font-extrabold text-9xl">
-            <span className="sr-only">Error</span>404
-          </p> */}
           <p className="text-2xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
 
           <br />
@@ -23,7 +20,7 @@ const NotFoundPage = ({ location }) => (
         </div>
       </div>
     </main>
-  </Layout >
+  </Layout>
 );
 
 NotFoundPage.propTypes = {

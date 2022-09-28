@@ -132,7 +132,7 @@ I continued working on QuickCart on the side. There were some bug fixes and UI i
 
 One of the most important themes of this week was practicing problem solving. Hack Reactor was really pushing best practices and effective communication. Each day I worked on a toy problem/code challenge. With a timer running, I would work on my pseudo-code BEFORE starting and really explain/verbalize my thought process as much as I could.
 
-Now that I was able to write small tests for a challenge, I wanted to work on writing tests for a real project. I started learning how to use Enzyme and Jest for React test-driven-development. The process is tedious at the start, but it will ensure the code is more robust. This was difficult for me at first, because I wasn’t sure if my React test was written incorrectly, or I needed to pass the test now instead. There were lots of features to read Docs about, like redirecting, testing context/store, and tons more.
+Now that I was able to write small tests for a challenge, I wanted to work on writing tests for a real project. I started learning how to use Enzyme and Jest for React test-driven-development. The process is tedious at the start, but it will ensure the code is more robust. This was difficult for me at first, because I wasn’t sure if my React test was written incorrectly, or I needed to pass the test now instead. There were lots of features to read Docs about, like redirecting, testing contexts/store, and tons more.
 
 Day 81–90: Test Driven Development and APIs
 ===========================================

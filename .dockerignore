@@ -1,6 +1,0 @@
-node_modules
-*.md
-.github
-.env
-.cache
-public
