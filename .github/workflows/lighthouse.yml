@@ -16,7 +16,7 @@ jobs:
           yarn run build
       - name: run Lighthouse CI
         run: |
-          yarn global add @lhci/cli@0.8.x
+          yarn global add @lhci/cli@0.9.0
           yarn add puppeteer
           lhci autorun --failOnUploadFailure=true 
         env:
@@ -25,7 +25,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: lighthouse-report
-          path: lighthouse-report
+          path: .lighthouseci
 
     # Output the JSON to job summary 
     # head to https://googlechrome.github.io/lighthouse/viewer/
