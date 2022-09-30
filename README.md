@@ -9,7 +9,7 @@
 
 Personal developer portfolio and blog site. Built with static content using static content for Gatsby and GraphQL. This was built from scratch with React and TailwindCSS, which includes a light/dark theme toggle.
 
-# ✅ View Site Uptime
+## ✅ View Site Uptime
 
 Head over to the [**status website →**](https://spencerlepine.github.io/portfolio-site-uptime) powered by [Upptime](https://github.com/spencerlepine/portfolio-site-uptime)
 
