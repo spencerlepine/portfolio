@@ -22,7 +22,7 @@ const PostTemplate = ({ data, location }) => {
       <Helmet title={title} />
 
       <LandingSection>
-        {/* TOOD */}
+        {/* TODO */}
         <span>
           <span >&larr;</span>
           <Link to="/blog" className="text-primary-text">All posts</Link>
