@@ -39,6 +39,6 @@ jobs:
         run: |
           # ${{ github.workspace }}/../../../.cargo/bin/typos >> typos/typos.txt || true
           echo '## Detected Typos Diff' >> $GITHUB_STEP_SUMMARY
-          echo '```diff' >> typos/typos-diff.md
+          echo '```diff' >> $GITHUB_STEP_SUMMARY
           ${{ github.workspace }}/../../../.cargo/bin/typos --diff >> $GITHUB_STEP_SUMMARY || true
-          echo '```' >> typos/typos-diff.md
+          echo '```' >> $GITHUB_STEP_SUMMARY
