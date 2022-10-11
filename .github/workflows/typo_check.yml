@@ -32,13 +32,13 @@ jobs:
         run: |
           touch _typos.toml
           echo "[files]" >> _typos.toml
-          echo "extend-exclude = ['typos/**', 'public/**']" >> _typos.toml
+          echo "extend-exclude = ['public/**']" >> _typos.toml
 
       - name: 🚫 Preform typo scan
         id: typo-scan
         run: |
           # ${{ github.workspace }}/../../../.cargo/bin/typos >> typos/typos.txt || true
-          echo '## Detected Typos Diff' >> typos/typos-diff.md
+          echo '## Detected Typos Diff' >> $GITHUB_STEP_SUMMARY
           echo '```diff' >> typos/typos-diff.md
           ${{ github.workspace }}/../../../.cargo/bin/typos --diff >> $GITHUB_STEP_SUMMARY || true
           echo '```' >> typos/typos-diff.md

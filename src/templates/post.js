@@ -29,8 +29,6 @@ const PostTemplate = ({ data, location }) => {
         </span>
 
         <header>
-          <h3 className="text-secondary-text">🏗️ PAGE UNDER CONSTRUCTION</h3>
-
           <time>
             {new Date(date).toLocaleDateString('en-US', {
               year: 'numeric',

@@ -20,8 +20,11 @@ slug: /portfolio/portfolio-site-v1
 
 [**Visit the status website →**](https://spencerlepine.github.io/portfolio-site-uptime)
 
+## What's New
+This latest version of my portfolio site includes total re-design of the styling/theme to follow my brands colors. My main focus was provided very user-friendly snapshots of my projects, assuming that users will only spend a few seconds browsing the site. The goal is to clearly display my work, as well as provide ways to easily connect with me wether that is through my social profiles, or the contact form.
+
 ## ⭐ How It's Built
-Developer Portfolio and Blog site powered by React, GatsbyJS, GraphQL and TailwindCSS. Builds static pages from markdown content, and includes light/dark theme toggle.
+This developer portfolio and blog site is powered by React, GatsbyJS, GraphQL and TailwindCSS. Builds static pages from markdown content, and includes light/dark theme toggle.
 
 ## 📦 Technologies:
 
@@ -42,12 +45,3 @@ $ yarn install
 $ yarn start
 # access on localhost:3000
 ```
-
-## Features
-- Landing page
-- About me
-- Socials Links
-- Tech Stack Showcase
-- Portfolio Showcase
-- Contact Form
-- Blog
