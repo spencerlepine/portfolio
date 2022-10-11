@@ -7,7 +7,7 @@ const FooterComponent = () => (
   <footer className="bg-tertiary text-tertiary-text h-48 flex w-full">
     <div className="max-w-5xl w-full flex mx-auto my-4">
       <div className="float-left pl-4">
-        <p>Made by Spencer Lepine</p>
+        <p>Built by Spencer Lepine</p>
         <p><a href={sourceRepository} className="underline">Source Code</a></p>
       </div>
 
@@ -18,9 +18,9 @@ const FooterComponent = () => (
           </a>
         ))}
 
-        <div className="grid text-right pt-4">
+        <div className="grid text-right py-4">
           {navLinks.map(({ url, name }) => (
-            <div className="inline" key={name} >
+            <div className="inline py-0.5" key={name} >
               <Link to={url}>
                 {name}
               </Link>

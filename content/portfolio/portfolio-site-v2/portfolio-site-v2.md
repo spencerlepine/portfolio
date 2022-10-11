@@ -1,7 +1,7 @@
 ---
 date: '2022-08-28'
 title: 'Portfolio Site'
-github: 'https://github.com/spencerlepine/portfolio-site'
+github: 'https://github.com/spencerlepine/spencerlepine.com'
 external: 'https://www.spencerlepine.com/'
 description: 'Developer portfolio/blog site built with React and Gatsby, styled with TailwindCSS, and deployed to Netlify.'
 tech:
@@ -36,18 +36,11 @@ Developer Portfolio and Blog site powered by React, GatsbyJS, GraphQL and Tailwi
 
 ## ⚙️ Development Setup
 ```sh
-$ git clone https://github.com/spencerlepine/portfolio-site.git
-$ cd portfolio-site
+$ git clone https://github.com/spencerlepine/spencerlepine.com.git
+$ cd spencerlepine.com
 $ yarn install
 $ yarn start
 # access on localhost:3000
-```
-
-## 🐳 Pull Docker Image
-```sh
-# docker pull ghcr.io/OWNER/IMAGE_NAME
-$ docker pull ghcr.io/spencerlepine/portfolio-site:1.1.0
-# runs on port 80
 ```
 
 ## Features

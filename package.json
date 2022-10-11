@@ -1,22 +1,23 @@
 {
-  "name": "portfolio-site",
+  "name": "spencerlepine.com",
   "description": "Personal developer portfolio and blog site. Built with static content using Gatsby",
   "version": "1.0.0",
   "author": "Spencer Lepine",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spencerlepine/portfolio-site.git"
+    "url": "git+https://github.com/spencerlepine/spencerlepine.com.git"
   },
   "keywords": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/spencerlepine/portfolio-site/issues"
+    "url": "https://github.com/spencerlepine/spencerlepine.com/issues"
   },
-  "homepage": "https://github.com/spencerlepine/portfolio-site#readme",
+  "homepage": "https://github.com/spencerlepine/spencerlepine.com#readme",
   "scripts": {
     "start": "yarn run develop",
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "test": "echo -e 'No tests to run.'",
     "test:lighthouse": "yarn global add @lhci/cli@0.9.0 && llhci autorun",
     "develop": "gatsby develop",
@@ -41,6 +42,7 @@
     "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-material-ui": "^4.1.0",
     "gatsby-plugin-postcss": "^5.24.0",
+    "gatsby-plugin-purgecss": "^6.1.2",
     "gatsby-plugin-react-helmet": "^5.24.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-robots-txt": "^1.7.1",

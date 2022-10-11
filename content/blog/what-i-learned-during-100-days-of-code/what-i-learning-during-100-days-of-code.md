@@ -220,7 +220,7 @@ Make a shopping list with personal grocery data to help budget.
 
 Portfolio and blog website ( Visit Here) created by Spencer Lepine. Built using static pages created with GatsbyJS…
 
-[GitHub Repo](https://github.com/spencerlepine/portfolio-site)
+[GitHub Repo](https://github.com/spencerlepine/spencerlepine.com)
 
 -----------------------
 
