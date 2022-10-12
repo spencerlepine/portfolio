@@ -8,6 +8,7 @@ tags:
   - Workflow
   - Tools
   - Software Engineer
+thumbnail: 'thumbnail.png'
 ---
 
 <!-- MARKDOWN CONTENT -->

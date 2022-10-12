@@ -35,6 +35,13 @@ export const pageQuery = graphql`
             slug
             date
             draft
+            thumbnail {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           html
         }

@@ -3,30 +3,52 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import LandingSection from '@styles/landingSection';
 
-const Articles = ({ posts }) => (
-  <LandingSection id="blog">
-    <h2 className="text-title-text">Sharing my knowledge of full-stack development</h2>
+const extractImage = thumbnail => {
+  try {
+    const thumbnailData = thumbnail.childImageSharp.fluid.src;
+    return thumbnailData;
+  } catch {
+    return 'http://cmsi-id.com/assets/product/15032016/pt-cahayatiara-mustika-scientific-indonesia_wrv9c_1073.png';
+  }
+};
 
-    <ul className="max-w-lg mx-auto">
-      {posts.length > 0 &&
-        posts.map(({ node }) => {
-          const { frontmatter } = node;
-          const { title, description, slug } = frontmatter;
-
-          return (
-            <div key={slug} className="text-left border-4 rounded-tl-xl rounded-tr-xl rounded-bl-xl p-4 my-4">
-              <Link to={slug} className="no-underline" >
-                <h4 className="no-underline text-xl">
-                  {title}
-                </h4>
-                <p className="text-primary-text no-underline">{description}</p>
-              </Link>
-            </div>
-          );
-        })}
-    </ul>
-  </LandingSection>
+const ArticleCard = ({ frontmatter: { slug, thumbnail, title, description }, customStyles }) => (
+  <Link key={slug} rel="noopener noreferrer" to={slug} className={customStyles}>
+    <img src={extractImage(thumbnail)} alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
+    <div className="space-y-2 lg:col-span-5">
+      <h3 className="text-2xl font-semibold hover:underline text-title-text">{title}</h3>
+      <p className="text-primary-text">{description}</p>
+    </div>
+  </Link>
 );
+
+const Articles = ({ posts }) => {
+  const [firstArticle, ...remainingArticles] = posts;
+  const firstArticleStyles = 'block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900 no-underline';
+  const articleCardStyles = 'max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block no-underline';
+
+  return (
+    <LandingSection id="blog">
+      {/* <div className="text-center mx-auto max-w-4xl"> */}
+      <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 text-left">
+        <ArticleCard frontmatter={firstArticle.node.frontmatter} customStyles={firstArticleStyles} />
+
+        <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {remainingArticles.length > 0 &&
+            remainingArticles.map(({ node: { frontmatter } }) => (
+              <ArticleCard frontmatter={frontmatter} customStyles={articleCardStyles} key={frontmatter.slug} />
+            ))
+          }
+        </div>
+
+        <div className="flex justify-center">
+          <button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400">Load more posts...</button>
+        </div>
+      </div>
+    </LandingSection >
+  );
+
+};
 
 Articles.propTypes = {
   posts: PropTypes.array.isRequired,

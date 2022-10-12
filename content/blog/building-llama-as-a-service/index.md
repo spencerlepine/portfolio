@@ -11,6 +11,7 @@ tags:
   - Node.js
   - Heroku
   - GitHub Actions
+thumbnail: 'thumbnail.png'
 ---
 
 This is a walkthrough of the development process and system design engineering for the Llama as a Service. LaaS is a website and public API that can serve random Llama images. It will respond with a single image URL, or even a list.

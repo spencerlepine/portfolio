@@ -10,6 +10,7 @@ tags:
   - Toy Problems
   - API
   - 100DaysOfCode
+thumbnail: 'thumbnail.png'
 ---
 
 <!-- MARKDOWN CONTENT -->
