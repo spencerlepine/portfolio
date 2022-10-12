@@ -59,7 +59,7 @@
     "gatsby-transformer-sharp": "^4.24.0",
     "graphql": "^16.6.0",
     "lodash": "^4.17.21",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.17",
     "postcss-import": "^15.0.0",
     "postcss-loader": "^7.0.1",
     "prismjs": "^1.29.0",
