@@ -10,21 +10,21 @@
         "first-contentful-paint": [
           "error",
           {
-            "maxNumericValue": 3000,
+            "maxNumericValue": 5000,
             "minScore": 0.8
           }
         ],
         "first-meaningful-paint": [
           "error",
           {
-            "maxNumericValue": 3000,
+            "maxNumericValue": 5000,
             "minScore": 0.8
           }
         ],
         "interactive": [
           "error",
           {
-            "maxNumericValue": 3000,
+            "maxNumericValue": 5000,
             "minScore": 0.5
           }
         ],
