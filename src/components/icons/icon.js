@@ -50,7 +50,7 @@ const GetIcon = name => {
       return IconGitHubSquare;
     case 'Linkedin':
       return IconLinkedin;
-    case 'LinkedinSqaure':
+    case 'LinkedinSquare':
       return IconLinkedinSquare;
     case 'Logo':
       return IconLogo;

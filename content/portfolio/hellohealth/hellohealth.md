@@ -48,7 +48,7 @@ Through the service, local farms can list their products for sale and consumers 
 
 ## Engineering Journal:
 
-I maintained a breif engineering journal for this projects, find it here on [Google Docs](https://docs.google.com/document/d/1V629qfaWTz82iCCIzR79HN17oolk1Q6brsBBwApAPXk/edit?usp=sharing).
+I maintained a brief engineering journal for this projects, find it here on [Google Docs](https://docs.google.com/document/d/1V629qfaWTz82iCCIzR79HN17oolk1Q6brsBBwApAPXk/edit?usp=sharing).
 
 ## Business Requirements:
 

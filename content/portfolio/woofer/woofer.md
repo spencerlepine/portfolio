@@ -37,7 +37,7 @@ View the [GitHub Repository](https://github.com/spencerlepine/woofer)
 Checkout the app demo [YouTube video](https://youtu.be/aiJhCoZRc78).
 
 ## 📝 Project Documentation
-Check out the Woofer [Wiki](https://github.com/spencerlepine/woofer/wiki) to view all project documentation. You can find the Whitepaper, API documenation, diagrams, and more.
+Check out the Woofer [Wiki](https://github.com/spencerlepine/woofer/wiki) to view all project documentation. You can find the Whitepaper, API documentation, diagrams, and more.
 
 ## 🎯 Overview
 - Designed a MongoDB Atlas NoSQL database managing user profile records, zip code groups, and yes/no match records

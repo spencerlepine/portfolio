@@ -31,14 +31,14 @@ showInProjects: true
 
 **Result:** Achieved traffic from <10 RPS to reliable 700 RPS with 70 ms average latency and <1% error rate. Avoided breaking changes with testing and continuous integration, decreasing the stress testing cycle length to allow  quick iteration of the system..
 
-## 📈 Preformance Results
+## 📈 Performance Results
 
-#### Target Preformance
+#### Target Performance
 - [ ] Throughput: 100 RPS
 - [ ] Latency: 2000 ms
 - [ ] Error rate: <1% rate
 
-#### Actual Preformance
+#### Actual Performance
 - [x] Throughput: ~700 RPS (Max 5000 RPS)
 - [x] Latency: ~70 ms
 - [x] Error rate: <1% rate

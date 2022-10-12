@@ -99,7 +99,7 @@ The continuous integration for this website is completely automated now. This sa
 
 ---
 
-View the source code on [GitHub](https://github.com/spencerlepine/portfolio-site).
+View the source code on [GitHub](https://github.com/spencerlepine/spencerlepine.com).
 
 Also find me here:
 * [Twitter (@spencerlepine)](https://twitter.com/SpencerLepine)

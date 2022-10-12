@@ -22,15 +22,13 @@ const PostTemplate = ({ data, location }) => {
       <Helmet title={title} />
 
       <LandingSection>
-        {/* TOOD */}
+        {/* TODO */}
         <span>
           <span >&larr;</span>
           <Link to="/blog" className="text-primary-text">All posts</Link>
         </span>
 
         <header>
-          <h3 className="text-secondary-text">🏗️ PAGE UNDER CONSTRUCTION</h3>
-
           <time>
             {new Date(date).toLocaleDateString('en-US', {
               year: 'numeric',

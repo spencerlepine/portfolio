@@ -39,7 +39,7 @@ module.exports = {
     },
   ],
 
-  sourceRepository: 'https://github.com/spencerlepine/portfolio-site',
+  sourceRepository: 'https://github.com/spencerlepine/spencerlepine.com',
 
   skills: [
     { skill: 'JavaScript', icon: 'JavaScript' },

@@ -52,7 +52,7 @@ This is a solo project that was developed over the course of several months. My 
 - [Firebase](https://firebase.google.com/)
 - [Node.js](https://nodejs.org/)
 - [Jest](https://jestjs.io/)
-- [React Testing Libary](https://testing-library.com/)
+- [React Testing Library](https://testing-library.com/)
 - [OpenFoodFacts](https://world.openfoodfacts.org)
 - [Google CSE](https://cse.google.com)
 - [Spoonacular](https://spoonacular.com/food-api/docs)

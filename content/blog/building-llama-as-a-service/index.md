@@ -112,7 +112,7 @@ This is the only code we need for this endpoint, compared to the previous 20 lin
 
 With the new query, the endpoint maintains 99% sub-300ms response time with a max of 440 RPS over 15 seconds.
 
-![Latency Improvments Chart](https://user-images.githubusercontent.com/60903378/179846777-3518451f-33f2-4638-b4d9-c614db7d52e5.png)
+![Latency Improvements Chart](https://user-images.githubusercontent.com/60903378/179846777-3518451f-33f2-4638-b4d9-c614db7d52e5.png)
 
 
 ### Horizontally Scaling the API

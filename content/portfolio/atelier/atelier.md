@@ -28,7 +28,7 @@ isFeatured: ''
 This was a group project with a group of 4 engineers, each working on one the of the four modules over a span two weeks. Given a wireframe, the goal was to implement all user stories specified in the business requirements document (not sharing, IP of Hack Reactor).
 
 ## Description
-This frontend project is built to serve product records from an exisiting API.
+This frontend project is built to serve product records from an existing API.
 
 This project was broken down into four modules: Products Overview, Related/Outfit, Question/Answers, and Rating/Reviews. This frontend client is accessible and optimized for browsing product data.
 

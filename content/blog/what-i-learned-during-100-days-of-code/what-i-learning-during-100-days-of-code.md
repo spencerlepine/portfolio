@@ -1,6 +1,6 @@
 ---
 title: What I Learned During 100DaysOfCode
-description: A recap of the concepts and skills I aquired during this challenge
+description: A recap of the concepts and skills I acquired during this challenge
 date: 2021-06-26
 draft: false
 slug: /blog/what-i-learned-during-100-days-of-code
@@ -193,7 +193,7 @@ Here is an overview of everything I learned:
 *   React Context, state, props, controlled forms
 *   CMS
 *   Hosting a static site
-*   Procedure for problem solving (psuedocode, breaking it down)
+*   Procedure for problem solving (pseudocode, breaking it down)
 *   Mocha/Chai testing
 *   React Jest/Enzyme testing
 *   Connecting to APIs (Spotify Web API, GitHub REST API, OpenFoodFacts API)
@@ -220,7 +220,7 @@ Make a shopping list with personal grocery data to help budget.
 
 Portfolio and blog website ( Visit Here) created by Spencer Lepine. Built using static pages created with GatsbyJS…
 
-[GitHub Repo](https://github.com/spencerlepine/portfolio-site)
+[GitHub Repo](https://github.com/spencerlepine/spencerlepine.com)
 
 -----------------------
 
