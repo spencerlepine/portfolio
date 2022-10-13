@@ -22,7 +22,7 @@ const Nav = () => (
 
       <div className="my-auto text-lg">
         {navLinks.map(({ url, name }) => (
-          <Link key={name} to={url} className="py-1 px-4 text-tertiary-text">
+          <Link key={name} to={url} className="py-1 px-4 text-gray-200">
             {name}
           </Link>
         ))}

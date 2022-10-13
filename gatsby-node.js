@@ -18,7 +18,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       postsRemark: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/blog/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
       ) {
         edges {
           node {
@@ -31,7 +30,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       portfolioRemark: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/portfolio/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
       ) {
         edges {
           node {
@@ -65,6 +63,29 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {},
     });
   });
+
+  /*-------------*/
+  // Create blog pages
+  const postsPerPage = 5;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+  Array.from({ length: numPages }).forEach((_, i) => {
+    const firstPage = i === 0;
+    const currentPage = i + 1;
+
+    const urlSlug = firstPage ? '/blog' : `/blog/page/${currentPage}`;
+
+    createPage({
+      path: urlSlug,
+      component: path.resolve(`src/templates/blogList.js`),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage,
+      },
+    });
+  });
+  /*-------------*/
 
 
   // Create project detail pages
