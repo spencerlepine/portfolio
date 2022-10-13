@@ -7,6 +7,7 @@ export { default as IconLinkedin } from './linkedin';
 export { default as IconLinkedinSquare } from './linkedin';
 export { default as IconLogo } from './logo';
 export { default as IconHamburger } from './hamburger';
+export { default as IconClose } from './close';
 export { default as IconTwitter } from './twitter';
 export { default as IconTwitterSquare } from './twitter-square';
 export { default as IconBookmark } from './bookmark';

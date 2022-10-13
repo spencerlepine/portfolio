@@ -1,22 +1,18 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { Layout } from '@components';
-import PortfolioSection from '@components/sections/portfolio';
-import MoreProjectsSection from '@components/sections/moreProjects';
-import Youtube from '@components/sections/youtube';
+import { Layout, Portfolio, YoutubeShoutout } from '@components';
 
-const ProjectsPage = ({ location }) => (
+const ProjectsPage = ({ location, data }) => (
   <Layout location={location}>
     <Helmet title="Portfolio" />
 
+    <Portfolio projects={data.portfolioProjects.edges || []} sectionTitle="Portfolio" hideViewAllBtn />
 
-    <PortfolioSection hideViewAllBtn />
+    <YoutubeShoutout />
 
-    <Youtube />
-
-    <MoreProjectsSection hideViewAllBtn />
+    <Portfolio projects={data.hobbyProjects.edges || []} sectionTitle="Hobby Projects" hideViewAllBtn />
   </Layout >
 );
 
@@ -29,8 +25,11 @@ export default ProjectsPage;
 
 export const pageQuery = graphql`
   query {
-    projects: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/portfolio/" } }
+    portfolioProjects: allMarkdownRemark(
+      filter: { 
+        fileAbsolutePath: { regex: "/portfolio/" }
+        frontmatter: { featureSection: { regex: "/(landing)|(portfolio)/"  } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -42,7 +41,6 @@ export const pageQuery = graphql`
             tech
             github
             external
-            company
             thumbnail {
               childImageSharp {
                 fluid(quality: 100, maxWidth: 1000) {
@@ -51,9 +49,37 @@ export const pageQuery = graphql`
               }
             }
             slug
-            isFeatured
+            featureSection
           }
-          html
+        }
+      }
+    }
+    hobbyProjects: allMarkdownRemark(
+      filter: { 
+        fileAbsolutePath: { regex: "/portfolio/" }
+        frontmatter: { featureSection: { eq: "hobby" } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date
+            description
+            title
+            tech
+            github
+            external
+            thumbnail {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            slug
+            featureSection
+          }
         }
       }
     }

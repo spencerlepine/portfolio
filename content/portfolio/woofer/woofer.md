@@ -14,8 +14,7 @@ tech:
   - GitHub Actions
   - Firebase
   - Bulma CSS
-company: ''
-showInProjects: true
+featureSection: 'hobby'
 thumbnail: ./thumbnail.jpeg
 slug: /portfolio/woofer
 screenshots:

@@ -1,8 +1,6 @@
 module.exports = {
   email: 'spencer.sayhello@gmail.com',
 
-  projectTitleChoices: ['SquidShop Ecommerce', 'QuickCart', 'Atelier API'],
-
   CONTACT_FORM_ENDPOINT: 'https://public.herotofu.com/v1/aae45b10-27cb-11ed-9d54-c9f9d2b00e7b',
 
   socialMedia: [

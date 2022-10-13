@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Emoji } from '@components';
-import { socialMedia } from '@config';
 import { Icon } from '@components/icons';
+import { socialMedia } from '@config';
 import { StaticImage } from 'gatsby-plugin-image';
 import BubbleLink from '@styles/bubbleLink';
 import LandingSection from '@styles/landingSection';
@@ -9,18 +9,20 @@ import LandingSection from '@styles/landingSection';
 const Welcome = () => (
   <LandingSection id="welcome">
     <div className="flex text-center mx-auto max-w-6xl py-20">
-      <div className="flex mx-auto flex-wrap">
+      <div className="flex mx-auto flex-wrap overflow-hidden">
         <div className="pr-10 max-w-md w-fit text-left my-auto mx-10">
           <h1 className="my-2 font-semibold text-title-text"><Emoji symbol='👋' />{' '}Hello!</h1>
           <h1 className="my-2 font-semibold text-title-text">I'm Spencer Lepine</h1>
-          <h1 className="mt-4 mb-8 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-8 py-2 rounded-md"><span className="text-gray-600 select-none">$</span> Software Engineer</h1>{/* TODO */}
+          <h1 className="mt-4 mb-8 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-8 py-2 rounded-md truncate">
+            <span className="text-gray-600 select-none">$</span> Software Engineer
+          </h1>
           <BubbleLink linkPath='/portfolio' color="brand" isLarger hasMargin>View Portfolio</BubbleLink>
           <BubbleLink linkPath='/contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
         </div>
 
         <div className="mx-10">
           <Suspense fallback={<div>Loading...</div>}>
-            <div className="mx-auto w-fit max-w-xs">
+            <div className="mx-auto w-fit max-w-xs my-8">
               <StaticImage
                 src="../../assets/images/me.jpg"
                 width={280}

@@ -74,7 +74,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     createPage({
       path: urlSlug,
-      component: path.resolve(`src/templates/blogList.js`),
+      component: path.resolve(`src/templates/articles.js`),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,

@@ -7,8 +7,7 @@ description: Playlist generator based on the top five songs from your favorite a
 tech:
   - React
   - Spotify Web API
-company: ''
-showInProjects: true
+featureSection: 'hobby'
 thumbnail: ./spotify-thumbnail.jpg
 screenshots:
   - ./spotify-thumbnail.jpg

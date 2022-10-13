@@ -13,9 +13,7 @@ tech:
   - Google CSE API
   - GitHub Actions
   - Testing Library
-company: ''
-showInProjects: true
-isFeatured: 'yes'
+featureSection: 'landing'
 slug: /portfolio/quickcart
 thumbnail: ./quickcart.png
 screenshots:

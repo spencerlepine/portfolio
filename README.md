@@ -4,14 +4,9 @@
 
 ![OG Snapshot](./static/og@2x.png)
 
-## ⭐ How It's Built
+## ❓ What Is This?
 
-Personal developer portfolio and blog site. Built with static content using static content for Gatsby and GraphQL. This was built from scratch with React and TailwindCSS, which includes a light/dark theme toggle.
-
-## ✅ View Site Uptime
-
-Head over to the [**status website →**](https://spencerlepine.github.io/portfolio-site-uptime) powered by [Upptime](https://github.com/spencerlepine/portfolio-site-uptime)
-
+My personal developer portfolio and blog site.
 
 ## 📦 Technologies
 
@@ -20,6 +15,20 @@ Head over to the [**status website →**](https://spencerlepine.github.io/portfo
 - [GraphQL](https://graphql.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Netlify](https://www.netlify.com/)
+- [AWS Route53](https://aws.amazon.com/route53/)
+
+## ⭐ How It's Built
+
+This was built from scratch with React and TailwindCSS, which includes a light/dark theme toggle. Using MDX content, static pages are generated with Gatsby and GraphQL. Automatically deploys to netlify, with routing on AWS Route53 for the domain.
+
+Using Figma, I created the designs to follow and basic component layout of the site:
+
+![Figma Designs](./static/figma-designs.png)
+
+## ✅ View Site Uptime
+
+Head over to the [**status website →**](https://spencerlepine.github.io/portfolio-site-uptime) powered by [Upptime](https://github.com/spencerlepine/portfolio-site-uptime)
+
 
 ## ⚙️ Development Setup
 ```sh

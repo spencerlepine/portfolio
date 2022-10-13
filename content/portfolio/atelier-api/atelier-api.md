@@ -12,13 +12,11 @@ tech:
   - NGINX
   - Docker
   - GitHub Actions
-company: ''
 slug: /portfolio/atelier-api
 thumbnail: ./diagram.png
 screenshots:
   - ./diagram.png
-isFeatured: 'yes'
-showInProjects: true
+featureSection: 'landing'
 ---
 
 ## 🌟 Project Overview

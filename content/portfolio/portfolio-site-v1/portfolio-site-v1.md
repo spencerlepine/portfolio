@@ -9,9 +9,7 @@ tech:
   - GatsbyJS
   - GraphQL
   - Tailwindcss
-company: ''
-showInProjects: false
-isFeatured: ''
+featureSection: 'nowhere'
 thumbnail: ./og.png
 slug: /portfolio/portfolio-site-v1
 ---

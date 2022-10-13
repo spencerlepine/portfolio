@@ -6,51 +6,55 @@ import { useOnClickOutside } from '@hooks';
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const buttonRef = useRef(null);
 
   const toggleMenu = () => {
-    if (menuOpen) {
-      buttonRef.current.className = '';
-    } else {
-      buttonRef.current.className = 'hidden';
-    }
     setMenuOpen(!menuOpen);
   };
 
-  const navRef = useRef(null);
-
-  const wrapperRef = useRef();
+  const wrapperRef = useRef(null);
   useOnClickOutside(wrapperRef, () => {
     setMenuOpen(false);
-    buttonRef.current.className = '';
   });
 
   return (
-    <div>
-      <div ref={wrapperRef} >
-        <button
-          onClick={toggleMenu}
-          ref={buttonRef}>
-          <div>
-            <Icon name="Hamburger" />
-          </div>
-        </button>
+    <div className="my-auto mx-4 md:hidden">
+      <div ref={wrapperRef}>
+        <div className="flex items-center my-auto">
+          <button className="outline-none mobile-menu-button" onClick={toggleMenu}>
+            <Icon name="Hamburger" customClass="w-8 h-8 my-auto" />
+          </button>
+        </div>
 
-        <aside>
-          <nav ref={navRef} >
-            {navLinks && (
-              <ol >
-                {navLinks.map(({ url, name }, i) => (
-                  <li key={i}>
-                    <Link to={url} onClick={toggleMenu}>
-                      {name}
+        {menuOpen && (
+          <aside className="absolute top-0 left-0 w-full">
+            <nav className="p-4 w-full bg-tertiary">
+              <div className="absolute right-0 top-0 p-4">
+                <button className="outline-none mobile-menu-button" onClick={toggleMenu}>
+                  <Icon name="Close" customClass="w-8 h-8 my-auto" />
+                </button>
+              </div>
+
+              {navLinks && (
+                <ol className="pt-10 text-center">
+                  <li className="py-2 hover:bg-secondary">
+                    <Link to="/" onClick={toggleMenu}>
+                      Home
                     </Link>
                   </li>
-                ))}
-              </ol>
-            )}
-          </nav>
-        </aside>
+                  {navLinks.map(({ url, name }, i) => (
+                    <li key={i} className="py-2 hover:bg-secondary">
+                      <Link to={url} onClick={toggleMenu}>
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              )}
+
+
+            </nav>
+          </aside>
+        )}
       </div>
     </div>
   );
