@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Welcome, About, Projects, Contact, Skills, ExtraLinks } from '@components';
+import { Layout, Welcome, About, LandingPortfolio, Contact, Skills, ExtraLinks } from '@components';
 import { Helmet } from 'react-helmet';
 
 const IndexPage = ({ location }) => (
@@ -10,7 +10,7 @@ const IndexPage = ({ location }) => (
     <Welcome />
     <About />
     <Skills />
-    <Projects />
+    <LandingPortfolio />
     <ExtraLinks />
     <Contact />
   </Layout>

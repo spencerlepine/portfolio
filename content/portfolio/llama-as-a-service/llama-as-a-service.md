@@ -12,9 +12,7 @@ tech:
   - Netlify
   - GitHub Actions
   - Heroku
-company: ''
-showInProjects: false
-isFeatured: ''
+featureSection: 'hobby'
 thumbnail: ./laas-thumbnail.png
 slug: /portfolio/llama-as-a-service
 ---

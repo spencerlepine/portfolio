@@ -10,8 +10,7 @@ tech:
   - Mongo
   - Node.js
   - Express
-company: ''
-showInProjects: false
+featureSection: 'nowhere'
 slug: /portfolio/grocerychecc
 thumbnail: ./listmaker.png
 screenshots:
@@ -20,7 +19,6 @@ screenshots:
   - ./listmaker.png
   - ./listchecker.png
   - ./nutritionfacts.png
-isFeatured: ''
 ---
 
 ## Overview

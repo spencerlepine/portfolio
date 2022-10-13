@@ -10,8 +10,7 @@ tech:
   - Webpack
   - Jest
   - Testing Library
-company: ''
-showInProjects: false
+featureSection: 'nowhere'
 slug: /portfolio/atelier
 thumbnail: ./product_overview.png
 screenshots:
@@ -21,7 +20,6 @@ screenshots:
   - ./ratings_review_modal.png
   - ./question_answer.png
   - ./question_answer_modal.png
-isFeatured: ''
 ---
 
 ## Overview

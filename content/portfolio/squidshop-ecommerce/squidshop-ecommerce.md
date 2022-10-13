@@ -13,9 +13,7 @@ tech:
   - Jest
   - GitHub Actions
   - Cassandra
-company: ''
-isFeatured: 'yes'
-showInProjects: true
+featureSection: 'landing'
 thumbnail: ./frontend.png
 slug: /portfolio/squidshop-ecommerce
 screenshots:

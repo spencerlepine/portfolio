@@ -12,10 +12,8 @@ tech:
   - Node.js
   - Express
   - Firebase
-company: ''
-isFeatured: ''
-showInProjects: true
-thumbnail: ./farmers_page.png
+featureSection: 'portfolio'
+thumbnail: ./thumbnail.png
 slug: /portfolio/hellohealth
 screenshots:
   - project_deployment.png

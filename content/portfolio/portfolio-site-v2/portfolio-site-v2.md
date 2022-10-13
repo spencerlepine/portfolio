@@ -11,9 +11,7 @@ tech:
   - TailwindCSS
   - Netlify
   - GitHub Actions
-company: ''
-showInProjects: true
-isFeatured: ''
+featureSection: 'portfolio'
 thumbnail: ./og.png
 slug: /portfolio/portfolio-site-v1
 ---

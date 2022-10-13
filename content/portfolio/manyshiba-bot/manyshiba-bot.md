@@ -12,9 +12,7 @@ tech:
   - Netlify
   - GitHub Actions
   - Heroku
-company: ''
-showInProjects: true
-isFeatured: ''
+featureSection: 'hobby'
 thumbnail: ./manyshiba.png
 slug: /portfolio/manyshiba-bot
 screenshots:

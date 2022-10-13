@@ -8,9 +8,7 @@ tech:
   - Node.js
   - jsdom
   - node-fetch
-company: ''
-showInProjects: true
-isFeatured: ''
+featureSection: 'hobby'
 slug: /portfolio/readme-crawler
 thumbnail: ./readme-thumbnail.png
 screenshots:
