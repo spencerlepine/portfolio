@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Emoji } from '@components';
-import { socialMedia } from '@config';
 import { Icon } from '@components/icons';
+import { socialMedia } from '@config';
 import { StaticImage } from 'gatsby-plugin-image';
 import BubbleLink from '@styles/bubbleLink';
 import LandingSection from '@styles/landingSection';

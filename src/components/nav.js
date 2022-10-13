@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { navLinks } from '@config';
 // import { Menu } from '@components';
 import { Icon } from '@components/icons';
-import ThemeToggleBtn from '@components/themeToggleBtn';
+import { ThemeToggleBtn } from '@components';
 
 const Nav = () => (
   <header className="bg-tertiary text-white uppercase h-16 flex w-full">

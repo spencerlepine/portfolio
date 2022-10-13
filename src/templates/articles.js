@@ -2,20 +2,17 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { Layout } from '@components';
-
-import Articles from '@components/sections/articles';
-import PageButtons from '@components/pageButtons';
+import { Layout, Articles, PageButtons } from '@components';
 
 const BlogListTemplate = ({ data, location, pageContext }) => {
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allMarkdownRemark.edges || [];
 
   return (
     <Layout location={location} >
 
       <Helmet title="Blog" />
 
-      <Articles posts={posts} />
+      <Articles posts={posts} pageContext={pageContext} />
 
       <PageButtons pageContext={pageContext} />
     </Layout>

@@ -8,11 +8,11 @@ const ProjectsPage = ({ location, data }) => (
   <Layout location={location}>
     <Helmet title="Portfolio" />
 
-    <Portfolio projects={data.portfolioProjects.edges} sectionTitle="Portfolio" hideViewAllBtn />
+    <Portfolio projects={data.portfolioProjects.edges || []} sectionTitle="Portfolio" hideViewAllBtn />
 
     <YoutubeShoutout />
 
-    <Portfolio projects={data.hobbyProjects.edges} sectionTitle="Hobby Projects" hideViewAllBtn />
+    <Portfolio projects={data.hobbyProjects.edges || []} sectionTitle="Hobby Projects" hideViewAllBtn />
   </Layout >
 );
 

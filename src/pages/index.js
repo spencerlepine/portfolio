@@ -11,7 +11,7 @@ const LandingPage = ({ location, data }) => (
     <Welcome />
     <About />
     <Skills />
-    <Portfolio projects={data.projects.edges} sectionTitle="Portfolio" />
+    <Portfolio projects={data.projects.edges || []} sectionTitle="Portfolio" />
     <ExtraLinks />
     <Contact />
   </Layout>
