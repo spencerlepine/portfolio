@@ -27,19 +27,23 @@ ArticleCard.propTypes = {
   customStyles: PropTypes.string,
 };
 
-const Articles = ({ posts }) => {
+const firstArticleStyles = 'block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900 no-underline';
+const articleCardStyles = 'max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 sm:block no-underline';
+
+const Articles = ({ posts, pageContext }) => {
+  const renderRecentPost = pageContext.currentPage === 1;
+
   const [firstArticle, ...remainingArticles] = posts;
-  const firstArticleStyles = 'block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900 no-underline';
-  const articleCardStyles = 'max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block no-underline';
+  const articlesGridList = renderRecentPost ? remainingArticles : posts;
 
   return (
     <LandingSection id="blog">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 text-left">
-        <ArticleCard frontmatter={firstArticle.node.frontmatter} customStyles={firstArticleStyles} />
+        {renderRecentPost && <ArticleCard frontmatter={firstArticle.node.frontmatter} customStyles={firstArticleStyles} />}
 
-        <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {remainingArticles.length > 0 &&
-            remainingArticles.map(({ node: { frontmatter } }) => (
+        <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
+          {articlesGridList.length > 0 &&
+            articlesGridList.map(({ node: { frontmatter } }) => (
               <ArticleCard frontmatter={frontmatter} customStyles={articleCardStyles} key={frontmatter.slug} />
             ))
           }
@@ -52,6 +56,7 @@ const Articles = ({ posts }) => {
 
 Articles.propTypes = {
   posts: PropTypes.array.isRequired,
+  pageContext: PropTypes.object,
 };
 
 export default Articles;
