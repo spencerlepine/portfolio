@@ -29,7 +29,6 @@ const Articles = ({ posts }) => {
 
   return (
     <LandingSection id="blog">
-      {/* <div className="text-center mx-auto max-w-4xl"> */}
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 text-left">
         <ArticleCard frontmatter={firstArticle.node.frontmatter} customStyles={firstArticleStyles} />
 

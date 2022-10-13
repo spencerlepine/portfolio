@@ -64,9 +64,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  /*-------------*/
-  // Create blog pages
-  const postsPerPage = 5;
+  const postsPerPage = 7;
   const numPages = Math.ceil(posts.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     const firstPage = i === 0;
@@ -85,8 +83,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     });
   });
-  /*-------------*/
-
 
   // Create project detail pages
   const projects = result.data.portfolioRemark.edges;

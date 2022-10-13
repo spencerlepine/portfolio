@@ -10,6 +10,7 @@ const ProjectsPage = ({ location }) => (
   <Layout location={location}>
     <Helmet title="Portfolio" />
 
+
     <PortfolioSection hideViewAllBtn />
     <MoreProjectsSection hideViewAllBtn />
   </Layout >
