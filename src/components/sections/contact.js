@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import LandingSection from '@styles/landingSection';
-
-const FORM_ENDPOINT = 'https://public.herotofu.com/v1/aae45b10-27cb-11ed-9d54-c9f9d2b00e7b';
+import { CONTACT_FORM_ENDPOINT } from '@config';
 
 const ContactForm = () => {
   const [status, setStatus] = useState(false);
@@ -25,7 +24,7 @@ const ContactForm = () => {
 
     Object.assign(data, injectedData);
 
-    fetch(FORM_ENDPOINT, {
+    fetch(CONTACT_FORM_ENDPOINT, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -70,7 +69,7 @@ const ContactForm = () => {
 
   return (
     <form
-      action={FORM_ENDPOINT}
+      action={CONTACT_FORM_ENDPOINT}
       onSubmit={handleSubmit}
       method="POST"
       target="_blank"

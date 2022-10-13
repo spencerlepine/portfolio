@@ -1,23 +1,59 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Welcome, About, LandingPortfolio, Contact, Skills, ExtraLinks } from '@components';
+import { Layout, Welcome, About, Portfolio, Contact, Skills, ExtraLinks } from '@components';
 import { Helmet } from 'react-helmet';
 
-const IndexPage = ({ location }) => (
+const LandingPage = ({ location, data }) => (
   <Layout location={location}>
     <Helmet title="Home" />
 
     <Welcome />
     <About />
     <Skills />
-    <LandingPortfolio />
+    <Portfolio projects={data.projects.edges} sectionTitle="Portfolio" />
     <ExtraLinks />
     <Contact />
   </Layout>
 );
 
-IndexPage.propTypes = {
+LandingPage.propTypes = {
   location: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
-export default IndexPage;
+export default LandingPage;
+
+export const pageQuery = graphql`
+  query {
+    projects: allMarkdownRemark(
+      filter: { 
+        fileAbsolutePath: { regex: "/portfolio/" }
+        frontmatter: { featureSection: { eq: "landing" } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date
+            description
+            title
+            tech
+            github
+            external
+            thumbnail {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            slug
+            featureSection
+          }
+        }
+      }
+    }
+  }
+`;
