@@ -20,9 +20,9 @@ const Nav = () => (
         </div>
       </Suspense>
 
-      <div className="my-auto">
+      <div className="my-auto text-lg">
         {navLinks.map(({ url, name }) => (
-          <Link key={name} to={url} className="p-1 font-bold">
+          <Link key={name} to={url} className="py-1 px-4 text-gray-300 font-sans font-semibold">
             {name}
           </Link>
         ))}

@@ -1,6 +1,6 @@
 ---
 title: What I Learned During 100DaysOfCode
-description: A recap of the concepts and skills I acquired during this challenge
+description: A recap of the concepts and skills I acquired during this challenge.
 date: 2021-06-26
 draft: false
 slug: /blog/what-i-learned-during-100-days-of-code
@@ -10,6 +10,7 @@ tags:
   - Toy Problems
   - API
   - 100DaysOfCode
+thumbnail: 'thumbnail.png'
 ---
 
 <!-- MARKDOWN CONTENT -->

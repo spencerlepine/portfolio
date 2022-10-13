@@ -10,6 +10,7 @@ tags:
   - ESLint
   - Workflow
   - GitHub
+thumbnail: 'thumbnail.png'
 ---
 
 Working on a project with Git and GitHub is relatively simple. When a project starts to grow however, it is crucial to write clean code that other developers can read. Follow this article to learn how to set up linting and pre-commit hooks for your repository.

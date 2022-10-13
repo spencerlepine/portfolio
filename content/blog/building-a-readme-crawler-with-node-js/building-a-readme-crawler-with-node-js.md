@@ -9,6 +9,7 @@ tags:
   - Repositories
   - WebCrawler
   - Node.js
+thumbnail: 'thumbnail.png'
 ---
 
 Building a README Crawler with Node.js

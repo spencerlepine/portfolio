@@ -50,7 +50,7 @@ const MoreProjects = ({ hideViewAllBtn }) => {
   return (
     <LandingSection id="portfolio">
       <div className="text-center mx-auto max-w-4xl">
-        <h2 className="text-title-text mt-6">More Projects</h2>
+        <h2 className="text-title-text mt-6">Hobby Projects</h2>
 
         {!hideViewAllBtn && <BubbleLink linkPath='/portfolio' isOutlined color="link">View All</BubbleLink>}
 

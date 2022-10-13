@@ -1,6 +1,6 @@
 ---
 title: Building Llama as a Service (LaaS)
-description: Creating the world’s first Llama as a Service
+description: Creating the world’s first Llama as a Service, the random image API you didn't realize you needed.
 date: '2022-07-13'
 draft: false
 slug: /blog/building-llama-as-a-service
@@ -11,6 +11,7 @@ tags:
   - Node.js
   - Heroku
   - GitHub Actions
+thumbnail: 'thumbnail.png'
 ---
 
 This is a walkthrough of the development process and system design engineering for the Llama as a Service. LaaS is a website and public API that can serve random Llama images. It will respond with a single image URL, or even a list.

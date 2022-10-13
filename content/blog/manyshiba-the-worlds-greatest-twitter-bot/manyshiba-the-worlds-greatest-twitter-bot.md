@@ -9,6 +9,7 @@ tags:
   - Twitter
   - Node.js
   - Bot
+thumbnail: 'thumbnail.png'
 ---
 
 ManyShiba is the greatest Twitter bot ever created. Bless your soul with a daily photo of the almighty Shiba. Be uplifted by the spirit of this holy and sacred creature to free your soul.
