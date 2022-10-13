@@ -32,6 +32,7 @@ import {
   IconFirebase,
   IconSQL,
   IconGitHubActions,
+  IconClose,
 } from '@components/icons';
 
 const GetIcon = name => {
@@ -60,6 +61,8 @@ const GetIcon = name => {
       return IconTwitterSquare;
     case 'Hamburger':
       return IconHamburger;
+    case 'Close':
+      return IconClose;
     case 'YouTube':
       return IconYouTube;
     case 'JavaScript':
