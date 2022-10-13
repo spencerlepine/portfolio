@@ -22,6 +22,11 @@ const ArticleCard = ({ frontmatter: { slug, thumbnail, title, description }, cus
   </Link>
 );
 
+ArticleCard.propTypes = {
+  frontmatter: PropTypes.object.isRequired,
+  customStyles: PropTypes.string,
+};
+
 const Articles = ({ posts }) => {
   const [firstArticle, ...remainingArticles] = posts;
   const firstArticleStyles = 'block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900 no-underline';

@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
 
 import Articles from '@components/sections/articles';
-import PageButtons from '@components/PageButtons';
+import PageButtons from '@components/pageButtons';
 
 const BlogListTemplate = ({ data, location, pageContext }) => {
   const posts = data.allMarkdownRemark.edges;
