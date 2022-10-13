@@ -14,7 +14,7 @@ const LandingSection = ({ children, id, isSkewSection }) => {
   }
 
   return (
-    <section id={id} className="prose lg:prose-xl text-center min-w-full my-10">
+    <section id={id} className="prose lg:prose-xl text-center min-w-full my-10 px-4">
       {children}
     </section>
   );
