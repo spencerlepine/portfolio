@@ -1,6 +1,6 @@
 ---
 title: Software Engineering Workflow
-description: Collection of software and resources I use for work
+description: Collection of software and resources I use for work.
 date: 2021-08-13
 draft: false
 slug: /blog/software-engineering-workflow

@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { Layout } from '@components';
 import PortfolioSection from '@components/sections/portfolio';
 import MoreProjectsSection from '@components/sections/moreProjects';
+import Youtube from '@components/sections/youtube';
 
 const ProjectsPage = ({ location }) => (
   <Layout location={location}>
@@ -12,6 +13,9 @@ const ProjectsPage = ({ location }) => (
 
 
     <PortfolioSection hideViewAllBtn />
+
+    <Youtube />
+
     <MoreProjectsSection hideViewAllBtn />
   </Layout >
 );

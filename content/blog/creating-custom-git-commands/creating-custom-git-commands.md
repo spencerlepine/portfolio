@@ -1,6 +1,6 @@
 ---
 title: Creating Custom Git Commands
-description: Creating custom Git commands to help automate git worklow.
+description: Creating custom Git commands to help automate git workflow.
 date: 2021-08-16
 draft: false
 slug: /blog/creating-custom-git-commands
