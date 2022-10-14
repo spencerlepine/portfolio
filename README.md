@@ -1,8 +1,13 @@
 # [SpencerLepine.com](https://www.spencerlepine.com/)
 
-[![CI](https://github.com/spencerlepine/portfolio-site/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/spencerlepine/portfolio-site/actions/workflows/ci.yml) [![Netlify Deploy](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml/badge.svg?branch=main)](https://github.com/spencerlepine/portfolio-site/actions/workflows/netlify.yml) [![Publish Docker](https://github.com/spencerlepine/portfolio-site/actions/workflows/publish-to-ghcr.yml/badge.svg?branch=main)](https://github.com/spencerlepine/portfolio-site/actions/workflows/publish-to-ghcr.yml) [![Stable Version](https://img.shields.io/github/v/tag/spencerlepine/portfolio-site)](https://img.shields.io/github/v/tag/spencerlepine/portfolio-site) [![Latest Release](https://img.shields.io/github/v/release/spencerlepine/portfolio-site?color=%233D9970)](https://img.shields.io/github/v/tag/spencerlepine/portfolio-site?color=%233D9970)
+```
+v1 Portfolio Site (Apr 2021 -  Sep 2022)
+spencerlepine.com (netlify + Route53)
+```
 
 Developer Portfolio and Blog powered by GatsbyJS and TailwindCSS.
+
+# [YouTube Demo Video](https://youtu.be/g_OAnrkNDH8)
 
 ![OG Snapshot](./static/og@2x.png)
 
@@ -26,13 +31,4 @@ $ yarn start
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
-## 📦 Pull from GitHub Repository Container Registry
-```sh
-# docker pull ghcr.io/OWNER/IMAGE_NAME
-$ docker pull ghcr.io/spencerlepine/portfolio-site:0.1.0
-# runs on port 80
 ```
-
----
-
-> [spencerlepine.com](https://www.spencerlepine.com) &nbsp;&middot;&nbsp; GitHub [@spencerlepine](https://github.com/spencerlepine) &nbsp;&middot;&nbsp; Twitter [@spencerlepine](http://twitter.com/spencerlepine)
