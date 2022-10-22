@@ -17,7 +17,7 @@ const ArticleCard = ({ frontmatter: { slug, thumbnail, title, description }, cus
     <img src={extractImage(thumbnail)} alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
     <div className="space-y-2 lg:col-span-5">
       <h3 className="text-2xl font-semibold hover:underline text-title-text">{title}</h3>
-      <p className="text-primary-text">{description}</p>
+      <p className="text-primary-text font-normal">{description}</p>
     </div>
   </Link>
 );
