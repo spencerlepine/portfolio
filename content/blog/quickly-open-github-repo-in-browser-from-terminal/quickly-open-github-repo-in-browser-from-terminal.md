@@ -31,7 +31,8 @@ First, navigate to the bin directory:
 ```sh
 $ cd ~/../../usr/local/bin
 
-# Make sure this path matches up with your configuration for the terminal (e.g. PATH=$PATH:$HOME/bin)
+# Make sure this path matches up with your 
+# configuration for the terminal (e.g. PATH=$PATH:$HOME/bin)
 ```
 
 Now create the script file, here I named the command `repo-page`:
@@ -50,9 +51,9 @@ git remote -v | awk '/origin.*push/ {print $2}' | xargs open
 
 Save the file:
 
-*press ‘ESC’
-*press ‘SHIFT’ + ‘:’
-*type ‘wq’ + ENTER
+- press ‘ESC’
+- press ‘SHIFT’ + ‘:’
+- type ‘wq’ + ENTER
 
 Create the executable:
 ```sh
@@ -70,9 +71,9 @@ Optionally, you can dig a little deeper into writing these scripts. Here are a f
 Bash script for Mac:
 ```sh
 function gbrowse {
-gbrowsevar=$(git config --get remote.origin.url)
-printf "${gbrowsevar}"
-start $gbrowsevar
+    gbrowsevar=$(git config --get remote.origin.url)
+    printf "${gbrowsevar}"
+    start $gbrowsevar
 }
 ```
  

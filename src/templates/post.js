@@ -22,13 +22,13 @@ const PostTemplate = ({ data, location }) => {
       <Helmet title={title} />
 
       <LandingSection>
-        {/* TODO */}
-        <span>
-          <span >&larr;</span>
-          <Link to="/blog" className="text-primary-text">All posts</Link>
-        </span>
+        <header className="text-left max-w-2xl mx-auto text-secondary">
+          <span className="text-left my-8">
+            <span >&larr;</span>
+            <Link to="/blog" className="text-secondary">All posts</Link>
+          </span>
 
-        <header>
+          <h1 className="text-title-text mt-4">{title}</h1>
           <time>
             {new Date(date).toLocaleDateString('en-US', {
               year: 'numeric',
@@ -36,7 +36,6 @@ const PostTemplate = ({ data, location }) => {
               day: 'numeric',
             })}
           </time>
-          <h1 className="text-title-text">{title}</h1>
           <p>
             {tags &&
               tags.length > 0 &&
@@ -60,21 +59,6 @@ PostTemplate.propTypes = {
   data: PropTypes.object,
   location: PropTypes.object,
 };
-
-// export const pageQuery = graphql`
-//   query($path: String!) {
-//     markdownRemark(frontmatter: { slug: { eq: $path } }) {
-//       html
-//       frontmatter {
-//         title
-//         description
-//         date
-//         slug
-//         tags
-//       }
-//     }
-//   }
-// `;
 
 export const pageQuery = graphql`
   query($path: String!) {
