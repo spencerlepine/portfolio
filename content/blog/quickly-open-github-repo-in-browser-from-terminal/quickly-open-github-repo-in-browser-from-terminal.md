@@ -35,10 +35,10 @@ $ cd ~/../../usr/local/bin
 # configuration for the terminal (e.g. PATH=$PATH:$HOME/bin)
 ```
 
-Now create the script file, here I named the command `repo-page`:
+Now create the script file, here I named the command `repo-open`:
 
 ```sh
-$ vim repo-page
+$ vim repo-open
 ```
 
 Now paste the script contents into the file editor:
@@ -57,7 +57,7 @@ Save the file:
 
 Create the executable:
 ```sh
-$ chmod +x repo-page
+$ chmod +x repo-open
 ```
 That’s it! Now you can run the new script in the terminal. If we are in a directory with a `.git` folder, we can run `repo-open`, and it will open the remote URL in the default browser.
 
