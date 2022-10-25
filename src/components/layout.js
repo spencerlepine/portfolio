@@ -11,7 +11,7 @@ const Layout = props => {
     <div className={`text-primary-text theme-${theme || 'light'} bg-primary`}>
       <Nav />
 
-      <main className="mx-auto bg-primary">
+      <main className="mx-auto bg-primary ">
         {props.children}
       </main>
 

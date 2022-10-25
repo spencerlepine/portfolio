@@ -48,7 +48,7 @@ const PostTemplate = ({ data, location }) => {
   const relatedArticlesData = data.allMarkdownRemark.edges;
   const postData = data.markdownRemark;
   const { frontmatter, html } = postData;
-  const { title, date, tags } = frontmatter;
+  const { title, date, tags, slug } = frontmatter;
   const postStyles = 'text-left max-w-2xl mx-auto text-primary-text';
 
   return (
@@ -92,7 +92,13 @@ const PostTemplate = ({ data, location }) => {
           <div className="">
             {relatedArticlesData.length > 0 &&
               relatedArticlesData.map(({ node: { frontmatter } }) => (
-                <ArticleCard frontmatter={frontmatter} customStyles="block gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline grid grid-cols-12 dark:bg-gray-900 no-underline" key={frontmatter.slug} />
+                <>
+                  {frontmatter.slug === slug ? (
+                    <></>
+                  ) : (
+                    <ArticleCard frontmatter={frontmatter} customStyles="block gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline grid grid-cols-12 dark:bg-gray-900 no-underline" key={frontmatter.slug} />
+                  )}
+                </>
               ))
             }
           </div>

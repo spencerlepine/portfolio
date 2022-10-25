@@ -3,36 +3,34 @@ import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Layout, Head } from '@components';
+import LandingSection from '@styles/landingSection';
 
-// TODO
 const TagsPage = ({ data, location }) => {
   const { allMarkdownRemark: { group } } = data;
 
   return (
     <Layout location={location}>
-      <Head title="Tags" />
+      <Head title={`Tags`} />
 
-      <main >
-        <span >
-          <span >&larr;</span>
-          <Link to="/blog">All posts</Link>
-        </span>
+      <LandingSection>
+        <h1>All Tags</h1>
 
-        <h1>Tags</h1>
+        <h3>
+          <span className="text-secondary">&larr;</span>
+          <Link to="/blog" className="text-secondary">View all posts</Link>
+        </h3>
 
-        <ul >
+        <div className="flex flex-col max-w-sm m-auto">
           {group.map(tag => (
-            <li key={tag.fieldValue} >
-              <Link to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}>
-                #{tag.fieldValue}{' '}
-                <span >
-                  ({tag.totalCount})
-                </span>
-              </Link>
-            </li>
+            <Link to={`/blog/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue} className="no-underline hover:underline">
+              #{tag.fieldValue}{' '}
+              <span >
+                ({tag.totalCount})
+              </span>
+            </Link>
           ))}
-        </ul>
-      </main>
+        </div>
+      </LandingSection>
     </Layout>
   );
 };
