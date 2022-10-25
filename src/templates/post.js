@@ -81,12 +81,25 @@ const PostTemplate = ({ data, location }) => {
         </header>
 
         <div className={postStyles} dangerouslySetInnerHTML={{ __html: html }} />
+
       </LandingSection>
 
+      {/* <LandingSection>
+        // TODO
+        <div className="mt-4 max-w-2xl mx-auto text-secondary">
+          {relatedArticlesData.length > 0 && (
+            <div className="ml-auto text-left rounded-full bg-tertiary-text text-title-text w-fit">
+              <p className="font-light w-fit">NEXT ARTICLE</p>
+              <p className="overflow-hidden w-fit">{relatedArticlesData[0].node.frontmatter.title}</p>
+            </div>
+          )}
+        </div>
+      </LandingSection> */}
 
       <LandingSection>
         <div className="mt-4 max-w-2xl mx-auto text-secondary">
-          <h2 className="text-left text-title-text">Read more</h2>
+          <hr className="border-4 border-secondary bg-secondary mb-0" />
+          <h2 className="text-left text-secondary mt-2">Read more</h2>
           <hr />
           <div className="">
             {relatedArticlesData.length > 0 &&
@@ -103,7 +116,7 @@ const PostTemplate = ({ data, location }) => {
           </div>
         </div>
       </LandingSection>
-    </Layout>
+    </Layout >
   );
 };
 

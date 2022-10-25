@@ -16,11 +16,12 @@ thumbnail: 'thumbnail.png'
 
 This is a walkthrough of the development process and system design engineering for the Llama as a Service. LaaS is a website and public API that can serve random Llama images. It will respond with a single image URL, or even a list.
 
-Visit the [LaaS website](https://llama-as-a-service.netlify.app/) for a demo
-View the source code on [GitHub](https://github.com/orgs/llama-as-a-service/repositories)
-View the walkthrough [YouTube video](TODO)
+- Visit the [LaaS website](https://llama-as-a-service.netlify.app/) for a demo
+- View the source code on [GitHub](https://github.com/orgs/llama-as-a-service/repositories)
+- View the walkthrough [YouTube video](TODO)
 
 ### What I Learned
+
 For this project, there is a frontend built with [React](https://reactjs.org/) hosted on [Netlify](https://www.netlify.com/), connected to the backend.
 
 I built each API with Node.js, Express, and Docker. Services connected to a NoSQL [MongoDB](https://www.mongodb.com/) database.
