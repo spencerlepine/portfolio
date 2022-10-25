@@ -5,7 +5,7 @@ import { Layout, Head, Portfolio, YoutubeShoutout } from '@components';
 
 const ProjectsPage = ({ location, data }) => (
   <Layout location={location}>
-    <Head title="Portfolio" description="Spencer Lepine's portfolio of Software Engineering applications."  />
+    <Head title="Portfolio | @SpencerLepine - Software Engineer" description="Spencer Lepine's portfolio of Software Engineering applications."  />
 
     <Portfolio projects={data.portfolioProjects.edges || []} sectionTitle="Portfolio" hideViewAllBtn />
 

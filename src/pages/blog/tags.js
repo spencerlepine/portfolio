@@ -10,7 +10,7 @@ const TagsPage = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={`Tags`} description={`Articles categorized by tag.`} />
+      <Head title="Blog Hashtags | @SpencerLepine - Software Engineer" description="Spencer Lepine's blog posts categorized by tag." />
 
       <LandingSection>
         <h1>All Tags</h1>

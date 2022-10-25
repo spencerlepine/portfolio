@@ -11,7 +11,7 @@ const TagTemplate = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={`#${tag} Articles`} description={`Articles under #${tag}.`} />
+      <Head title={`#${tag} Blog Posts | @SpencerLepine - Software Engineer`} description={`Spencer Lepine blog posts categorized under #${tag}.`} />
 
       <LandingSection>
         <h1>

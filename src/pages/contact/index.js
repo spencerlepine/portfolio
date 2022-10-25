@@ -4,7 +4,7 @@ import { Layout, Contact, Head } from '@components';
 
 const ContactPage = ({ location }) => (
   <Layout location={location}>
-    <Head title="Contact" description="Spencer Lepine contact form." />
+    <Head title="Contact Form | @SpencerLepine - Software Engineer" description="Want to work together or have any questions? Contact Spencer Lepine directly through the contact form." />
 
     <Contact />
   </Layout >

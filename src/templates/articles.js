@@ -8,7 +8,7 @@ const BlogListTemplate = ({ data, location, pageContext }) => {
 
   return (
     <Layout location={location} >
-      <Head title="Blog" description="Spencer Lepine sharing knowledge of software development and learning resources." />
+      <Head title="Blog | @SpencerLepine - Software Engineer" description="Spencer Lepine sharing knowledge of software development and learning resources." />
 
       <Articles posts={posts} pageContext={pageContext} />
 

@@ -13,7 +13,7 @@ tech:
   - GitHub Actions
 featureSection: 'portfolio'
 thumbnail: ./og.png
-slug: /portfolio/portfolio-site-v1
+slug: /portfolio/portfolio-site-v2
 ---
 
 [**Visit the status website →**](https://spencerlepine.github.io/portfolio-site-uptime)

@@ -52,7 +52,7 @@ const PostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={title} description={description} image={thumbnail} />
+      <Head title={`${title} | @SpencerLepine - Software Engineer`} description={description} image={extractImage(thumbnail)} />
 
       <LandingSection>
         <header className="text-left max-w-2xl mx-auto text-secondary">

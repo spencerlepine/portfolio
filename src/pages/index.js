@@ -5,7 +5,7 @@ import { Layout, Head, Welcome, About, Portfolio, Contact, Skills, ExtraLinks } 
 
 const LandingPage = ({ location, data }) => (
   <Layout location={location}>
-    <Head title="Home" />
+    <Head title="Home | @SpencerLepine - Software Engineer" />
 
     <Welcome />
     <About />

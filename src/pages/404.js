@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const NotFoundPage = ({ location }) => (
   <Layout location={location}>
-    <Head title="Page Not Found" />
+    <Head title="Spencer Lepine | Software Engineer" />
 
     <main className="min-h-screen">
       <div className="m-8 container flex flex-col items-center justify-center px-5 mx-auto my-8">

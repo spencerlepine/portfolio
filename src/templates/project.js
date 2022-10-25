@@ -47,7 +47,7 @@ const ProjectTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={title} description={description} image={extractImage(thumbnail)} />
+      <Head title={`${title} | @SpencerLepine - Software Engineer`} description={description} image={extractImage(thumbnail)} />
 
       <LandingSection>
         <span >
