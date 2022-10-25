@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
-import { Layout, Portfolio, YoutubeShoutout } from '@components';
+import { Layout, Head, Portfolio, YoutubeShoutout } from '@components';
 
 const ProjectsPage = ({ location, data }) => (
   <Layout location={location}>
-    <Helmet title="Portfolio" />
+    <Head title="Portfolio" description="Spencer Lepine's portfolio of Software Engineering applications."  />
 
     <Portfolio projects={data.portfolioProjects.edges || []} sectionTitle="Portfolio" hideViewAllBtn />
 

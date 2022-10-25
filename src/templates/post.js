@@ -2,8 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { Layout } from '@components';
+import { Layout, Head } from '@components';
 import LandingSection from '@styles/landingSection';
 import NotFoundPage from '@pages/404';
 
@@ -48,12 +47,12 @@ const PostTemplate = ({ data, location }) => {
   const relatedArticlesData = data.allMarkdownRemark.edges;
   const postData = data.markdownRemark;
   const { frontmatter, html } = postData;
-  const { title, date, tags } = frontmatter;
+  const { title, date, tags, slug, description, thumbnail } = frontmatter;
   const postStyles = 'text-left max-w-2xl mx-auto text-primary-text';
 
   return (
     <Layout location={location}>
-      <Helmet title={title} />
+      <Head title={title} description={description} image={thumbnail} />
 
       <LandingSection>
         <header className="text-left max-w-2xl mx-auto text-secondary">
@@ -82,23 +81,42 @@ const PostTemplate = ({ data, location }) => {
         </header>
 
         <div className={postStyles} dangerouslySetInnerHTML={{ __html: html }} />
+
       </LandingSection>
 
+      {/* <LandingSection>
+        // TODO
+        <div className="mt-4 max-w-2xl mx-auto text-secondary">
+          {relatedArticlesData.length > 0 && (
+            <div className="ml-auto text-left rounded-full bg-tertiary-text text-title-text w-fit">
+              <p className="font-light w-fit">NEXT ARTICLE</p>
+              <p className="overflow-hidden w-fit">{relatedArticlesData[0].node.frontmatter.title}</p>
+            </div>
+          )}
+        </div>
+      </LandingSection> */}
 
       <LandingSection>
         <div className="mt-4 max-w-2xl mx-auto text-secondary">
-          <h2 className="text-left text-title-text">Read more</h2>
+          <hr className="border-4 border-secondary bg-secondary mb-0" />
+          <h2 className="text-left text-secondary mt-2">Read more</h2>
           <hr />
           <div className="">
             {relatedArticlesData.length > 0 &&
               relatedArticlesData.map(({ node: { frontmatter } }) => (
-                <ArticleCard frontmatter={frontmatter} customStyles="block gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline grid grid-cols-12 dark:bg-gray-900 no-underline" key={frontmatter.slug} />
+                <>
+                  {frontmatter.slug === slug ? (
+                    <></>
+                  ) : (
+                    <ArticleCard frontmatter={frontmatter} customStyles="block gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline grid grid-cols-12 dark:bg-gray-900 no-underline" key={frontmatter.slug} />
+                  )}
+                </>
               ))
             }
           </div>
         </div>
       </LandingSection>
-    </Layout>
+    </Layout >
   );
 };
 
@@ -119,6 +137,13 @@ export const pageQuery = graphql`
         date
         slug
         tags
+        thumbnail {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     allMarkdownRemark(

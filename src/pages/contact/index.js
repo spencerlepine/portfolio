@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { Layout, Contact } from '@components';
+import { Layout, Contact, Head } from '@components';
 
 const ContactPage = ({ location }) => (
   <Layout location={location}>
-    <Helmet title="Contact" />
+    <Head title="Contact" description="Spencer Lepine contact form." />
 
     <Contact />
   </Layout >

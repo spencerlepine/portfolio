@@ -12,10 +12,17 @@ const extractImage = thumbnail => {
   }
 };
 
-const ArticleCard = ({ frontmatter: { slug, thumbnail, title, description }, customStyles }) => (
+const ArticleCard = ({ frontmatter: { slug, thumbnail, title, description, date }, customStyles }) => (
   <Link key={slug} rel="noopener noreferrer" to={slug} className={customStyles}>
-    <img src={extractImage(thumbnail)} alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
+    <img src={extractImage(thumbnail)} alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500 my-2" />
     <div className="space-y-2 lg:col-span-5">
+      <time className="text-primary-text text-sm">
+        {new Date(date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </time>
       <h3 className="text-2xl font-semibold hover:underline text-title-text">{title}</h3>
       <p className="text-primary-text font-normal">{description}</p>
     </div>

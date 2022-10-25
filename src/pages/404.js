@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import { Head, Layout } from '@components';
 import PropTypes from 'prop-types';
-import { Layout } from '@components';
 
 const NotFoundPage = ({ location }) => (
   <Layout location={location}>
-    <Helmet title="Page Not Found" />
+    <Head title="Page Not Found" />
 
     <main className="min-h-screen">
       <div className="m-8 container flex flex-col items-center justify-center px-5 mx-auto my-8">

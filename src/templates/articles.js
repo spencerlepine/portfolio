@@ -1,16 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { Layout, Articles, PageButtons } from '@components';
+import { Layout, Head, Articles, PageButtons } from '@components';
 
 const BlogListTemplate = ({ data, location, pageContext }) => {
   const posts = data.allMarkdownRemark.edges || [];
 
   return (
     <Layout location={location} >
-
-      <Helmet title="Blog" />
+      <Head title="Blog" description="Spencer Lepine sharing knowledge of software development and learning resources." />
 
       <Articles posts={posts} pageContext={pageContext} />
 

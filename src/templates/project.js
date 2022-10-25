@@ -2,13 +2,21 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 // import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { Layout } from '@components';
+import { Layout, Head } from '@components';
 import BubbleLink from '@styles/bubbleLink';
 import LandingSection from '@styles/landingSection';
 import NotFoundPage from '@pages/404';
 
 import { Carousel } from 'react-responsive-carousel';
+
+const extractImage = image => {
+  try {
+    const imageData = image.childImageSharp.fluid.src;
+    return imageData;
+  } catch {
+    return '';
+  }
+};
 
 const extractImages = imageEdges => {
   try {
@@ -34,12 +42,12 @@ const ProjectTemplate = ({ data, location }) => {
 
   const { frontmatter, html } = data.allMarkdownRemark.edges[0].node;
   // eslint-disable-next-line no-unused-vars
-  const { title, description, tech, github, external } = frontmatter;
+  const { title, description, tech, github, external, thumbnail } = frontmatter;
   const images = extractImages(data.allMarkdownRemark);
 
   return (
     <Layout location={location}>
-      <Helmet title={title} />
+      <Head title={title} description={description} image={extractImage(thumbnail)} />
 
       <LandingSection>
         <span >
@@ -126,6 +134,13 @@ export const postQuery = graphql`
             external
             description
             slug
+            thumbnail {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fileAbsolutePath
         }

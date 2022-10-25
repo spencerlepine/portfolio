@@ -1,5 +1,5 @@
 ---
-title: Git project configuration with Husky and ESLint
+title: Git Project Configuration With Husky and ESLint
 description: Git conventions using pre-commit hooks and enforcing code styles.
 date: 2022-03-20
 draft: false
