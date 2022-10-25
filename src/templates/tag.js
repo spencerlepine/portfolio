@@ -2,8 +2,9 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { Layout } from '@components';
+import { Layout, Head, Articles } from '@components';
+import LandingSection from '@styles/landingSection';
+
 
 const TagTemplate = ({ pageContext, data, location }) => {
   const { tag } = pageContext;
@@ -11,52 +12,25 @@ const TagTemplate = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title={`Tagged: #${tag}`} />
+      <Head title={`#${tag} Articles`} />
 
-      <main >
-        <span >
-          <span >&larr;</span>
-          <Link to="/blog">All posts</Link>
-        </span>
-
+      <LandingSection>
         <h1>
-          <span >#{tag}</span>
-          <span>-</span>
-          <span >
-            <Link to="/blog/tags">View all tags</Link>
-          </span>
+          <span>#{tag}</span> Articles
         </h1>
 
-        <ul >
-          {edges.map(({ node }) => {
-            const { title, slug, date, tags } = node.frontmatter;
-            return (
-              <li key={slug} >
-                <h2>
-                  <Link to={slug} >{title}</Link>
-                </h2>
-                <p >
-                  <time>
-                    {new Date(date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </time>
-                  <span>&nbsp;&mdash;&nbsp;</span>
-                  {tags &&
-                    tags.length > 0 &&
-                    tags.map((tag, i) => (
-                      <Link key={i} to={`/blog/tags/${kebabCase(tag)}/`} >
-                        #{tag}
-                      </Link>
-                    ))}
-                </p>
-              </li>
-            );
-          })}
-        </ul>
-      </main>
+        <h3>
+          <span className="text-secondary">&larr;</span>
+          <Link to="/blog/tags" className="text-secondary">View all tags</Link>
+        </h3>
+
+        <h3>
+          <span className="text-secondary">&larr;</span>
+          <Link to="/blog" className="text-secondary">View all posts</Link>
+        </h3>
+
+        <Articles posts={edges} pageContext={{ currentPage: 1 }} />
+      </LandingSection>
     </Layout>
   );
 };
@@ -100,6 +74,13 @@ export const pageQuery = graphql`
             date
             slug
             tags
+            thumbnail {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

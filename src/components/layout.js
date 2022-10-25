@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Head, Nav, Footer } from '@components';
+import { Nav, Footer } from '@components';
 import '../styles/layout.css';
 import { ThemeContext } from '../contexts/themeContext';
 
@@ -9,7 +9,6 @@ const Layout = props => {
 
   return (
     <div className={`text-primary-text theme-${theme || 'light'} bg-primary`}>
-      <Head />
       <Nav />
 
       <main className="mx-auto bg-primary">

@@ -1,12 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Welcome, About, Portfolio, Contact, Skills, ExtraLinks } from '@components';
-import { Helmet } from 'react-helmet';
+import { Layout, Head, Welcome, About, Portfolio, Contact, Skills, ExtraLinks } from '@components';
 
 const LandingPage = ({ location, data }) => (
   <Layout location={location}>
-    <Helmet title="Home" />
+    <Head title="Home" />
 
     <Welcome />
     <About />

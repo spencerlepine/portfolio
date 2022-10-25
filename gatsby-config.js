@@ -8,11 +8,11 @@ module.exports = {
     twitterUsername: '@spencerlepine',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,
     {
       resolve: 'gatsby-plugin-htaccess',
