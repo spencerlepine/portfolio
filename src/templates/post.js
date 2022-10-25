@@ -47,12 +47,12 @@ const PostTemplate = ({ data, location }) => {
   const relatedArticlesData = data.allMarkdownRemark.edges;
   const postData = data.markdownRemark;
   const { frontmatter, html } = postData;
-  const { title, date, tags, slug, description } = frontmatter;
+  const { title, date, tags, slug, description, thumbnail } = frontmatter;
   const postStyles = 'text-left max-w-2xl mx-auto text-primary-text';
 
   return (
     <Layout location={location}>
-      <Head title={title} description={description} />
+      <Head title={title} description={description} image={thumbnail} />
 
       <LandingSection>
         <header className="text-left max-w-2xl mx-auto text-secondary">
@@ -124,6 +124,13 @@ export const pageQuery = graphql`
         date
         slug
         tags
+        thumbnail {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     allMarkdownRemark(
