@@ -10,7 +10,7 @@ const TagsPage = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={`Tags`} />
+      <Head title={`Tags`} description={`Articles categorized by tag.`} />
 
       <LandingSection>
         <h1>All Tags</h1>

@@ -2,8 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 // import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { Layout } from '@components';
+import { Layout, Head } from '@components';
 import BubbleLink from '@styles/bubbleLink';
 import LandingSection from '@styles/landingSection';
 import NotFoundPage from '@pages/404';
@@ -39,7 +38,7 @@ const ProjectTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title={title} />
+      <Head title={title} description={description} />
 
       <LandingSection>
         <span >

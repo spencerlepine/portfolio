@@ -2,8 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { Layout } from '@components';
+import { Layout, Head } from '@components';
 import LandingSection from '@styles/landingSection';
 import NotFoundPage from '@pages/404';
 
@@ -48,12 +47,12 @@ const PostTemplate = ({ data, location }) => {
   const relatedArticlesData = data.allMarkdownRemark.edges;
   const postData = data.markdownRemark;
   const { frontmatter, html } = postData;
-  const { title, date, tags, slug } = frontmatter;
+  const { title, date, tags, slug, description } = frontmatter;
   const postStyles = 'text-left max-w-2xl mx-auto text-primary-text';
 
   return (
     <Layout location={location}>
-      <Helmet title={title} />
+      <Head title={title} description={description} />
 
       <LandingSection>
         <header className="text-left max-w-2xl mx-auto text-secondary">
