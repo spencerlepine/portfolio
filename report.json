@@ -1,0 +1,20 @@
+[
+    {
+        "hash": "58dcd67d7e5553cd0796570c1c6c1fe4",
+        "description": "Highentropy",
+        "file": "content/portfolio/atelier-api/atelier-api.md",
+        "line": 74
+    },
+    {
+        "hash": "8d163be3a1f026e97287e1100a0d14ca",
+        "description": "Bracket object notation with user input is present, this might allow an attacker to access all properties of the object and even it's prototype, leading to possible code execution.",
+        "file": "src/components/pageButtons.js",
+        "line": 20
+    },
+    {
+        "hash": "cd28909f5f25dcadd5b39ac9ce936c41",
+        "description": "Base64 High Entropy String",
+        "file": "src/components/head.js",
+        "line": 67
+    }
+]
