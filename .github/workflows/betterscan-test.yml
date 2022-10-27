@@ -1,0 +1,17 @@
+name: Betterscan Scan
+
+on: [push]
+
+jobs:
+  Betterscan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Betterscan Scan
+        uses: topcodersonline/betterscan@v3
+      - name: Upload the SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: report.sarif
