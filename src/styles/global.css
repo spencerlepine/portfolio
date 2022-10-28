@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-const celticBlue = '#205CCF';
-const blackPearl = #040B14';
-const alabasterWhite = '#FCFCFC';
-const buttonBlue = '#1B9BE3';
-const linkBlue = '#2EB2DC';
-const textOnBlue = '#BDBDBD';
-const textOnWhite = '#808080';
-*/
 .theme-dark {
   --celticBlue: #668fff;
   --blackPearl: #282828;
@@ -33,4 +24,21 @@ const textOnWhite = '#808080';
   --textOnWhite: #808080;
   --textOnBlack: #BDBDBD;
   --titleText: #040B14;
+}
+
+/* gatsby-remark-prismjs OVERRIDE
+   Inline code highlights are including backtick characters
+*/
+code::before, code::after {
+  display: none;
+}
+
+:not(pre) > code.language-text {
+  margin: 0 0.10em;
+  padding: 0 0.10em;
+  font-family: monospace;
+  font-weight: 100;
+  text-shadow: none;
+  color: #565656;
+  background: #d6d6d7 !important;
 }
