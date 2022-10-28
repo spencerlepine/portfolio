@@ -8,6 +8,7 @@ import LandingSection from '@styles/landingSection';
 import NotFoundPage from '@pages/404';
 
 import { Carousel } from 'react-responsive-carousel';
+import '@styles/postStyles.css';
 
 const extractImage = image => {
   try {
@@ -18,16 +19,9 @@ const extractImage = image => {
   }
 };
 
-const extractImages = imageEdges => {
+const extractImages = frontmatter => {
   try {
-    /*
-    childImageSharp {
-      gatsbyImageData(width: 700, formats: [AUTO, PNG])
-    }
-    */
-    //
-
-    const images = imageEdges.edges[0].node.frontmatter.screenshots.map(imageObj => imageObj.childImageSharp.fluid.src);
+    const images = frontmatter.screenshots.map(imageObj => imageObj.childImageSharp.fluid.src);
     return images;
   } catch {
     return [];
@@ -41,37 +35,36 @@ const ProjectTemplate = ({ data, location }) => {
   }
 
   const { frontmatter, html } = data.allMarkdownRemark.edges[0].node;
-  // eslint-disable-next-line no-unused-vars
-  const { title, description, tech, github, external, thumbnail } = frontmatter;
-  const images = extractImages(data.allMarkdownRemark);
+  const { title, description, github, external, thumbnail } = frontmatter;
+  const images = extractImages(frontmatter);
 
   return (
     <Layout location={location}>
       <Head title={`${title} | @SpencerLepine - Software Engineer`} description={description} image={extractImage(thumbnail)} />
 
       <LandingSection>
-        <span >
-          <span >&larr;</span>
-          <Link to="/portfolio">View Portfolio</Link>
+        <span>
+          <span className="text-title-text">&larr;</span>
+          <Link to="/portfolio" className="text-title-text">View Portfolio</Link>
         </span>
 
         <header className="my-8">
           <h1 className="text-title-text">{title}</h1>
           <span >
             {github && (
-              <BubbleLink linkPath={github} icon="GitHub" color="tertiary">
+              <BubbleLink linkPath={github} icon="GitHub" color="tertiary" hasHorizontalMargin>
                 Repository
               </BubbleLink>
             )}
             {external && (
-              <BubbleLink linkPath={external} icon="External" color="brand" isOutline>
+              <BubbleLink linkPath={external} icon="External" color="green" isOutline hasHorizontalMargin>
                 Demo
               </BubbleLink>
             )}
           </span>
         </header>
-
         {/* 
+
         <div>
           {tech && tech.length && (
             <ul >
@@ -84,7 +77,7 @@ const ProjectTemplate = ({ data, location }) => {
           )}
         </div> */}
 
-        <div className="text-left max-w-3xl mx-auto">
+        <div className="text-left max-w-3xl mx-auto text-primary-text">
           {images.length > 0 && (
             <div>
               <Carousel dynamicHeight autoPlay centerMode>
@@ -96,7 +89,10 @@ const ProjectTemplate = ({ data, location }) => {
               </Carousel>
             </div>
           )}
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div
+            className="not-prose text-left max-w-2xl mx-auto text-primary-text"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </div>
 
       </LandingSection>

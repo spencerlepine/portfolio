@@ -5,9 +5,6 @@ module.exports = {
   },
   purge: [],
   variants: {},
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
   important: true,
   theme: {
     extend: {
@@ -24,4 +21,7 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

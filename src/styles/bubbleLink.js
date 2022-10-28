@@ -20,28 +20,22 @@ const colorPalette = {
     outlined: 'bg-primary text-link-primary border-link-primary',
     fill: 'bg-link-primary text-primary border-link-primary',
   },
+  green: {
+    outlined: 'bg-primary text-tertiary border-tertiary',
+    fill: 'bg-green-600 text-white border-green-600',
+  },
 };
 
 
-const BubbleLink = ({ isOutlined, linkPath, children, icon, color, isLarger, hasMargin }) => {
+const BubbleLink = ({ isOutlined, linkPath, children, icon, color, isLarger, hasMargin, hasHorizontalMargin }) => {
   const sizes = `${isLarger ? `px-6 py-3 rounded-2xl border-2 text-lg ${hasMargin ? 'mr-2' : ''}` : `px-5 py-2 border-2 rounded-xl ${hasMargin ? 'mr-2' : ''}`}`;
   const colors = `${colorPalette[color][isOutlined ? 'outlined' : 'fill']}`;
-  const bubbleStyles = `${colors} ${sizes} border-solid no-underline truncate`;
+  const bubbleStyles = `${colors} ${sizes} border-solid no-underline truncate ${hasHorizontalMargin ? 'mx-1' : ''}`;
 
-  const OptIcon = iconName => (
-    <>{iconName && <Icon name={iconName} customClass={`${colors} h-6 mx-1 inline my-auto`} />}</>
-  );
-
-  if (linkPath.slice(0, 5) === 'https') {
-    return (
-      <Link to={linkPath} className={bubbleStyles} target='_blank'>
-        {OptIcon(icon)} {children}
-      </Link >
-    );
-  }
+  const OptIcon = iconName => (<>{iconName && <Icon name={iconName} customClass={`${colors} h-6 mx-1 inline my-auto`} />}</>);
 
   return (
-    <Link to={linkPath} className={bubbleStyles}>
+    <Link to={linkPath} className={bubbleStyles} target={linkPath.slice(0, 5) === 'https' ? '_blank' : ''}>
       {OptIcon(icon)} {children}
     </Link >
   );
@@ -55,6 +49,7 @@ BubbleLink.propTypes = {
   color: PropTypes.oneOf(['tertiary', 'brand', 'link', 'button']).isRequired,
   isLarger: PropTypes.bool,
   hasMargin: PropTypes.bool,
+  hasHorizontalMargin: PropTypes.bool,
 };
 
 export default BubbleLink;

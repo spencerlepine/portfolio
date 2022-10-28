@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Layout, Head } from '@components';
 import LandingSection from '@styles/landingSection';
 import NotFoundPage from '@pages/404';
-
+import '@styles/postStyles.css';
 
 const extractImage = thumbnail => {
   try {
@@ -48,7 +48,6 @@ const PostTemplate = ({ data, location }) => {
   const postData = data.markdownRemark;
   const { frontmatter, html } = postData;
   const { title, date, tags, slug, description, thumbnail } = frontmatter;
-  const postStyles = 'text-left max-w-2xl mx-auto text-primary-text';
 
   return (
     <Layout location={location}>
@@ -80,7 +79,10 @@ const PostTemplate = ({ data, location }) => {
           </p>
         </header>
 
-        <div className={postStyles} dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          className="not-prose text-left max-w-2xl mx-auto text-primary-text"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
 
       </LandingSection>
 
