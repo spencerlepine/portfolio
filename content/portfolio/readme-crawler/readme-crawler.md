@@ -8,7 +8,7 @@ tech:
   - Node.js
   - jsdom
   - node-fetch
-featureSection: 'hobby'
+featureSection: 'nowhere'
 slug: /portfolio/readme-crawler
 thumbnail: ./readme-thumbnail.png
 screenshots:

@@ -106,3 +106,9 @@ One issue I ran into was trying to automatically save estimate prices. No servic
 
 I learned many development skills during this project, and also had many failures. I learned React, React Router, React Context, MongoDB, Express, Firebase Authentication, Firebase Firestore, MaterialUI, Jest and React Testing Library, using a linter, git workflow, and deploying to Heroku.
 
+---
+
+Also find me here:
+* [Twitter (@spencerlepine)](https://twitter.com/SpencerLepine)
+* [GitHub (@spencerlepine)](https://github.com/spencerlepine)
+* [LinkedIn](https://www.linkedin.com/in/spencer-lepine/)

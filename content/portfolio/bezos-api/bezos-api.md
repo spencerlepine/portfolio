@@ -16,9 +16,11 @@ screenshots:
 ---
 [![Continuous Integration](https://github.com/bezos-api/bezos-api/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bezos-api/bezos-api/actions/workflows/ci.yml) [![Deploy Lambda](https://github.com/bezos-api/bezos-api/actions/workflows/deploy-lambda.yml/badge.svg?branch=main)](https://github.com/bezos-api/bezos-api/actions/workflows/deploy-lambda.yml)
 
-API to fetch a random Jeff Bezos quote deployed to AWS. Automated deployments using AWS CDK to provision resources and permissions automatically.
+API to fetch a random Jeff Bezos quote deployed to AWS.
 
 > To see tickets - view the status of the [GitHub Project](https://github.com/orgs/bezos-api/projects/1).
+
+This is a serverless API using Amazon Gateway API connected to AWS Lambda. Deployments are automated using AWS CDK (w/ GitHub Actions) to provision resources and permissions automatically.
 
 
 ## 🔥 API Endpoint
