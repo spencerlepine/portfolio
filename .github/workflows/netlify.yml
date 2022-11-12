@@ -15,7 +15,7 @@ on:
 
 jobs:
   netlify_deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest    
     environment:
       name: deployment
       url: https://spencerlepine.com
@@ -34,9 +34,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     # https://github.com/bahmutov/npm-install
-      # GitHub Action for install npm dependencies with caching without any configuration
-      - name: "📦 Install Dependencies"
-        uses: bahmutov/npm-install@v1
+    # GitHub Action for install npm dependencies with caching without any configuration
+    - name: "📦 Install Dependencies"
+      uses: bahmutov/npm-install@v1
 
     - name: "📦 Install Dependencies"
       # if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
