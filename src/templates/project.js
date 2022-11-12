@@ -48,34 +48,20 @@ const ProjectTemplate = ({ data, location }) => {
           <Link to="/portfolio" className="text-title-text">View Portfolio</Link>
         </span>
 
-        <header className="my-8">
-          <h1 className="text-title-text">{title}</h1>
-          <span >
-            {github && (
-              <BubbleLink linkPath={github} icon="GitHub" color="tertiary" hasHorizontalMargin>
-                Repository
-              </BubbleLink>
-            )}
-            {external && (
-              <BubbleLink linkPath={external} icon="External" color="green" isOutline hasHorizontalMargin>
-                Demo
-              </BubbleLink>
-            )}
-          </span>
-        </header>
-        {/* 
+        <header className="my-8 max-w-3xl mx-auto text-left flex">
+          <h1 className="text-title-text my-0 mr-auto">{title}</h1>
 
-        <div>
-          {tech && tech.length && (
-            <ul >
-              {tech.map((tech, i) => (
-                <li key={i} >
-                  {tech}
-                </li>
-              ))}
-            </ul>
+          {github && (
+            <BubbleLink linkPath={github} icon="GitHub" color="tertiary" hasHorizontalMargin>
+              Repository
+            </BubbleLink>
           )}
-        </div> */}
+          {external && (
+            <BubbleLink linkPath={external} icon="External" color="green" isOutline hasHorizontalMargin>
+              Demo
+            </BubbleLink>
+          )}
+        </header>
 
         <div className="text-left max-w-3xl mx-auto text-primary-text">
           {images.length > 0 && (

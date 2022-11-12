@@ -15,6 +15,9 @@ tech:
 featureSection: 'hobby'
 thumbnail: ./laas-thumbnail.png
 slug: /portfolio/llama-as-a-service
+screenshots:
+ - './diagram.png'
+ - './laas-thumbnail.png'
 ---
 
 Random Llama Image API. The world's first Llama as a Service (LaaS) - by @spencerlepine

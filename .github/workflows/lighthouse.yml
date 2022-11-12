@@ -6,15 +6,20 @@ jobs:
     name: Lighthouse
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js 18.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - name: yarn install, build
-        run: |
-          yarn install
-          yarn run build
+
+      # https://github.com/bahmutov/npm-install
+      # GitHub Action for install npm dependencies with caching without any configuration
+      - name: "📦 Install Dependencies"
+        uses: bahmutov/npm-install@v1
+
+      - name: yarn build
+        run: yarn run build
+        
       - name: run Lighthouse CI
         run: |
           yarn global add @lhci/cli@0.9.0

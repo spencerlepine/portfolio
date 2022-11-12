@@ -22,29 +22,17 @@ jobs:
     name: Node ${{ matrix.node }} on ${{ matrix.os }}
     steps:
       - name: ♻️ Check out Git Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: 🔖  Set up Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
 
-      - name: "⚙️ Get Yarn Cache Directory Path"
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-      - name: "⚡️ Cache Dependencies"
-        uses: actions/cache@v1
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
+      # https://github.com/bahmutov/npm-install
+      # GitHub Action for install npm dependencies with caching without any configuration
       - name: "📦 Install Dependencies"
-        # if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
-        run: yarn
+        uses: bahmutov/npm-install@v1
 
       - name: 🔴 Lint all files
         run: yarn run lint

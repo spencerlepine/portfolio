@@ -72,3 +72,10 @@ The endpoints for this project are documented in [this markdown file](https://gi
 - Engineering Journal: [PDF](resources/system_design_project_engineering_journal.pdf) &nbsp; [Markdown](resources/JOURNAL.md) &nbsp; [Google Doc](https://docs.google.com/document/d/1pTTeDCzcKNozd9dljexVn-PrXwzoTBS0hby2dOZ95yw)
 - Ticketing System: [Trello Board:](https://trello.com/b/Ua5qkKmA/trello-system-design-capstone)
 - Source Code: [GitHub Repo](https://github.com/sdc-bareminimum/project-catwalk-related-service)
+
+---
+
+Also find me here:
+* [Twitter (@spencerlepine)](https://twitter.com/SpencerLepine)
+* [GitHub (@spencerlepine)](https://github.com/spencerlepine)
+* [LinkedIn](https://www.linkedin.com/in/spencer-lepine/)

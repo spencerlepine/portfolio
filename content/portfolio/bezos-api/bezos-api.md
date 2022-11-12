@@ -2,7 +2,7 @@
 date: '2022-11-11'
 title: 'Bezos API'
 github: 'https://github.com/bezos-api/bezos-api'
-description: 'Random Jeff Bezos quote API deployed to AWS'
+description: 'Random Jeff Bezos quote API w/ automated deployment/provisioning with GitHub Actions to AWS CDK (serverless).'
 tech:
   - AWS Lambda
   - GitHub Actions
@@ -10,9 +10,10 @@ tech:
   - AWS CDK
 featureSection: 'hobby'
 slug: /portfolio/bezos-api
-thumbnail: ./diagram.png
+thumbnail: ./bezos-thumbnail.png
 screenshots:
   - ./diagram.png
+  - ./bezos-thumbnail.png
 ---
 [![Continuous Integration](https://github.com/bezos-api/bezos-api/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bezos-api/bezos-api/actions/workflows/ci.yml) [![Deploy Lambda](https://github.com/bezos-api/bezos-api/actions/workflows/deploy-lambda.yml/badge.svg?branch=main)](https://github.com/bezos-api/bezos-api/actions/workflows/deploy-lambda.yml)
 
