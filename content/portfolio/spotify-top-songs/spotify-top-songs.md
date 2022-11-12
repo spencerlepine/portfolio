@@ -8,28 +8,43 @@ tech:
   - React
   - Spotify Web API
 featureSection: 'hobby'
-thumbnail: ./spotify-thumbnail.jpg
+thumbnail: ./spotify-thumbnail.png
 screenshots:
-  - ./spotify-thumbnail.jpg
+  - ./spotify-thumbnail.png
 slug: /portfolio/spotify-top-songs
 ---
 
+## 🎯 Description
+
 Generate a Spotify playlist based on the top rated songs of your favorite artists.
 
-Connect user Spotify accounts to this React App and create personalized playlists by calling the Spotify Web API.
+Connect user Spotify accounts to the web app, select artists, and create a personalized playlist.
 
-View the [demo](https://master.dj6fzfb5de88f.amplifyapp.com/)
+View the web app [demo](https://master.dj6fzfb5de88f.amplifyapp.com/)
 
-#### Technologies:
+## ⭐ How It's Built
+
+This was built with React and manual CSS styling. It connects to and authenticates Spotify accounts with the Spotify Web API. The static files have been manually deployed to AWS Amplify.
+
+## 🎥 Demo Video
+
+[![Top Songs Thumbnail](./spotify-youtube.png)](https://www.youtube.com/watch?v=qbcwO6H8ffY)
+
+## 📦 Technologies
+
 - [React](https://reactjs.org/)
 - [Spotify Web Api JS Wrapper](https://github.com/JMPerez/spotify-web-api-js/blob/master/src/spotify-web-api.js)
 - [React Router](https://reactrouter.com/)
+- [AWS Amplify](https://aws.amazon.com/amplify)
 
 ### Setup:
-- ```git clone https://github.com/spencerlepine/spotify-top-songs.git```
-- ```cd spotify-top-songs```
-- ```npm install```
-- ```npm start```
+
+```
+git clone https://github.com/spencerlepine/spotify-top-songs.git
+cd spotify-top-songs
+npm install
+npm start
+```
 
 ---
 
