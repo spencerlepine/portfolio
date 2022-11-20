@@ -29,7 +29,7 @@ Ocean-themed ecommerce web app connected to microservice architecture backend.
 
 ## 🎥 Demo Video + Project Walk-through
 
-[![Youtube Video](./squidshop-youtube.png)](TODO)
+[![Youtube Video](./squidshop-youtube.png)](https://www.youtube.com/watch?v=VfxcdeF16uE)
 
 ## 🎯 Project Overview
 
@@ -45,7 +45,7 @@ Ocean-themed ecommerce web app connected to microservice architecture backend.
 ## 🌐 Links
 
 - Demo website: [https://squidshop.netlify.app/](https://squidshop.netlify.app/)
-- Youtube demo video: [TODO](TODO)
+- Demo video: [Youtube video](https://www.youtube.com/watch?v=VfxcdeF16uE)
 - Video slideshow: [Google Slides](https://docs.google.com/presentation/d/1Sms6UfmCuadFw1SUD1WRonk7vxQzgPKXFXU61_wVC60/edit?usp=sharing)
 - Source code: [github.com/spencerlepine/squidshop-ecommerce](https://github.com/spencerlepine/squidshop-ecommerce)
 - Blog post: [https://www.spencerlepine.com/portfolio/squidshop-ecommerce](https://www.spencerlepine.com/portfolio/squidshop-ecommerce)

@@ -18,7 +18,7 @@ This is a walkthrough of the development process and system design engineering f
 
 - Visit the [LaaS website](https://llama-as-a-service.netlify.app/) for a demo
 - View the source code on [GitHub](https://github.com/orgs/llama-as-a-service/repositories)
-- View the walkthrough [YouTube video](TODO)
+- View the walkthrough [YouTube video](https://www.youtube.com/watch?v=uDQUA_JTMJk)
 
 ### What I Learned
 

@@ -2,7 +2,7 @@
 date: '2022-06-20'
 title: 'Llama as a Service'
 github: 'https://github.com/llama-as-a-service'
-external: 'https://llama-as-a-service.netlify.app/'
+external: 'https://www.youtube.com/watch?v=uDQUA_JTMJk'
 description: Random Llama Image API. The world's first Llama as a Service (LaaS)
 tech:
   - React
@@ -44,7 +44,7 @@ curl https://llama-as-a-service-images.herokuapp.com/random
 
 ## 🎥 Walkthrough Video
 
-[![YouTube Video](https://user-images.githubusercontent.com/60903378/178522554-bdd1e702-b01c-4433-8d11-2b8e4ccf4f75.png)](TODO)
+[![YouTube Video](https://user-images.githubusercontent.com/60903378/178522554-bdd1e702-b01c-4433-8d11-2b8e4ccf4f75.png)](https://www.youtube.com/watch?v=uDQUA_JTMJk)
 
 ## 💡 Blog Post
 Read about the development process and what I learned on my [blog post](https://www.spencerlepine.com/blog/building-llama-as-a-service)
