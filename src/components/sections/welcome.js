@@ -30,12 +30,12 @@ const Welcome = () => (
 
         <div className="mx-auto text-center flex flex-col max-w-sm">
           <Suspense fallback={<div>Loading...</div>}>
-            <div className="">
+            <div className="rounded-full">
               <StaticImage
                 src="../../assets/images/me.png"
                 // width={280}
                 className="flex justify-center max-w-full h-auto m-1 rounded-full border-8 border-solid border-gray-200"
-                style={{ borderRadius: '50%' }}
+                imgStyle={{ borderRadius: '100%' }}
                 quality={90}
                 formats={['AUTO', 'WEBP', 'AVIF']}
                 alt="Spencer Lepine Headshot Profile"
