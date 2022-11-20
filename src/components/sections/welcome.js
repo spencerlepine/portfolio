@@ -8,25 +8,34 @@ import LandingSection from '@styles/landingSection';
 
 const Welcome = () => (
   <LandingSection id="welcome">
-    <div className="flex text-center mx-auto max-w-6xl py-20">
-      <div className="flex mx-auto flex-wrap overflow-hidden">
-        <div className="pr-10 max-w-md w-fit text-left my-auto mx-10">
-          <h1 className="my-2 font-semibold text-title-text"><Emoji symbol='👋' />{' '}Hello!</h1>
-          <h1 className="my-2 font-semibold text-title-text">I'm Spencer Lepine</h1>
-          <h1 className="mt-4 mb-8 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-8 py-2 rounded-md truncate">
-            <span className="text-gray-600 select-none">$</span> Software Engineer
-          </h1>
-          <BubbleLink linkPath='/portfolio' color="brand" isLarger hasMargin>View Portfolio</BubbleLink>
-          <BubbleLink linkPath='/contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
+    <div className="mx-auto max-w-6xl xs:py-4 sm:py-4">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+        <div className="mx-auto text-left flex flex-col max-w-sm mb-5">
+          <div>
+            <p className="text-4xl my-0 text-xl font-semibold text-title-text"><Emoji symbol='👋' />{' '}Hello!</p>
+            <p className="text-4xl  my-1 font-semibold text-title-text">I'm Spencer Lepine</p>
+            <p className="text-4xl my-0 mb-4 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-8 rounded-md">
+              <span className="text-gray-600 select-none">$</span> Software Engineer
+            </p>
+          </div>
+          <div className="mx-auto sm:flex">
+            <div className="my-8 sm:my-0">
+              <BubbleLink linkPath='/portfolio' color="brand" isLarger hasMargin>View Portfolio</BubbleLink>
+            </div>
+            <div className="my-5 sm:my-0">
+              <BubbleLink linkPath='/contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
+            </div>
+          </div>
         </div>
 
-        <div className="mx-10">
+        <div className="mx-auto text-center flex flex-col max-w-sm">
           <Suspense fallback={<div>Loading...</div>}>
-            <div className="mx-auto w-fit max-w-xs my-8">
+            <div className="">
               <StaticImage
                 src="../../assets/images/me.png"
-                width={280}
+                // width={280}
                 className="flex justify-center max-w-full h-auto m-1 rounded-full border-8 border-solid border-gray-200"
+                style={{ borderRadius: '50%' }}
                 quality={90}
                 formats={['AUTO', 'WEBP', 'AVIF']}
                 alt="Spencer Lepine Headshot Profile"
@@ -34,7 +43,7 @@ const Welcome = () => (
             </div>
           </Suspense>
 
-          <div className="flex mx-auto w-fit justify-center m-2">
+          <div className="flex mx-auto">
             {socialMedia.map((social, i) => (
               <a href={social.url} key={i}>
                 <Icon name={social.name} customClass="h-8 text-title-text mx-1"></Icon>
