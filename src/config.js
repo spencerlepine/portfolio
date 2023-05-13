@@ -32,6 +32,10 @@ module.exports = {
       url: '/blog',
     },
     {
+      name: 'About',
+      url: '/about',
+    },
+    {
       name: 'Contact',
       url: '/contact',
     },
@@ -40,22 +44,30 @@ module.exports = {
   sourceRepository: 'https://github.com/spencerlepine/spencerlepine.com',
 
   skills: [
-    { skill: 'JavaScript', icon: 'JavaScript' },
-    { skill: 'Node.js', icon: 'NodeJS' },
-    { skill: 'React', icon: 'React' },
-    { skill: 'Tailwind CSS', icon: 'TailwindCSS' },
     { skill: 'HTML', icon: 'HTML' },
     { skill: 'CSS', icon: 'CSS' },
-    { skill: 'Express', icon: 'Express' },
-    { skill: 'Jest', icon: 'Jest' },
-    { skill: 'Cypress', icon: 'Cypress' },
-    { skill: 'AWS (EC2)', icon: 'EC2' },
-    { skill: 'Docker', icon: 'Docker' },
+    { skill: 'JavaScript', icon: 'JavaScript' },
+    { skill: 'TypeScript', icon: 'TypeScript' },
     { skill: 'Git', icon: 'Git' },
-    { skill: 'VSCode', icon: 'VSCode' },
-    { skill: 'OSX', icon: 'OSX' },
-    { skill: 'Firebase', icon: 'Firebase' },
-    { skill: 'SQL', icon: 'SQL' },
+    { skill: 'React', icon: 'React' },
+    { skill: 'Jest', icon: 'Jest' },
     { skill: 'GitHub Actions', icon: 'GitHubActions' },
+    { skill: 'Node.js', icon: 'NodeJS' },
+    { skill: 'Lambda', icon: 'Lambda' },
+    { skill: 'CDK', icon: 'CDK' },
+
+    { skill: 'ChatGPT', icon: 'ChatGPT' }, //TODO-XYZ
+    { skill: 'Webpack', icon: 'Webpack' }, //TODO-XYZ
+    { skill: 'Storybook', icon: 'Storybook' }, //TODO-XYZ
+
+    // { skill: 'VSCode', icon: 'VSCode' },
+    // { skill: 'OSX', icon: 'OSX' },
+    // { skill: 'Tailwind CSS', icon: 'TailwindCSS' },
+    // { skill: 'Express', icon: 'Express' },
+    // { skill: 'Cypress', icon: 'Cypress' },
+    // { skill: 'AWS (EC2)', icon: 'EC2' },
+    // { skill: 'Docker', icon: 'Docker' },
+    // { skill: 'Firebase', icon: 'Firebase' },
+    // { skill: 'SQL', icon: 'SQL' }, 
   ],
 };

@@ -60,10 +60,10 @@ const ContactForm = () => {
 
   if (status) {
     return (
-      <>
+      <div className="m-20">
         <div>Thank you!</div>
         <div>{status}</div>
-      </>
+      </div>
     );
   }
 
