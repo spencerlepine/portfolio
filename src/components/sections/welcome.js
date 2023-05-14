@@ -5,6 +5,9 @@ import { socialMedia } from '@config';
 import { StaticImage } from 'gatsby-plugin-image';
 import BubbleLink from '@styles/bubbleLink';
 import LandingSection from '@styles/landingSection';
+import { TypeAnimation } from 'react-type-animation';
+
+const welcomeImg = '../../assets/images/welcome.png';
 
 const Welcome = () => (
   <LandingSection id="welcome">
@@ -13,12 +16,26 @@ const Welcome = () => (
         <div className="mx-auto text-left flex flex-col max-w-sm mb-5">
           <div>
             <p className="text-4xl my-0 text-xl font-semibold text-title-text"><Emoji symbol='👋' />{' '}Hello!</p>
-            <p className="text-4xl  my-1 font-semibold text-title-text">I'm Spencer Lepine</p>
-            <p className="text-4xl my-0 mb-4 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-8 rounded-md">
-              <span className="text-gray-600 select-none">$</span> Software Engineer
+            <p className="text-4xl  my-1 font-semibold text-title-text mr-8">I'm Spencer Lepine</p>
+            <p className="text-4xl my-0 mb-4 bg-gray-800 text-green-400 font-normal font-sans pl-4 pr-4 rounded-md">
+              <span className="text-gray-600 select-none no-wrap">$</span> <TypeAnimation
+                sequence={[
+                  '_',
+                  530,
+                  '',
+                  530,
+                  'Software', // Types 'One'
+                  200, // Waits 1,
+                  'Software Engineer',
+                ]}
+                wrapper="span"
+                cursor={false}
+                repeat={false}
+                style={{}}
+              />
             </p>
           </div>
-          <div className="mx-auto sm:flex">
+          <div className="mx-auto sm:flex mt-4">
             <div className="my-8 sm:my-0">
               <BubbleLink linkPath='/portfolio' color="brand" isLarger hasMargin>View Portfolio</BubbleLink>
             </div>
@@ -32,11 +49,11 @@ const Welcome = () => (
           <Suspense fallback={<div>Loading...</div>}>
             <div className="rounded-full">
               <StaticImage
-                src="../../assets/images/me.png"
+                src={welcomeImg}
                 // width={280}
                 className="flex justify-center max-w-full h-auto m-1 rounded-full border-8 border-solid border-gray-200"
                 imgStyle={{ borderRadius: '100%' }}
-                quality={90}
+                quality={80}
                 formats={['AUTO', 'WEBP', 'AVIF']}
                 alt="Spencer Lepine Headshot Profile"
               />
@@ -46,7 +63,7 @@ const Welcome = () => (
           <div className="flex mx-auto">
             {socialMedia.map((social, i) => (
               <a href={social.url} key={i}>
-                <Icon name={social.name} customClass="h-8 text-title-text mx-1"></Icon>
+                <Icon name={social.name} customClass="h-10 text-title-text mx-1"></Icon>
               </a>
             ))}
           </div>

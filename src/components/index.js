@@ -15,3 +15,4 @@ export { default as ExtraLinks } from './sections/meeting-link';
 export { default as YoutubeShoutout } from './sections/youtube-link';
 export { default as Articles } from './sections/articles';
 export { default as PageButtons } from './pageButtons';
+export { default as AboutPage } from './about';

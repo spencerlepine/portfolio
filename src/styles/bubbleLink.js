@@ -24,6 +24,10 @@ const colorPalette = {
     outlined: 'bg-primary text-tertiary border-tertiary',
     fill: 'bg-green-600 text-white border-green-600',
   },
+  readmore: {
+    outlined: '',
+    fill: 'bg-tertiary text-gray-400 opacity-50 border-none',
+  },
 };
 
 

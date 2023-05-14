@@ -33,6 +33,12 @@ import {
   IconSQL,
   IconGitHubActions,
   IconClose,
+  IconLambda,
+  IconTypeScript,
+  IconCDK,
+  IconWebpack,
+  IconStorybook,
+  IconChatGPT,
 } from '@components/icons';
 
 const GetIcon = name => {
@@ -101,6 +107,18 @@ const GetIcon = name => {
       return IconGitHubActions;
     case 'Meeting':
       return IconMeeting;
+    case 'Lambda':
+      return IconLambda;
+    case 'TypeScript':
+      return IconTypeScript;
+    case 'CDK':
+      return IconCDK;
+    case 'Webpack':
+      return IconWebpack;
+    case 'Storybook':
+      return IconStorybook;
+    case 'ChatGPT':
+      return IconChatGPT;
     default:
       return IconExternal;
   }
