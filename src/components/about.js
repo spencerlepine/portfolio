@@ -11,9 +11,6 @@ const currentSituation = `
   I'm Spencer Lepine, a Software Engineer based in Seattle.
   Originally from the east-coast, I moved to the PNW in 2021 before attending Hack Reactor, a 3 month coding bootcamp.
 `;
-const movingForward = `
-  I love the fast pace, constant learning, and strive to advance my career.
-`;
 const additionalExperience = `
   I am experienced in Full-Stack development, with a strong focus on Frontend work. 
   While continuing to advance my technical skills, I enjoy sharing my progress by showcasing my work on GitHub and YouTube.
@@ -40,7 +37,6 @@ const About = () => (
           <div className="mx-auto max-w-4xl text-left">
             <p className="text-primary-text mb-0 max-w-xl mx-auto px-4">{currentSituation}</p>
             <p className="text-primary-text mb-0 max-w-xl mx-auto px-4">{history}</p>
-            <p className="text-primary-text mb-0 max-w-xl mx-auto px-4">{movingForward}</p>
             <p className="text-primary-text mb-0 max-w-xl mx-auto px-4">{hobbies}</p>
 
             <p className="text-primary-text mb-0 max-w-xl mx-auto px-4 text-center">...</p>
