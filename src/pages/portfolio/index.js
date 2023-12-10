@@ -5,13 +5,13 @@ import { Layout, Head, Portfolio, YoutubeShoutout } from '@components';
 
 const ProjectsPage = ({ location, data }) => (
   <Layout location={location}>
-    <Head title="Portfolio | @SpencerLepine - Software Engineer" description="Spencer Lepine's portfolio of Software Engineering applications."  />
+    <Head title="Portfolio | @SpencerLepine - Software Engineer" description="Spencer Lepine's portfolio of Software Engineering applications." />
 
     <Portfolio projects={data.portfolioProjects.edges || []} sectionTitle="Portfolio" hideViewAllBtn />
 
     <YoutubeShoutout />
 
-    <Portfolio projects={data.hobbyProjects.edges || []} sectionTitle="Hobby Projects" hideViewAllBtn />
+    <Portfolio projects={data.hobbyProjects.edges || []} sectionTitle="More Projects" hideViewAllBtn />
   </Layout >
 );
 
@@ -40,6 +40,7 @@ export const pageQuery = graphql`
             tech
             github
             external
+            youtube
             thumbnail {
               childImageSharp {
                 fluid(quality: 100, maxWidth: 1000) {
@@ -69,6 +70,7 @@ export const pageQuery = graphql`
             tech
             github
             external
+            youtube
             thumbnail {
               childImageSharp {
                 fluid(quality: 100, maxWidth: 1000) {

@@ -3,6 +3,7 @@ date: '2021-10-14'
 title: 'Atelier'
 github: 'https://github.com/fec-bareminimum/project-catwalk'
 external: 'https://project-atelier.herokuapp.com/'
+youtube: ''
 description: 'MVP client-facing retail web-portal. Browse catalog products with a modern customer experience'
 tech:
   - React

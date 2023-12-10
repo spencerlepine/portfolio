@@ -3,7 +3,8 @@ date: '2021-04-04'
 title: 'Spotify Top Songs'
 github: 'https://github.com/spencerlepine/spotify-top-songs'
 external: 'https://master.dj6fzfb5de88f.amplifyapp.com'
-description: Playlist generator based on the top five songs from your favorite artists, built with React and connected to Spotify's Web API.
+youtube: ''
+description: Generate a playlist to combine the top 5 songs from every selected artist. Built with React and Spotify Web API
 tech:
   - React
   - Spotify Web API

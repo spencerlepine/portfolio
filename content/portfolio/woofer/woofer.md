@@ -2,8 +2,10 @@
 date: '2022-05-07'
 title: 'Woofer'
 github: 'https://github.com/spencerlepine/woofer'
-external: 'https://youtu.be/aiJhCoZRc78'
-description: 'Dating app for pets with real time chat (web sockets) and authentication (Firebase). A full-stack MERN app with CI/CD pipeline using GitHub Actions.'
+external: ''
+youtube: 'https://youtu.be/aiJhCoZRc78'
+description: 'Pet dating app with real-time websocket chat (Socket.io) and authentication (Firebase). MERN stack application deployed w/ Amazon EC2'
+
 tech:
   - React
   - Node.js

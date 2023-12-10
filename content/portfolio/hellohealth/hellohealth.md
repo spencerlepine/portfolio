@@ -1,9 +1,10 @@
 ---
 date: '2021-10-20'
 title: 'HelloHealth'
-github: 'https://github.com/Blue-Ocean-Team-1/HelloHealth'
-external: 'https://gallant-torvalds-547222.netlify.app/'
-description: 'Web app that connects consumers to local farms. Browse products and purchase the weekly meal-kit box.'
+github: 'https://github.com/spencerlepine/HelloHealth'
+external: ''
+youtube: ''
+description: 'HelloFresh clone built by team of 8 using React, Firebase (Auth), PostgreSQL, NodeJS/Amazon EC2.'
 tech:
   - React
   - MaterialUI

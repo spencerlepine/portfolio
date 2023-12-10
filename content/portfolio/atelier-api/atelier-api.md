@@ -1,9 +1,10 @@
 ---
 date: '2021-10-20'
 title: 'Atelier API'
-github: 'https://github.com/sdc-bareminimum/project-catwalk-related-service'
+github: 'https://github.com/spencerlepine/atelier-ecommerce-api'
 external: ''
-description: 'Node.js RESTful API serving retail product data built to handle demands of production level traffic.'
+youtube: ''
+description: 'Node.js RESTful API serving retail product data (PostgreSQL) built to handle demands of production level traffic.' 
 tech:
   - Node.js
   - Express

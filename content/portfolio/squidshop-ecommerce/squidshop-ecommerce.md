@@ -2,8 +2,9 @@
 date: '2022-08-22'
 title: 'SquidShop Ecommerce'
 github: 'https://github.com/spencerlepine/squidshop-ecommerce'
-external: 'https://squidshop.netlify.app'
-description: 'Ocean-themed ecommerce web app connected to microservice architecture backend. Dockerized and automated with continuous integration using GitHub Actions.'
+external: 'https://squidshop.netlify.app/'
+youtube: 'https://www.youtube.com/watch?v=VfxcdeF16uE'
+description: 'Ecommerce app built with React/MaterialUI, Node.js microservice architecture (Amazon EC2), Cassandra NoSQL database, and MySQL database.'
 tech:
   - React
   - Node.js

@@ -1,8 +1,9 @@
 ---
 date: '2022-10-12'
-title: 'Open Source Repository Web Crawler'
+title: 'GitHub Repository Web Crawler'
 github: 'https://github.com/spencerlepine/open-source-crawler'
-external: 'TODO'
+external: 'https://github.com/spencerlepine/open-source-crawler-output'
+youtube: ''
 description: 'Web crawler finding open source GitHub repositories, parsing README files, and scanning for typo/security issues.'
 tech:
   - GitHub Actions

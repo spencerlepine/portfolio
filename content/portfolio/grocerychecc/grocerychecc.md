@@ -2,7 +2,8 @@
 date: '2021-10-14'
 title: 'GroceryChecc'
 github: 'https://github.com/spencerlepine/hr-sea19-mvp'
-external: 'https://grocery-checc.herokuapp.com/'
+external: ''
+youtube: ''
 description: 'MVP full-stack app for storing auto generated grocery list and recipes'
 tech:
   - React

@@ -17,7 +17,7 @@ const ProjectCard = ({ node }) => {
   const { frontmatter } = node;
   const image = extractImages(node);
 
-  const { github, external, title, description, slug } = frontmatter;
+  const { github, external, title, description, youtube } = frontmatter; // { slug }
 
   const TitleLink = () => {
     if (external) {
@@ -37,7 +37,7 @@ const ProjectCard = ({ node }) => {
 
         <p className="text-primary-text max-w-sm pr-4">{description}</p>
 
-        <BubbleLink linkPath={slug} color="brand" hasMargin>
+        <BubbleLink linkPath={youtube || github} color="brand" hasMargin>
           Learn More
         </BubbleLink>
 

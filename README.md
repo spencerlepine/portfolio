@@ -38,5 +38,5 @@ $ git clone https://github.com/spencerlepine/spencerlepine.com.git
 $ cd spencerlepine.com
 $ yarn install
 $ yarn start
-# access on localhost:3000
+# access on http://localhost:8000
 ```

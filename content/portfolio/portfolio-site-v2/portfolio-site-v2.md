@@ -3,6 +3,7 @@ date: '2022-08-28'
 title: 'Portfolio Site'
 github: 'https://github.com/spencerlepine/spencerlepine.com'
 external: 'https://www.spencerlepine.com/'
+youtube: ''
 description: 'Developer portfolio/blog site built with React and Gatsby, styled with TailwindCSS, and deployed to Netlify.'
 tech:
   - React
@@ -11,7 +12,7 @@ tech:
   - TailwindCSS
   - Netlify
   - GitHub Actions
-featureSection: 'hobby'
+featureSection: 'nowhere'
 thumbnail: ./portfolio-thumbnail.png
 slug: /portfolio/portfolio-site-v2
 screenshots:

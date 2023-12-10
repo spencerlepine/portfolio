@@ -2,14 +2,16 @@
 date: '2022-11-11'
 title: 'Bezos API'
 github: 'https://github.com/bezos-api/bezos-api'
+youtube: ''
 description: 'Random Jeff Bezos quote API w/ automated deployment/provisioning with GitHub Actions to AWS CDK (serverless).'
 tech:
   - AWS Lambda
   - GitHub Actions
   - Amazon Gateway API
   - AWS CDK
-featureSection: 'hobby'
+featureSection: 'nowhere'
 slug: /portfolio/bezos-api
+hidden: true
 thumbnail: ./bezos-thumbnail.png
 screenshots:
   - ./diagram.png

@@ -1,17 +1,14 @@
 ---
 date: '2021-06-09'
-title: 'ManyShiba Twitter Bot'
+title: 'ManyShiba Twitter/X Bot'
 github: 'https://github.com/spencerlepine/manyshiba-bot'
 external: 'https://twitter.com/manyshiba'
-description: Twitter bot posting daily Shiba Inu pictures. Once you follow, there is no going back ;)
+youtube: ''
+description: Twitter (X) bot posting daily Shiba Inu pictures. A NodeJS script using Shiba.online API and Twitter API, automated with GitHub Actions
 tech:
-  - React
   - Node.js
-  - MongoDB
-  - Docker
   - Netlify
   - GitHub Actions
-  - Heroku
 featureSection: 'hobby'
 thumbnail: ./manyshiba.png
 slug: /portfolio/manyshiba-bot

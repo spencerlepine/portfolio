@@ -17,7 +17,7 @@ const Menu = () => {
   });
 
   return (
-    <div className="my-auto mx-4 md:hidden">
+    <div className="ml-auto  my-auto mx-4 md:hidden">
       <div ref={wrapperRef}>
         <div className="flex items-center my-auto">
           <button className="outline-none mobile-menu-button" onClick={toggleMenu}>

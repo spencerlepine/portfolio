@@ -2,8 +2,9 @@
 date: '2021-09-19'
 title: 'QuickCart'
 github: 'https://github.com/spencerlepine/quickcart'
-external: 'https://youtu.be/2YrizGT_2xA'
-description: 'Web app with grocery product catalog for budgeting a shopping list stored in the cloud. Connected to Firebase (BaaS) and multiple external APIs.'
+external: ''
+youtube: 'https://youtu.be/2YrizGT_2xA'
+description: 'Full stack React/Firebase application to create grocery lists. Scan barcodes and search real products with third party APIs.'
 tech:
   - React
   - Node.js

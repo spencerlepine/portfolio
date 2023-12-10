@@ -1,15 +1,13 @@
 ---
 date: '2022-06-20'
 title: 'Llama as a Service'
-github: 'https://github.com/llama-as-a-service'
-external: 'https://www.youtube.com/watch?v=uDQUA_JTMJk'
-description: Random Llama Image API. The world's first Llama as a Service (LaaS)
+github: 'https://github.com/llama-as-a-service/images-service'
+external: 'https://llama-as-a-service.netlify.app/'
+youtube: 'https://www.youtube.com/watch?v=uDQUA_JTMJk'
+description: The world's first Llama as a Service (LaaS). A random llama image API built with NodeJS and MongoDB
 tech:
-  - React
   - Node.js
   - MongoDB
-  - Docker
-  - Netlify
   - GitHub Actions
   - Heroku
 featureSection: 'hobby'

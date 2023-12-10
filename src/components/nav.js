@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { navLinks } from '@config';
-import { Menu, ThemeToggleBtn } from '@components';
+import { Menu } from '@components';
 import { Icon } from '@components/icons';
 
 const Nav = () => (
@@ -11,15 +11,15 @@ const Nav = () => (
         <Link to="/" ><Icon name="Logo" customClass="max-w-full h-auto m-1" /></Link>
       </div>
 
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <div className="ml-auto mr-4 relative my-auto h-fit pt-2">
           <ThemeToggleBtn />
         </div>
-      </Suspense>
+      </Suspense> */}
 
       <Menu />
 
-      <div className="my-auto text-lg hidden lg:flex md:flex xl:flex 2xl:flex">
+      <div className="ml-auto my-auto text-lg hidden lg:flex md:flex xl:flex 2xl:flex">
         {navLinks.map(({ url, name }) => (
           <Link key={name} to={url} className="py-1 px-4 text-gray-300 font-sans font-semibold">
             {name}
