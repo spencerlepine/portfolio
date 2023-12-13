@@ -9,15 +9,10 @@ const aboutImg = '../assets/images/me-slu.png';
 
 const currentSituation = `
   I'm Spencer Lepine, a Software Engineer based in Seattle.
-  Originally from the east-coast, I moved to the PNW in 2021 before attending Hack Reactor, a 3 month coding bootcamp.
+  I'm a Front-End Engineer working at Amazon Web Services (AWS) and soldier in the U.S. Army Reserves.
 `;
 const additionalExperience = `
-  I am experienced in Full-Stack development, with a strong focus on Frontend work. 
-  While continuing to advance my technical skills, I enjoy sharing my progress by showcasing my work on GitHub and YouTube.
-`;
-const personalStrengths = `
-  Being highly motivated is one of my strengths as a team member, along with my ability to quickly grasp new technologies.
-  Additionally, I actively question existing processes, aiming to find ways to improve, automate, or script existing team workflows.
+  I have experience in Full-Stack development, with a strong focus on TypeScript, React, and Node.js.
 `;
 const history = `
    My passion for web development began in high school, building mini-games in JavaScript and Python, developing React apps, and exploring open-source projects on GitHub.
@@ -43,7 +38,6 @@ const About = () => (
               <p className="text-primary-text mb-0 max-w-xl mx-auto px-4 text-center">...</p>
 
               <p className="text-primary-text mb-0 max-w-xl mx-auto px-4">{additionalExperience}</p>
-              <p className="text-primary-text mb-0 max-w-xl mx-auto px-4">{personalStrengths}</p>
             </div>
           </div>
 

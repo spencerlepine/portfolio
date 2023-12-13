@@ -7,12 +7,7 @@ const currentSituation = `
   Prior to my current role, I attended a 3-month Hack Reactor coding bootcamp.
 `;
 const additionalExperience = `
-  I am experienced in Full-Stack development, with a strong focus on Frontend work. 
-  While continuing to advance my technical skills, I enjoy sharing my progress by showcasing my work on GitHub and YouTube.
-`;
-const personalStrengths = `
-  Being highly motivated is one of my strengths as a team member, along with my ability to quickly grasp new technologies.
-  Additionally, I actively question existing processes, aiming to find ways to improve, automate, or script existing team workflows.
+  I have experience in Full-Stack development, with a strong focus on TypeScript, React, and Node.js.
 `;
 
 const About = () => (
@@ -22,7 +17,6 @@ const About = () => (
 
       <p className="text-secondary-text mb-0 max-w-xl mx-auto px-4">{currentSituation}</p>
       <p className="text-secondary-text mb-0 max-w-xl mx-auto px-4">{additionalExperience}</p>
-      <p className="text-secondary-text mb-0 max-w-xl mx-auto px-4">{personalStrengths}</p>
 
       <div className="mt-6">
         <BubbleLink linkPath={'/about'} color="readmore" hasMargin>

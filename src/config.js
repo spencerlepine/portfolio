@@ -15,11 +15,7 @@ module.exports = {
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/spencerlepine',
-    },
-    {
-      name: 'YouTube',
-      url: 'https://www.youtube.com/channel/UCBL6vAHJZqUlyJp-rcFU55Q',
-    },
+    }
   ],
 
   navLinks: [
