@@ -36,7 +36,7 @@
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.24.8",
     "gatsby-plugin-force-trailing-slashes": "^1.0.6",
-    "gatsby-plugin-google-gtag": "^4.24.0",
+    "gatsby-plugin-google-gtag": "^4.25.0",
     "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
