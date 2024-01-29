@@ -4,7 +4,7 @@ module.exports = {
     description:
       'Spencer Lepine is a Full Stack Software Engineer and technologist working to build the future today.',
     siteUrl: 'https://spencerlepine.com',
-    image: '/og.png',
+    image: '/og.jpg',
     twitterUsername: '@spencerlepine',
   },
   plugins: [

@@ -4,9 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - src/**
-      - content/**
-      - README.md
+      - none
 
 jobs:
   # Preform typo scan
