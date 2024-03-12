@@ -4,7 +4,7 @@
 
 <!-- [![Lighthouse CI](https://github.com/spencerlepine/spencerlepine.com/actions/workflows/lighthouse.yml/badge.svg?branch=master)](https://github.com/spencerlepine/spencerlepine.com/actions/workflows/lighthouse.yml) -->
 
-![OG Snapshot](./static/og@2x.png)
+![OG Snapshot](./static/og@2x.jpg)
 
 ## ❓ What Is This?
 
