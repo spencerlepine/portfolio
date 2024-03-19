@@ -7,7 +7,7 @@ import BubbleLink from '@styles/bubbleLink';
 import LandingSection from '@styles/landingSection';
 import { TypeAnimation } from 'react-type-animation';
 
-const welcomeImg = '../../assets/images/welcome.png';
+const welcomeImg = '../../assets/images/profile-picture-github-transparent.png';
 
 const Welcome = () => (
   <LandingSection id="welcome">
@@ -37,10 +37,10 @@ const Welcome = () => (
           </div>
           <div className="mx-auto sm:flex mt-4">
             <div className="my-8 sm:my-0">
-              <BubbleLink linkPath='/portfolio' color="brand" isLarger hasMargin>View Portfolio</BubbleLink>
+              <BubbleLink linkPath="https://www.linkedin.com/in/spencerlepine" color="brand" isLarger hasMargin>View LinkedIn</BubbleLink>
             </div>
             <div className="my-5 sm:my-0">
-              <BubbleLink linkPath='/contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
+              <BubbleLink linkPath='#contact' isOutlined color="brand" isLarger>Get In Touch</BubbleLink>
             </div>
           </div>
         </div>

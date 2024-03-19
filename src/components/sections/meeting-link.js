@@ -20,7 +20,7 @@ const LinkPrompt = (iconName, promptTitle, promptMessage, linkText, link) => (
 const Extra = () => (
   <LandingSection id="moreLinks" isSkewSection>
     <div className="flex text-center flex-wrap mx-auto max-w-4xl py-20">
-      {LinkPrompt('GitHub', 'More Projects', 'Looking to read or explore actual code? Find more over on my GitHub profile.', 'Open GitHub', githubLink)}
+      {LinkPrompt('GitHub', 'View Projects', 'Looking to read or explore actual code? Find more over on my GitHub profile.', 'Open GitHub', githubLink)}
 
       {LinkPrompt('Meeting', 'Book Meeting', 'Interested in a virtual coffee chat? Easily book a meeting with me through Calendly.', 'Let\'s Chat', meetingLink)}
     </div>

@@ -79,6 +79,7 @@ const ContactForm = () => {
         <input
           type="text"
           placeholder="Name"
+          data-testid="contact-form-name-input"
           name="name"
           className="w-full p-4 text-xs font-semibold border-2 border-text-primary rounded"
           required
@@ -88,6 +89,7 @@ const ContactForm = () => {
         <input
           type="email"
           placeholder="name@example.com"
+          data-testid="contact-form-email-input"
           className="w-full p-4 text-xs font-semibold border-2 border-text-primary rounded"
           name="email"
           required
@@ -96,13 +98,18 @@ const ContactForm = () => {
       <div className="mb-4">
         <textarea
           placeholder="Message..."
+          data-testid="contact-form-message-input"
           className="w-full p-4 text-xs font-semibold h-24 border-2 border-text-primary rounded"
           name="message"
           required
         />
       </div>
       <div className="text-right">
-        <button type="submit" className="bg-secondary text-primary border-secondary px-6 py-2 font-bold border-2 border-solid rounded-xl">
+        <button
+          type="submit"
+          className="bg-secondary text-primary border-secondary px-6 py-2 font-bold border-2 border-solid rounded-xl"
+          data-testid="contact-form-submit-btn"
+        >
           Submit
         </button >
       </div>
@@ -113,7 +120,7 @@ const ContactForm = () => {
 const Contact = () => (
   <LandingSection id="contact">
     <div className="text-center mx-auto">
-      <h2 className="text-title-text m-6 text-2xl font-bold">Contact</h2>
+      <h2 className="text-title-text m-6 text-2xl font-bold" id="contact">Contact</h2>
 
       <p className="text-primary-text">
         Want to work together or have any questions?

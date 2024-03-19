@@ -15,21 +15,13 @@ module.exports = {
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/spencerlepine',
-    }
+    },
   ],
 
   navLinks: [
     {
-      name: 'Portfolio',
-      url: '/portfolio',
-    },
-    {
       name: 'Blog',
       url: '/blog',
-    },
-    {
-      name: 'About',
-      url: '/about',
     },
     {
       name: 'Contact',

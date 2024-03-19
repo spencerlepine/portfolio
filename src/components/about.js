@@ -5,7 +5,7 @@ import { Icon } from '@components/icons';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Skills } from '@components';
 
-const aboutImg = '../assets/images/me-slu.png';
+const aboutImg = '../assets/images/profile-picture-github-transparent.png';
 
 const currentSituation = `
   I'm Spencer Lepine, a Software Engineer based in Seattle.

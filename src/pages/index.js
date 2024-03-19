@@ -1,16 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Head, Welcome, About, Portfolio, Contact, Skills, ExtraLinks } from '@components';
+import { Layout, Head, Welcome, Contact, ExtraLinks } from '@components';
 
-const LandingPage = ({ location, data }) => (
+const LandingPage = ({ location }) => (
   <Layout location={location}>
-    <Head title="Home | @SpencerLepine - Software Engineer" />
+    <Head title="Spencer Lepine - Software Engineer" />
 
     <Welcome />
-    <About />
-    <Skills />
-    <Portfolio projects={data.projects.edges || []} sectionTitle="Portfolio" />
     <ExtraLinks />
     <Contact />
   </Layout>
