@@ -25,7 +25,7 @@ module.exports = {
     },
     {
       name: 'Contact',
-      url: '/contact',
+      url: '#contact',
     },
   ],
 
