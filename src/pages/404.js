@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 const NotFoundPage = ({ location }) => (
   <Layout location={location}>
     <Head title="Spencer Lepine | Software Engineer" />
+    <meta name="google-site-verification" content="MrEbFlMKxZ8bRsv5NQsjAyr9h_ToSS2P11KPB0t1KNc" />
 
     <main className="min-h-screen">
       <div className="m-8 container flex flex-col items-center justify-center px-5 mx-auto my-8">

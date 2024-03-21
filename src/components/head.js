@@ -41,7 +41,7 @@ const Head = ({ title, description, image }) => {
   };
 
   return (
-    <Helmet title={seo.title} defaultTitle={seo.title}>
+    <Helmet title={seo.title} defaultTitle={seo.title} ignoreChildFragments={true}>
       <html lang="en" />
 
       <meta name="description" content={seo.description} />
@@ -63,8 +63,6 @@ const Head = ({ title, description, image }) => {
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:site" content="@spencerlepine" />
-
-      <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
     </Helmet>
   );
 };

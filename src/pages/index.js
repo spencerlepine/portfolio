@@ -6,6 +6,7 @@ import { Layout, Head, Welcome, Contact, ExtraLinks } from '@components';
 const LandingPage = ({ location }) => (
   <Layout location={location}>
     <Head title="Spencer Lepine - Software Engineer" />
+    <meta name="google-site-verification" content="MrEbFlMKxZ8bRsv5NQsjAyr9h_ToSS2P11KPB0t1KNc" />
 
     <Welcome />
     <ExtraLinks />
