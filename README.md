@@ -6,6 +6,8 @@
 
 ![OG Snapshot](./portfolio-site-landing-page.gif)
 
+![Architecture](./portfolio-architecture.png)
+
 ## ❓ What Is This?
 
 My personal developer portfolio and blog site.
