@@ -4,7 +4,7 @@
 
 <!-- [![Lighthouse CI](https://github.com/spencerlepine/spencerlepine.com/actions/workflows/lighthouse.yml/badge.svg?branch=master)](https://github.com/spencerlepine/spencerlepine.com/actions/workflows/lighthouse.yml) -->
 
-![OG Snapshot](./static/og@2x.jpg)
+![OG Snapshot](./portfolio-site-landing-page.gif)
 
 ## ❓ What Is This?
 
@@ -27,10 +27,14 @@ Using Figma, I created the designs to follow and basic component layout of the s
 
 ![Figma Designs](./static/figma-designs.png)
 
+## 📁 Previous Versions
+
+- V1: https://github.com/spencerlepine/portfolio-site-v1
+- V2: https://github.com/spencerlepine/portfolio-site-v2
+
 ## ✅ View Site Uptime
 
 Head over to the [**status website →**](https://spencerlepine.github.io/portfolio-site-uptime) powered by [Upptime](https://github.com/spencerlepine/portfolio-site-uptime)
-
 
 ## ⚙️ Development Setup
 ```sh
