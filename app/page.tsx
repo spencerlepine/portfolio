@@ -12,7 +12,7 @@ const config = {
   about:
     "I'm a Software Engineer based in Seattle, currently serving part-time in the Army Reserve. With a primary focus on full-stack development, I'm also passionate about DevOps, open-source, and everything cloud. When I'm not coding, you can find me traveling, hiking scenic trails, or enjoying a classic 90s film.",
   aboutPhoto: '/assets/headshot.webp',
-  heroTofuEndpoint: 'https://public.herotofu.com/v1/aae45b10-27cb-11ed-9d54-c9f9d2b00e7b',
+  heroTofuEndpoint: 'https://public.herotofu.com/v1/8a20de80-e812-11ef-91ab-497918027bf8',
   socialLinks: [
     { name: 'GitHub', icon: Github, url: 'https://github.com/spencerlepine.co' },
     { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/spencerlepine' },
