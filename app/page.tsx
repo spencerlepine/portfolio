@@ -270,7 +270,7 @@ export default function LandingPage() {
               </Link>
             ))}
           </div>
-          <p className="text-sm text-gray-600">© 2024 {config.name}. All rights reserved.</p>
+          <p className="text-sm text-gray-600">© 2026 {config.name}. All rights reserved.</p>
         </div>
       </footer>
     </div>
