@@ -19,34 +19,35 @@ const config = {
     { name: 'Email', icon: Mail, url: 'mailto:spencer.sayhello@gmail.com' },
   ],
   skills: [
+    { name: 'TypeScript', icon: 'typescript', color: '#3178C6' },
+    { name: 'JavaScript', icon: 'js', color: '#d6c317' },
     { name: 'React', icon: 'reactjs', color: '#61DAFB' },
     { name: 'Node.js', icon: 'nodejs', color: '#339933' },
-    { name: 'JavaScript ES6+', icon: 'js', color: '#d6c317' },
-    { name: 'TypeScript', icon: 'typescript', color: '#3178C6' },
-    { name: 'Python', icon: 'python', color: '#d6c317' },
-    { name: 'MongoDB', icon: 'mongodb', color: '#4ca53f' },
-    { name: 'PostgreSQL', icon: 'postgresql', color: '#31648c' },
-    { name: 'Docker', icon: 'docker', color: '#2496ED' },
-    { name: 'Kubernetes', icon: 'kubernetes', color: '#2496ED' },
-    { name: 'GitHub Actions', icon: 'github', color: '#2496ED' },
-    { name: 'AWS', icon: 'aws', color: 'c78100' },
-    { name: 'RESTful API', icon: '', color: '#7c7c7c' },
+    { name: 'Micro-frontends', icon: 'webpack', color: '#8DD6F9' },
+    { name: 'AWS Lambda', icon: '', image: '/assets/skills/aws-lambda.svg', color: '#FF9900' },
+    { name: 'AWS', icon: 'aws', color: '#c78100' },
+    { name: 'NoSQL DB', icon: 'mongodb', color: '#4ca53f' },
+    { name: 'Microservices', icon: '', image: '/assets/skills/microservices.png', color: '#7c7c7c' },
+    { name: 'CI/CD', icon: 'github', color: '#2496ED' },
+    { name: 'Playwright / Cypress', icon: 'playwright', color: '#2EAD33' },
+    { name: 'AI Agents & MCP', icon: '', image: '/assets/skills/mcp.svg', color: '#7c7c7c' },
   ],
   experiences: [
     {
       image: '/assets/aws-logo.webp',
       company: 'Amazon Web Services (AWS)',
-      position: 'Frontend Engineer',
+      position: 'Frontend Engineer II',
       period: 'Nov 2022 - Present',
-      description: '{ status: "in-progress" }',
+      description:
+        'Full-stack engineer on a customer-facing AWS product. I build React and TypeScript micro-frontends, embeddable JavaScript widgets that run on customer sites, and a shared component library, backed by Lambda and DynamoDB services. I also write AWS CDK infrastructure, deploy across multiple regions with CI/CD pipelines, and build monitoring and end-to-end UI tests.',
     },
     {
       image: '/assets/us-army-reserve-logo.webp',
       company: 'U.S. Army Reserve',
-      position: 'IT Specialist',
+      position: 'Information Systems Technician',
       period: 'Nov 2021 - Present',
       description:
-        'Providing IT support and troubleshooting for division-level command in a fast-paced environment, with a focus on end-user support, junior staff training, technical documentation, IT accounts administration, and team collaboration.',
+        'Systems administrator and IT support for a division-level command. I keep users, networks, and secure communications equipment running, often under time pressure for senior leadership. Hands-on with Windows imaging, Active Directory, VPN, Remote Desktop, and SharePoint. Active Secret clearance.',
     },
     {
       image: '/assets/grad-cap.jpg',
@@ -145,7 +146,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {config.skills.map(skill => (
               <div key={skill.name} className="flex items-center space-x-2 bg-gray-100 rounded-full px-4 py-2">
-                <StackIcon name={skill.icon} className="w-6 h-6" />
+                {skill.image ? <Image src={skill.image} alt="" width={24} height={24} className="w-6 h-6 object-contain" /> : <StackIcon name={skill.icon} className="w-6 h-6" />}
                 <span>{skill.name}</span>
               </div>
             ))}
@@ -177,8 +178,8 @@ export default function LandingPage() {
                   <Image src={experience.image} alt={experience.company} width={50} height={50} className="rounded-full z-10 relative bg-background" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold">{experience.company}</h3>
-                  <p className="text-muted-foreground text-blue-600">{experience.position}</p>
+                  <h3 className="text-xl font-semibold">{experience.position}</h3>
+                  <p className="text-muted-foreground text-blue-600">{experience.company}</p>
                   <p className="text-sm text-muted-foreground">{experience.period}</p>
                   <p className="mt-2 text-gray-600 max-w-3xl">{experience.description}</p>
                 </div>
