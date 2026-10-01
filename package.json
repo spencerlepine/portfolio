@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "launch": "npm install && { lsof -ti tcp:3000 | xargs kill -9 2>/dev/null || true; } && { (until curl -s -o /dev/null http://localhost:3000; do sleep 1; done; open -a 'Google Chrome' http://localhost:3000) & npm run dev; }",
+    "launch": "npm install && { lsof -ti tcp:3000 | xargs kill -9 2>/dev/null || true; } && { (until curl -s -o /dev/null http://localhost:3000; do sleep 1; done; if [ \"$(uname)\" = Darwin ]; then open -a 'Google Chrome' http://localhost:3000; fi) & npm run dev; }",
     "build": "NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production next build",
     "start": "next start",
     "lint": "next lint",
